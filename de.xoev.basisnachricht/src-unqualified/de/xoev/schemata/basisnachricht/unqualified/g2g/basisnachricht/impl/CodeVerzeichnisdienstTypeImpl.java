@@ -1,0 +1,47 @@
+/*
+ * Copyright (c) 2026 Contributors to the Eclipse Foundation.
+ * 
+ * This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *   Data In Motion Consulting - initial implementation
+ */
+package de.xoev.schemata.basisnachricht.unqualified.g2g.basisnachricht.impl;
+
+import de.xoev.schemata.basisnachricht.unqualified.g2g.basisnachricht.BasisnachrichtUnqualifiedPackage;
+import de.xoev.schemata.basisnachricht.unqualified.g2g.basisnachricht.CodeVerzeichnisdienstType;
+
+import de.xoev.schemata.code.code.impl.CodeImpl;
+
+import org.eclipse.emf.ecore.EClass;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Code Verzeichnisdienst Type</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * @generated
+ */
+public class CodeVerzeichnisdienstTypeImpl extends CodeImpl implements CodeVerzeichnisdienstType {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CodeVerzeichnisdienstTypeImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return BasisnachrichtUnqualifiedPackage.Literals.CODE_VERZEICHNISDIENST_TYPE;
+	}
+
+} //CodeVerzeichnisdienstTypeImpl

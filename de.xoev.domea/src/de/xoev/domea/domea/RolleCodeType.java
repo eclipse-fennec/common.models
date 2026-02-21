@@ -1,0 +1,33 @@
+/*
+ * Copyright (c) 2026 Contributors to the Eclipse Foundation.
+ * 
+ * This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *   Data In Motion Consulting - initial implementation
+ */
+package de.xoev.domea.domea;
+
+import de.xoev.schemata.code.code.Code;
+
+import org.osgi.annotation.versioning.ProviderType;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Rolle Code Type</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <!-- begin-model-doc -->
+ * Der Datentyp zur Rolle aus einer Codeliste für Kontakte unter Angabe weiterer Informationen zur konkreten Angabe eines Wertes. Hinweise zur Erstellung und Nutzung von Codelisten sind im XÖV-Handbuch 3.0.0 (siehe Abschnitt 8.3. Szenarien der Codelistennutzung unter https://docs.xoev.de/xoev-handbuch/%C3%BCbersicht#_betrieb) zu finden.
+ * <!-- end-model-doc -->
+ *
+ *
+ * @see de.xoev.domea.domea.DomeaPackage#getRolleCodeType()
+ * @model extendedMetaData="name='RolleCodeType' kind='elementOnly'"
+ * @generated
+ */
+@ProviderType
+public interface RolleCodeType extends Code {
+} // RolleCodeType
