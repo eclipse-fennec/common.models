@@ -4,6 +4,17 @@
 
 A collection of EMF models generated from XSD schemas. The packages contain generated code. Where possible, basic models like XHTML or Atom are reused across modules.
 
+## Branches & releases
+
+* `snapshot` is the active development branch. PRs land here first; every
+  push publishes `-SNAPSHOT` artifacts to
+  [Sonatype Central snapshots](https://central.sonatype.com/repository/maven-snapshots/org/eclipse/fennec/models/).
+* `main` always holds the latest released version. Released artifacts are
+  available on [Maven Central](https://repo1.maven.org/maven2/org/eclipse/fennec/models/)
+  under `org.eclipse.fennec.models:*`.
+
+See [docs/ci.md](docs/ci.md) for the full CI / publishing pipeline.
+
 ## Fennec EMF Model Bndtools Library
 
 To simplify using these models in Bndtools, a workspace library is provided that integrates all dependencies.
