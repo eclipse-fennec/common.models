@@ -1,154 +1,149 @@
 # GitHub CI
 
-The repository runs four GitHub Actions workflows: pull-request validation,
-license-header enforcement, snapshot publication from the `snapshot` branch,
-and release publication from the `main` branch.
+CI is built from **centralized reusable workflows** that live in
+[`eclipse-fennec/.github`](https://github.com/eclipse-fennec/.github). This
+repository contains only thin callers: all build logic and all action versions
+are maintained in one place for the whole organisation, so bumping an action is a
+single edit there instead of the same SHA in a dozen files per repo.
 
-All workflow definitions live in [`.github/workflows`](../.github/workflows).
+The design is documented in
+[`ci-cd-reusable-workflows.md`](https://github.com/eclipse-fennec/.github/blob/main/docs/ci-cd-reusable-workflows.md).
+
+All caller definitions live in [`.github/workflows`](../.github/workflows) and are
+pinned by SHA to `eclipse-fennec/.github@v1.1.1`
+(`9292fbff296548018fa9e4b0f6ad49ba7c639501`). Dependabot rewrites the SHA together
+with its `# v1.1.1` comment, so pinning does not mean going stale.
 
 ## Branch model
 
 `snapshot` is the active development line — all PRs target it, and every push
-publishes a `-SNAPSHOT` artifact. `main` always holds the latest released
-version, which is available on
-[Maven Central](https://repo1.maven.org/maven2/org/eclipse/fennec/models/) under
-`org.eclipse.fennec.models:*`.
+publishes a `-SNAPSHOT` artifact. `main` always holds the latest released version,
+available on [Maven Central](https://repo1.maven.org/maven2/org/eclipse/fennec/models/)
+under `org.eclipse.fennec.models:*`.
 
-| Branch     | Purpose                                            | Publishes to                                              |
-|------------|----------------------------------------------------|-----------------------------------------------------------|
-| `snapshot` | Active development. PRs target this branch.        | Sonatype Central — `-SNAPSHOT` versions                   |
-| `main`     | Latest release — code here matches what is on Maven Central. | Sonatype Central → Maven Central — final versions, signed with project GPG key |
+| Branch | Purpose | Publishes to |
+|---|---|---|
+| feature branches / PRs | verification only | – |
+| `snapshot` | Active development. PRs target this branch. | Sonatype Central — `-SNAPSHOT` versions |
+| `main` | Latest release — matches what is on Maven Central. | Sonatype Central → Maven Central — signed with the project GPG key |
+
+**Verification is identical everywhere** — license gate, build and tests run the
+same way on PRs, feature branches, `snapshot` and `main`. The only difference
+between the two publishing branches is the `do-release` flag: `false` publishes a
+snapshot, `true` publishes a release. Both invoke the same Gradle `release` task.
 
 ## Workflow overview
 
 ```
-┌─────────────────────────┐
-│   PR / feature branch   │
-└────────────┬────────────┘
-             │  push / pull_request
-             ▼
-    ┌─────────────────┐    ┌──────────────────┐
-    │   build.yml     │    │   license.yml    │
-    │   (CI Build)    │    │ (License header) │
-    └─────────────────┘    └──────────────────┘
-             │
-             │  merge into snapshot
-             ▼
-    ┌─────────────────┐
-    │  snapshot.yml   │  →  publishes SNAPSHOT artifacts
-    └─────────────────┘
-             │
-             │  merge into main
-             ▼
-    ┌─────────────────┐
-    │   release.yml   │  →  publishes signed release artifacts
-    └─────────────────┘
+PR / feature branch          push to snapshot              push to main
+        │                          │                            │
+        ▼                          ▼                            ▼
+   build.yml                 snapshot.yml                  release.yml
+        │                          │                            │
+        │                     ┌────┴────┐                  ┌────┴────┐
+        └──► verify           │ verify  │                  │ verify  │  license + JDK 21 + JDK 25
+                              └────┬────┘                  └────┬────┘  [no secrets]
+                                   ▼                            ▼
+                              release                       release       Gradle release task
+                              do-release: false            do-release: true
+                              → Maven Snapshot             → Maven Central
+                                   │  [Sonatype + GPG]          │  [Sonatype + GPG]
+                                   ▼                            ▼
+                                 docs                         docs        VitePress + Pages
+                                        [no secrets]
 ```
 
-## `build.yml` — CI Build
+`needs:` is what gates the publish: nothing reaches Sonatype until the license
+gate **and both JDKs** are green.
 
-* **File:** [`.github/workflows/build.yml`](../.github/workflows/build.yml)
-* **Triggers:** every `push` and `pull_request` on any branch.
-* **Purpose:** Verify the source tree compiles and tests pass.
-* **JDK:** Java 21 (Temurin) on `ubuntu-latest`.
-* **Steps:** checkout → Gradle wrapper validation → set up JDK with Gradle
-  cache → `./gradlew build --info`.
-* **Secrets used:** none — this workflow does not publish anything.
+## Credential scoping
 
-A green run is the gating signal for review.
+This is the central design decision, not an implementation detail. The publishing
+step lives in its own reusable workflow (`reusable-release.yml`), and it is the
+only one that declares `secrets:`. Therefore:
 
-## `license.yml` — License header check
+- the matrix build, the tests and the docs build never see publishing credentials,
+- exactly **one** JDK publishes (21 for this repo), not the whole matrix,
+- `secrets: inherit` in the callers forwards secrets only to the release job.
 
-* **File:** [`.github/workflows/license.yml`](../.github/workflows/license.yml)
-* **Triggers:** `push`, `pull_request`, and manual `workflow_dispatch`.
-* **Purpose:** Verify every source file carries the Eclipse Public License
-  2.0 header. Uses [apache/skywalking-eyes](https://github.com/apache/skywalking-eyes)
-  driven by [`.licenserc.yaml`](../.licenserc.yaml).
-* **What it checks:** the SPDX header pattern declared in `.licenserc.yaml`,
-  applied to every file *not* listed under `paths-ignore`.
-* **Failure mode:** on a PR the action comments on the offending lines via
-  `GITHUB_TOKEN`. The fix is to add the standard header (template in
-  [`CONTRIBUTING.md`](../CONTRIBUTING.md#license-headers)) and push again.
+## The callers
 
-## `snapshot.yml` — Snapshot Build
+| File | Trigger | Calls |
+|---|---|---|
+| [`build.yml`](../.github/workflows/build.yml) | push to any branch except `main`/`snapshot`, and every PR | `reusable-verify` |
+| [`snapshot.yml`](../.github/workflows/snapshot.yml) | push to `snapshot` | `reusable-verify` → `reusable-release` (`do-release: false`) → `reusable-docs` |
+| [`release.yml`](../.github/workflows/release.yml) | push to `main` | `reusable-verify` → `reusable-release` (`do-release: true`) → `reusable-docs` |
+| [`docs.yml`](../.github/workflows/docs.yml) | `workflow_dispatch` | `reusable-docs` — manual site rebuild |
+| [`scorecard.yml`](../.github/workflows/scorecard.yml) | weekly schedule, push to `main`, branch protection changes | `reusable-scorecard` |
+| [`dependency-review.yml`](../.github/workflows/dependency-review.yml) | PR | `reusable-dependency-review` |
 
-* **File:** [`.github/workflows/snapshot.yml`](../.github/workflows/snapshot.yml)
-* **Triggers:** `push` to the `snapshot` branch only. Pull requests are
-  explicitly excluded so untrusted code cannot reach the publishing step.
-* **Purpose:** Build, sign, and publish `-SNAPSHOT` artifacts whenever the
-  `snapshot` branch advances.
-* **JDK:** Java 21 (Temurin) on `ubuntu-latest`.
-* **Command:** `./gradlew release --info`.
-* **Secrets used:**
-  * `CENTRAL_SONATYPE_TOKEN_USERNAME`, `CENTRAL_SONATYPE_TOKEN_PASSWORD` — Sonatype Central credentials
-  * `GPG_PRIVATE_KEY`, `GPG_PASSPHRASE`, `GPG_KEY_ID` — signing key (imported into the runner's keyring, deleted at the end of the job)
+### What `verify` does
 
-## `release.yml` — Release Build
+License gate first — [apache/skywalking-eyes](https://github.com/apache/skywalking-eyes)
+driven by this repo's [`.licenserc.yaml`](../.licenserc.yaml) — then the Gradle
+build on the JDK matrix `[21, 25]`, then `perfTest`. The license configuration
+stays project-local; a centralized default is an open proposal, not current
+practice.
 
-* **File:** [`.github/workflows/release.yml`](../.github/workflows/release.yml)
-* **Triggers:** `push` to the `main` branch only. PRs are explicitly excluded.
-* **Purpose:** Cut a signed release to Sonatype Central whenever `main` advances.
-* **JDK:** Java 21.
-* **Command:** `./gradlew release --info` with `DO_RELEASE=true`.
-* **Secrets used:** same set as `snapshot.yml`.
-* **Result:** signed artifacts pushed to Sonatype Central and (after the
-  Central sync) to Maven Central.
+There is **no standalone `license.yml`** any more. The gate is the first, gating
+job inside `reusable-verify`, which applies it to every branch and PR without a
+second run.
+
+The reusable runs `clean build testOSGi`. This repository has no OSGi test
+projects, so `testOSGi` resolves to SKIPPED in every module — it is a no-op here,
+and no input is needed to suppress it.
+
+### What `release` does
+
+Imports the GPG key, runs `./gradlew build testOSGi release` with
+`DO_RELEASE` set from `do-release`, uploads test results, then removes the
+keyring. Tests and the release happen in **one** Gradle invocation, so the jars
+that were tested are the jars that get published.
+
+### What `docs` does
+
+Builds the VitePress site in [`docs-site/`](../docs-site) and deploys it to
+GitHub Pages under `https://eclipse-fennec.github.io/common.models/<branch>/`.
+The publish path comes from `docs-site/docs/.vitepress/config.mts` via
+`DOCS_BRANCH`, not from the workflow. See [overview.md](overview.md) for how the
+documentation sources are organised.
 
 ## Published artifacts
 
-Releases and snapshots are published to **Sonatype Central**, from which
-releases sync to Maven Central. The group id is `org.eclipse.fennec.models`.
+| Channel | Repository URL | Pushed by |
+|---|---|---|
+| Release | [Maven Central](https://repo1.maven.org/maven2/org/eclipse/fennec/models/) — `org.eclipse.fennec.models:*` | `release.yml` on `main` |
+| Snapshot | [Sonatype Central snapshots](https://central.sonatype.com/repository/maven-snapshots/org/eclipse/fennec/models/) — `*-SNAPSHOT` | `snapshot.yml` on `snapshot` |
+| Browse | [search.maven.org `org.eclipse.fennec.models`](https://search.maven.org/search?q=g:org.eclipse.fennec.models) | |
 
-| Channel    | Repository URL                                                                                                                       | Pushed by                    |
-|------------|--------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
-| Release    | [Maven Central](https://repo1.maven.org/maven2/org/eclipse/fennec/models/) — `org.eclipse.fennec.models:*`                            | `release.yml` on `main`      |
-| Snapshot   | [Sonatype Central snapshots](https://central.sonatype.com/repository/maven-snapshots/org/eclipse/fennec/models/) — `*-SNAPSHOT`      | `snapshot.yml` on `snapshot` |
-| Browse     | [search.maven.org `org.eclipse.fennec.models`](https://search.maven.org/search?q=g:org.eclipse.fennec.models) — find a version       |                              |
-
-The Maven BOM coordinate to depend on the whole stack from a Gradle/Maven
-build:
-
-```xml
-<dependency>
-    <groupId>org.eclipse.fennec.models</groupId>
-    <artifactId>org.eclipse.fennec.common.models.bom</artifactId>
-    <version>${fennec.models.version}</version>
-    <type>pom</type>
-    <scope>import</scope>
-</dependency>
-```
-
-For BND workspaces, consume the bundle via the
-`-library: fennecEMFModels` directive — see the
-[README](../readme.md#fennec-emf-model-bndtools-library) for details.
+See [consuming.md](consuming.md) for the BOM and workspace-library coordinates.
 
 ## Secrets
 
-The following repository / organisation secrets must be defined for
-`snapshot.yml` and `release.yml` to succeed:
+Required at repository or organisation level for the release job:
 
-| Secret name                          | Purpose                                  |
-|--------------------------------------|------------------------------------------|
-| `CENTRAL_SONATYPE_TOKEN_USERNAME`    | Sonatype Central user token              |
-| `CENTRAL_SONATYPE_TOKEN_PASSWORD`    | Sonatype Central token password          |
-| `GPG_PRIVATE_KEY`                    | ASCII-armored GPG private key            |
-| `GPG_PASSPHRASE`                     | Passphrase for the private key           |
-| `GPG_KEY_ID`                         | Long-form key id (used by the build)     |
+| Secret | Purpose |
+|---|---|
+| `CENTRAL_SONATYPE_TOKEN_USERNAME` | Sonatype Central user token |
+| `CENTRAL_SONATYPE_TOKEN_PASSWORD` | Sonatype Central token password |
+| `GPG_PRIVATE_KEY` | ASCII-armored GPG private key |
+| `GPG_PASSPHRASE` | Passphrase for the private key |
+| `GPG_KEY_ID` | Long-form key id |
 
-The GPG key is imported on the fly and the keyring is removed in a final
-step that runs even when the job fails (`if: always()`). The build never
-echoes secret values.
+They flow only through `secrets: inherit` into `reusable-release.yml`. Verify and
+docs never receive them.
 
 ## Reproducing CI locally
 
-* Full PR build:
-  ```bash
-  ./gradlew clean build --info
-  ```
-* License headers:
-  ```bash
-  docker run --rm -v $(pwd):/github/workspace \
-    ghcr.io/apache/skywalking-eyes/license-eye header check
-  ```
-* The snapshot / release workflows cannot be reproduced locally because they
-  publish to Sonatype Central and require the project signing key.
+```bash
+./gradlew clean build            # what verify runs (per JDK)
+./gradlew perfTest               # the perf/thread-safety tests
+
+docker run --rm -v $(pwd):/github/workspace \
+  ghcr.io/apache/skywalking-eyes/license-eye header check   # the license gate
+
+cd docs-site && npm ci && npm run docs:build                # the docs build
+```
+
+The release path cannot be reproduced locally — it publishes to Sonatype Central
+and needs the project signing key.
