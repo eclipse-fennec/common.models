@@ -1,4 +1,4 @@
-[![Snapshot Build](https://github.com/eclipse-fennec/common.models/actions/workflows/snapshot.yml/badge.svg)](https://github.com/eclipse-fennec/common.models/actions/workflows/snapshot.yml)[![License](https://github.com/eclipse-fennec/common.models/actions/workflows/license.yml/badge.svg)](https://github.com/eclipse-fennec/common.models/actions/workflows/license.yml)
+[![Snapshot Build](https://github.com/eclipse-fennec/common.models/actions/workflows/snapshot.yml/badge.svg)](https://github.com/eclipse-fennec/common.models/actions/workflows/snapshot.yml)[![CI Build](https://github.com/eclipse-fennec/common.models/actions/workflows/build.yml/badge.svg)](https://github.com/eclipse-fennec/common.models/actions/workflows/build.yml)
 
 # Eclipse Fennec Common Models
 
