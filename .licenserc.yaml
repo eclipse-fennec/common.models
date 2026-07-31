@@ -17,6 +17,7 @@ header:
       which is available at https://www.eclipse.org/legal/epl-2.0/
   paths-ignore:
     - 'dist'
+    - 'docs-site/**'
     - 'licenses'
     - '**/package-info.java'
     - '**/packageinfo'

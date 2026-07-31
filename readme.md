@@ -4,6 +4,19 @@
 
 A collection of EMF models generated from XSD schemas. The packages contain generated code. Where possible, basic models like XHTML or Atom are reused across modules.
 
+## Documentation
+
+| Page | Contents |
+|---|---|
+| [Overview](docs/overview.md) | Repository layout, what a model bundle contains, how the code is generated |
+| [Model catalog & origins](docs/model-catalog.md) | Every module with its specification, namespace URI and the original schema it came from |
+| [Consuming the models](docs/consuming.md) | Bndtools workspace library, Maven BOM, and getting at an `EPackage` at runtime |
+| [Adding a new model](docs/adding-a-model.md) | Checklist for contributing another standard |
+| [CI / publishing](docs/ci.md) | The pipeline behind the branches below |
+
+These pages are the source of truth; `docs-site/` renders the user-facing subset
+as a VitePress site (`cd docs-site && npm ci && npm run docs:dev`).
+
 ## Branches & releases
 
 * `snapshot` is the active development branch. PRs land here first; every
@@ -44,6 +57,10 @@ Use the following coordinates on Maven Central:
 ```
 
 ## Available Models
+
+A quick index. For each model's **specification version, namespace URI and the
+original schema it was generated from**, see
+[docs/model-catalog.md](docs/model-catalog.md).
 
 ### W3C Standards
 
@@ -126,72 +143,16 @@ Use the following coordinates on Maven Central:
 
 | Module | Description |
 |---|---|
+| `org.eclipse.fennec.model` | Fennec collection, PushStream and utility models |
 | `org.eclipse.fennec.query.model` | Fennec EMF query model |
 
 ## Adding a New Model Module
 
-### Project Setup
-
-1. **Module name**: Derived from the schema's namespace URI, with `.model` appended if needed (e.g., `http://www.opengis.net/gml/3.2` becomes `net.opengis.gml3.model`)
-2. **Directory layout**:
-   ```
-   <module>/
-   ├── bnd.bnd
-   ├── model/          # Ecore, genmodel, and XSD source files
-   ├── src/            # Generated Java code (default)
-   └── .settings/org.eclipse.jdt.core.prefs
-   ```
-3. **`.settings/org.eclipse.jdt.core.prefs`**: Set Java compliance, source, and target to `21`
-
-### Versioning
-
-- **Bundle-Version** must reflect the specification version of the underlying schema (e.g., WFS 2.0 → `2.0.0.SNAPSHOT`, FHIR R5 → `5.0.0.SNAPSHOT`)
-- If no specification version exists, use `1.0.0.SNAPSHOT`
-- Always use the `.SNAPSHOT` qualifier
-
-### bnd.bnd Configuration
-
-```bnd
--library: enableEMF
-
-#-generate:\
-#	model/example.genmodel;\
-#		generate=fennecEMF;\
-#		genmodel=model/example.genmodel;\
-#		output=src
-
--includeresource.model: model=model
-
-Bundle-Version: <spec-version>.SNAPSHOT
-
--buildpath: \
-	org.osgi.service.condition;version=latest
-```
-
-- The `-generate:` block must be **commented out** after initial code generation. Generated code is checked in so that builds do not require running the code generator every time.
-- To regenerate, temporarily uncomment the block, run `./gradlew build`, then comment it out again and commit the updated sources.
-- Cross-model dependencies go into `-buildpath` with `;version=snapshot`.
-
-### Genmodel Settings
-
-| Setting | Value |
-|---|---|
-| `complianceLevel` | `21.0` |
-| `oSGiCompatible` | `true` |
-| `basePackage` | `...` |
-| `copyrightText` | EPL-2.0 header (see existing modules for exact text) |
-
-### Checklist
-
-- [ ] Ecore/XSD model files placed in `model/`
-- [ ] Genmodel created with settings above
-- [ ] Code generated and committed to `src/` (or `src-gen/`)
-- [ ] `-generate:` block commented out in `bnd.bnd`
-- [ ] Bundle-Version matches specification version
-- [ ] Java 21 compliance in `.settings/org.eclipse.jdt.core.prefs`
-- [ ] EPL-2.0 copyright header set in genmodel
-- [ ] Module added to `org.eclipse.fennec.common.models.library/required.bnd` (run-requires) and *Resolve*  (This includes you new model into the *Bnd library* and the *Maven BOM*)
-- [ ] `./gradlew build` passes
+See **[docs/adding-a-model.md](docs/adding-a-model.md)** for the full walkthrough:
+naming, project layout, `bnd.bnd`, the specification-driven `Bundle-Version`, the
+GenModel settings that have to be set in *both* the `.genmodel` and the `.ecore`,
+the generate-then-switch-off cycle, wiring the module into the library and BOM, and
+the checklist.
 
 ## Links
 
