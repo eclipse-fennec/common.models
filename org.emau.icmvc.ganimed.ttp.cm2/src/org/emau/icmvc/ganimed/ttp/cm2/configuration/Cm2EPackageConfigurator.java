@@ -29,6 +29,14 @@ import org.emau.icmvc.ganimed.ttp.cm2.Cm2Package;
  */
 public class Cm2EPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:20bda5e3e9b71c66e02413544ede3d47f7e35e304688fec5bcc9147b707b70ba";
+
 	private Cm2Package ePackage;
 
 	protected Cm2EPackageConfigurator(Cm2Package ePackage){
@@ -66,6 +74,7 @@ public class Cm2EPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "cm2");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

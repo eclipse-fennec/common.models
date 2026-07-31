@@ -52,7 +52,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = XALPackage.eNS_URI, genModel = "/model/ogckml22.genmodel", genModelSourceLocations = {"model/ogckml22.genmodel","net.opengis.kml.model/model/ogckml22.genmodel"}, ecore = "/model/xal-address.ecore", ecoreSourceLocations = "/model/xal-address.ecore")
+@EPackage(uri = XALPackage.eNS_URI, fingerprint = "fp1:98debbb6215ee87509046a97588cd150b7b7da4bc1b066d6968c12adea4e875d", genModel = "/model/ogckml22.genmodel", genModelSourceLocations = {"model/ogckml22.genmodel","net.opengis.kml.model/model/ogckml22.genmodel"}, ecore = "/model/xal-address.ecore", ecoreSourceLocations = "/model/xal-address.ecore")
 public interface XALPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

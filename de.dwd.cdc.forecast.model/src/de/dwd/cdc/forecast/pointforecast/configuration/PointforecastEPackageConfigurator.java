@@ -1,15 +1,12 @@
 /*
- * Copyright (c) 2012 - 2024 Data In Motion and others.
- * All rights reserved. 
+ * Copyright (c) 2026 Contributors to the Eclipse Foundation.
  * 
- * This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License 2.0
- * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/
  * 
  * SPDX-License-Identifier: EPL-2.0
  * 
  * Contributors:
- *      Mark Hoffmann - initial API and implementation
+ *   Data In Motion Consulting - initial implementation
  */
 package de.dwd.cdc.forecast.pointforecast.configuration;
 
@@ -32,6 +29,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class PointforecastEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:429320f7de169c575d2072392ca43a8454d2285d76bf933295945d8648ba61e5";
+
 	private PointforecastPackage ePackage;
 
 	protected PointforecastEPackageConfigurator(PointforecastPackage ePackage){
@@ -69,6 +74,7 @@ public class PointforecastEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "pointforecast");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

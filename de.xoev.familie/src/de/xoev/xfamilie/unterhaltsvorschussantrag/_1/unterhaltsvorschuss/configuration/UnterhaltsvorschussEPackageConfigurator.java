@@ -32,6 +32,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class UnterhaltsvorschussEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:0d33a8a5a18e4e849583efa3b63d4f279f7de466f5b22c5661d55c9ea758dd7a";
+
 	private UnterhaltsvorschussPackage ePackage;
 
 	protected UnterhaltsvorschussEPackageConfigurator(UnterhaltsvorschussPackage ePackage){
@@ -69,6 +77,7 @@ public class UnterhaltsvorschussEPackageConfigurator implements EPackageConfigur
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "unterhaltsvorschuss");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

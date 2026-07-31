@@ -29,6 +29,14 @@ import org.hl7.fhir.FHIRPackage;
  */
 public class FHIREPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:0b53057747463d6aa63bc0f8ca48447faaacc01e017ee9c57ee805eb987e0ffa";
+
 	private FHIRPackage ePackage;
 
 	protected FHIREPackageConfigurator(FHIRPackage ePackage){
@@ -66,6 +74,7 @@ public class FHIREPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "fhir");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

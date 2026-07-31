@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = AtomPackage.eNS_URI, genModel = "/model/atom.genmodel", genModelSourceLocations = {"model/atom.genmodel","org.w3.atom.model/model/atom.genmodel"}, ecore = "/model/atom.ecore", ecoreSourceLocations = "/model/atom.ecore")
+@EPackage(uri = AtomPackage.eNS_URI, fingerprint = "fp1:81d798434b3c88016f600fd1444e2985c37c21e8e8a08c15fe89ce5b385a5d56", genModel = "/model/atom.genmodel", genModelSourceLocations = {"model/atom.genmodel","org.w3.atom.model/model/atom.genmodel"}, ecore = "/model/atom.ecore", ecoreSourceLocations = "/model/atom.ecore")
 public interface AtomPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

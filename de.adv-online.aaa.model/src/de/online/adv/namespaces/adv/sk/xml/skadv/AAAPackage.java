@@ -322,7 +322,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = AAAPackage.eNS_URI, genModel = "/model/sk-xml.genmodel", genModelSourceLocations = {"model/sk-xml.genmodel","de.adv-online.aaa.model/model/sk-xml.genmodel"}, ecore = "/model/sk-xml.ecore", ecoreSourceLocations = "/model/sk-xml.ecore")
+@EPackage(uri = AAAPackage.eNS_URI, fingerprint = "fp1:b82d5f983eb79973907220600d674232ea0a41dbc3c16ada30d0de43d3c64259", genModel = "/model/sk-xml.genmodel", genModelSourceLocations = {"model/sk-xml.genmodel","de.adv-online.aaa.model/model/sk-xml.genmodel"}, ecore = "/model/sk-xml.ecore", ecoreSourceLocations = "/model/sk-xml.ecore")
 public interface AAAPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

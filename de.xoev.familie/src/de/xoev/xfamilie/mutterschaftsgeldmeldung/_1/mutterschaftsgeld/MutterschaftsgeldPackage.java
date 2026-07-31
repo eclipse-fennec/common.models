@@ -45,7 +45,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = MutterschaftsgeldPackage.eNS_URI, genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/mutterschaftsgeld.ecore", ecoreSourceLocations = "/model/mutterschaftsgeld.ecore")
+@EPackage(uri = MutterschaftsgeldPackage.eNS_URI, fingerprint = "fp1:3bf65b41f2baf3e6820fd543c6219226e6ba56fbdf42a31b46da5de9f00f6645", genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/mutterschaftsgeld.ecore", ecoreSourceLocations = "/model/mutterschaftsgeld.ecore")
 public interface MutterschaftsgeldPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

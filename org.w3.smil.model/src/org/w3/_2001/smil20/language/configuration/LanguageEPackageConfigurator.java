@@ -267,6 +267,14 @@ import org.w3._2001.smil20.language.LanguagePackage;
  */
 public class LanguageEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:d7063103ed372902865e614bd3a5793b1a87a96f44c6dd92b1a5511ae3685e9a";
+
 	private LanguagePackage ePackage;
 
 	protected LanguageEPackageConfigurator(LanguagePackage ePackage){
@@ -305,6 +313,7 @@ public class LanguageEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "language");
 		properties.put(EMFNamespaces.EMF_MODEL_CONTENT_TYPE, "smil20-language");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

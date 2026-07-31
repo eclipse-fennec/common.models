@@ -391,7 +391,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = GMLPackage.eNS_URI, genModel = "/model/gml.genmodel", genModelSourceLocations = {"model/gml.genmodel","net.opengis.gml3.model/model/gml.genmodel"}, ecore = "/model/gml.ecore", ecoreSourceLocations = "/model/gml.ecore")
+@EPackage(uri = GMLPackage.eNS_URI, fingerprint = "fp1:b6efb2f102dafc558628903e34ee7c097c8186186f482d1c1bab36723434ac22", genModel = "/model/gml.genmodel", genModelSourceLocations = {"model/gml.genmodel","net.opengis.gml3.model/model/gml.genmodel"}, ecore = "/model/gml.ecore", ecoreSourceLocations = "/model/gml.ecore")
 public interface GMLPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

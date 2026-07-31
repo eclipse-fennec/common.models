@@ -37,7 +37,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = EnvelopePackage.eNS_URI, genModel = "/model/soap-envelope.genmodel", genModelSourceLocations = {"model/soap-envelope.genmodel","org.xmlsoap.model/model/soap-envelope.genmodel"}, ecore = "/model/soap-envelope.ecore", ecoreSourceLocations = "/model/soap-envelope.ecore")
+@EPackage(uri = EnvelopePackage.eNS_URI, fingerprint = "fp1:07bc6b76373fcca3953a8af7071a77413ffe1bbef6948060639a554654ec3643", genModel = "/model/soap-envelope.genmodel", genModelSourceLocations = {"model/soap-envelope.genmodel","org.xmlsoap.model/model/soap-envelope.genmodel"}, ecore = "/model/soap-envelope.ecore", ecoreSourceLocations = "/model/soap-envelope.ecore")
 public interface EnvelopePackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

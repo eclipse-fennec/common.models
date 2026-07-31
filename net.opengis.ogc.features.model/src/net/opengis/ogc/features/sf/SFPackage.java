@@ -885,7 +885,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = SFPackage.eNS_URI, genModel = "/model/ogc-features.genmodel", genModelSourceLocations = {"model/ogc-features.genmodel","net.opengis.ogc.features.model/model/ogc-features.genmodel"}, ecore = "/model/ogc-features.ecore", ecoreSourceLocations = "/model/ogc-features.ecore")
+@EPackage(uri = SFPackage.eNS_URI, fingerprint = "fp1:6619623ded6feeb5d898b4210e7097e14b9af22ee31add9278f23d3640233a95", genModel = "/model/ogc-features.genmodel", genModelSourceLocations = {"model/ogc-features.genmodel","net.opengis.ogc.features.model/model/ogc-features.genmodel"}, ecore = "/model/ogc-features.ecore", ecoreSourceLocations = "/model/ogc-features.ecore")
 public interface SFPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

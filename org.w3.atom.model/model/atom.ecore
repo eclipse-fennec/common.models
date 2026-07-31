@@ -5,7 +5,7 @@
     <details key="documentation" value="There is no official atom XSD. This XSD is created based on:&#xA;      http://atompub.org/2005/08/17/atom.rnc. A subset of Atom as used in the&#xA;      ogckml22.xsd is defined here. "/>
     <details key="basePackage" value="org.w3._2005"/>
     <details key="complianceLevel" value="11.0"/>
-    <details key="copyrightText" value="Copyright (c) 2012 - 2024 Data In Motion and others.&#xA;All rights reserved. &#xA;&#xA;This program and the accompanying materials are made&#xA;available under the terms of the Eclipse Public License 2.0&#xA;which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;     Mark Hoffmann - initial API and implementation"/>
+    <details key="copyrightText" value="Copyright (c) 2026 Contributors to the Eclipse Foundation.&#xA;&#xA;This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;  Data In Motion Consulting - initial implementation"/>
     <details key="oSGiCompatible" value="true"/>
     <details key="resource" value="XML"/>
   </eAnnotations>

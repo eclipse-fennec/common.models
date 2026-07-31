@@ -553,6 +553,14 @@ import org.isotc211._2005.gco.GCOPackage;
  */
 public class GCOEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:98d94da02277a132e3f90e1aefb660d334f4ad649c0af20d2318f0d58704c23f";
+
 	private GCOPackage ePackage;
 
 	protected GCOEPackageConfigurator(GCOPackage ePackage){
@@ -590,6 +598,7 @@ public class GCOEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "gco");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

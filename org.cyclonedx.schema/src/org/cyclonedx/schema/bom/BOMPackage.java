@@ -50,7 +50,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = BOMPackage.eNS_URI, genModel = "/model/bom-1.6.genmodel", genModelSourceLocations = {"model/bom-1.6.genmodel","org.cyclonedx.schema/model/bom-1.6.genmodel"}, ecore = "/model/bom.ecore", ecoreSourceLocations = "/model/bom.ecore")
+@EPackage(uri = BOMPackage.eNS_URI, fingerprint = "fp1:0736e54179bf5d4c5951511a50ce842cbbbf9d4495fbee276215d6c7073edf70", genModel = "/model/bom-1.6.genmodel", genModelSourceLocations = {"model/bom-1.6.genmodel","org.cyclonedx.schema/model/bom-1.6.genmodel"}, ecore = "/model/bom.ecore", ecoreSourceLocations = "/model/bom.ecore")
 public interface BOMPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

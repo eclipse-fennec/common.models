@@ -1,15 +1,12 @@
 /*
- * Copyright (c) 2012 - 2024 Data In Motion and others.
- * All rights reserved. 
+ * Copyright (c) 2026 Contributors to the Eclipse Foundation.
  * 
- * This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License 2.0
- * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/
  * 
  * SPDX-License-Identifier: EPL-2.0
  * 
  * Contributors:
- *      Mark Hoffmann - initial API and implementation
+ *   Data In Motion Consulting - initial implementation
  */
 package de.dwd.cdc;
 
@@ -186,7 +183,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = CDCPackage.eNS_URI, genModel = "/model/cdc.genmodel", genModelSourceLocations = {"model/cdc.genmodel","de.dwd.cdc.model/model/cdc.genmodel"}, ecore = "/model/cdc.ecore", ecoreSourceLocations = "/model/cdc.ecore")
+@EPackage(uri = CDCPackage.eNS_URI, fingerprint = "fp1:47c9159882fd3048f720dd027b8aa9544e3f22f08e9429b589cd114c776a1372", genModel = "/model/cdc.genmodel", genModelSourceLocations = {"model/cdc.genmodel","de.dwd.cdc.model/model/cdc.genmodel"}, ecore = "/model/cdc.ecore", ecoreSourceLocations = "/model/cdc.ecore")
 public interface CDCPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

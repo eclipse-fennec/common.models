@@ -296,7 +296,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = WMSPackage.eNS_URI, genModel = "/model/wms-capabilities.genmodel", genModelSourceLocations = {"model/wms-capabilities.genmodel","net.opengis.wms/model/wms-capabilities.genmodel"}, ecore = "/model/wms-capabilities.ecore", ecoreSourceLocations = "/model/wms-capabilities.ecore")
+@EPackage(uri = WMSPackage.eNS_URI, fingerprint = "fp1:c5f145fef050718971cc380abb31276bb14eda63d13eca075c32de857fa13551", genModel = "/model/wms-capabilities.genmodel", genModelSourceLocations = {"model/wms-capabilities.genmodel","net.opengis.wms/model/wms-capabilities.genmodel"}, ecore = "/model/wms-capabilities.ecore", ecoreSourceLocations = "/model/wms-capabilities.ecore")
 public interface WMSPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

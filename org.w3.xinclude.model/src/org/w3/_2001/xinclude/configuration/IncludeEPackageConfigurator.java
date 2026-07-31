@@ -35,6 +35,14 @@ import org.w3._2001.xinclude.IncludePackage;
  */
 public class IncludeEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:349266225418b38ccd02007a9907bfb33207774e5b3dc51c58b040d74f5f25ee";
+
 	private IncludePackage ePackage;
 
 	protected IncludeEPackageConfigurator(IncludePackage ePackage){
@@ -72,6 +80,7 @@ public class IncludeEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "include");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

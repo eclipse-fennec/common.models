@@ -40,7 +40,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = FHIRPackage.eNS_URI, genModel = "/model/fhir.genmodel", genModelSourceLocations = {"model/fhir.genmodel","org.hl7.fhir.model/model/fhir.genmodel"}, ecore = "/model/fhir.ecore", ecoreSourceLocations = "/model/fhir.ecore")
+@EPackage(uri = FHIRPackage.eNS_URI, fingerprint = "fp1:0b53057747463d6aa63bc0f8ca48447faaacc01e017ee9c57ee805eb987e0ffa", genModel = "/model/fhir.genmodel", genModelSourceLocations = {"model/fhir.genmodel","org.hl7.fhir.model/model/fhir.genmodel"}, ecore = "/model/fhir.ecore", ecoreSourceLocations = "/model/fhir.ecore")
 public interface FHIRPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

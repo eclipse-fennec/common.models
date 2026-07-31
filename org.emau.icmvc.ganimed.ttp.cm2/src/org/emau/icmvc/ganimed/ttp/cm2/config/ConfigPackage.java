@@ -38,7 +38,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = ConfigPackage.eNS_URI, genModel = "/model/gicsService.genmodel", genModelSourceLocations = {"model/gicsService.genmodel","org.emau.icmvc.ganimed.ttp.cm2/model/gicsService.genmodel"}, ecore = "/model/config.ecore", ecoreSourceLocations = "/model/config.ecore")
+@EPackage(uri = ConfigPackage.eNS_URI, fingerprint = "fp1:d26db952c2e06f6444fd50ad557d40c5ea48a8c0550c5b54bccd5be4947f92ee", genModel = "/model/gicsService.genmodel", genModelSourceLocations = {"model/gicsService.genmodel","org.emau.icmvc.ganimed.ttp.cm2/model/gicsService.genmodel"}, ecore = "/model/config.ecore", ecoreSourceLocations = "/model/config.ecore")
 public interface ConfigPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

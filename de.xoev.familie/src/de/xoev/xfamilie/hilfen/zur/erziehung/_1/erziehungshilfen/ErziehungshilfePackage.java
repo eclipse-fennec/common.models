@@ -45,7 +45,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = ErziehungshilfePackage.eNS_URI, genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/erziehungshilfen.ecore", ecoreSourceLocations = "/model/erziehungshilfen.ecore")
+@EPackage(uri = ErziehungshilfePackage.eNS_URI, fingerprint = "fp1:c61035ffb90cd92faf9108ee7b4e2515b02c3f159d80af637532b6690379282a", genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/erziehungshilfen.ecore", ecoreSourceLocations = "/model/erziehungshilfen.ecore")
 public interface ErziehungshilfePackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

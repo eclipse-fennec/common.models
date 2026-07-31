@@ -562,6 +562,14 @@ import org.isotc211._2005.gmd.GMDPackage;
  */
 public class GMDEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:bed2d60a32645a737c2f3164a97db270eb31f4fd1fe334d24993d7f1c5b36dcc";
+
 	private GMDPackage ePackage;
 
 	protected GMDEPackageConfigurator(GMDPackage ePackage){
@@ -599,6 +607,7 @@ public class GMDEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "gmd");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

@@ -40,7 +40,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = BasisG2GPackage.eNS_URI, genModel = "/model/basisnachricht.genmodel", genModelSourceLocations = {"model/basisnachricht.genmodel","de.xoev.basisnachricht/model/basisnachricht.genmodel"}, ecore = "/model/basisnachricht-g2g.ecore", ecoreSourceLocations = "/model/basisnachricht-g2g.ecore")
+@EPackage(uri = BasisG2GPackage.eNS_URI, fingerprint = "fp1:b636824db75a251408e8aa1fde843785161a2ffe55be336ca1de985808100a99", genModel = "/model/basisnachricht.genmodel", genModelSourceLocations = {"model/basisnachricht.genmodel","de.xoev.basisnachricht/model/basisnachricht.genmodel"}, ecore = "/model/basisnachricht-g2g.ecore", ecoreSourceLocations = "/model/basisnachricht-g2g.ecore")
 public interface BasisG2GPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

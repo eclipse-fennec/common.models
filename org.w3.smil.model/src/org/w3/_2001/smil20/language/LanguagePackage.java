@@ -276,7 +276,7 @@ import org.w3._2001.smil20.Smil20Package;
  * @generated
  */
 @ProviderType
-@EPackage(uri = LanguagePackage.eNS_URI, genModel = "/model/smil20.genmodel", genModelSourceLocations = {"model/smil20.genmodel","org.w3.smil.model/model/smil20.genmodel"}, ecore = "/model/smil-language.ecore", ecoreSourceLocations = "/model/smil-language.ecore")
+@EPackage(uri = LanguagePackage.eNS_URI, fingerprint = "fp1:d7063103ed372902865e614bd3a5793b1a87a96f44c6dd92b1a5511ae3685e9a", genModel = "/model/smil20.genmodel", genModelSourceLocations = {"model/smil20.genmodel","org.w3.smil.model/model/smil20.genmodel"}, ecore = "/model/smil-language.ecore", ecoreSourceLocations = "/model/smil-language.ecore")
 public interface LanguagePackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

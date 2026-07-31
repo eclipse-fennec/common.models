@@ -35,7 +35,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = SpdxPackage.eNS_URI, genModel = "/model/bom-1.6.genmodel", genModelSourceLocations = {"model/bom-1.6.genmodel","org.cyclonedx.schema/model/bom-1.6.genmodel"}, ecore = "/model/spdx.ecore", ecoreSourceLocations = "/model/spdx.ecore")
+@EPackage(uri = SpdxPackage.eNS_URI, fingerprint = "fp1:1e2672eaaef92ae27268605eea98177e21b3b303cdcd1203275677b9ccb0bebb", genModel = "/model/bom-1.6.genmodel", genModelSourceLocations = {"model/bom-1.6.genmodel","org.cyclonedx.schema/model/bom-1.6.genmodel"}, ecore = "/model/spdx.ecore", ecoreSourceLocations = "/model/spdx.ecore")
 public interface SpdxPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

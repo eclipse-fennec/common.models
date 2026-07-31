@@ -298,7 +298,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = XlinkPackage.eNS_URI, genModel = "/model/xlink.genmodel", genModelSourceLocations = {"model/xlink.genmodel","org.w3.xlink.model/model/xlink.genmodel"}, ecore = "/model/xlink.ecore", ecoreSourceLocations = "/model/xlink.ecore")
+@EPackage(uri = XlinkPackage.eNS_URI, fingerprint = "fp1:d8b5a5bfbfa654145232a34423f208b061b4d82cffec5aed2492ff3b0a6f574d", genModel = "/model/xlink.genmodel", genModelSourceLocations = {"model/xlink.genmodel","org.w3.xlink.model/model/xlink.genmodel"}, ecore = "/model/xlink.ecore", ecoreSourceLocations = "/model/xlink.ecore")
 public interface XlinkPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

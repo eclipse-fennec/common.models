@@ -35,7 +35,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = Code10Package.eNS_URI, genModel = "/model/xoev-code.genmodel", genModelSourceLocations = {"model/xoev-code.genmodel","de.xoev.code/model/xoev-code.genmodel"}, ecore = "/model/xoev-code.ecore", ecoreSourceLocations = "/model/xoev-code.ecore")
+@EPackage(uri = Code10Package.eNS_URI, fingerprint = "fp1:270c456440874833f41487c866db31602d06fade4664d5ef97ca8824a4ecc3e3", genModel = "/model/xoev-code.genmodel", genModelSourceLocations = {"model/xoev-code.genmodel","de.xoev.code/model/xoev-code.genmodel"}, ecore = "/model/xoev-code.ecore", ecoreSourceLocations = "/model/xoev-code.ecore")
 public interface Code10Package extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -590,7 +590,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = GTSPackage.eNS_URI, genModel = "/model/gml.genmodel", genModelSourceLocations = {"model/gml.genmodel","net.opengis.gml3.model/model/gml.genmodel"}, ecore = "/model/gts.ecore", ecoreSourceLocations = "/model/gts.ecore")
+@EPackage(uri = GTSPackage.eNS_URI, fingerprint = "fp1:5ab446dab8899e54996199b6b502f4f3cb1e8e1ac63a3039907a386309f07d5c", genModel = "/model/gml.genmodel", genModelSourceLocations = {"model/gml.genmodel","net.opengis.gml3.model/model/gml.genmodel"}, ecore = "/model/gts.ecore", ecoreSourceLocations = "/model/gts.ecore")
 public interface GTSPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

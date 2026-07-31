@@ -410,7 +410,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = XhtmlPackage.eNS_URI, genModel = "/model/xhtml.genmodel", genModelSourceLocations = {"model/xhtml.genmodel","org.w3.xhtml.model/model/xhtml.genmodel"}, ecore = "/model/xhtml.ecore", ecoreSourceLocations = "/model/xhtml.ecore")
+@EPackage(uri = XhtmlPackage.eNS_URI, fingerprint = "fp1:804daa37e261da10ab31c7033548c87e58cc0aba350311f71bf5f1ade813d531", genModel = "/model/xhtml.genmodel", genModelSourceLocations = {"model/xhtml.genmodel","org.w3.xhtml.model/model/xhtml.genmodel"}, ecore = "/model/xhtml.ecore", ecoreSourceLocations = "/model/xhtml.ecore")
 public interface XhtmlPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

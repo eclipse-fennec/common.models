@@ -406,6 +406,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class FESEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:ec2a5ce25bec7fe8b845e937c36cdc27e51a0d6fdecb52bb1d26c6d23e0e0382";
+
 	private FESPackage ePackage;
 
 	protected FESEPackageConfigurator(FESPackage ePackage){
@@ -443,6 +451,7 @@ public class FESEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "fes");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

@@ -32,6 +32,14 @@ import org.w3.rdf.RdfPackage;
  */
 public class RdfEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:5ab6f2c31dc90d2bb296869b31eb161f4aed65073655475f5e3bb81d5b4d2df2";
+
 	private RdfPackage ePackage;
 
 	protected RdfEPackageConfigurator(RdfPackage ePackage){
@@ -69,6 +77,7 @@ public class RdfEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "rdf");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = BasisnachrichtPackage.eNS_URI, genModel = "/model/xdomea.genmodel", genModelSourceLocations = {"model/xdomea.genmodel","de.xoev.domea/model/xdomea.genmodel"}, ecore = "/model/basisnachricht.ecore", ecoreSourceLocations = "/model/basisnachricht.ecore")
+@EPackage(uri = BasisnachrichtPackage.eNS_URI, fingerprint = "fp1:ed5d954b6154e6fc22e3117aad3745253ceb3ac264694a02cdc8773486347cc2", genModel = "/model/xdomea.genmodel", genModelSourceLocations = {"model/xdomea.genmodel","de.xoev.domea/model/xdomea.genmodel"}, ecore = "/model/basisnachricht.ecore", ecoreSourceLocations = "/model/basisnachricht.ecore")
 public interface BasisnachrichtPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -44,7 +44,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = IncludePackage.eNS_URI, genModel = "/model/xinclude.genmodel", genModelSourceLocations = {"model/xinclude.genmodel","org.w3.xinclude.model/model/xinclude.genmodel"}, ecore = "/model/xinclude.ecore", ecoreSourceLocations = "/model/xinclude.ecore")
+@EPackage(uri = IncludePackage.eNS_URI, fingerprint = "fp1:349266225418b38ccd02007a9907bfb33207774e5b3dc51c58b040d74f5f25ee", genModel = "/model/xinclude.genmodel", genModelSourceLocations = {"model/xinclude.genmodel","org.w3.xinclude.model/model/xinclude.genmodel"}, ecore = "/model/xinclude.ecore", ecoreSourceLocations = "/model/xinclude.ecore")
 public interface IncludePackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

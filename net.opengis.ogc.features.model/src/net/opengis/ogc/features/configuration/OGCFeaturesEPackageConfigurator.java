@@ -302,6 +302,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class OGCFeaturesEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:ba3a3d78af975592bd2fe81363b45e85ee1fafa55c057a8fe315a399e1e60de5";
+
 	private OGCFeaturesPackage ePackage;
 
 	protected OGCFeaturesEPackageConfigurator(OGCFeaturesPackage ePackage){
@@ -340,6 +348,7 @@ public class OGCFeaturesEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "ogcfeatures");
 		properties.put(EMFNamespaces.EMF_MODEL_CONTENT_TYPE, "ogcf#1.0.1");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

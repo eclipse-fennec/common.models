@@ -41,7 +41,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = BasisKommunikationPackage.eNS_URI, genModel = "/model/basisnachricht.genmodel", genModelSourceLocations = {"model/basisnachricht.genmodel","de.xoev.basisnachricht/model/basisnachricht.genmodel"}, ecore = "/model/basisnachricht-kommunikation.ecore", ecoreSourceLocations = "/model/basisnachricht-kommunikation.ecore")
+@EPackage(uri = BasisKommunikationPackage.eNS_URI, fingerprint = "fp1:63bc4c6f642c9eb793e178b99350b8ee54f47964b3b62b18e9582151b2887685", genModel = "/model/basisnachricht.genmodel", genModelSourceLocations = {"model/basisnachricht.genmodel","de.xoev.basisnachricht/model/basisnachricht.genmodel"}, ecore = "/model/basisnachricht-kommunikation.ecore", ecoreSourceLocations = "/model/basisnachricht-kommunikation.ecore")
 public interface BasisKommunikationPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

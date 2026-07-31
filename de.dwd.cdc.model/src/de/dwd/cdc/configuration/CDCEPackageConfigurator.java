@@ -1,15 +1,12 @@
 /*
- * Copyright (c) 2012 - 2024 Data In Motion and others.
- * All rights reserved. 
+ * Copyright (c) 2026 Contributors to the Eclipse Foundation.
  * 
- * This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License 2.0
- * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/
  * 
  * SPDX-License-Identifier: EPL-2.0
  * 
  * Contributors:
- *      Mark Hoffmann - initial API and implementation
+ *   Data In Motion Consulting - initial implementation
  */
 package de.dwd.cdc.configuration;
 
@@ -147,6 +144,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class CDCEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:47c9159882fd3048f720dd027b8aa9544e3f22f08e9429b589cd114c776a1372";
+
 	private CDCPackage ePackage;
 
 	protected CDCEPackageConfigurator(CDCPackage ePackage){
@@ -184,6 +189,7 @@ public class CDCEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "cdc");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

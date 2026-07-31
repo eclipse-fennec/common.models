@@ -32,6 +32,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class KinderwunschEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:48d47ce23ae89950141200eb74a9e8ba59bf8e48591d6ef18b6c17ff947bdab1";
+
 	private KinderwunschPackage ePackage;
 
 	protected KinderwunschEPackageConfigurator(KinderwunschPackage ePackage){
@@ -69,6 +77,7 @@ public class KinderwunschEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "kinderwunsch");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

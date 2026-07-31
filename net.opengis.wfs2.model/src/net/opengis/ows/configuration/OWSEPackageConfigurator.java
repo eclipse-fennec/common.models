@@ -329,6 +329,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class OWSEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:36e61502a12b0a016945c297e4b9b01214d21c3ad9eb0ad6c7eeb59b51ba40b5";
+
 	private OWSPackage ePackage;
 
 	protected OWSEPackageConfigurator(OWSPackage ePackage){
@@ -366,6 +374,7 @@ public class OWSEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "ows");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

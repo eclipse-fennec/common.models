@@ -276,7 +276,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = Smil20Package.eNS_URI, genModel = "/model/smil20.genmodel", genModelSourceLocations = {"model/smil20.genmodel","org.w3.smil.model/model/smil20.genmodel"}, ecore = "/model/smil20.ecore", ecoreSourceLocations = "/model/smil20.ecore")
+@EPackage(uri = Smil20Package.eNS_URI, fingerprint = "fp1:d20ae9814789a17a34146dff6115675c1fdf907df5b67d7b2bac3e5b1efeac8a", genModel = "/model/smil20.genmodel", genModelSourceLocations = {"model/smil20.genmodel","org.w3.smil.model/model/smil20.genmodel"}, ecore = "/model/smil20.ecore", ecoreSourceLocations = "/model/smil20.ecore")
 public interface Smil20Package extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

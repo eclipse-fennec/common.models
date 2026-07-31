@@ -32,6 +32,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class DIN913791903EPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:aa8ae63e0abfe0f9e071a4da038449c340230633afe386c638fe353d60ff8ca5";
+
 	private DIN913791903Package ePackage;
 
 	protected DIN913791903EPackageConfigurator(DIN913791903Package ePackage){
@@ -69,6 +77,7 @@ public class DIN913791903EPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "din913791903");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

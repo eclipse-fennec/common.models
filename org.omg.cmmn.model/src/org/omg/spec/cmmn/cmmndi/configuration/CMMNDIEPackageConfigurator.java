@@ -32,6 +32,14 @@ import org.omg.spec.cmmn.cmmndi.CMMNDIPackage;
  */
 public class CMMNDIEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:e46372e428d07ef23a1c59d42edf2d87674578be9fceb2ea040694646a3e6a5e";
+
 	private CMMNDIPackage ePackage;
 
 	protected CMMNDIEPackageConfigurator(CMMNDIPackage ePackage){
@@ -69,6 +77,7 @@ public class CMMNDIEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "cmmndi");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

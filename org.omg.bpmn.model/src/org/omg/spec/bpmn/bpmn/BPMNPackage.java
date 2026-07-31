@@ -38,7 +38,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = BPMNPackage.eNS_URI, genModel = "/model/BPMN20.genmodel", genModelSourceLocations = {"model/BPMN20.genmodel","org.omg.bpmn.model/model/BPMN20.genmodel"}, ecore = "/model/bpmn.ecore", ecoreSourceLocations = "/model/bpmn.ecore")
+@EPackage(uri = BPMNPackage.eNS_URI, fingerprint = "fp1:f3686a1cd1565847fcfb2b5d4f16b5bb1c45d31a306d864bc612d9dec091a804", genModel = "/model/BPMN20.genmodel", genModelSourceLocations = {"model/BPMN20.genmodel","org.omg.bpmn.model/model/BPMN20.genmodel"}, ecore = "/model/bpmn.ecore", ecoreSourceLocations = "/model/bpmn.ecore")
 public interface BPMNPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

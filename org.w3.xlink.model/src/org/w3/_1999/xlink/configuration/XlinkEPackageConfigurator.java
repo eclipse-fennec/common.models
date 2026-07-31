@@ -289,6 +289,14 @@ import org.w3._1999.xlink.XlinkPackage;
  */
 public class XlinkEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:d8b5a5bfbfa654145232a34423f208b061b4d82cffec5aed2492ff3b0a6f574d";
+
 	private XlinkPackage ePackage;
 
 	protected XlinkEPackageConfigurator(XlinkPackage ePackage){
@@ -326,6 +334,7 @@ public class XlinkEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "xlink");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

@@ -46,7 +46,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = DomeaPackage.eNS_URI, genModel = "/model/xdomea.genmodel", genModelSourceLocations = {"model/xdomea.genmodel","de.xoev.domea/model/xdomea.genmodel"}, ecore = "/model/xdomea.ecore", ecoreSourceLocations = "/model/xdomea.ecore")
+@EPackage(uri = DomeaPackage.eNS_URI, fingerprint = "fp1:3a93b06f6415cfb1347335fdb3a79a209f433fef44b2aae8783780962d1fbb7b", genModel = "/model/xdomea.genmodel", genModelSourceLocations = {"model/xdomea.genmodel","de.xoev.domea/model/xdomea.genmodel"}, ecore = "/model/xdomea.ecore", ecoreSourceLocations = "/model/xdomea.ecore")
 public interface DomeaPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

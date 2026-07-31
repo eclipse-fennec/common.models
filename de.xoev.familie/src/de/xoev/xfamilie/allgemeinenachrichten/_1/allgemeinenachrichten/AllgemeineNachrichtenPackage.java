@@ -45,7 +45,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = AllgemeineNachrichtenPackage.eNS_URI, genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/allgemeinenachrichten.ecore", ecoreSourceLocations = "/model/allgemeinenachrichten.ecore")
+@EPackage(uri = AllgemeineNachrichtenPackage.eNS_URI, fingerprint = "fp1:e77d5284af7b9502fd734d7dce9846434852e4fca8f38f56a1831481e43e7d36", genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/allgemeinenachrichten.ecore", ecoreSourceLocations = "/model/allgemeinenachrichten.ecore")
 public interface AllgemeineNachrichtenPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

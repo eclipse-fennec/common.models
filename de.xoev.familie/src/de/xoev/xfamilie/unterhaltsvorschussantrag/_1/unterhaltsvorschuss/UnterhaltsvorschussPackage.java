@@ -45,7 +45,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = UnterhaltsvorschussPackage.eNS_URI, genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/unterhaltsvorschuss.ecore", ecoreSourceLocations = "/model/unterhaltsvorschuss.ecore")
+@EPackage(uri = UnterhaltsvorschussPackage.eNS_URI, fingerprint = "fp1:0d33a8a5a18e4e849583efa3b63d4f279f7de466f5b22c5661d55c9ea758dd7a", genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/unterhaltsvorschuss.ecore", ecoreSourceLocations = "/model/unterhaltsvorschuss.ecore")
 public interface UnterhaltsvorschussPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -56,6 +56,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class OrmEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:f2232a242f6c7269cde7a37afbefcfb4475dcc6fd9cd96f4669ce90afd87dcbe";
+
 	private OrmPackage ePackage;
 
 	protected OrmEPackageConfigurator(OrmPackage ePackage){
@@ -93,6 +101,7 @@ public class OrmEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "orm");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

@@ -40,6 +40,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class BOMEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:0736e54179bf5d4c5951511a50ce842cbbbf9d4495fbee276215d6c7073edf70";
+
 	private BOMPackage ePackage;
 
 	protected BOMEPackageConfigurator(BOMPackage ePackage){
@@ -77,6 +85,7 @@ public class BOMEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "bom");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

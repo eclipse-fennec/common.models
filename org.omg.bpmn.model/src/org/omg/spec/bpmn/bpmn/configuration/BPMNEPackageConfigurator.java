@@ -29,6 +29,14 @@ import org.omg.spec.bpmn.bpmn.BPMNPackage;
  */
 public class BPMNEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:f3686a1cd1565847fcfb2b5d4f16b5bb1c45d31a306d864bc612d9dec091a804";
+
 	private BPMNPackage ePackage;
 
 	protected BPMNEPackageConfigurator(BPMNPackage ePackage){
@@ -66,6 +74,7 @@ public class BPMNEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "bpmn");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

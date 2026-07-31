@@ -41,7 +41,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = DSRVPackage.eNS_URI, genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/dsrv.ecore", ecoreSourceLocations = "/model/dsrv.ecore")
+@EPackage(uri = DSRVPackage.eNS_URI, fingerprint = "fp1:0e58ca5c7600b19092e9baa0eb30efc6d65acf292b6d4590bf8e999228991013", genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/dsrv.ecore", ecoreSourceLocations = "/model/dsrv.ecore")
 public interface DSRVPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -32,6 +32,14 @@ import org.omg.spec.dmn.dmn.DMNPackage;
  */
 public class DMNEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:216cfd41401329a3add3f3aac388406ed858ccdcdd4c0c60283e0a2d0547817b";
+
 	private DMNPackage ePackage;
 
 	protected DMNEPackageConfigurator(DMNPackage ePackage){
@@ -69,6 +77,7 @@ public class DMNEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "dmn");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

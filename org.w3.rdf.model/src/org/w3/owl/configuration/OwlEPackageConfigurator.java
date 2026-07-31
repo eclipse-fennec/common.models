@@ -32,6 +32,14 @@ import org.w3.owl.OwlPackage;
  */
 public class OwlEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:1ad8532b4a287e4fb37df1e07b1b8855422b79257fb03e21c91f1fdc2b77a65d";
+
 	private OwlPackage ePackage;
 
 	protected OwlEPackageConfigurator(OwlPackage ePackage){
@@ -69,6 +77,7 @@ public class OwlEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "owl");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

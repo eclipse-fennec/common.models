@@ -1,15 +1,12 @@
 /*
- * Copyright (c) 2012 - 2026 Data In Motion and others.
- * All rights reserved. 
+ * Copyright (c) 2026 Contributors to the Eclipse Foundation.
  * 
- * This program and the accompanying materials are made
- * available under the terms of the Eclipse Public License 2.0
- * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/
  * 
  * SPDX-License-Identifier: EPL-2.0
  * 
  * Contributors:
- *     Data In Motion - initial API and implementation
+ *   Data In Motion Consulting - initial implementation
  */
 package org.eclipse.fennec.model.query;
 
@@ -39,11 +36,11 @@ import org.osgi.annotation.versioning.ProviderType;
  * @see org.eclipse.fennec.model.query.QueryFactory
  * @model kind="package"
  *        annotation="Version value='1.0'"
- *        annotation="http://www.eclipse.org/emf/2002/GenModel complianceLevel='17.0' oSGiCompatible='true' basePackage='org.eclipse.fennec.model' resource='XMI' copyrightText='Copyright (c) 2012 - 2026 Data In Motion and others.\nAll rights reserved. \n\nThis program and the accompanying materials are made\navailable under the terms of the Eclipse Public License 2.0\nwhich is available at https://www.eclipse.org/legal/epl-2.0/\n\nSPDX-License-Identifier: EPL-2.0\n\nContributors:\n    Data In Motion - initial API and implementation'"
+ *        annotation="http://www.eclipse.org/emf/2002/GenModel complianceLevel='21.0' oSGiCompatible='true' basePackage='org.eclipse.fennec.model' resource='XMI' copyrightText='Copyright (c) 2026 Contributors to the Eclipse Foundation.\n\nThis program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/\n\nSPDX-License-Identifier: EPL-2.0\n\nContributors:\n  Data In Motion Consulting - initial implementation'"
  * @generated
  */
 @ProviderType
-@EPackage(uri = QueryPackage.eNS_URI, genModel = "/model/query.genmodel", genModelSourceLocations = {"model/query.genmodel","org.eclipse.fennec.query.model/model/query.genmodel"}, ecore = "/model/query.ecore", ecoreSourceLocations = "/model/query.ecore")
+@EPackage(uri = QueryPackage.eNS_URI, fingerprint = "fp1:3c72d097a1e8cac938fc6ef54a9ed0620dead080e5d3a4151fcde721932ef97d", genModel = "/model/query.genmodel", genModelSourceLocations = {"model/query.genmodel","org.eclipse.fennec.query.model/model/query.genmodel"}, ecore = "/model/query.ecore", ecoreSourceLocations = "/model/query.ecore")
 public interface QueryPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

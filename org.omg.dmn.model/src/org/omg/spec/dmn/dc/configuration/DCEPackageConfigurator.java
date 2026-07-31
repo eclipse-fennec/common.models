@@ -29,6 +29,14 @@ import org.omg.spec.dmn.dc.DCPackage;
  */
 public class DCEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:39957cd96eb8bf0ba79576afe6599498a027a445e5d26c4f4c497c26945cf800";
+
 	private DCPackage ePackage;
 
 	protected DCEPackageConfigurator(DCPackage ePackage){
@@ -66,6 +74,7 @@ public class DCEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "dc");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

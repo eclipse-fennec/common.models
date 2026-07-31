@@ -43,7 +43,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = EdmPackage.eNS_URI, genModel = "/model/edmx.genmodel", genModelSourceLocations = {"model/edmx.genmodel","org.odata.csdl.model/model/edmx.genmodel"}, ecore = "/model/edm.ecore", ecoreSourceLocations = "/model/edm.ecore")
+@EPackage(uri = EdmPackage.eNS_URI, fingerprint = "fp1:b6a9a6cf4b1d6a18772721636b0ec2bd546bc28ae62528c264705fb2c0c0c47f", genModel = "/model/edmx.genmodel", genModelSourceLocations = {"model/edmx.genmodel","org.odata.csdl.model/model/edmx.genmodel"}, ecore = "/model/edm.ecore", ecoreSourceLocations = "/model/edm.ecore")
 public interface EdmPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

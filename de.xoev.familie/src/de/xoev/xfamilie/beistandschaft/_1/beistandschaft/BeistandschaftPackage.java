@@ -45,7 +45,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = BeistandschaftPackage.eNS_URI, genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/beistandschaft.ecore", ecoreSourceLocations = "/model/beistandschaft.ecore")
+@EPackage(uri = BeistandschaftPackage.eNS_URI, fingerprint = "fp1:327cbd9e43a4de68be7f04f333396e3b201fb2ad794974c68a446d99ab04e2d3", genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/beistandschaft.ecore", ecoreSourceLocations = "/model/beistandschaft.ecore")
 public interface BeistandschaftPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

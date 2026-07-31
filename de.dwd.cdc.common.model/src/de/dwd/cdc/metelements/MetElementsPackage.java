@@ -37,7 +37,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = MetElementsPackage.eNS_URI, genModel = "/model/met-elements.genmodel", genModelSourceLocations = {"model/met-elements.genmodel","de.dwd.cdc.common.model/model/met-elements.genmodel"}, ecore = "/model/met-elements.ecore", ecoreSourceLocations = "/model/met-elements.ecore")
+@EPackage(uri = MetElementsPackage.eNS_URI, fingerprint = "fp1:658a0b44977eea0672ebc06dd440675087f4933a9b6fe19d8e1aae9fff6bf7af", genModel = "/model/met-elements.genmodel", genModelSourceLocations = {"model/met-elements.genmodel","de.dwd.cdc.common.model/model/met-elements.genmodel"}, ecore = "/model/met-elements.ecore", ecoreSourceLocations = "/model/met-elements.ecore")
 public interface MetElementsPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

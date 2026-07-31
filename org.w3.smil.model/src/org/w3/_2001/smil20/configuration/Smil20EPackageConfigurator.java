@@ -267,6 +267,14 @@ import org.w3._2001.smil20.Smil20Package;
  */
 public class Smil20EPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:d20ae9814789a17a34146dff6115675c1fdf907df5b67d7b2bac3e5b1efeac8a";
+
 	private Smil20Package ePackage;
 
 	protected Smil20EPackageConfigurator(Smil20Package ePackage){
@@ -305,6 +313,7 @@ public class Smil20EPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "smil20");
 		properties.put(EMFNamespaces.EMF_MODEL_CONTENT_TYPE, "smil20");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

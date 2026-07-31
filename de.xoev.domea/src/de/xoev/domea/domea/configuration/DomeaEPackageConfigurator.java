@@ -34,6 +34,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class DomeaEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:3a93b06f6415cfb1347335fdb3a79a209f433fef44b2aae8783780962d1fbb7b";
+
 	private DomeaPackage ePackage;
 
 	protected DomeaEPackageConfigurator(DomeaPackage ePackage){
@@ -71,6 +79,7 @@ public class DomeaEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "domea");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

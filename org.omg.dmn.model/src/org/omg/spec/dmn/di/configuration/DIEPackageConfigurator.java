@@ -32,6 +32,14 @@ import org.omg.spec.dmn.di.DIPackage;
  */
 public class DIEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:732a46c1fc0196f4aa2a6f69e069e3ad0e38f18795888061681395f5fb2e832d";
+
 	private DIPackage ePackage;
 
 	protected DIEPackageConfigurator(DIPackage ePackage){
@@ -69,6 +77,7 @@ public class DIEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "di");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

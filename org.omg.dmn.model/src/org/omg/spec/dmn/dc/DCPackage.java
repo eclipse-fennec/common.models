@@ -38,7 +38,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = DCPackage.eNS_URI, genModel = "/model/DMN16.genmodel", genModelSourceLocations = {"model/DMN16.genmodel","org.omg.dmn.model/model/DMN16.genmodel"}, ecore = "/model/dc.ecore", ecoreSourceLocations = "/model/dc.ecore")
+@EPackage(uri = DCPackage.eNS_URI, fingerprint = "fp1:39957cd96eb8bf0ba79576afe6599498a027a445e5d26c4f4c497c26945cf800", genModel = "/model/DMN16.genmodel", genModelSourceLocations = {"model/DMN16.genmodel","org.omg.dmn.model/model/DMN16.genmodel"}, ecore = "/model/dc.ecore", ecoreSourceLocations = "/model/dc.ecore")
 public interface DCPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

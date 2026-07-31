@@ -38,7 +38,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = DocbookPackage.eNS_URI, genModel = "/model/docbook.genmodel", genModelSourceLocations = {"model/docbook.genmodel","org.docbook.model/model/docbook.genmodel"}, ecore = "/model/docbook.ecore", ecoreSourceLocations = "/model/docbook.ecore")
+@EPackage(uri = DocbookPackage.eNS_URI, fingerprint = "fp1:b8169946a7c70b4972d46caae1f4002c489df95f45f795c5622abc544309fdfc", genModel = "/model/docbook.genmodel", genModelSourceLocations = {"model/docbook.genmodel","org.docbook.model/model/docbook.genmodel"}, ecore = "/model/docbook.ecore", ecoreSourceLocations = "/model/docbook.ecore")
 public interface DocbookPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -32,6 +32,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class ElterngeldEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:2404c115466fb7e42acd577a4d2a7bb34127c0f3a719b861c141cbf218e7a8a2";
+
 	private ElterngeldPackage ePackage;
 
 	protected ElterngeldEPackageConfigurator(ElterngeldPackage ePackage){
@@ -69,6 +77,7 @@ public class ElterngeldEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "elterngeld");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

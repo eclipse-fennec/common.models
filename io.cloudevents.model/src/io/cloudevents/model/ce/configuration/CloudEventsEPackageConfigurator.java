@@ -29,6 +29,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class CloudEventsEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:12971b319f54f99e82084c642bbb9c6d2b7c8ba31fa80ffb47933bdb46fbf6ea";
+
 	private CloudEventsPackage ePackage;
 
 	protected CloudEventsEPackageConfigurator(CloudEventsPackage ePackage){
@@ -66,6 +74,7 @@ public class CloudEventsEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "cloudevents");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

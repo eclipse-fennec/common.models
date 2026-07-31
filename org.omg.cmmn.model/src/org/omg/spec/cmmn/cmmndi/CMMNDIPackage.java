@@ -41,7 +41,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = CMMNDIPackage.eNS_URI, genModel = "/model/CMMN11.genmodel", genModelSourceLocations = {"model/CMMN11.genmodel","org.omg.cmmn.model/model/CMMN11.genmodel"}, ecore = "/model/cmmndi.ecore", ecoreSourceLocations = "/model/cmmndi.ecore")
+@EPackage(uri = CMMNDIPackage.eNS_URI, fingerprint = "fp1:e46372e428d07ef23a1c59d42edf2d87674578be9fceb2ea040694646a3e6a5e", genModel = "/model/CMMN11.genmodel", genModelSourceLocations = {"model/CMMN11.genmodel","org.omg.cmmn.model/model/CMMN11.genmodel"}, ecore = "/model/cmmndi.ecore", ecoreSourceLocations = "/model/cmmndi.ecore")
 public interface CMMNDIPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

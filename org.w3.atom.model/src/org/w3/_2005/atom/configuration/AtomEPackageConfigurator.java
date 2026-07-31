@@ -34,6 +34,14 @@ import org.w3._2005.atom.AtomPackage;
  */
 public class AtomEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:81d798434b3c88016f600fd1444e2985c37c21e8e8a08c15fe89ce5b385a5d56";
+
 	private AtomPackage ePackage;
 
 	protected AtomEPackageConfigurator(AtomPackage ePackage){
@@ -71,6 +79,7 @@ public class AtomEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "atom");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

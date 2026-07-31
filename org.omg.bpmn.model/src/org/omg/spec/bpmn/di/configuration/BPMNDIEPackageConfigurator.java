@@ -29,6 +29,14 @@ import org.omg.spec.bpmn.di.BPMNDIPackage;
  */
 public class BPMNDIEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:447d54c3f30379b256165bd4791d48c132c971d270e74be41dcd1f1d7289ee4d";
+
 	private BPMNDIPackage ePackage;
 
 	protected BPMNDIEPackageConfigurator(BPMNDIPackage ePackage){
@@ -66,6 +74,7 @@ public class BPMNDIEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "bpmndi");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

@@ -280,7 +280,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = OMEPackage.eNS_URI, genModel = "/model/ome.genmodel", genModelSourceLocations = {"model/ome.genmodel","org.openmicroscopy/model/ome.genmodel"}, ecore = "/model/ome.ecore", ecoreSourceLocations = "/model/ome.ecore")
+@EPackage(uri = OMEPackage.eNS_URI, fingerprint = "fp1:d6f5e1527e17eefe895cfd856c165afdc0b0e1e72829bd7cff833c4c354e8dc0", genModel = "/model/ome.genmodel", genModelSourceLocations = {"model/ome.genmodel","org.openmicroscopy/model/ome.genmodel"}, ecore = "/model/ome.ecore", ecoreSourceLocations = "/model/ome.ecore")
 public interface OMEPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

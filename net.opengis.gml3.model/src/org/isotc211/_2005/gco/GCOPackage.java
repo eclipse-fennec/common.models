@@ -589,7 +589,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = GCOPackage.eNS_URI, genModel = "/model/gml.genmodel", genModelSourceLocations = {"model/gml.genmodel","net.opengis.gml3.model/model/gml.genmodel"}, ecore = "/model/gco.ecore", ecoreSourceLocations = "/model/gco.ecore")
+@EPackage(uri = GCOPackage.eNS_URI, fingerprint = "fp1:98d94da02277a132e3f90e1aefb660d334f4ad649c0af20d2318f0d58704c23f", genModel = "/model/gml.genmodel", genModelSourceLocations = {"model/gml.genmodel","net.opengis.gml3.model/model/gml.genmodel"}, ecore = "/model/gco.ecore", ecoreSourceLocations = "/model/gco.ecore")
 public interface GCOPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -58,7 +58,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = KMLPackage.eNS_URI, genModel = "/model/ogckml22.genmodel", genModelSourceLocations = {"model/ogckml22.genmodel","net.opengis.kml.model/model/ogckml22.genmodel"}, ecore = "/model/kml-2.2.ecore", ecoreSourceLocations = "/model/kml-2.2.ecore")
+@EPackage(uri = KMLPackage.eNS_URI, fingerprint = "fp1:62eb088c59fe137cb3215198a2d2a6b758d464e0a89227b1e993b98fe9b54dd9", genModel = "/model/ogckml22.genmodel", genModelSourceLocations = {"model/ogckml22.genmodel","net.opengis.kml.model/model/ogckml22.genmodel"}, ecore = "/model/kml-2.2.ecore", ecoreSourceLocations = "/model/kml-2.2.ecore")
 public interface KMLPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

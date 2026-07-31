@@ -37,7 +37,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = LatincharsPackage.eNS_URI, genModel = "/model/latinchars.genmodel", genModelSourceLocations = {"model/latinchars.genmodel","de.xoev.code/model/latinchars.genmodel"}, ecore = "/model/latinchars.ecore", ecoreSourceLocations = "/model/latinchars.ecore")
+@EPackage(uri = LatincharsPackage.eNS_URI, fingerprint = "fp1:727b9a3a036c8b588016246c6606d0dbc6aaccdaff397ec17dec264f1b9d0446", genModel = "/model/latinchars.genmodel", genModelSourceLocations = {"model/latinchars.genmodel","de.xoev.code/model/latinchars.genmodel"}, ecore = "/model/latinchars.ecore", ecoreSourceLocations = "/model/latinchars.ecore")
 public interface LatincharsPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = CamundaPackage.eNS_URI, genModel = "/model/CamundaExtensions.genmodel", genModelSourceLocations = {"model/CamundaExtensions.genmodel","org.camunda.bpmn.model/model/CamundaExtensions.genmodel"}, ecore = "/model/CamundaExtensions.ecore", ecoreSourceLocations = "/model/CamundaExtensions.ecore")
+@EPackage(uri = CamundaPackage.eNS_URI, fingerprint = "fp1:12d6ec501199cd612bf33d36a54f1cddf2dd01812fbf54159cf22871e0c70aac", genModel = "/model/CamundaExtensions.genmodel", genModelSourceLocations = {"model/CamundaExtensions.genmodel","org.camunda.bpmn.model/model/CamundaExtensions.genmodel"}, ecore = "/model/CamundaExtensions.ecore", ecoreSourceLocations = "/model/CamundaExtensions.ecore")
 public interface CamundaPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

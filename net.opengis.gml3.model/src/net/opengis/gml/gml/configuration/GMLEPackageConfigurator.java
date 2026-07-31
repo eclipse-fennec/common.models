@@ -372,6 +372,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class GMLEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:b6efb2f102dafc558628903e34ee7c097c8186186f482d1c1bab36723434ac22";
+
 	private GMLPackage ePackage;
 
 	protected GMLEPackageConfigurator(GMLPackage ePackage){
@@ -409,6 +417,7 @@ public class GMLEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "gml");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

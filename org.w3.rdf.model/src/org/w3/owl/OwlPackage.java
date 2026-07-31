@@ -44,7 +44,7 @@ import org.w3.rdfs.RdfsPackage;
  * @generated
  */
 @ProviderType
-@EPackage(uri = OwlPackage.eNS_URI, genModel = "/model/rdf.genmodel", genModelSourceLocations = {"model/rdf.genmodel","org.w3.rdf.model/model/rdf.genmodel"}, ecore = "/model/owl.ecore", ecoreSourceLocations = "/model/owl.ecore")
+@EPackage(uri = OwlPackage.eNS_URI, fingerprint = "fp1:1ad8532b4a287e4fb37df1e07b1b8855422b79257fb03e21c91f1fdc2b77a65d", genModel = "/model/rdf.genmodel", genModelSourceLocations = {"model/rdf.genmodel","org.w3.rdf.model/model/rdf.genmodel"}, ecore = "/model/owl.ecore", ecoreSourceLocations = "/model/owl.ecore")
 public interface OwlPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

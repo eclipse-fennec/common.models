@@ -320,7 +320,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = OWSPackage.eNS_URI, genModel = "/model/wfs.genmodel", genModelSourceLocations = {"model/wfs.genmodel","net.opengis.wfs.model/model/wfs.genmodel"}, ecore = "/model/ows.ecore", ecoreSourceLocations = "/model/ows.ecore")
+@EPackage(uri = OWSPackage.eNS_URI, fingerprint = "fp1:60bff817e0aca3c9b7cf1a300b732b7e8f69bd2eead4f54131f1e644a498f222", genModel = "/model/wfs.genmodel", genModelSourceLocations = {"model/wfs.genmodel","net.opengis.wfs.model/model/wfs.genmodel"}, ecore = "/model/ows.ecore", ecoreSourceLocations = "/model/ows.ecore")
 public interface OWSPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

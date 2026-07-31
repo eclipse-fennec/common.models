@@ -36,7 +36,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = POMPackage.eNS_URI, genModel = "/model/pom.genmodel", genModelSourceLocations = {"model/pom.genmodel","org.apache.maven.model/model/pom.genmodel"}, ecore = "/model/pom.ecore", ecoreSourceLocations = "/model/pom.ecore")
+@EPackage(uri = POMPackage.eNS_URI, fingerprint = "fp1:a79ef4da365838f34682edd67774dfed3aa785513412d08f3feff17bc1c10424", genModel = "/model/pom.genmodel", genModelSourceLocations = {"model/pom.genmodel","org.apache.maven.model/model/pom.genmodel"}, ecore = "/model/pom.ecore", ecoreSourceLocations = "/model/pom.ecore")
 public interface POMPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

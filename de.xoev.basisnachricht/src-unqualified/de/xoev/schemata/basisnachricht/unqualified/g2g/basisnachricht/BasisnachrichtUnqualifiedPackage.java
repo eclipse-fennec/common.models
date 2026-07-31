@@ -42,7 +42,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = BasisnachrichtUnqualifiedPackage.eNS_URI, genModel = "/model/basisnachricht-unqualified.genmodel", genModelSourceLocations = {"model/basisnachricht-unqualified.genmodel","de.xoev.basisnachricht/model/basisnachricht-unqualified.genmodel"}, ecore = "/model/basisnachricht-unqualified.ecore", ecoreSourceLocations = "/model/basisnachricht-unqualified.ecore")
+@EPackage(uri = BasisnachrichtUnqualifiedPackage.eNS_URI, fingerprint = "fp1:065ccbaf6f5ef72a889e2f9c722d170a24e0f0de5b506588ac96fc1e57bf9c19", genModel = "/model/basisnachricht-unqualified.genmodel", genModelSourceLocations = {"model/basisnachricht-unqualified.genmodel","de.xoev.basisnachricht/model/basisnachricht-unqualified.genmodel"}, ecore = "/model/basisnachricht-unqualified.ecore", ecoreSourceLocations = "/model/basisnachricht-unqualified.ecore")
 public interface BasisnachrichtUnqualifiedPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

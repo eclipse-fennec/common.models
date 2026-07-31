@@ -36,7 +36,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = OGCExceptionsPackage.eNS_URI, genModel = "/model/ogc-exceptions.genmodel", genModelSourceLocations = {"model/ogc-exceptions.genmodel","net.opengis.ogc/model/ogc-exceptions.genmodel"}, ecore = "/model/ogc-exceptions.ecore", ecoreSourceLocations = "/model/ogc-exceptions.ecore")
+@EPackage(uri = OGCExceptionsPackage.eNS_URI, fingerprint = "fp1:da7b25527a3053a7d8635a763eee6873fb83b91f7f9280c9dcbb41c08075634e", genModel = "/model/ogc-exceptions.genmodel", genModelSourceLocations = {"model/ogc-exceptions.genmodel","net.opengis.ogc/model/ogc-exceptions.genmodel"}, ecore = "/model/ogc-exceptions.ecore", ecoreSourceLocations = "/model/ogc-exceptions.ecore")
 public interface OGCExceptionsPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -43,7 +43,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = BaukastenPackage.eNS_URI, genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/baukasten.ecore", ecoreSourceLocations = "/model/baukasten.ecore")
+@EPackage(uri = BaukastenPackage.eNS_URI, fingerprint = "fp1:510f8d0a35176d4e608dd67f5da329e3c16614868ac7a882d029f6058bbae411", genModel = "/model/xfamilie.genmodel", genModelSourceLocations = {"model/xfamilie.genmodel","de.xoev.familie/model/xfamilie.genmodel"}, ecore = "/model/baukasten.ecore", ecoreSourceLocations = "/model/baukasten.ecore")
 public interface BaukastenPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

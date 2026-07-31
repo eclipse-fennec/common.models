@@ -37,7 +37,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = DIN913792204Package.eNS_URI, genModel = "/model/din-91379-2204.genmodel", genModelSourceLocations = {"model/din-91379-2204.genmodel","de.xoev.din91379/model/din-91379-2204.genmodel"}, ecore = "/model/din-91379-2204.ecore", ecoreSourceLocations = "/model/din-91379-2204.ecore")
+@EPackage(uri = DIN913792204Package.eNS_URI, fingerprint = "fp1:19e2ef85eac479ab53e5490647d2fcc222cd213a6f40c9c6a0e4eed403c20de1", genModel = "/model/din-91379-2204.genmodel", genModelSourceLocations = {"model/din-91379-2204.genmodel","de.xoev.din91379/model/din-91379-2204.genmodel"}, ecore = "/model/din-91379-2204.ecore", ecoreSourceLocations = "/model/din-91379-2204.ecore")
 public interface DIN913792204Package extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -29,6 +29,14 @@ import org.geojson.GeoJsonPackage;
  */
 public class GeoJsonEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:998cd2df693d523081ff97740365b10c7380b9236abf3f5ab153dbacf1087dd0";
+
 	private GeoJsonPackage ePackage;
 
 	protected GeoJsonEPackageConfigurator(GeoJsonPackage ePackage){
@@ -67,6 +75,7 @@ public class GeoJsonEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "geojson");
 		properties.put(EMFNamespaces.EMF_MODEL_CONTENT_TYPE, "application/geo+json");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

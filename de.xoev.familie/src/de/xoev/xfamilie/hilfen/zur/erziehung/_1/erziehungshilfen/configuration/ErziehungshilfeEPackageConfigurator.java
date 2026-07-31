@@ -32,6 +32,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class ErziehungshilfeEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:c61035ffb90cd92faf9108ee7b4e2515b02c3f159d80af637532b6690379282a";
+
 	private ErziehungshilfePackage ePackage;
 
 	protected ErziehungshilfeEPackageConfigurator(ErziehungshilfePackage ePackage){
@@ -69,6 +77,7 @@ public class ErziehungshilfeEPackageConfigurator implements EPackageConfigurator
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "erziehungshilfe");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }

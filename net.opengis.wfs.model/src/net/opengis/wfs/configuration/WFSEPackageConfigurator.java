@@ -572,6 +572,14 @@ import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
  */
 public class WFSEPackageConfigurator implements EPackageConfigurator {
 	
+	/**
+	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
+	 * time. It identifies the model content, not the artifact - see the <code>emf.fingerprint</code>
+	 * service property.
+	 * @generated
+	 */
+	public static final String FINGERPRINT = "fp1:9207643744bb51af5fb37e7d708a6e51606bafa47d42d8f9a56cb985a73a6ea4";
+
 	private WFSPackage ePackage;
 
 	protected WFSEPackageConfigurator(WFSPackage ePackage){
@@ -609,6 +617,7 @@ public class WFSEPackageConfigurator implements EPackageConfigurator {
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
 		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "wfs");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
+		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
 	}
 }
