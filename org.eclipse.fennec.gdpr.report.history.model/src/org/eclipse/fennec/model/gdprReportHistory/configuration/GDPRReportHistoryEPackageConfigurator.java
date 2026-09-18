@@ -8,7 +8,7 @@
  * Contributors:
  *   Data In Motion Consulting - initial implementation
  */
-package org.eclipse.fennec.model.gdprReport.configuration;
+package org.eclipse.fennec.model.gdprReportHistory.configuration;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,17 +17,22 @@ import org.eclipse.fennec.emf.osgi.configurator.EPackageConfigurator;
 
 import org.eclipse.fennec.emf.osgi.constants.EMFNamespaces;
 
-import org.eclipse.fennec.model.gdprReport.GDPRReportPackage;
+import org.eclipse.fennec.model.gdprReportHistory.GDPRReportHistoryPackage;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>EPackageConfiguration</b> and <b>ResourceFactoryConfigurator</b> for the model.
  * The package will be registered into a OSGi base model registry.
  * <!-- end-user-doc -->
+ * <!-- begin-model-doc -->
+ * The review history of one subject, derived from the GdprReport objects stored for it and rebuilt whenever one of them lands or changes.
+ * 
+ * The model is deliberately FLAT: three containment lists of attribute-only classes under the root, so the tabular codec renders one spreadsheet sheet per list. Nesting it like gdpr-report would produce a sheet-per-EClass sprawl that no human reads. Nothing here is a source of truth - the object can be deleted and regenerated from the reports at any time.
+ * <!-- end-model-doc -->
  * @see EPackageConfigurator
  * @generated
  */
-public class GDPRReportEPackageConfigurator implements EPackageConfigurator {
+public class GDPRReportHistoryEPackageConfigurator implements EPackageConfigurator {
 	
 	/**
 	 * The fingerprint of this model version, computed from the <code>.ecore</code> at build
@@ -35,11 +40,11 @@ public class GDPRReportEPackageConfigurator implements EPackageConfigurator {
 	 * service property.
 	 * @generated
 	 */
-	public static final String FINGERPRINT = "fp1:698d60694fccada712d46721416328a5bbbe62fe5a45ef97ee44a3fe578d96ae";
+	public static final String FINGERPRINT = "fp1:f783e1eee0985c74b22ac304a1918408473d41068643f5a2195ad8e73f2485f1";
 
-	private GDPRReportPackage ePackage;
+	private GDPRReportHistoryPackage ePackage;
 
-	protected GDPRReportEPackageConfigurator(GDPRReportPackage ePackage){
+	protected GDPRReportHistoryEPackageConfigurator(GDPRReportHistoryPackage ePackage){
 		this.ePackage = ePackage;
 	}
 	
@@ -50,7 +55,7 @@ public class GDPRReportEPackageConfigurator implements EPackageConfigurator {
 	 */
 	@Override
 	public void configureEPackage(org.eclipse.emf.ecore.EPackage.Registry registry) {
-		registry.put(GDPRReportPackage.eNS_URI, ePackage);
+		registry.put(GDPRReportHistoryPackage.eNS_URI, ePackage);
 	}
 	
 	/**
@@ -60,7 +65,7 @@ public class GDPRReportEPackageConfigurator implements EPackageConfigurator {
 	 */
 	@Override
 	public void unconfigureEPackage(org.eclipse.emf.ecore.EPackage.Registry registry) {
-		registry.remove(GDPRReportPackage.eNS_URI);
+		registry.remove(GDPRReportHistoryPackage.eNS_URI);
 	}
 	
 	/**
@@ -69,10 +74,10 @@ public class GDPRReportEPackageConfigurator implements EPackageConfigurator {
 	 */
 	public Map<String, Object> getServiceProperties() {
 		Map<String, Object> properties = new HashMap<String, Object>();
-		properties.put(EMFNamespaces.EMF_NAME, GDPRReportPackage.eNAME);
-		properties.put(EMFNamespaces.EMF_MODEL_NSURI, GDPRReportPackage.eNS_URI);
+		properties.put(EMFNamespaces.EMF_NAME, GDPRReportHistoryPackage.eNAME);
+		properties.put(EMFNamespaces.EMF_MODEL_NSURI, GDPRReportHistoryPackage.eNS_URI);
 		properties.put(EMFNamespaces.EMF_MODEL_REGISTRATION, EMFNamespaces.MODEL_REGISTRATION_PROVIDED);
-		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "gdprreport");
+		properties.put(EMFNamespaces.EMF_MODEL_FILE_EXT, "gdprreporthistory");
 		properties.put(EMFNamespaces.EMF_MODEL_VERSION, "1.0");
 		properties.put(EMFNamespaces.EMF_MODEL_FINGERPRINT, FINGERPRINT);
 		return properties;
