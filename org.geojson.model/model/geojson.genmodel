@@ -39,7 +39,7 @@
     <genClasses ecoreClass="geojson.ecore#//LineString"/>
     <genClasses ecoreClass="geojson.ecore#//SimpleLineString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geojson.ecore#//SimpleLineString/data"
-          get="return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);"/>
+          get="return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toPosition, org.geojson.util.GeoJsonHelper::convertCoordinates);"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geojson.ecore#//SimpleLineString/coordinates"/>
     </genClasses>
     <genClasses ecoreClass="geojson.ecore#//Feature">
@@ -55,7 +55,7 @@
     </genClasses>
     <genClasses ecoreClass="geojson.ecore#//MultiPoint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute geojson.ecore#//MultiPoint/data"
-          get="return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);"/>
+          get="return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toPosition, org.geojson.util.GeoJsonHelper::convertCoordinates);"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference geojson.ecore#//MultiPoint/coordinates"/>
     </genClasses>
     <genClasses ecoreClass="geojson.ecore#//Polygon"/>

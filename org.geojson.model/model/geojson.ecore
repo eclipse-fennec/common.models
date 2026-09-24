@@ -93,7 +93,7 @@
         <details key="suppressedIsSetVisibility" value="false"/>
         <details key="suppressedSetVisibility" value="true"/>
         <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="get" value="return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);"/>
+        <details key="get" value="return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toPosition, org.geojson.util.GeoJsonHelper::convertCoordinates);"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="coordinates" upperBound="-1"
@@ -132,7 +132,7 @@
         <details key="suppressedIsSetVisibility" value="false"/>
         <details key="suppressedSetVisibility" value="true"/>
         <details key="suppressedUnsetVisibility" value="true"/>
-        <details key="get" value="return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);"/>
+        <details key="get" value="return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toPosition, org.geojson.util.GeoJsonHelper::convertCoordinates);"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="coordinates" upperBound="-1"

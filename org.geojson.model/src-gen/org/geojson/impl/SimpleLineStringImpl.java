@@ -78,7 +78,7 @@ public class SimpleLineStringImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	public EList<double[]> getData() {
-		return new org.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);
+		return new org.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toPosition, org.geojson.util.GeoJsonHelper::convertCoordinates);
 	}
 
 	/**
