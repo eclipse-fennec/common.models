@@ -53,6 +53,10 @@ public class GeoJsonHelper {
 	}
 	
 	public static double[][][] getSimplePolygonData(SimplePolygon polygon) {
+		if (polygon.getExteriorRing() == null && polygon.getInteriorHoles().isEmpty()) {
+			// an empty geometry has an empty coordinates array (RFC 7946, section 3.1)
+			return new double[0][][];
+		}
 		double[][][] result = new double[1 + polygon.getInteriorHoles().size()][][];
 		result[0] = GeoJsonHelper.convertRing(polygon.getExteriorRing());
 		for (int i = 0; i < polygon.getInteriorHoles().size(); i++) {
@@ -101,6 +105,9 @@ public class GeoJsonHelper {
 	}
 
 	public static BoundingBox convertToBoundingBox(double[] bbox) {
+		if (bbox == null) {
+			return null;
+		}
 		BoundingBox boundingBox = GeoJsonFactory.eINSTANCE.createBoundingBox();
 		boolean ignoreElevation = bbox.length / 2 == 2;
 		double[] southwest = Arrays.copyOfRange(bbox, 0, ignoreElevation ? 2 : 3);

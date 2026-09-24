@@ -41,7 +41,7 @@ public interface Feature extends GeoJsonObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
 	 * @see org.geojson.GeoJsonPackage#getFeature_Id()
-	 * @model id="true" required="true"
+	 * @model id="true"
 	 * @generated
 	 */
 	String getId();

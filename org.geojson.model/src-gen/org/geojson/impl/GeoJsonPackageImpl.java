@@ -930,8 +930,8 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		addEParameter(op, this.getDoubleArray1D(), "data", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(geoJsonObjectEClass, GeoJsonObject.class, "GeoJsonObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGeoJsonObject_Bbox(), this.getDoubleArray1D(), "bbox", null, 1, 1, GeoJsonObject.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getGeoJsonObject_BoundingBox(), this.getBoundingBox(), null, "boundingBox", null, 1, 1, GeoJsonObject.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeoJsonObject_Bbox(), this.getDoubleArray1D(), "bbox", null, 0, 1, GeoJsonObject.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getGeoJsonObject_BoundingBox(), this.getBoundingBox(), null, "boundingBox", null, 0, 1, GeoJsonObject.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getGeoJsonObject__SetBbox__double(), null, "setBbox", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getDoubleArray1D(), "newBbox", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -945,7 +945,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		initEReference(getSimpleLineString_Coordinates(), this.getCoordinates(), null, "coordinates", null, 0, -1, SimpleLineString.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getFeature_Id(), ecorePackage.getEString(), "id", null, 1, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFeature_Id(), ecorePackage.getEString(), "id", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeature_Geometry(), this.getGeometry(), null, "geometry", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFeature_Properties(), ecorePackage.getEObject(), null, "properties", null, 0, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
