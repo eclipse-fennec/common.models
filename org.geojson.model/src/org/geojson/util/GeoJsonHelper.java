@@ -44,6 +44,10 @@ public class GeoJsonHelper {
 	}
 	
 	public static void setMultiPolygonData(MultiPolygon multiPoygon, double[][][][] data) {
+		multiPoygon.getPolygons().clear();
+		if (data == null) {
+			return;
+		}
 		for (int i = 0; i < data.length; i++) {
 			double[][][] d = data[i];
 			SimplePolygonImpl polygon = (SimplePolygonImpl) GeoJsonFactory.eINSTANCE.createSimplePolygon();
@@ -67,6 +71,11 @@ public class GeoJsonHelper {
 	}
 
 	public static void setSimplePolygonData(SimplePolygon polygon, double[][][] data) {
+		polygon.setExteriorRing(null);
+		polygon.getInteriorHoles().clear();
+		if (data == null) {
+			return;
+		}
 		for (int i = 0; i < data.length; i++) {
 			double[][] d = data[i];
 			if (i == 0) {
@@ -95,10 +104,10 @@ public class GeoJsonHelper {
 		double[] norhteast = convertCoordinates(bbox.getNortheast());
 		double[] result = Arrays.copyOf(southwest, southwest.length + norhteast.length);
 		if(result.length < 4) {
-			throw new IllegalArgumentException("Northeast and Southwest must both be set for a Boundingbox");
+			throw new IllegalArgumentException("Southwest and northeast must both be set for a bounding box");
 		}
 		if(result.length % 2 != 0) {
-			throw new IllegalArgumentException("Coordinates of a boundingbox must aither bove or none have an Elevation");
+			throw new IllegalArgumentException("Either both or none of the corners of a bounding box must have an elevation");
 		}
 		System.arraycopy(norhteast, 0, result, southwest.length, norhteast.length);
 		return result;
@@ -108,8 +117,11 @@ public class GeoJsonHelper {
 		if (bbox == null) {
 			return null;
 		}
+		if (bbox.length != 4 && bbox.length != 6) {
+			throw new IllegalArgumentException("A bbox needs 4 (2D) or 6 (3D) values (RFC 7946 §5), but has " + bbox.length);
+		}
 		BoundingBox boundingBox = GeoJsonFactory.eINSTANCE.createBoundingBox();
-		boolean ignoreElevation = bbox.length / 2 == 2;
+		boolean ignoreElevation = bbox.length == 4;
 		double[] southwest = Arrays.copyOfRange(bbox, 0, ignoreElevation ? 2 : 3);
 		double[] norhteast = Arrays.copyOfRange(bbox, ignoreElevation ? 2 : 3, bbox.length);
 		boundingBox.setSouthwest(toCoordinates(southwest));
@@ -118,6 +130,10 @@ public class GeoJsonHelper {
 	}
 	
 	public static void setMultiLineStringData(MultiLineString multiLineString, double[][][] data) {
+		multiLineString.getLinesStrings().clear();
+		if (data == null) {
+			return;
+		}
 		for (int i = 0; i < data.length; i++) {
 			double[][] d = data[i];
 			SimpleLineStringImpl line = (SimpleLineStringImpl) GeoJsonFactory.eINSTANCE.createSimpleLineString();
@@ -143,8 +159,12 @@ public class GeoJsonHelper {
 	}
 
 	public static Coordinates toCoordinates(double[] data) {
-		if (data == null) {
+		if (data == null || data.length == 0) {
+			// an empty Point has empty coordinates (RFC 7946, section 3.1)
 			return null;
+		}
+		if (data.length == 1) {
+			throw new IllegalArgumentException("A position needs at least two elements (RFC 7946 §3.1.1)");
 		}
 		Coordinates c = new CoordinatesImpl();
 		c.setLongitude(data[0]);
@@ -153,6 +173,17 @@ public class GeoJsonHelper {
 			c.setElevation(data[2]);
 		}
 		return c;
+	}
+
+	/**
+	 * Converts a position inside a multi-position geometry (LineString, MultiPoint, rings), where,
+	 * unlike for a Point, an empty position is not allowed.
+	 */
+	public static Coordinates toPosition(double[] data) {
+		if (data == null || data.length == 0) {
+			throw new IllegalArgumentException("An empty position is not allowed inside a geometry, a position needs at least two elements (RFC 7946 §3.1.1)");
+		}
+		return toCoordinates(data);
 	}
 
 	public static double[][] convertRing(Ring ring) {
@@ -187,7 +218,7 @@ public class GeoJsonHelper {
 		}
 		Ring ring = GeoJsonFactory.eINSTANCE.createRing();
 		for (int i = 0; i < data.length; i++) {
-			ring.getCoordinates().add(toCoordinates(data[i]));
+			ring.getCoordinates().add(toPosition(data[i]));
 		}
 		return ring;
 	}
@@ -198,7 +229,7 @@ public class GeoJsonHelper {
 		}
 		Hole hole = GeoJsonFactory.eINSTANCE.createHole();
 		for (int i = 0; i < data.length; i++) {
-			hole.getCoordinates().add(toCoordinates(data[i]));
+			hole.getCoordinates().add(toPosition(data[i]));
 		}
 		return hole;
 	}
