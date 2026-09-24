@@ -35,7 +35,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @model features="data" 
  *        dataDataType="org.geojson.DoubleArray1D" dataMany="true" dataVolatile="true" dataDerived="true" dataSuppressedGetVisibility="true" dataSuppressedSetVisibility="true" dataSuppressedUnsetVisibility="true"
  *        dataExtendedMetaData="name='coordinates'"
- *        dataAnnotation="http://www.eclipse.org/emf/2002/GenModel get='return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates&gt;(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);'"
+ *        dataAnnotation="http://www.eclipse.org/emf/2002/GenModel get='return new org.geojson.util.GenericConvertingList&lt;double[], Coordinates&gt;(getCoordinates(), org.geojson.util.GeoJsonHelper::toPosition, org.geojson.util.GeoJsonHelper::convertCoordinates);'"
  * @generated
  */
 @ProviderType

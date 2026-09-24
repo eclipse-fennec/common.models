@@ -53,14 +53,13 @@ class GeoJsonEdgeCaseTest {
 				.withMessageContaining("at least two elements");
 	}
 
-	// LineString and MultiPoint reject an empty position by the 'no null' constraint of their
-	// coordinates list; a dedicated message would need a model change (toPosition in the get annotation)
 	@Test
 	void emptyPositionInLineString_isRejected() {
 		LineString line = GeoJsonFactory.eINSTANCE.createLineString();
 
 		assertThatIllegalArgumentException()
-				.isThrownBy(() -> line.eSet(GeoJsonPackage.Literals.SIMPLE_LINE_STRING__DATA, List.of(new double[] { 1.5, 2.5 }, new double[0])));
+				.isThrownBy(() -> line.eSet(GeoJsonPackage.Literals.SIMPLE_LINE_STRING__DATA, List.of(new double[] { 1.5, 2.5 }, new double[0])))
+				.withMessageContaining("empty position");
 	}
 
 	@Test
@@ -68,7 +67,17 @@ class GeoJsonEdgeCaseTest {
 		MultiPoint multiPoint = GeoJsonFactory.eINSTANCE.createMultiPoint();
 
 		assertThatIllegalArgumentException()
-				.isThrownBy(() -> multiPoint.eSet(GeoJsonPackage.Literals.MULTI_POINT__DATA, List.of(new double[0])));
+				.isThrownBy(() -> multiPoint.eSet(GeoJsonPackage.Literals.MULTI_POINT__DATA, List.of(new double[0])))
+				.withMessageContaining("empty position");
+	}
+
+	@Test
+	void emptyPositionInMultiLineString_isRejected() {
+		MultiLineString multiLineString = GeoJsonFactory.eINSTANCE.createMultiLineString();
+
+		assertThatIllegalArgumentException()
+				.isThrownBy(() -> multiLineString.eSet(GeoJsonPackage.Literals.MULTI_LINE_STRING__DATA, new double[][][] { { { 1.5, 2.5 }, {} } }))
+				.withMessageContaining("empty position");
 	}
 
 	@Test

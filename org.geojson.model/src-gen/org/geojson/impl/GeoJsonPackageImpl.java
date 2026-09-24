@@ -1099,7 +1099,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "false",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return new org.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);"
+			   "get", "return new org.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toPosition, org.geojson.util.GeoJsonHelper::convertCoordinates);"
 		   });
 		addAnnotation
 		  (geometryCollectionEClass,
@@ -1121,7 +1121,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 			   "suppressedIsSetVisibility", "false",
 			   "suppressedSetVisibility", "true",
 			   "suppressedUnsetVisibility", "true",
-			   "get", "return new org.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toCoordinates, org.geojson.util.GeoJsonHelper::convertCoordinates);"
+			   "get", "return new org.geojson.util.GenericConvertingList<double[], Coordinates>(getCoordinates(), org.geojson.util.GeoJsonHelper::toPosition, org.geojson.util.GeoJsonHelper::convertCoordinates);"
 		   });
 		addAnnotation
 		  (polygonEClass,
