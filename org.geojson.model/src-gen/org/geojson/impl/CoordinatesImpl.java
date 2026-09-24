@@ -97,6 +97,15 @@ public class CoordinatesImpl extends MinimalEObjectImpl.Container implements Coo
 	protected double elevation = ELEVATION_EDEFAULT;
 
 	/**
+	 * This is true if the Elevation attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean elevationESet;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -180,8 +189,35 @@ public class CoordinatesImpl extends MinimalEObjectImpl.Container implements Coo
 	public void setElevation(double newElevation) {
 		double oldElevation = elevation;
 		elevation = newElevation;
+		boolean oldElevationESet = elevationESet;
+		elevationESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GeoJsonPackage.COORDINATES__ELEVATION, oldElevation, elevation));
+			eNotify(new ENotificationImpl(this, Notification.SET, GeoJsonPackage.COORDINATES__ELEVATION, oldElevation, elevation, !oldElevationESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void unsetElevation() {
+		double oldElevation = elevation;
+		boolean oldElevationESet = elevationESet;
+		elevation = ELEVATION_EDEFAULT;
+		elevationESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GeoJsonPackage.COORDINATES__ELEVATION, oldElevation, ELEVATION_EDEFAULT, oldElevationESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean isSetElevation() {
+		return elevationESet;
 	}
 
 	/**
@@ -238,7 +274,7 @@ public class CoordinatesImpl extends MinimalEObjectImpl.Container implements Coo
 				setLatitude(LATITUDE_EDEFAULT);
 				return;
 			case GeoJsonPackage.COORDINATES__ELEVATION:
-				setElevation(ELEVATION_EDEFAULT);
+				unsetElevation();
 				return;
 		}
 		super.eUnset(featureID);
@@ -257,7 +293,7 @@ public class CoordinatesImpl extends MinimalEObjectImpl.Container implements Coo
 			case GeoJsonPackage.COORDINATES__LATITUDE:
 				return latitude != LATITUDE_EDEFAULT;
 			case GeoJsonPackage.COORDINATES__ELEVATION:
-				return elevation != ELEVATION_EDEFAULT;
+				return isSetElevation();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -277,7 +313,7 @@ public class CoordinatesImpl extends MinimalEObjectImpl.Container implements Coo
 		result.append(", latitude: ");
 		result.append(latitude);
 		result.append(", elevation: ");
-		result.append(elevation);
+		if (elevationESet) result.append(elevation); else result.append("<unset>");
 		result.append(')');
 		return result.toString();
 	}
