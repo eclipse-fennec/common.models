@@ -11,22 +11,30 @@
 package org.geojson.util;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.AbstractEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EStructuralFeature.Setting;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
+ * A list view that converts between the values of a backing list and another representation.
+ * It implements {@link InternalEList}, because EMF uses the {@code basic*} and {@code *Unique}
+ * methods of many-valued features, e.g. when loading XMI. The elements are computed on every
+ * access, so the {@code basic*} methods behave like their regular counterparts.
  * 
  * @author Juergen Albert
  * @since 29 Nov 2024
  */
-public class GenericConvertingList<T,E> extends AbstractEList<T> implements EStructuralFeature.Setting{
+public class GenericConvertingList<T,E> extends AbstractEList<T> implements InternalEList<T>, EStructuralFeature.Setting{
 
 	
 	private EList<E> backingList;
@@ -113,18 +121,26 @@ public class GenericConvertingList<T,E> extends AbstractEList<T> implements EStr
 	 * (non-Javadoc)
 	 * @see org.eclipse.emf.common.util.AbstractEList#addAllUnique(java.lang.Object[], int, int)
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public boolean addAllUnique(Object[] objects, int start, int end) {
-		throw new UnsupportedOperationException();
+		for (int i = start; i < end; i++) {
+			backingList.add(tToE.apply((T) objects[i]));
+		}
+		return start < end;
 	}
 
 	/* 
 	 * (non-Javadoc)
 	 * @see org.eclipse.emf.common.util.AbstractEList#addAllUnique(int, java.lang.Object[], int, int)
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public boolean addAllUnique(int index, Object[] objects, int start, int end) {
-		throw new UnsupportedOperationException();
+		for (int i = start; i < end; i++) {
+			backingList.add(index++, tToE.apply((T) objects[i]));
+		}
+		return start < end;
 	}
 
 	/* 
@@ -152,7 +168,7 @@ public class GenericConvertingList<T,E> extends AbstractEList<T> implements EStr
 	 * @see org.eclipse.emf.common.util.AbstractEList#basicList()
 	 */
 	@Override
-	protected List<T> basicList() {
+	public List<T> basicList() {
 		return backingList.stream().map(eToT).collect(Collectors.toList());
 	}
 
@@ -166,6 +182,116 @@ public class GenericConvertingList<T,E> extends AbstractEList<T> implements EStr
 		return get == null ? null : eToT.apply(get);
 	}
 
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.common.util.AbstractEList#basicGet(int)
+	 */
+	@Override
+	public T basicGet(int index) {
+		return get(index);
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.common.util.AbstractEList#basicIterator()
+	 */
+	@Override
+	public Iterator<T> basicIterator() {
+		return iterator();
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.common.util.AbstractEList#basicListIterator()
+	 */
+	@Override
+	public ListIterator<T> basicListIterator() {
+		return listIterator();
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.common.util.AbstractEList#basicListIterator(int)
+	 */
+	@Override
+	public ListIterator<T> basicListIterator(int index) {
+		return listIterator(index);
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.ecore.util.InternalEList#basicToArray()
+	 */
+	@Override
+	public Object[] basicToArray() {
+		return toArray();
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.ecore.util.InternalEList#basicToArray(java.lang.Object[])
+	 */
+	@Override
+	public <A> A[] basicToArray(A[] array) {
+		return toArray(array);
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.ecore.util.InternalEList#basicIndexOf(java.lang.Object)
+	 */
+	@Override
+	public int basicIndexOf(Object object) {
+		return indexOf(object);
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.ecore.util.InternalEList#basicLastIndexOf(java.lang.Object)
+	 */
+	@Override
+	public int basicLastIndexOf(Object object) {
+		return lastIndexOf(object);
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.ecore.util.InternalEList#basicContains(java.lang.Object)
+	 */
+	@Override
+	public boolean basicContains(Object object) {
+		return contains(object);
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.ecore.util.InternalEList#basicContainsAll(java.util.Collection)
+	 */
+	@Override
+	public boolean basicContainsAll(Collection<?> collection) {
+		return containsAll(collection);
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.ecore.util.InternalEList#basicRemove(java.lang.Object, org.eclipse.emf.common.notify.NotificationChain)
+	 */
+	@Override
+	public NotificationChain basicRemove(Object object, NotificationChain notifications) {
+		remove(object);
+		return notifications;
+	}
+
+	/* 
+	 * (non-Javadoc)
+	 * @see org.eclipse.emf.ecore.util.InternalEList#basicAdd(java.lang.Object, org.eclipse.emf.common.notify.NotificationChain)
+	 */
+	@Override
+	public NotificationChain basicAdd(T object, NotificationChain notifications) {
+		addUnique(object);
+		return notifications;
+	}
 
 	/* 
 	 * (non-Javadoc)

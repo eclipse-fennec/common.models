@@ -923,14 +923,14 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		initEAttribute(getCoordinates_Elevation(), ecorePackage.getEDouble(), "elevation", "0.0d", 0, 1, Coordinates.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pointEClass, Point.class, "Point", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPoint_Data(), this.getDoubleArray1D(), "data", null, 0, 1, Point.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPoint_Data(), this.getDoubleArray1D(), "data", null, 0, 1, Point.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getPoint_Coordinates(), this.getCoordinates(), null, "coordinates", null, 0, 1, Point.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		EOperation op = initEOperation(getPoint__SetData__double(), null, "setData", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getDoubleArray1D(), "data", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(geoJsonObjectEClass, GeoJsonObject.class, "GeoJsonObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getGeoJsonObject_Bbox(), this.getDoubleArray1D(), "bbox", null, 1, 1, GeoJsonObject.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGeoJsonObject_Bbox(), this.getDoubleArray1D(), "bbox", null, 1, 1, GeoJsonObject.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getGeoJsonObject_BoundingBox(), this.getBoundingBox(), null, "boundingBox", null, 1, 1, GeoJsonObject.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getGeoJsonObject__SetBbox__double(), null, "setBbox", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -941,7 +941,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		initEClass(lineStringEClass, LineString.class, "LineString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(simpleLineStringEClass, SimpleLineString.class, "SimpleLineString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSimpleLineString_Data(), this.getDoubleArray1D(), "data", null, 0, -1, SimpleLineString.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSimpleLineString_Data(), this.getDoubleArray1D(), "data", null, 0, -1, SimpleLineString.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSimpleLineString_Coordinates(), this.getCoordinates(), null, "coordinates", null, 0, -1, SimpleLineString.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -956,7 +956,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		initEReference(getGeometryCollection_Geometries(), this.getGeometry(), null, "geometries", null, 0, -1, GeometryCollection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(multiPointEClass, MultiPoint.class, "MultiPoint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMultiPoint_Data(), this.getDoubleArray1D(), "data", null, 0, -1, MultiPoint.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMultiPoint_Data(), this.getDoubleArray1D(), "data", null, 0, -1, MultiPoint.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getMultiPoint_Coordinates(), this.getCoordinates(), null, "coordinates", null, 0, -1, MultiPoint.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(polygonEClass, Polygon.class, "Polygon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -967,14 +967,14 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		initEClass(holeEClass, Hole.class, "Hole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(multiPolygonEClass, MultiPolygon.class, "MultiPolygon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMultiPolygon_Data(), this.getDoubleArray4D(), "data", null, 0, 1, MultiPolygon.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMultiPolygon_Polygons(), this.getSimplePolygon(), null, "polygons", null, 0, -1, MultiPolygon.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMultiPolygon_Data(), this.getDoubleArray4D(), "data", null, 0, 1, MultiPolygon.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getMultiPolygon_Polygons(), this.getSimplePolygon(), null, "polygons", null, 0, -1, MultiPolygon.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getMultiPolygon__SetData__double(), null, "setData", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getDoubleArray4D(), "data", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(simplePolygonEClass, SimplePolygon.class, "SimplePolygon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSimplePolygon_Data(), this.getDoubleArray3D(), "data", null, 0, 1, SimplePolygon.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSimplePolygon_Data(), this.getDoubleArray3D(), "data", null, 0, 1, SimplePolygon.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getSimplePolygon_ExteriorRing(), this.getRing(), null, "exteriorRing", null, 0, 1, SimplePolygon.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSimplePolygon_InteriorHoles(), this.getHole(), null, "interiorHoles", null, 0, -1, SimplePolygon.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -982,7 +982,7 @@ public class GeoJsonPackageImpl extends EPackageImpl implements GeoJsonPackage {
 		addEParameter(op, this.getDoubleArray3D(), "data", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(multiLineStringEClass, MultiLineString.class, "MultiLineString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMultiLineString_Data(), this.getDoubleArray3D(), "data", null, 0, 1, MultiLineString.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMultiLineString_Data(), this.getDoubleArray3D(), "data", null, 0, 1, MultiLineString.class, !IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getMultiLineString_LinesStrings(), this.getSimpleLineString(), null, "linesStrings", null, 0, -1, MultiLineString.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = initEOperation(getMultiLineString__SetData__double(), null, "setData", 0, 1, IS_UNIQUE, IS_ORDERED);

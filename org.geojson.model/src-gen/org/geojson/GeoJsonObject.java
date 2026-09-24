@@ -28,7 +28,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *
  * @see org.geojson.GeoJsonPackage#getGeoJsonObject()
  * @model features="bbox" 
- *        bboxDataType="org.geojson.DoubleArray1D" bboxRequired="true" bboxVolatile="true" bboxSuppressedGetVisibility="true" bboxSuppressedSetVisibility="true" bboxSuppressedUnsetVisibility="true"
+ *        bboxDataType="org.geojson.DoubleArray1D" bboxRequired="true" bboxVolatile="true" bboxDerived="true" bboxSuppressedGetVisibility="true" bboxSuppressedSetVisibility="true" bboxSuppressedUnsetVisibility="true"
  *        bboxExtendedMetaData="name='bbox'"
  *        bboxAnnotation="http://www.eclipse.org/emf/2002/GenModel get='return org.geojson.util.GeoJsonHelper.convertBoundingBox(getBoundingBox());'"
  * @generated

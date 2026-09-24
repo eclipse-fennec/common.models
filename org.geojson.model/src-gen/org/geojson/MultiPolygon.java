@@ -33,7 +33,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *
  * @see org.geojson.GeoJsonPackage#getMultiPolygon()
  * @model features="data" 
- *        dataDataType="org.geojson.DoubleArray4D" dataVolatile="true" dataSuppressedGetVisibility="true" dataSuppressedSetVisibility="true" dataSuppressedUnsetVisibility="true"
+ *        dataDataType="org.geojson.DoubleArray4D" dataVolatile="true" dataDerived="true" dataSuppressedGetVisibility="true" dataSuppressedSetVisibility="true" dataSuppressedUnsetVisibility="true"
  *        dataExtendedMetaData="name='coordinates'"
  *        dataAnnotation="http://www.eclipse.org/emf/2002/GenModel get='return org.geojson.util.GeoJsonHelper.getMultiPolygonData(this);'"
  * @generated
@@ -47,7 +47,7 @@ public interface MultiPolygon extends Geometry {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Polygons</em>' containment reference list.
 	 * @see org.geojson.GeoJsonPackage#getMultiPolygon_Polygons()
-	 * @model containment="true"
+	 * @model containment="true" transient="true"
 	 * @generated
 	 */
 	EList<SimplePolygon> getPolygons();
