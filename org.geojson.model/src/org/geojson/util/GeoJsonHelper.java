@@ -129,7 +129,7 @@ public class GeoJsonHelper {
 		if (coordinates == null) {
 			return new double[0];
 		}
-		double[] array = Double.isNaN(coordinates.getElevation()) || ignoreElevation
+		double[] array = ignoreElevation || !coordinates.isSetElevation() || Double.isNaN(coordinates.getElevation())
 				? new double[] { coordinates.getLongitude(), coordinates.getLatitude() }
 				: new double[] { coordinates.getLongitude(), coordinates.getLatitude(), coordinates.getElevation() };
 		return array;
@@ -158,11 +158,11 @@ public class GeoJsonHelper {
 
 		for (int i = 0; i < ring.getCoordinates().size(); i++) {
 			Coordinates coordinates = ring.getCoordinates().get(i);
-			result[i] = convertCoordinates(coordinates, true);
+			result[i] = convertCoordinates(coordinates);
 		}
 		if (!ringClosed) {
 			Coordinates coordinates = ring.getCoordinates().get(0);
-			result[ring.getCoordinates().size()] = convertCoordinates(coordinates, true);
+			result[ring.getCoordinates().size()] = convertCoordinates(coordinates);
 		}
 
 		return result;

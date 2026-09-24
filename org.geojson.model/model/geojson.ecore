@@ -17,7 +17,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="latitude" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elevation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elevation" unsettable="true" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
         defaultValueLiteral="0.0d"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Point" eSuperTypes="#//Geometry">

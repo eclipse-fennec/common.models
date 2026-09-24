@@ -84,9 +84,11 @@ public interface Coordinates extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Elevation</em>' attribute.
+	 * @see #isSetElevation()
+	 * @see #unsetElevation()
 	 * @see #setElevation(double)
 	 * @see org.geojson.GeoJsonPackage#getCoordinates_Elevation()
-	 * @model default="0.0d"
+	 * @model default="0.0d" unsettable="true"
 	 * @generated
 	 */
 	double getElevation();
@@ -96,9 +98,34 @@ public interface Coordinates extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Elevation</em>' attribute.
+	 * @see #isSetElevation()
+	 * @see #unsetElevation()
 	 * @see #getElevation()
 	 * @generated
 	 */
 	void setElevation(double value);
+
+	/**
+	 * Unsets the value of the '{@link org.geojson.Coordinates#getElevation <em>Elevation</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetElevation()
+	 * @see #getElevation()
+	 * @see #setElevation(double)
+	 * @generated
+	 */
+	void unsetElevation();
+
+	/**
+	 * Returns whether the value of the '{@link org.geojson.Coordinates#getElevation <em>Elevation</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Elevation</em>' attribute is set.
+	 * @see #unsetElevation()
+	 * @see #getElevation()
+	 * @see #setElevation(double)
+	 * @generated
+	 */
+	boolean isSetElevation();
 
 } // Coordinates
