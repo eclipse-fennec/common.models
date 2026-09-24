@@ -40,7 +40,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = GeoJsonPackage.eNS_URI, fingerprint = "fp1:998cd2df693d523081ff97740365b10c7380b9236abf3f5ab153dbacf1087dd0", genModel = "/model/geojson.genmodel", genModelSourceLocations = {"model/geojson.genmodel","org.geojson.model/model/geojson.genmodel"}, ecore = "/model/geojson.ecore", ecoreSourceLocations = "/model/geojson.ecore")
+@EPackage(uri = GeoJsonPackage.eNS_URI, fingerprint = "fp1:5937649880d8ad38d94e21f2f6ef48869bc330b7290049d01e1116d61fabbe2a", genModel = "/model/geojson.genmodel", genModelSourceLocations = {"model/geojson.genmodel","org.geojson.model/model/geojson.genmodel"}, ecore = "/model/geojson.ecore", ecoreSourceLocations = "/model/geojson.ecore")
 public interface GeoJsonPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.

@@ -35,7 +35,7 @@ public class GeoJsonEPackageConfigurator implements EPackageConfigurator {
 	 * service property.
 	 * @generated
 	 */
-	public static final String FINGERPRINT = "fp1:998cd2df693d523081ff97740365b10c7380b9236abf3f5ab153dbacf1087dd0";
+	public static final String FINGERPRINT = "fp1:5937649880d8ad38d94e21f2f6ef48869bc330b7290049d01e1116d61fabbe2a";
 
 	private GeoJsonPackage ePackage;
 

@@ -36,7 +36,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *
  * @see org.geojson.GeoJsonPackage#getSimplePolygon()
  * @model features="data" 
- *        dataDataType="org.geojson.DoubleArray3D" dataVolatile="true" dataSuppressedGetVisibility="true" dataSuppressedSetVisibility="true" dataSuppressedUnsetVisibility="true"
+ *        dataDataType="org.geojson.DoubleArray3D" dataVolatile="true" dataDerived="true" dataSuppressedGetVisibility="true" dataSuppressedSetVisibility="true" dataSuppressedUnsetVisibility="true"
  *        dataExtendedMetaData="name='coordinates'"
  *        dataAnnotation="http://www.eclipse.org/emf/2002/GenModel get='return org.geojson.util.GeoJsonHelper.getSimplePolygonData(this);'"
  * @generated
