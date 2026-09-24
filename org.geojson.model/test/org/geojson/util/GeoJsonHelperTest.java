@@ -15,13 +15,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.geojson.Coordinates;
 import org.geojson.GeoJsonFactory;
 import org.geojson.GeoJsonPackage;
+import org.geojson.MultiPolygon;
 import org.geojson.Point;
 import org.geojson.Ring;
 import org.geojson.SimplePolygon;
 import org.junit.jupiter.api.Test;
 
 /**
- * Tests the elevation handling of {@link GeoJsonHelper}, see issues #24 and #25.
+ * Tests the conversion of {@link GeoJsonHelper}, see issues #24, #25 and #34.
  */
 class GeoJsonHelperTest {
 
@@ -129,5 +130,31 @@ class GeoJsonHelperTest {
 		GeoJsonHelper.setSimplePolygonData(polygon, data);
 
 		assertThat(GeoJsonHelper.getSimplePolygonData(polygon)).isEqualTo(data);
+	}
+
+	@Test
+	void emptyPolygon_isEmptyArray() {
+		SimplePolygon polygon = GeoJsonFactory.eINSTANCE.createSimplePolygon();
+
+		assertThat(GeoJsonHelper.getSimplePolygonData(polygon)).isEmpty();
+	}
+
+	@Test
+	void emptyPolygon_roundTripStaysEmpty() {
+		SimplePolygon polygon = GeoJsonFactory.eINSTANCE.createSimplePolygon();
+		GeoJsonHelper.setSimplePolygonData(polygon, new double[0][][]);
+
+		assertThat(polygon.getExteriorRing()).isNull();
+		assertThat(GeoJsonHelper.getSimplePolygonData(polygon)).isEmpty();
+	}
+
+	@Test
+	void multiPolygonWithEmptyPolygon_containsEmptyArray() {
+		MultiPolygon multiPolygon = GeoJsonFactory.eINSTANCE.createMultiPolygon();
+		multiPolygon.getPolygons().add(GeoJsonFactory.eINSTANCE.createSimplePolygon());
+
+		double[][][][] data = GeoJsonHelper.getMultiPolygonData(multiPolygon);
+
+		assertThat(data).hasDimensions(1, 0);
 	}
 }

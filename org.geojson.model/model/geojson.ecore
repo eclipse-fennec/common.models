@@ -55,7 +55,7 @@
       </eAnnotations>
       <eParameters name="newBbox" eType="#//DoubleArray1D"/>
     </eOperations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bbox" lowerBound="1" eType="#//DoubleArray1D"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bbox" eType="#//DoubleArray1D"
         volatile="true" derived="true">
       <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
         <details key="name" value="bbox"/>
@@ -68,7 +68,7 @@
         <details key="get" value="return org.geojson.util.GeoJsonHelper.convertBoundingBox(getBoundingBox());"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="boundingBox" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boundingBox"
         eType="#//BoundingBox" transient="true" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="DoubleArray1D" instanceClassName="java.lang.double[]"/>
@@ -100,7 +100,7 @@
         eType="#//Coordinates" transient="true" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Feature" eSuperTypes="#//GeoJsonObject">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="geometry" eType="#//Geometry"
         containment="true"/>
