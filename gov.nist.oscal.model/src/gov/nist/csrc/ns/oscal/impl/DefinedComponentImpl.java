@@ -13,8 +13,6 @@ package gov.nist.csrc.ns.oscal.impl;
 import gov.nist.csrc.ns.oscal.ComponentControlImplementation;
 import gov.nist.csrc.ns.oscal.DefinedComponent;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.Protocol;
@@ -61,34 +59,64 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class DefinedComponentImpl extends MinimalEObjectImpl.Container implements DefinedComponent {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPurpose() <em>Purpose</em>}' containment reference.
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPurpose() <em>Purpose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPurpose()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype purpose;
+	protected static final String PURPOSE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPurpose() <em>Purpose</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPurpose()
+	 * @generated
+	 * @ordered
+	 */
+	protected String purpose = PURPOSE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -141,14 +169,24 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	protected EList<ComponentControlImplementation> controlImplementation;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -215,7 +253,7 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -224,14 +262,12 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
+	@Override
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
 		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -240,27 +276,7 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DEFINED_COMPONENT__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DEFINED_COMPONENT__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__TITLE, newTitle, newTitle));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -269,14 +285,12 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
+	@Override
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
 		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -285,27 +299,7 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DEFINED_COMPONENT__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DEFINED_COMPONENT__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__DESCRIPTION, newDescription, newDescription));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupLineDatatype getPurpose() {
+	public String getPurpose() {
 		return purpose;
 	}
 
@@ -314,34 +308,12 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPurpose(MarkupLineDatatype newPurpose, NotificationChain msgs) {
-		MarkupLineDatatype oldPurpose = purpose;
-		purpose = newPurpose;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__PURPOSE, oldPurpose, newPurpose);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setPurpose(MarkupLineDatatype newPurpose) {
-		if (newPurpose != purpose) {
-			NotificationChain msgs = null;
-			if (purpose != null)
-				msgs = ((InternalEObject)purpose).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DEFINED_COMPONENT__PURPOSE, null, msgs);
-			if (newPurpose != null)
-				msgs = ((InternalEObject)newPurpose).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DEFINED_COMPONENT__PURPOSE, null, msgs);
-			msgs = basicSetPurpose(newPurpose, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__PURPOSE, newPurpose, newPurpose));
+	public void setPurpose(String newPurpose) {
+		String oldPurpose = purpose;
+		purpose = newPurpose;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__PURPOSE, oldPurpose, purpose));
 	}
 
 	/**
@@ -415,7 +387,7 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -424,34 +396,12 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DEFINED_COMPONENT__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DEFINED_COMPONENT__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DEFINED_COMPONENT__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -508,12 +458,6 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.DEFINED_COMPONENT__TITLE:
-				return basicSetTitle(null, msgs);
-			case OSCALPackage.DEFINED_COMPONENT__DESCRIPTION:
-				return basicSetDescription(null, msgs);
-			case OSCALPackage.DEFINED_COMPONENT__PURPOSE:
-				return basicSetPurpose(null, msgs);
 			case OSCALPackage.DEFINED_COMPONENT__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.DEFINED_COMPONENT__LINK:
@@ -524,8 +468,6 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 				return ((InternalEList<?>)getProtocol()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.DEFINED_COMPONENT__CONTROL_IMPLEMENTATION:
 				return ((InternalEList<?>)getControlImplementation()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.DEFINED_COMPONENT__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -574,13 +516,13 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.DEFINED_COMPONENT__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__PURPOSE:
-				setPurpose((MarkupLineDatatype)newValue);
+				setPurpose((String)newValue);
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__PROP:
 				getProp().clear();
@@ -603,7 +545,7 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 				getControlImplementation().addAll((Collection<? extends ComponentControlImplementation>)newValue);
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__TYPE:
 				setType((String)newValue);
@@ -624,13 +566,13 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.DEFINED_COMPONENT__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__PURPOSE:
-				setPurpose((MarkupLineDatatype)null);
+				setPurpose(PURPOSE_EDEFAULT);
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__PROP:
 				getProp().clear();
@@ -648,7 +590,7 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 				getControlImplementation().clear();
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.DEFINED_COMPONENT__TYPE:
 				setType(TYPE_EDEFAULT);
@@ -669,11 +611,11 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.DEFINED_COMPONENT__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.DEFINED_COMPONENT__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.DEFINED_COMPONENT__PURPOSE:
-				return purpose != null;
+				return PURPOSE_EDEFAULT == null ? purpose != null : !PURPOSE_EDEFAULT.equals(purpose);
 			case OSCALPackage.DEFINED_COMPONENT__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.DEFINED_COMPONENT__LINK:
@@ -685,7 +627,7 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 			case OSCALPackage.DEFINED_COMPONENT__CONTROL_IMPLEMENTATION:
 				return controlImplementation != null && !controlImplementation.isEmpty();
 			case OSCALPackage.DEFINED_COMPONENT__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.DEFINED_COMPONENT__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case OSCALPackage.DEFINED_COMPONENT__UUID:
@@ -704,7 +646,15 @@ public class DefinedComponentImpl extends MinimalEObjectImpl.Container implement
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (type: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", purpose: ");
+		result.append(purpose);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", type: ");
 		result.append(type);
 		result.append(", uuid: ");
 		result.append(uuid);

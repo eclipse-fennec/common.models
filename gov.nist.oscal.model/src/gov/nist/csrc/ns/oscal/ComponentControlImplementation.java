@@ -49,7 +49,7 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface ComponentControlImplementation extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -59,24 +59,24 @@ public interface ComponentControlImplementation extends EObject {
 	 *   : A description of how the specified set of controls are implemented for the containing component or capability.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Description</em>' containment reference.
-	 * @see #setDescription(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getComponentControlImplementation_Description()
-	 * @model containment="true" required="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype" required="true"
 	 *        extendedMetaData="kind='element' name='description' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getDescription();
+	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.ComponentControlImplementation#getDescription <em>Description</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.ComponentControlImplementation#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' containment reference.
+	 * @param value the new value of the '<em>Description</em>' attribute.
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(MarkupMultilineDatatype value);
+	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Prop</b></em>' containment reference list.

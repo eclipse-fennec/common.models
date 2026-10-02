@@ -14,14 +14,12 @@ import gov.nist.csrc.ns.oscal.Action;
 import gov.nist.csrc.ns.oscal.DocumentId;
 import gov.nist.csrc.ns.oscal.Link;
 import gov.nist.csrc.ns.oscal.Location;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.Metadata;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Party;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleParty;
-import gov.nist.csrc.ns.oscal.Revisions;
+import gov.nist.csrc.ns.oscal.Revision;
 import gov.nist.csrc.ns.oscal.Role;
 
 import java.util.Collection;
@@ -55,7 +53,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link gov.nist.csrc.ns.oscal.impl.MetadataImpl#getLastModified <em>Last Modified</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.impl.MetadataImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.impl.MetadataImpl#getOscalVersion <em>Oscal Version</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.impl.MetadataImpl#getRevisions <em>Revisions</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.impl.MetadataImpl#getRevision <em>Revision</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.impl.MetadataImpl#getDocumentId <em>Document Id</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.impl.MetadataImpl#getProp <em>Prop</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.impl.MetadataImpl#getLink <em>Link</em>}</li>
@@ -71,14 +69,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class MetadataImpl extends MinimalEObjectImpl.Container implements Metadata {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPublished() <em>Published</em>}' attribute.
@@ -161,14 +169,14 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	protected String oscalVersion = OSCAL_VERSION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRevisions() <em>Revisions</em>}' containment reference.
+	 * The cached value of the '{@link #getRevision() <em>Revision</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRevisions()
+	 * @see #getRevision()
 	 * @generated
 	 * @ordered
 	 */
-	protected Revisions revisions;
+	protected EList<Revision> revision;
 
 	/**
 	 * The cached value of the '{@link #getDocumentId() <em>Document Id</em>}' containment reference list.
@@ -251,14 +259,24 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	protected EList<Action> action;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -285,7 +303,7 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -294,34 +312,12 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
-		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.METADATA__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.METADATA__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.METADATA__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.METADATA__TITLE, newTitle, newTitle));
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
+		title = newTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.METADATA__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -422,43 +418,11 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	 * @generated
 	 */
 	@Override
-	public Revisions getRevisions() {
-		return revisions;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRevisions(Revisions newRevisions, NotificationChain msgs) {
-		Revisions oldRevisions = revisions;
-		revisions = newRevisions;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.METADATA__REVISIONS, oldRevisions, newRevisions);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<Revision> getRevision() {
+		if (revision == null) {
+			revision = new EObjectContainmentEList<Revision>(Revision.class, this, OSCALPackage.METADATA__REVISION);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRevisions(Revisions newRevisions) {
-		if (newRevisions != revisions) {
-			NotificationChain msgs = null;
-			if (revisions != null)
-				msgs = ((InternalEObject)revisions).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.METADATA__REVISIONS, null, msgs);
-			if (newRevisions != null)
-				msgs = ((InternalEObject)newRevisions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.METADATA__REVISIONS, null, msgs);
-			msgs = basicSetRevisions(newRevisions, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.METADATA__REVISIONS, newRevisions, newRevisions));
+		return revision;
 	}
 
 	/**
@@ -571,7 +535,7 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -580,34 +544,12 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.METADATA__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.METADATA__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.METADATA__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.METADATA__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.METADATA__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -618,10 +560,8 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.METADATA__TITLE:
-				return basicSetTitle(null, msgs);
-			case OSCALPackage.METADATA__REVISIONS:
-				return basicSetRevisions(null, msgs);
+			case OSCALPackage.METADATA__REVISION:
+				return ((InternalEList<?>)getRevision()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.METADATA__DOCUMENT_ID:
 				return ((InternalEList<?>)getDocumentId()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.METADATA__PROP:
@@ -638,8 +578,6 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 				return ((InternalEList<?>)getResponsibleParty()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.METADATA__ACTION:
 				return ((InternalEList<?>)getAction()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.METADATA__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -662,8 +600,8 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 				return getVersion();
 			case OSCALPackage.METADATA__OSCAL_VERSION:
 				return getOscalVersion();
-			case OSCALPackage.METADATA__REVISIONS:
-				return getRevisions();
+			case OSCALPackage.METADATA__REVISION:
+				return getRevision();
 			case OSCALPackage.METADATA__DOCUMENT_ID:
 				return getDocumentId();
 			case OSCALPackage.METADATA__PROP:
@@ -696,7 +634,7 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.METADATA__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.METADATA__PUBLISHED:
 				setPublished((XMLGregorianCalendar)newValue);
@@ -710,8 +648,9 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 			case OSCALPackage.METADATA__OSCAL_VERSION:
 				setOscalVersion((String)newValue);
 				return;
-			case OSCALPackage.METADATA__REVISIONS:
-				setRevisions((Revisions)newValue);
+			case OSCALPackage.METADATA__REVISION:
+				getRevision().clear();
+				getRevision().addAll((Collection<? extends Revision>)newValue);
 				return;
 			case OSCALPackage.METADATA__DOCUMENT_ID:
 				getDocumentId().clear();
@@ -746,7 +685,7 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 				getAction().addAll((Collection<? extends Action>)newValue);
 				return;
 			case OSCALPackage.METADATA__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -761,7 +700,7 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.METADATA__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.METADATA__PUBLISHED:
 				setPublished(PUBLISHED_EDEFAULT);
@@ -775,8 +714,8 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 			case OSCALPackage.METADATA__OSCAL_VERSION:
 				setOscalVersion(OSCAL_VERSION_EDEFAULT);
 				return;
-			case OSCALPackage.METADATA__REVISIONS:
-				setRevisions((Revisions)null);
+			case OSCALPackage.METADATA__REVISION:
+				getRevision().clear();
 				return;
 			case OSCALPackage.METADATA__DOCUMENT_ID:
 				getDocumentId().clear();
@@ -803,7 +742,7 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 				getAction().clear();
 				return;
 			case OSCALPackage.METADATA__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -818,7 +757,7 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.METADATA__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.METADATA__PUBLISHED:
 				return PUBLISHED_EDEFAULT == null ? published != null : !PUBLISHED_EDEFAULT.equals(published);
 			case OSCALPackage.METADATA__LAST_MODIFIED:
@@ -827,8 +766,8 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 				return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
 			case OSCALPackage.METADATA__OSCAL_VERSION:
 				return OSCAL_VERSION_EDEFAULT == null ? oscalVersion != null : !OSCAL_VERSION_EDEFAULT.equals(oscalVersion);
-			case OSCALPackage.METADATA__REVISIONS:
-				return revisions != null;
+			case OSCALPackage.METADATA__REVISION:
+				return revision != null && !revision.isEmpty();
 			case OSCALPackage.METADATA__DOCUMENT_ID:
 				return documentId != null && !documentId.isEmpty();
 			case OSCALPackage.METADATA__PROP:
@@ -846,7 +785,7 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 			case OSCALPackage.METADATA__ACTION:
 				return action != null && !action.isEmpty();
 			case OSCALPackage.METADATA__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -861,7 +800,9 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (published: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", published: ");
 		result.append(published);
 		result.append(", lastModified: ");
 		result.append(lastModified);
@@ -869,6 +810,8 @@ public class MetadataImpl extends MinimalEObjectImpl.Container implements Metada
 		result.append(version);
 		result.append(", oscalVersion: ");
 		result.append(oscalVersion);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(')');
 		return result.toString();
 	}

@@ -45,7 +45,7 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface AuthorizedPrivilege extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -55,27 +55,27 @@ public interface AuthorizedPrivilege extends EObject {
 	 *   : A human readable name for the privilege.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Title</em>' containment reference.
-	 * @see #setTitle(MarkupLineDatatype)
+	 * @return the value of the '<em>Title</em>' attribute.
+	 * @see #setTitle(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAuthorizedPrivilege_Title()
-	 * @model containment="true" required="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupLineDatatype" required="true"
 	 *        extendedMetaData="kind='element' name='title' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupLineDatatype getTitle();
+	String getTitle();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getTitle <em>Title</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getTitle <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' containment reference.
+	 * @param value the new value of the '<em>Title</em>' attribute.
 	 * @see #getTitle()
 	 * @generated
 	 */
-	void setTitle(MarkupLineDatatype value);
+	void setTitle(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -85,24 +85,24 @@ public interface AuthorizedPrivilege extends EObject {
 	 *   : A summary of the privilege's purpose within the system.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Description</em>' containment reference.
-	 * @see #setDescription(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAuthorizedPrivilege_Description()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype"
 	 *        extendedMetaData="kind='element' name='description' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getDescription();
+	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getDescription <em>Description</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' containment reference.
+	 * @param value the new value of the '<em>Description</em>' attribute.
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(MarkupMultilineDatatype value);
+	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Function Performed</b></em>' attribute list.

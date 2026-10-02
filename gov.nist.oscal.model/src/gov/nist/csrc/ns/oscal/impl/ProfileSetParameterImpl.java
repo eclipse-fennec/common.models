@@ -11,8 +11,6 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.ParameterConstraint;
 import gov.nist.csrc.ns.oscal.ParameterGuideline;
@@ -82,24 +80,44 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 	protected EList<Link> link;
 
 	/**
-	 * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference.
+	 * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLabel()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype label;
+	protected static final String LABEL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUsage() <em>Usage</em>}' containment reference.
+	 * The cached value of the '{@link #getLabel() <em>Label</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLabel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String label = LABEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUsage() <em>Usage</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getUsage()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype usage;
+	protected static final String USAGE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUsage() <em>Usage</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUsage()
+	 * @generated
+	 * @ordered
+	 */
+	protected String usage = USAGE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' containment reference list.
@@ -252,7 +270,7 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getLabel() {
+	public String getLabel() {
 		return label;
 	}
 
@@ -261,14 +279,12 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetLabel(MarkupLineDatatype newLabel, NotificationChain msgs) {
-		MarkupLineDatatype oldLabel = label;
+	@Override
+	public void setLabel(String newLabel) {
+		String oldLabel = label;
 		label = newLabel;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.PROFILE_SET_PARAMETER__LABEL, oldLabel, newLabel);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PROFILE_SET_PARAMETER__LABEL, oldLabel, label));
 	}
 
 	/**
@@ -277,27 +293,7 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public void setLabel(MarkupLineDatatype newLabel) {
-		if (newLabel != label) {
-			NotificationChain msgs = null;
-			if (label != null)
-				msgs = ((InternalEObject)label).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PROFILE_SET_PARAMETER__LABEL, null, msgs);
-			if (newLabel != null)
-				msgs = ((InternalEObject)newLabel).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PROFILE_SET_PARAMETER__LABEL, null, msgs);
-			msgs = basicSetLabel(newLabel, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PROFILE_SET_PARAMETER__LABEL, newLabel, newLabel));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getUsage() {
+	public String getUsage() {
 		return usage;
 	}
 
@@ -306,34 +302,12 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetUsage(MarkupMultilineDatatype newUsage, NotificationChain msgs) {
-		MarkupMultilineDatatype oldUsage = usage;
-		usage = newUsage;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.PROFILE_SET_PARAMETER__USAGE, oldUsage, newUsage);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setUsage(MarkupMultilineDatatype newUsage) {
-		if (newUsage != usage) {
-			NotificationChain msgs = null;
-			if (usage != null)
-				msgs = ((InternalEObject)usage).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PROFILE_SET_PARAMETER__USAGE, null, msgs);
-			if (newUsage != null)
-				msgs = ((InternalEObject)newUsage).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PROFILE_SET_PARAMETER__USAGE, null, msgs);
-			msgs = basicSetUsage(newUsage, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PROFILE_SET_PARAMETER__USAGE, newUsage, newUsage));
+	public void setUsage(String newUsage) {
+		String oldUsage = usage;
+		usage = newUsage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PROFILE_SET_PARAMETER__USAGE, oldUsage, usage));
 	}
 
 	/**
@@ -501,10 +475,6 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.PROFILE_SET_PARAMETER__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.PROFILE_SET_PARAMETER__LABEL:
-				return basicSetLabel(null, msgs);
-			case OSCALPackage.PROFILE_SET_PARAMETER__USAGE:
-				return basicSetUsage(null, msgs);
 			case OSCALPackage.PROFILE_SET_PARAMETER__CONSTRAINT:
 				return ((InternalEList<?>)getConstraint()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.PROFILE_SET_PARAMETER__GUIDELINE:
@@ -567,10 +537,10 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
 			case OSCALPackage.PROFILE_SET_PARAMETER__LABEL:
-				setLabel((MarkupLineDatatype)newValue);
+				setLabel((String)newValue);
 				return;
 			case OSCALPackage.PROFILE_SET_PARAMETER__USAGE:
-				setUsage((MarkupMultilineDatatype)newValue);
+				setUsage((String)newValue);
 				return;
 			case OSCALPackage.PROFILE_SET_PARAMETER__CONSTRAINT:
 				getConstraint().clear();
@@ -615,10 +585,10 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 				getLink().clear();
 				return;
 			case OSCALPackage.PROFILE_SET_PARAMETER__LABEL:
-				setLabel((MarkupLineDatatype)null);
+				setLabel(LABEL_EDEFAULT);
 				return;
 			case OSCALPackage.PROFILE_SET_PARAMETER__USAGE:
-				setUsage((MarkupMultilineDatatype)null);
+				setUsage(USAGE_EDEFAULT);
 				return;
 			case OSCALPackage.PROFILE_SET_PARAMETER__CONSTRAINT:
 				getConstraint().clear();
@@ -658,9 +628,9 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 			case OSCALPackage.PROFILE_SET_PARAMETER__LINK:
 				return link != null && !link.isEmpty();
 			case OSCALPackage.PROFILE_SET_PARAMETER__LABEL:
-				return label != null;
+				return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
 			case OSCALPackage.PROFILE_SET_PARAMETER__USAGE:
-				return usage != null;
+				return USAGE_EDEFAULT == null ? usage != null : !USAGE_EDEFAULT.equals(usage);
 			case OSCALPackage.PROFILE_SET_PARAMETER__CONSTRAINT:
 				return constraint != null && !constraint.isEmpty();
 			case OSCALPackage.PROFILE_SET_PARAMETER__GUIDELINE:
@@ -689,7 +659,11 @@ public class ProfileSetParameterImpl extends MinimalEObjectImpl.Container implem
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (value: ");
+		result.append(" (label: ");
+		result.append(label);
+		result.append(", usage: ");
+		result.append(usage);
+		result.append(", value: ");
 		result.append(value);
 		result.append(", class: ");
 		result.append(class_);

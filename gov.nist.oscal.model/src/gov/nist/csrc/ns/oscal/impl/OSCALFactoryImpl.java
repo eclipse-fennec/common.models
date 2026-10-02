@@ -75,17 +75,14 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 		switch (eClass.getClassifierID()) {
 			case OSCALPackage.ADD: return createAdd();
 			case OSCALPackage.ALTER: return createAlter();
-			case OSCALPackage.MARKUP_ANCHOR: return createMarkupAnchor();
 			case OSCALPackage.ASSESSMENT_LOG: return createAssessmentLog();
 			case OSCALPackage.ASSESSMENT_PLATFORM: return createAssessmentPlatform();
 			case OSCALPackage.ASSOCIATED_ACTIVITY: return createAssociatedActivity();
 			case OSCALPackage.AT_FREQUENCY: return createAtFrequency();
 			case OSCALPackage.ATTESTATION: return createAttestation();
 			case OSCALPackage.BASE64: return createBase64();
-			case OSCALPackage.MARKUP_BLOCK_QUOTE: return createMarkupBlockQuote();
 			case OSCALPackage.CATEGORIZATION: return createCategorization();
 			case OSCALPackage.CITATION: return createCitation();
-			case OSCALPackage.MARKUP_CODE: return createMarkupCode();
 			case OSCALPackage.COMBINE: return createCombine();
 			case OSCALPackage.CONTROL_OBJECTIVE_SELECTION: return createControlObjectiveSelection();
 			case OSCALPackage.CONTROL_SELECTION: return createControlSelection();
@@ -99,24 +96,16 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 			case OSCALPackage.FACET: return createFacet();
 			case OSCALPackage.FLAT: return createFlat();
 			case OSCALPackage.IDENTIFIED_SUBJECT: return createIdentifiedSubject();
-			case OSCALPackage.MARKUP_IMAGE: return createMarkupImage();
 			case OSCALPackage.IMPLEMENTED_COMPONENT: return createImplementedComponent();
 			case OSCALPackage.INFORMATION_TYPE: return createInformationType();
 			case OSCALPackage.INHERITED: return createInherited();
-			case OSCALPackage.INLINE_MARKUP: return createInlineMarkup();
-			case OSCALPackage.MARKUP_INSERT: return createMarkupInsert();
 			case OSCALPackage.LEVERAGED_AUTHORIZATION: return createLeveragedAuthorization();
-			case OSCALPackage.MARKUP_LIST_ITEM: return createMarkupListItem();
-			case OSCALPackage.MARKUP_LIST: return createMarkupList();
 			case OSCALPackage.RESULT_LOCAL_DEFINITIONS: return createResultLocalDefinitions();
 			case OSCALPackage.ASSESSMENT_RESULTS_LOCAL_DEFINITIONS: return createAssessmentResultsLocalDefinitions();
 			case OSCALPackage.ASSESSMENT_PLAN_LOCAL_DEFINITIONS: return createAssessmentPlanLocalDefinitions();
 			case OSCALPackage.LOCATION: return createLocation();
-			case OSCALPackage.MARKUP_LINE_DATATYPE: return createMarkupLineDatatype();
-			case OSCALPackage.MARKUP_MULTILINE_DATATYPE: return createMarkupMultilineDatatype();
 			case OSCALPackage.MITIGATING_FACTOR: return createMitigatingFactor();
 			case OSCALPackage.ON_DATE: return createOnDate();
-			case OSCALPackage.MARKUP_ORDERED_LIST: return createMarkupOrderedList();
 			case OSCALPackage.POAM_ITEM_ORIGIN: return createPoamItemOrigin();
 			case OSCALPackage.ASSESSMENT_PLAN: return createAssessmentPlan();
 			case OSCALPackage.ASSESSMENT_RESULTS: return createAssessmentResults();
@@ -224,7 +213,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 			case OSCALPackage.SYSTEM_INFORMATION: return createSystemInformation();
 			case OSCALPackage.SYSTEM_SECURITY_PLAN: return createSystemSecurityPlan();
 			case OSCALPackage.PARTY: return createParty();
-			case OSCALPackage.MARKUP_PREFORMATTED: return createMarkupPreformatted();
 			case OSCALPackage.PROVIDED: return createProvided();
 			case OSCALPackage.RELATED_FINDING: return createRelatedFinding();
 			case OSCALPackage.RELATED_RESPONSE: return createRelatedResponse();
@@ -233,7 +221,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 			case OSCALPackage.REQUIRED_ASSET: return createRequiredAsset();
 			case OSCALPackage.BACK_MATTER_RESOURCE: return createBackMatterResource();
 			case OSCALPackage.RESPONSIBILITY: return createResponsibility();
-			case OSCALPackage.REVISIONS: return createRevisions();
 			case OSCALPackage.REVISION: return createRevision();
 			case OSCALPackage.RISK_LOG: return createRiskLog();
 			case OSCALPackage.RLINK: return createRlink();
@@ -244,9 +231,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 			case OSCALPackage.FINDING_TARGET_STATUS: return createFindingTargetStatus();
 			case OSCALPackage.SYSTEM_COMPONENT_STATUS: return createSystemComponentStatus();
 			case OSCALPackage.STEP: return createStep();
-			case OSCALPackage.MARKUP_TABLE_CELL: return createMarkupTableCell();
-			case OSCALPackage.MARKUP_TABLE_ROW: return createMarkupTableRow();
-			case OSCALPackage.MARKUP_TABLE: return createMarkupTable();
 			case OSCALPackage.TERMS_AND_CONDITIONS: return createTermsAndConditions();
 			case OSCALPackage.CONSTRAINT_TEST: return createConstraintTest();
 			case OSCALPackage.TIMING: return createTiming();
@@ -265,10 +249,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case OSCALPackage.ALIGN_TYPE:
-				return createAlignTypeFromString(eDataType, initialValue);
-			case OSCALPackage.ALIGN_TYPE_OBJECT:
-				return createAlignTypeObjectFromString(eDataType, initialValue);
 			case OSCALPackage.AS_IS_TYPE:
 				return createAsIsTypeFromString(eDataType, initialValue);
 			case OSCALPackage.AS_IS_TYPE_OBJECT:
@@ -313,6 +293,10 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 				return createImplementationStatementUuidTypeFromString(eDataType, initialValue);
 			case OSCALPackage.INFORMATION_TYPE_ID_TYPE:
 				return createInformationTypeIdTypeFromString(eDataType, initialValue);
+			case OSCALPackage.MARKUP_LINE_DATATYPE:
+				return createMarkupLineDatatypeFromString(eDataType, initialValue);
+			case OSCALPackage.MARKUP_MULTILINE_DATATYPE:
+				return createMarkupMultilineDatatypeFromString(eDataType, initialValue);
 			case OSCALPackage.MEMBER_OF_ORGANIZATION_TYPE:
 				return createMemberOfOrganizationTypeFromString(eDataType, initialValue);
 			case OSCALPackage.METHOD_TYPE:
@@ -420,10 +404,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case OSCALPackage.ALIGN_TYPE:
-				return convertAlignTypeToString(eDataType, instanceValue);
-			case OSCALPackage.ALIGN_TYPE_OBJECT:
-				return convertAlignTypeObjectToString(eDataType, instanceValue);
 			case OSCALPackage.AS_IS_TYPE:
 				return convertAsIsTypeToString(eDataType, instanceValue);
 			case OSCALPackage.AS_IS_TYPE_OBJECT:
@@ -468,6 +448,10 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 				return convertImplementationStatementUuidTypeToString(eDataType, instanceValue);
 			case OSCALPackage.INFORMATION_TYPE_ID_TYPE:
 				return convertInformationTypeIdTypeToString(eDataType, instanceValue);
+			case OSCALPackage.MARKUP_LINE_DATATYPE:
+				return convertMarkupLineDatatypeToString(eDataType, instanceValue);
+			case OSCALPackage.MARKUP_MULTILINE_DATATYPE:
+				return convertMarkupMultilineDatatypeToString(eDataType, instanceValue);
 			case OSCALPackage.MEMBER_OF_ORGANIZATION_TYPE:
 				return convertMemberOfOrganizationTypeToString(eDataType, instanceValue);
 			case OSCALPackage.METHOD_TYPE:
@@ -595,17 +579,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	 * @generated
 	 */
 	@Override
-	public MarkupAnchor createMarkupAnchor() {
-		MarkupAnchorImpl markupAnchor = new MarkupAnchorImpl();
-		return markupAnchor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public AssessmentLog createAssessmentLog() {
 		AssessmentLogImpl assessmentLog = new AssessmentLogImpl();
 		return assessmentLog;
@@ -672,17 +645,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	 * @generated
 	 */
 	@Override
-	public MarkupBlockQuote createMarkupBlockQuote() {
-		MarkupBlockQuoteImpl markupBlockQuote = new MarkupBlockQuoteImpl();
-		return markupBlockQuote;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Categorization createCategorization() {
 		CategorizationImpl categorization = new CategorizationImpl();
 		return categorization;
@@ -697,17 +659,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	public Citation createCitation() {
 		CitationImpl citation = new CitationImpl();
 		return citation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupCode createMarkupCode() {
-		MarkupCodeImpl markupCode = new MarkupCodeImpl();
-		return markupCode;
 	}
 
 	/**
@@ -859,17 +810,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	 * @generated
 	 */
 	@Override
-	public MarkupImage createMarkupImage() {
-		MarkupImageImpl markupImage = new MarkupImageImpl();
-		return markupImage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public ImplementedComponent createImplementedComponent() {
 		ImplementedComponentImpl implementedComponent = new ImplementedComponentImpl();
 		return implementedComponent;
@@ -903,53 +843,9 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	 * @generated
 	 */
 	@Override
-	public InlineMarkup createInlineMarkup() {
-		InlineMarkupImpl inlineMarkup = new InlineMarkupImpl();
-		return inlineMarkup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupInsert createMarkupInsert() {
-		MarkupInsertImpl markupInsert = new MarkupInsertImpl();
-		return markupInsert;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public LeveragedAuthorization createLeveragedAuthorization() {
 		LeveragedAuthorizationImpl leveragedAuthorization = new LeveragedAuthorizationImpl();
 		return leveragedAuthorization;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupListItem createMarkupListItem() {
-		MarkupListItemImpl markupListItem = new MarkupListItemImpl();
-		return markupListItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupList createMarkupList() {
-		MarkupListImpl markupList = new MarkupListImpl();
-		return markupList;
 	}
 
 	/**
@@ -1002,28 +898,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype createMarkupLineDatatype() {
-		MarkupLineDatatypeImpl markupLineDatatype = new MarkupLineDatatypeImpl();
-		return markupLineDatatype;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype createMarkupMultilineDatatype() {
-		MarkupMultilineDatatypeImpl markupMultilineDatatype = new MarkupMultilineDatatypeImpl();
-		return markupMultilineDatatype;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public MitigatingFactor createMitigatingFactor() {
 		MitigatingFactorImpl mitigatingFactor = new MitigatingFactorImpl();
 		return mitigatingFactor;
@@ -1038,17 +912,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	public OnDate createOnDate() {
 		OnDateImpl onDate = new OnDateImpl();
 		return onDate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupOrderedList createMarkupOrderedList() {
-		MarkupOrderedListImpl markupOrderedList = new MarkupOrderedListImpl();
-		return markupOrderedList;
 	}
 
 	/**
@@ -2234,17 +2097,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	 * @generated
 	 */
 	@Override
-	public MarkupPreformatted createMarkupPreformatted() {
-		MarkupPreformattedImpl markupPreformatted = new MarkupPreformattedImpl();
-		return markupPreformatted;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Provided createProvided() {
 		ProvidedImpl provided = new ProvidedImpl();
 		return provided;
@@ -2325,17 +2177,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	public Responsibility createResponsibility() {
 		ResponsibilityImpl responsibility = new ResponsibilityImpl();
 		return responsibility;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Revisions createRevisions() {
-		RevisionsImpl revisions = new RevisionsImpl();
-		return revisions;
 	}
 
 	/**
@@ -2454,39 +2295,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	 * @generated
 	 */
 	@Override
-	public MarkupTableCell createMarkupTableCell() {
-		MarkupTableCellImpl markupTableCell = new MarkupTableCellImpl();
-		return markupTableCell;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupTableRow createMarkupTableRow() {
-		MarkupTableRowImpl markupTableRow = new MarkupTableRowImpl();
-		return markupTableRow;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupTable createMarkupTable() {
-		MarkupTableImpl markupTable = new MarkupTableImpl();
-		return markupTable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public TermsAndConditions createTermsAndConditions() {
 		TermsAndConditionsImpl termsAndConditions = new TermsAndConditionsImpl();
 		return termsAndConditions;
@@ -2534,44 +2342,6 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	public WithinDateRange createWithinDateRange() {
 		WithinDateRangeImpl withinDateRange = new WithinDateRangeImpl();
 		return withinDateRange;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AlignType createAlignTypeFromString(EDataType eDataType, String initialValue) {
-		AlignType result = AlignType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertAlignTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AlignType createAlignTypeObjectFromString(EDataType eDataType, String initialValue) {
-		return createAlignTypeFromString(OSCALPackage.eINSTANCE.getAlignType(), initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertAlignTypeObjectToString(EDataType eDataType, Object instanceValue) {
-		return convertAlignTypeToString(OSCALPackage.eINSTANCE.getAlignType(), instanceValue);
 	}
 
 	/**
@@ -2968,6 +2738,42 @@ public class OSCALFactoryImpl extends EFactoryImpl implements OSCALFactory {
 	 */
 	public String convertInformationTypeIdTypeToString(EDataType eDataType, Object instanceValue) {
 		return convertStringDatatypeToString(OSCALPackage.eINSTANCE.getStringDatatype(), instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createMarkupLineDatatypeFromString(EDataType eDataType, String initialValue) {
+		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.STRING, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMarkupLineDatatypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.STRING, instanceValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String createMarkupMultilineDatatypeFromString(EDataType eDataType, String initialValue) {
+		return (String)XMLTypeFactory.eINSTANCE.createFromString(XMLTypePackage.Literals.STRING, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMarkupMultilineDatatypeToString(EDataType eDataType, Object instanceValue) {
+		return XMLTypeFactory.eINSTANCE.convertToString(XMLTypePackage.Literals.STRING, instanceValue);
 	}
 
 	/**

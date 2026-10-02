@@ -38,6 +38,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link gov.nist.csrc.ns.oscal.DocumentRoot#getPlanOfActionAndMilestones <em>Plan Of Action And Milestones</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.DocumentRoot#getProfile <em>Profile</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.DocumentRoot#getSystemSecurityPlan <em>System Security Plan</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.DocumentRoot#getSchema <em>Schema</em>}</li>
  * </ul>
  *
  * @see gov.nist.csrc.ns.oscal.OSCALPackage#getDocumentRoot()
@@ -270,5 +271,31 @@ public interface DocumentRoot extends EObject {
 	 * @generated
 	 */
 	void setSystemSecurityPlan(SystemSecurityPlan value);
+
+	/**
+	 * Returns the value of the '<em><b>Schema</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * The JSON member $schema of an OSCAL JSON document. Transient, so XMLResource ignores it.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Schema</em>' attribute.
+	 * @see #setSchema(String)
+	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getDocumentRoot_Schema()
+	 * @model transient="true"
+	 *        annotation="http://eclipse.org/fennec/codec key='$schema'"
+	 * @generated
+	 */
+	String getSchema();
+
+	/**
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.DocumentRoot#getSchema <em>Schema</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Schema</em>' attribute.
+	 * @see #getSchema()
+	 * @generated
+	 */
+	void setSchema(String value);
 
 } // DocumentRoot

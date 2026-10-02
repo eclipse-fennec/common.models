@@ -12,8 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Diagram;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 
@@ -53,14 +51,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -83,24 +91,44 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	protected EList<Link> link;
 
 	/**
-	 * The cached value of the '{@link #getCaption() <em>Caption</em>}' containment reference.
+	 * The default value of the '{@link #getCaption() <em>Caption</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCaption()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype caption;
+	protected static final String CAPTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The cached value of the '{@link #getCaption() <em>Caption</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCaption()
+	 * @generated
+	 * @ordered
+	 */
+	protected String caption = CAPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -147,7 +175,7 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -156,34 +184,12 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.DIAGRAM__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DIAGRAM__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DIAGRAM__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DIAGRAM__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DIAGRAM__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -218,7 +224,7 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getCaption() {
+	public String getCaption() {
 		return caption;
 	}
 
@@ -227,14 +233,12 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCaption(MarkupLineDatatype newCaption, NotificationChain msgs) {
-		MarkupLineDatatype oldCaption = caption;
+	@Override
+	public void setCaption(String newCaption) {
+		String oldCaption = caption;
 		caption = newCaption;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.DIAGRAM__CAPTION, oldCaption, newCaption);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DIAGRAM__CAPTION, oldCaption, caption));
 	}
 
 	/**
@@ -243,27 +247,7 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	 * @generated
 	 */
 	@Override
-	public void setCaption(MarkupLineDatatype newCaption) {
-		if (newCaption != caption) {
-			NotificationChain msgs = null;
-			if (caption != null)
-				msgs = ((InternalEObject)caption).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DIAGRAM__CAPTION, null, msgs);
-			if (newCaption != null)
-				msgs = ((InternalEObject)newCaption).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DIAGRAM__CAPTION, null, msgs);
-			msgs = basicSetCaption(newCaption, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DIAGRAM__CAPTION, newCaption, newCaption));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -272,34 +256,12 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.DIAGRAM__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DIAGRAM__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.DIAGRAM__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DIAGRAM__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DIAGRAM__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -333,16 +295,10 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.DIAGRAM__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.DIAGRAM__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.DIAGRAM__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.DIAGRAM__CAPTION:
-				return basicSetCaption(null, msgs);
-			case OSCALPackage.DIAGRAM__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -381,7 +337,7 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.DIAGRAM__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.DIAGRAM__PROP:
 				getProp().clear();
@@ -392,10 +348,10 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
 			case OSCALPackage.DIAGRAM__CAPTION:
-				setCaption((MarkupLineDatatype)newValue);
+				setCaption((String)newValue);
 				return;
 			case OSCALPackage.DIAGRAM__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.DIAGRAM__UUID:
 				setUuid((String)newValue);
@@ -413,7 +369,7 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.DIAGRAM__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.DIAGRAM__PROP:
 				getProp().clear();
@@ -422,10 +378,10 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 				getLink().clear();
 				return;
 			case OSCALPackage.DIAGRAM__CAPTION:
-				setCaption((MarkupLineDatatype)null);
+				setCaption(CAPTION_EDEFAULT);
 				return;
 			case OSCALPackage.DIAGRAM__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.DIAGRAM__UUID:
 				setUuid(UUID_EDEFAULT);
@@ -443,15 +399,15 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.DIAGRAM__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.DIAGRAM__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.DIAGRAM__LINK:
 				return link != null && !link.isEmpty();
 			case OSCALPackage.DIAGRAM__CAPTION:
-				return caption != null;
+				return CAPTION_EDEFAULT == null ? caption != null : !CAPTION_EDEFAULT.equals(caption);
 			case OSCALPackage.DIAGRAM__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.DIAGRAM__UUID:
 				return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
 		}
@@ -468,7 +424,13 @@ public class DiagramImpl extends MinimalEObjectImpl.Container implements Diagram
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (uuid: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", caption: ");
+		result.append(caption);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", uuid: ");
 		result.append(uuid);
 		result.append(')');
 		return result.toString();

@@ -14,7 +14,6 @@ import gov.nist.csrc.ns.oscal.Capability;
 import gov.nist.csrc.ns.oscal.ComponentControlImplementation;
 import gov.nist.csrc.ns.oscal.IncorporatesComponent;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 
@@ -56,14 +55,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capability {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -106,14 +115,24 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 	protected EList<ComponentControlImplementation> controlImplementation;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -180,7 +199,7 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -189,34 +208,12 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.CAPABILITY__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CAPABILITY__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CAPABILITY__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CAPABILITY__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CAPABILITY__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -277,7 +274,7 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -286,34 +283,12 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.CAPABILITY__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CAPABILITY__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CAPABILITY__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CAPABILITY__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CAPABILITY__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -370,8 +345,6 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.CAPABILITY__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.CAPABILITY__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.CAPABILITY__LINK:
@@ -380,8 +353,6 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 				return ((InternalEList<?>)getIncorporatesComponent()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.CAPABILITY__CONTROL_IMPLEMENTATION:
 				return ((InternalEList<?>)getControlImplementation()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.CAPABILITY__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -424,7 +395,7 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.CAPABILITY__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.CAPABILITY__PROP:
 				getProp().clear();
@@ -443,7 +414,7 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 				getControlImplementation().addAll((Collection<? extends ComponentControlImplementation>)newValue);
 				return;
 			case OSCALPackage.CAPABILITY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.CAPABILITY__NAME:
 				setName((String)newValue);
@@ -464,7 +435,7 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.CAPABILITY__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.CAPABILITY__PROP:
 				getProp().clear();
@@ -479,7 +450,7 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 				getControlImplementation().clear();
 				return;
 			case OSCALPackage.CAPABILITY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.CAPABILITY__NAME:
 				setName(NAME_EDEFAULT);
@@ -500,7 +471,7 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.CAPABILITY__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.CAPABILITY__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.CAPABILITY__LINK:
@@ -510,7 +481,7 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 			case OSCALPackage.CAPABILITY__CONTROL_IMPLEMENTATION:
 				return controlImplementation != null && !controlImplementation.isEmpty();
 			case OSCALPackage.CAPABILITY__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.CAPABILITY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case OSCALPackage.CAPABILITY__UUID:
@@ -529,7 +500,11 @@ public class CapabilityImpl extends MinimalEObjectImpl.Container implements Capa
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", name: ");
 		result.append(name);
 		result.append(", uuid: ");
 		result.append(uuid);

@@ -12,7 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.AssessmentAssets;
 import gov.nist.csrc.ns.oscal.InventoryItem;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.PoamLocalDefinitions;
 import gov.nist.csrc.ns.oscal.SystemComponent;
@@ -81,14 +80,24 @@ public class PoamLocalDefinitionsImpl extends MinimalEObjectImpl.Container imple
 	protected AssessmentAssets assessmentAssets;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,7 +195,7 @@ public class PoamLocalDefinitionsImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -195,34 +204,12 @@ public class PoamLocalDefinitionsImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.POAM_LOCAL_DEFINITIONS__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.POAM_LOCAL_DEFINITIONS__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.POAM_LOCAL_DEFINITIONS__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.POAM_LOCAL_DEFINITIONS__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.POAM_LOCAL_DEFINITIONS__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -239,8 +226,6 @@ public class PoamLocalDefinitionsImpl extends MinimalEObjectImpl.Container imple
 				return ((InternalEList<?>)getInventoryItem()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.POAM_LOCAL_DEFINITIONS__ASSESSMENT_ASSETS:
 				return basicSetAssessmentAssets(null, msgs);
-			case OSCALPackage.POAM_LOCAL_DEFINITIONS__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -286,7 +271,7 @@ public class PoamLocalDefinitionsImpl extends MinimalEObjectImpl.Container imple
 				setAssessmentAssets((AssessmentAssets)newValue);
 				return;
 			case OSCALPackage.POAM_LOCAL_DEFINITIONS__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -310,7 +295,7 @@ public class PoamLocalDefinitionsImpl extends MinimalEObjectImpl.Container imple
 				setAssessmentAssets((AssessmentAssets)null);
 				return;
 			case OSCALPackage.POAM_LOCAL_DEFINITIONS__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -331,9 +316,25 @@ public class PoamLocalDefinitionsImpl extends MinimalEObjectImpl.Container imple
 			case OSCALPackage.POAM_LOCAL_DEFINITIONS__ASSESSMENT_ASSETS:
 				return assessmentAssets != null;
 			case OSCALPackage.POAM_LOCAL_DEFINITIONS__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (remarks: ");
+		result.append(remarks);
+		result.append(')');
+		return result.toString();
 	}
 
 } //PoamLocalDefinitionsImpl

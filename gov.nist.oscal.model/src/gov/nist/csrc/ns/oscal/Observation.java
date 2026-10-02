@@ -57,7 +57,7 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface Observation extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -67,27 +67,27 @@ public interface Observation extends EObject {
 	 *   : The title for this observation.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Title</em>' containment reference.
-	 * @see #setTitle(MarkupLineDatatype)
+	 * @return the value of the '<em>Title</em>' attribute.
+	 * @see #setTitle(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getObservation_Title()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupLineDatatype"
 	 *        extendedMetaData="kind='element' name='title' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupLineDatatype getTitle();
+	String getTitle();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Observation#getTitle <em>Title</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Observation#getTitle <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' containment reference.
+	 * @param value the new value of the '<em>Title</em>' attribute.
 	 * @see #getTitle()
 	 * @generated
 	 */
-	void setTitle(MarkupLineDatatype value);
+	void setTitle(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -97,24 +97,24 @@ public interface Observation extends EObject {
 	 *   : A human-readable description of this assessment observation.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Description</em>' containment reference.
-	 * @see #setDescription(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getObservation_Description()
-	 * @model containment="true" required="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype" required="true"
 	 *        extendedMetaData="kind='element' name='description' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getDescription();
+	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Observation#getDescription <em>Description</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Observation#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' containment reference.
+	 * @param value the new value of the '<em>Description</em>' attribute.
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(MarkupMultilineDatatype value);
+	void setDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Prop</b></em>' containment reference list.
@@ -260,7 +260,7 @@ public interface Observation extends EObject {
 	void setExpires(XMLGregorianCalendar value);
 
 	/**
-	 * Returns the value of the '<em><b>Remarks</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -270,24 +270,24 @@ public interface Observation extends EObject {
 	 *   : Additional commentary about the containing object.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Remarks</em>' containment reference.
-	 * @see #setRemarks(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Remarks</em>' attribute.
+	 * @see #setRemarks(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getObservation_Remarks()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype"
 	 *        extendedMetaData="kind='element' name='remarks' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getRemarks();
+	String getRemarks();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Observation#getRemarks <em>Remarks</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Observation#getRemarks <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Remarks</em>' containment reference.
+	 * @param value the new value of the '<em>Remarks</em>' attribute.
 	 * @see #getRemarks()
 	 * @generated
 	 */
-	void setRemarks(MarkupMultilineDatatype value);
+	void setRemarks(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Uuid</b></em>' attribute.

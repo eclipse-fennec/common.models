@@ -10,7 +10,6 @@
  */
 package gov.nist.csrc.ns.oscal.impl;
 
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.SetParameter;
 import gov.nist.csrc.ns.oscal.SspControlImplementation;
@@ -49,14 +48,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class SspControlImplementationImpl extends MinimalEObjectImpl.Container implements SspControlImplementation {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getSetParameter() <em>Set Parameter</em>}' containment reference list.
@@ -103,7 +112,7 @@ public class SspControlImplementationImpl extends MinimalEObjectImpl.Container i
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -112,34 +121,12 @@ public class SspControlImplementationImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.SSP_CONTROL_IMPLEMENTATION__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.SSP_CONTROL_IMPLEMENTATION__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.SSP_CONTROL_IMPLEMENTATION__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.SSP_CONTROL_IMPLEMENTATION__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.SSP_CONTROL_IMPLEMENTATION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -176,8 +163,6 @@ public class SspControlImplementationImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__SET_PARAMETER:
 				return ((InternalEList<?>)getSetParameter()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__IMPLEMENTED_REQUIREMENT:
@@ -214,7 +199,7 @@ public class SspControlImplementationImpl extends MinimalEObjectImpl.Container i
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__SET_PARAMETER:
 				getSetParameter().clear();
@@ -237,7 +222,7 @@ public class SspControlImplementationImpl extends MinimalEObjectImpl.Container i
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__SET_PARAMETER:
 				getSetParameter().clear();
@@ -258,13 +243,29 @@ public class SspControlImplementationImpl extends MinimalEObjectImpl.Container i
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__SET_PARAMETER:
 				return setParameter != null && !setParameter.isEmpty();
 			case OSCALPackage.SSP_CONTROL_IMPLEMENTATION__IMPLEMENTED_REQUIREMENT:
 				return implementedRequirement != null && !implementedRequirement.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (description: ");
+		result.append(description);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SspControlImplementationImpl

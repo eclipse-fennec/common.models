@@ -17,7 +17,6 @@ import gov.nist.csrc.ns.oscal.Link;
 import gov.nist.csrc.ns.oscal.MapEntry;
 import gov.nist.csrc.ns.oscal.Mapping;
 import gov.nist.csrc.ns.oscal.MappingResourceReference;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 
@@ -116,24 +115,44 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	protected EList<Link> link;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getMappingDescription() <em>Mapping Description</em>}' containment reference.
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMappingDescription() <em>Mapping Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMappingDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype mappingDescription;
+	protected static final String MAPPING_DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getMappingDescription() <em>Mapping Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMappingDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String mappingDescription = MAPPING_DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getSourceGapSummary() <em>Source Gap Summary</em>}' containment reference.
@@ -409,7 +428,7 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -418,14 +437,12 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
+	@Override
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
 		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.MAPPING__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.MAPPING__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -434,27 +451,7 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	 * @generated
 	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.MAPPING__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.MAPPING__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.MAPPING__REMARKS, newRemarks, newRemarks));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getMappingDescription() {
+	public String getMappingDescription() {
 		return mappingDescription;
 	}
 
@@ -463,34 +460,12 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMappingDescription(MarkupMultilineDatatype newMappingDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldMappingDescription = mappingDescription;
-		mappingDescription = newMappingDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.MAPPING__MAPPING_DESCRIPTION, oldMappingDescription, newMappingDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setMappingDescription(MarkupMultilineDatatype newMappingDescription) {
-		if (newMappingDescription != mappingDescription) {
-			NotificationChain msgs = null;
-			if (mappingDescription != null)
-				msgs = ((InternalEObject)mappingDescription).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.MAPPING__MAPPING_DESCRIPTION, null, msgs);
-			if (newMappingDescription != null)
-				msgs = ((InternalEObject)newMappingDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.MAPPING__MAPPING_DESCRIPTION, null, msgs);
-			msgs = basicSetMappingDescription(newMappingDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.MAPPING__MAPPING_DESCRIPTION, newMappingDescription, newMappingDescription));
+	public void setMappingDescription(String newMappingDescription) {
+		String oldMappingDescription = mappingDescription;
+		mappingDescription = newMappingDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.MAPPING__MAPPING_DESCRIPTION, oldMappingDescription, mappingDescription));
 	}
 
 	/**
@@ -783,10 +758,6 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.MAPPING__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.MAPPING__REMARKS:
-				return basicSetRemarks(null, msgs);
-			case OSCALPackage.MAPPING__MAPPING_DESCRIPTION:
-				return basicSetMappingDescription(null, msgs);
 			case OSCALPackage.MAPPING__SOURCE_GAP_SUMMARY:
 				return basicSetSourceGapSummary(null, msgs);
 			case OSCALPackage.MAPPING__TARGET_GAP_SUMMARY:
@@ -869,10 +840,10 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
 			case OSCALPackage.MAPPING__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.MAPPING__MAPPING_DESCRIPTION:
-				setMappingDescription((MarkupMultilineDatatype)newValue);
+				setMappingDescription((String)newValue);
 				return;
 			case OSCALPackage.MAPPING__SOURCE_GAP_SUMMARY:
 				setSourceGapSummary((GapSummary)newValue);
@@ -926,10 +897,10 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 				getLink().clear();
 				return;
 			case OSCALPackage.MAPPING__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.MAPPING__MAPPING_DESCRIPTION:
-				setMappingDescription((MarkupMultilineDatatype)null);
+				setMappingDescription(MAPPING_DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.MAPPING__SOURCE_GAP_SUMMARY:
 				setSourceGapSummary((GapSummary)null);
@@ -978,9 +949,9 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 			case OSCALPackage.MAPPING__LINK:
 				return link != null && !link.isEmpty();
 			case OSCALPackage.MAPPING__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.MAPPING__MAPPING_DESCRIPTION:
-				return mappingDescription != null;
+				return MAPPING_DESCRIPTION_EDEFAULT == null ? mappingDescription != null : !MAPPING_DESCRIPTION_EDEFAULT.equals(mappingDescription);
 			case OSCALPackage.MAPPING__SOURCE_GAP_SUMMARY:
 				return sourceGapSummary != null;
 			case OSCALPackage.MAPPING__TARGET_GAP_SUMMARY:
@@ -1011,7 +982,11 @@ public class MappingImpl extends MinimalEObjectImpl.Container implements Mapping
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (matchingRationale: ");
+		result.append(" (remarks: ");
+		result.append(remarks);
+		result.append(", mappingDescription: ");
+		result.append(mappingDescription);
+		result.append(", matchingRationale: ");
 		result.append(matchingRationale);
 		result.append(", method: ");
 		result.append(method);

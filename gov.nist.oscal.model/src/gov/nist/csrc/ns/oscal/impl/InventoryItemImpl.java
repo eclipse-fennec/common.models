@@ -13,7 +13,6 @@ package gov.nist.csrc.ns.oscal.impl;
 import gov.nist.csrc.ns.oscal.ImplementedComponent;
 import gov.nist.csrc.ns.oscal.InventoryItem;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleParty;
@@ -55,14 +54,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class InventoryItemImpl extends MinimalEObjectImpl.Container implements InventoryItem {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -105,14 +114,24 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 	protected EList<ImplementedComponent> implementedComponent;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -159,7 +178,7 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -168,34 +187,12 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.INVENTORY_ITEM__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.INVENTORY_ITEM__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.INVENTORY_ITEM__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.INVENTORY_ITEM__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.INVENTORY_ITEM__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -256,7 +253,7 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -265,34 +262,12 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.INVENTORY_ITEM__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.INVENTORY_ITEM__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.INVENTORY_ITEM__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.INVENTORY_ITEM__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.INVENTORY_ITEM__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -326,8 +301,6 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.INVENTORY_ITEM__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.INVENTORY_ITEM__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.INVENTORY_ITEM__LINK:
@@ -336,8 +309,6 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 				return ((InternalEList<?>)getResponsibleParty()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.INVENTORY_ITEM__IMPLEMENTED_COMPONENT:
 				return ((InternalEList<?>)getImplementedComponent()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.INVENTORY_ITEM__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -378,7 +349,7 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.INVENTORY_ITEM__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.INVENTORY_ITEM__PROP:
 				getProp().clear();
@@ -397,7 +368,7 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 				getImplementedComponent().addAll((Collection<? extends ImplementedComponent>)newValue);
 				return;
 			case OSCALPackage.INVENTORY_ITEM__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.INVENTORY_ITEM__UUID:
 				setUuid((String)newValue);
@@ -415,7 +386,7 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.INVENTORY_ITEM__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.INVENTORY_ITEM__PROP:
 				getProp().clear();
@@ -430,7 +401,7 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 				getImplementedComponent().clear();
 				return;
 			case OSCALPackage.INVENTORY_ITEM__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.INVENTORY_ITEM__UUID:
 				setUuid(UUID_EDEFAULT);
@@ -448,7 +419,7 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.INVENTORY_ITEM__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.INVENTORY_ITEM__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.INVENTORY_ITEM__LINK:
@@ -458,7 +429,7 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 			case OSCALPackage.INVENTORY_ITEM__IMPLEMENTED_COMPONENT:
 				return implementedComponent != null && !implementedComponent.isEmpty();
 			case OSCALPackage.INVENTORY_ITEM__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.INVENTORY_ITEM__UUID:
 				return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
 		}
@@ -475,7 +446,11 @@ public class InventoryItemImpl extends MinimalEObjectImpl.Container implements I
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (uuid: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", uuid: ");
 		result.append(uuid);
 		result.append(')');
 		return result.toString();

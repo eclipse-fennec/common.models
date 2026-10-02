@@ -12,8 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Characterization;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.MitigatingFactor;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Origin;
@@ -71,34 +69,64 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getStatement() <em>Statement</em>}' containment reference.
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStatement() <em>Statement</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStatement()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype statement;
+	protected static final String STATEMENT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getStatement() <em>Statement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatement()
+	 * @generated
+	 * @ordered
+	 */
+	protected String statement = STATEMENT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -275,7 +303,7 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -284,14 +312,12 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
+	@Override
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
 		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.RISK__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RISK__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -300,27 +326,7 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	 * @generated
 	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RISK__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RISK__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RISK__TITLE, newTitle, newTitle));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -329,14 +335,12 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
+	@Override
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
 		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.RISK__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RISK__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -345,27 +349,7 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	 * @generated
 	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RISK__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RISK__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RISK__DESCRIPTION, newDescription, newDescription));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getStatement() {
+	public String getStatement() {
 		return statement;
 	}
 
@@ -374,34 +358,12 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetStatement(MarkupMultilineDatatype newStatement, NotificationChain msgs) {
-		MarkupMultilineDatatype oldStatement = statement;
-		statement = newStatement;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.RISK__STATEMENT, oldStatement, newStatement);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setStatement(MarkupMultilineDatatype newStatement) {
-		if (newStatement != statement) {
-			NotificationChain msgs = null;
-			if (statement != null)
-				msgs = ((InternalEObject)statement).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RISK__STATEMENT, null, msgs);
-			if (newStatement != null)
-				msgs = ((InternalEObject)newStatement).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RISK__STATEMENT, null, msgs);
-			msgs = basicSetStatement(newStatement, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RISK__STATEMENT, newStatement, newStatement));
+	public void setStatement(String newStatement) {
+		String oldStatement = statement;
+		statement = newStatement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RISK__STATEMENT, oldStatement, statement));
 	}
 
 	/**
@@ -630,12 +592,6 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.RISK__TITLE:
-				return basicSetTitle(null, msgs);
-			case OSCALPackage.RISK__DESCRIPTION:
-				return basicSetDescription(null, msgs);
-			case OSCALPackage.RISK__STATEMENT:
-				return basicSetStatement(null, msgs);
 			case OSCALPackage.RISK__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.RISK__LINK:
@@ -710,13 +666,13 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.RISK__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.RISK__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.RISK__STATEMENT:
-				setStatement((MarkupMultilineDatatype)newValue);
+				setStatement((String)newValue);
 				return;
 			case OSCALPackage.RISK__PROP:
 				getProp().clear();
@@ -775,13 +731,13 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.RISK__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.RISK__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.RISK__STATEMENT:
-				setStatement((MarkupMultilineDatatype)null);
+				setStatement(STATEMENT_EDEFAULT);
 				return;
 			case OSCALPackage.RISK__PROP:
 				getProp().clear();
@@ -832,11 +788,11 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.RISK__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.RISK__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.RISK__STATEMENT:
-				return statement != null;
+				return STATEMENT_EDEFAULT == null ? statement != null : !STATEMENT_EDEFAULT.equals(statement);
 			case OSCALPackage.RISK__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.RISK__LINK:
@@ -875,7 +831,13 @@ public class RiskImpl extends MinimalEObjectImpl.Container implements Risk {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (status: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", statement: ");
+		result.append(statement);
+		result.append(", status: ");
 		result.append(status);
 		result.append(", deadline: ");
 		result.append(deadline);

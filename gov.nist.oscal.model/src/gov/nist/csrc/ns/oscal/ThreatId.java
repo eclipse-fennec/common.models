@@ -51,6 +51,7 @@ public interface ThreatId extends EObject {
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getThreatId_Value()
 	 * @model dataType="gov.nist.csrc.ns.oscal.URIDatatype"
 	 *        extendedMetaData="name=':0' kind='simple'"
+	 *        annotation="http://eclipse.org/fennec/codec key='id'"
 	 * @generated
 	 */
 	String getValue();

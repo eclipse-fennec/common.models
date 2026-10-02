@@ -121,7 +121,7 @@ public interface Impact extends EObject {
 	void setSelected(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Adjustment Justification</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Adjustment Justification</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -131,23 +131,23 @@ public interface Impact extends EObject {
 	 *   : If the selected security level is different from the base security level, this contains the justification for the change.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Adjustment Justification</em>' containment reference.
-	 * @see #setAdjustmentJustification(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Adjustment Justification</em>' attribute.
+	 * @see #setAdjustmentJustification(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getImpact_AdjustmentJustification()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype"
 	 *        extendedMetaData="kind='element' name='adjustment-justification' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getAdjustmentJustification();
+	String getAdjustmentJustification();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Impact#getAdjustmentJustification <em>Adjustment Justification</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Impact#getAdjustmentJustification <em>Adjustment Justification</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Adjustment Justification</em>' containment reference.
+	 * @param value the new value of the '<em>Adjustment Justification</em>' attribute.
 	 * @see #getAdjustmentJustification()
 	 * @generated
 	 */
-	void setAdjustmentJustification(MarkupMultilineDatatype value);
+	void setAdjustmentJustification(String value);
 
 } // Impact

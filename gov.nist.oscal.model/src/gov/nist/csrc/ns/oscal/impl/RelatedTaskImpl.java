@@ -13,7 +13,6 @@ package gov.nist.csrc.ns.oscal.impl;
 import gov.nist.csrc.ns.oscal.AssessmentSubject;
 import gov.nist.csrc.ns.oscal.IdentifiedSubject;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.RelatedTask;
@@ -106,14 +105,24 @@ public class RelatedTaskImpl extends MinimalEObjectImpl.Container implements Rel
 	protected IdentifiedSubject identifiedSubject;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTaskUuid() <em>Task Uuid</em>}' attribute.
@@ -257,7 +266,7 @@ public class RelatedTaskImpl extends MinimalEObjectImpl.Container implements Rel
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -266,34 +275,12 @@ public class RelatedTaskImpl extends MinimalEObjectImpl.Container implements Rel
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.RELATED_TASK__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RELATED_TASK__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RELATED_TASK__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RELATED_TASK__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RELATED_TASK__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -337,8 +324,6 @@ public class RelatedTaskImpl extends MinimalEObjectImpl.Container implements Rel
 				return ((InternalEList<?>)getSubject()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.RELATED_TASK__IDENTIFIED_SUBJECT:
 				return basicSetIdentifiedSubject(null, msgs);
-			case OSCALPackage.RELATED_TASK__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -398,7 +383,7 @@ public class RelatedTaskImpl extends MinimalEObjectImpl.Container implements Rel
 				setIdentifiedSubject((IdentifiedSubject)newValue);
 				return;
 			case OSCALPackage.RELATED_TASK__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.RELATED_TASK__TASK_UUID:
 				setTaskUuid((String)newValue);
@@ -431,7 +416,7 @@ public class RelatedTaskImpl extends MinimalEObjectImpl.Container implements Rel
 				setIdentifiedSubject((IdentifiedSubject)null);
 				return;
 			case OSCALPackage.RELATED_TASK__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.RELATED_TASK__TASK_UUID:
 				setTaskUuid(TASK_UUID_EDEFAULT);
@@ -459,7 +444,7 @@ public class RelatedTaskImpl extends MinimalEObjectImpl.Container implements Rel
 			case OSCALPackage.RELATED_TASK__IDENTIFIED_SUBJECT:
 				return identifiedSubject != null;
 			case OSCALPackage.RELATED_TASK__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.RELATED_TASK__TASK_UUID:
 				return TASK_UUID_EDEFAULT == null ? taskUuid != null : !TASK_UUID_EDEFAULT.equals(taskUuid);
 		}
@@ -476,7 +461,9 @@ public class RelatedTaskImpl extends MinimalEObjectImpl.Container implements Rel
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (taskUuid: ");
+		result.append(" (remarks: ");
+		result.append(remarks);
+		result.append(", taskUuid: ");
 		result.append(taskUuid);
 		result.append(')');
 		return result.toString();

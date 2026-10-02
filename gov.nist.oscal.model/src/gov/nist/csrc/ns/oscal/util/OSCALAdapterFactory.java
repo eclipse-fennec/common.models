@@ -84,10 +84,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 				return createAlterAdapter();
 			}
 			@Override
-			public Adapter caseMarkupAnchor(MarkupAnchor object) {
-				return createMarkupAnchorAdapter();
-			}
-			@Override
 			public Adapter caseAssessmentLog(AssessmentLog object) {
 				return createAssessmentLogAdapter();
 			}
@@ -112,20 +108,12 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 				return createBase64Adapter();
 			}
 			@Override
-			public Adapter caseMarkupBlockQuote(MarkupBlockQuote object) {
-				return createMarkupBlockQuoteAdapter();
-			}
-			@Override
 			public Adapter caseCategorization(Categorization object) {
 				return createCategorizationAdapter();
 			}
 			@Override
 			public Adapter caseCitation(Citation object) {
 				return createCitationAdapter();
-			}
-			@Override
-			public Adapter caseMarkupCode(MarkupCode object) {
-				return createMarkupCodeAdapter();
 			}
 			@Override
 			public Adapter caseCombine(Combine object) {
@@ -180,10 +168,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 				return createIdentifiedSubjectAdapter();
 			}
 			@Override
-			public Adapter caseMarkupImage(MarkupImage object) {
-				return createMarkupImageAdapter();
-			}
-			@Override
 			public Adapter caseImplementedComponent(ImplementedComponent object) {
 				return createImplementedComponentAdapter();
 			}
@@ -196,24 +180,8 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 				return createInheritedAdapter();
 			}
 			@Override
-			public Adapter caseInlineMarkup(InlineMarkup object) {
-				return createInlineMarkupAdapter();
-			}
-			@Override
-			public Adapter caseMarkupInsert(MarkupInsert object) {
-				return createMarkupInsertAdapter();
-			}
-			@Override
 			public Adapter caseLeveragedAuthorization(LeveragedAuthorization object) {
 				return createLeveragedAuthorizationAdapter();
-			}
-			@Override
-			public Adapter caseMarkupListItem(MarkupListItem object) {
-				return createMarkupListItemAdapter();
-			}
-			@Override
-			public Adapter caseMarkupList(MarkupList object) {
-				return createMarkupListAdapter();
 			}
 			@Override
 			public Adapter caseResultLocalDefinitions(ResultLocalDefinitions object) {
@@ -232,24 +200,12 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 				return createLocationAdapter();
 			}
 			@Override
-			public Adapter caseMarkupLineDatatype(MarkupLineDatatype object) {
-				return createMarkupLineDatatypeAdapter();
-			}
-			@Override
-			public Adapter caseMarkupMultilineDatatype(MarkupMultilineDatatype object) {
-				return createMarkupMultilineDatatypeAdapter();
-			}
-			@Override
 			public Adapter caseMitigatingFactor(MitigatingFactor object) {
 				return createMitigatingFactorAdapter();
 			}
 			@Override
 			public Adapter caseOnDate(OnDate object) {
 				return createOnDateAdapter();
-			}
-			@Override
-			public Adapter caseMarkupOrderedList(MarkupOrderedList object) {
-				return createMarkupOrderedListAdapter();
 			}
 			@Override
 			public Adapter casePoamItemOrigin(PoamItemOrigin object) {
@@ -680,10 +636,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 				return createPartyAdapter();
 			}
 			@Override
-			public Adapter caseMarkupPreformatted(MarkupPreformatted object) {
-				return createMarkupPreformattedAdapter();
-			}
-			@Override
 			public Adapter caseProvided(Provided object) {
 				return createProvidedAdapter();
 			}
@@ -714,10 +666,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseResponsibility(Responsibility object) {
 				return createResponsibilityAdapter();
-			}
-			@Override
-			public Adapter caseRevisions(Revisions object) {
-				return createRevisionsAdapter();
 			}
 			@Override
 			public Adapter caseRevision(Revision object) {
@@ -758,18 +706,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseStep(Step object) {
 				return createStepAdapter();
-			}
-			@Override
-			public Adapter caseMarkupTableCell(MarkupTableCell object) {
-				return createMarkupTableCellAdapter();
-			}
-			@Override
-			public Adapter caseMarkupTableRow(MarkupTableRow object) {
-				return createMarkupTableRowAdapter();
-			}
-			@Override
-			public Adapter caseMarkupTable(MarkupTable object) {
-				return createMarkupTableAdapter();
 			}
 			@Override
 			public Adapter caseTermsAndConditions(TermsAndConditions object) {
@@ -836,20 +772,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAlterAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupAnchor <em>Markup Anchor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor
-	 * @generated
-	 */
-	public Adapter createMarkupAnchorAdapter() {
 		return null;
 	}
 
@@ -938,20 +860,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote <em>Markup Block Quote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote
-	 * @generated
-	 */
-	public Adapter createMarkupBlockQuoteAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.Categorization <em>Categorization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -976,20 +884,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCitationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupCode <em>Markup Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupCode
-	 * @generated
-	 */
-	public Adapter createMarkupCodeAdapter() {
 		return null;
 	}
 
@@ -1176,20 +1070,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupImage <em>Markup Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupImage
-	 * @generated
-	 */
-	public Adapter createMarkupImageAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.ImplementedComponent <em>Implemented Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1232,34 +1112,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.InlineMarkup <em>Inline Markup</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup
-	 * @generated
-	 */
-	public Adapter createInlineMarkupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupInsert <em>Markup Insert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupInsert
-	 * @generated
-	 */
-	public Adapter createMarkupInsertAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.LeveragedAuthorization <em>Leveraged Authorization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1270,34 +1122,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLeveragedAuthorizationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupListItem <em>Markup List Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem
-	 * @generated
-	 */
-	public Adapter createMarkupListItemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupList <em>Markup List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupList
-	 * @generated
-	 */
-	public Adapter createMarkupListAdapter() {
 		return null;
 	}
 
@@ -1358,34 +1182,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupLineDatatype <em>Markup Line Datatype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupLineDatatype
-	 * @generated
-	 */
-	public Adapter createMarkupLineDatatypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype <em>Markup Multiline Datatype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype
-	 * @generated
-	 */
-	public Adapter createMarkupMultilineDatatypeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MitigatingFactor <em>Mitigating Factor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1410,20 +1206,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOnDateAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupOrderedList <em>Markup Ordered List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupOrderedList
-	 * @generated
-	 */
-	public Adapter createMarkupOrderedListAdapter() {
 		return null;
 	}
 
@@ -2926,20 +2708,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupPreformatted <em>Markup Preformatted</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupPreformatted
-	 * @generated
-	 */
-	public Adapter createMarkupPreformattedAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.Provided <em>Provided</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -3048,20 +2816,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResponsibilityAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.Revisions <em>Revisions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.Revisions
-	 * @generated
-	 */
-	public Adapter createRevisionsAdapter() {
 		return null;
 	}
 
@@ -3202,48 +2956,6 @@ public class OSCALAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupTableCell <em>Markup Table Cell</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTableCell
-	 * @generated
-	 */
-	public Adapter createMarkupTableCellAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupTableRow <em>Markup Table Row</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTableRow
-	 * @generated
-	 */
-	public Adapter createMarkupTableRowAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link gov.nist.csrc.ns.oscal.MarkupTable <em>Markup Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTable
-	 * @generated
-	 */
-	public Adapter createMarkupTableAdapter() {
 		return null;
 	}
 

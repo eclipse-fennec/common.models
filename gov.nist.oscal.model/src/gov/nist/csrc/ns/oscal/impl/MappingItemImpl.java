@@ -12,7 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Link;
 import gov.nist.csrc.ns.oscal.MappingItem;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 
@@ -71,14 +70,24 @@ public class MappingItemImpl extends MinimalEObjectImpl.Container implements Map
 	protected EList<Link> link;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getIdRef() <em>Id Ref</em>}' attribute.
@@ -171,7 +180,7 @@ public class MappingItemImpl extends MinimalEObjectImpl.Container implements Map
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -180,34 +189,12 @@ public class MappingItemImpl extends MinimalEObjectImpl.Container implements Map
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.MAPPING_ITEM__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.MAPPING_ITEM__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.MAPPING_ITEM__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.MAPPING_ITEM__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.MAPPING_ITEM__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -268,8 +255,6 @@ public class MappingItemImpl extends MinimalEObjectImpl.Container implements Map
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.MAPPING_ITEM__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.MAPPING_ITEM__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -314,7 +299,7 @@ public class MappingItemImpl extends MinimalEObjectImpl.Container implements Map
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
 			case OSCALPackage.MAPPING_ITEM__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.MAPPING_ITEM__ID_REF:
 				setIdRef((String)newValue);
@@ -341,7 +326,7 @@ public class MappingItemImpl extends MinimalEObjectImpl.Container implements Map
 				getLink().clear();
 				return;
 			case OSCALPackage.MAPPING_ITEM__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.MAPPING_ITEM__ID_REF:
 				setIdRef(ID_REF_EDEFAULT);
@@ -366,7 +351,7 @@ public class MappingItemImpl extends MinimalEObjectImpl.Container implements Map
 			case OSCALPackage.MAPPING_ITEM__LINK:
 				return link != null && !link.isEmpty();
 			case OSCALPackage.MAPPING_ITEM__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.MAPPING_ITEM__ID_REF:
 				return ID_REF_EDEFAULT == null ? idRef != null : !ID_REF_EDEFAULT.equals(idRef);
 			case OSCALPackage.MAPPING_ITEM__TYPE:
@@ -385,7 +370,9 @@ public class MappingItemImpl extends MinimalEObjectImpl.Container implements Map
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (idRef: ");
+		result.append(" (remarks: ");
+		result.append(remarks);
+		result.append(", idRef: ");
 		result.append(idRef);
 		result.append(", type: ");
 		result.append(type);

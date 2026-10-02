@@ -98,7 +98,7 @@ public interface MappingProvenance extends EObject {
 	void setCoverage(Coverage value);
 
 	/**
-	 * Returns the value of the '<em><b>Mapping Description</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Mapping Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -108,24 +108,24 @@ public interface MappingProvenance extends EObject {
 	 *   : Description of the context and intended use of the mapping set.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Mapping Description</em>' containment reference.
-	 * @see #setMappingDescription(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Mapping Description</em>' attribute.
+	 * @see #setMappingDescription(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getMappingProvenance_MappingDescription()
-	 * @model containment="true" required="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype" required="true"
 	 *        extendedMetaData="kind='element' name='mapping-description' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getMappingDescription();
+	String getMappingDescription();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getMappingDescription <em>Mapping Description</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getMappingDescription <em>Mapping Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mapping Description</em>' containment reference.
+	 * @param value the new value of the '<em>Mapping Description</em>' attribute.
 	 * @see #getMappingDescription()
 	 * @generated
 	 */
-	void setMappingDescription(MarkupMultilineDatatype value);
+	void setMappingDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Responsible Party</b></em>' containment reference list.
@@ -170,7 +170,7 @@ public interface MappingProvenance extends EObject {
 	EList<Link> getLink();
 
 	/**
-	 * Returns the value of the '<em><b>Remarks</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -180,24 +180,24 @@ public interface MappingProvenance extends EObject {
 	 *   : Additional commentary about the containing object.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Remarks</em>' containment reference.
-	 * @see #setRemarks(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Remarks</em>' attribute.
+	 * @see #setRemarks(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getMappingProvenance_Remarks()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype"
 	 *        extendedMetaData="kind='element' name='remarks' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getRemarks();
+	String getRemarks();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getRemarks <em>Remarks</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getRemarks <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Remarks</em>' containment reference.
+	 * @param value the new value of the '<em>Remarks</em>' attribute.
 	 * @see #getRemarks()
 	 * @generated
 	 */
-	void setRemarks(MarkupMultilineDatatype value);
+	void setRemarks(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Matching Rationale</b></em>' attribute.

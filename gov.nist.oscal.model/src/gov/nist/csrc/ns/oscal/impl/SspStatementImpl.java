@@ -12,7 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.ByComponent;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleRole;
@@ -95,14 +94,24 @@ public class SspStatementImpl extends MinimalEObjectImpl.Container implements Ss
 	protected EList<ByComponent> byComponent;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getStatementId() <em>Statement Id</em>}' attribute.
@@ -221,7 +230,7 @@ public class SspStatementImpl extends MinimalEObjectImpl.Container implements Ss
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -230,34 +239,12 @@ public class SspStatementImpl extends MinimalEObjectImpl.Container implements Ss
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.SSP_STATEMENT__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.SSP_STATEMENT__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.SSP_STATEMENT__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.SSP_STATEMENT__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.SSP_STATEMENT__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -322,8 +309,6 @@ public class SspStatementImpl extends MinimalEObjectImpl.Container implements Ss
 				return ((InternalEList<?>)getResponsibleRole()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.SSP_STATEMENT__BY_COMPONENT:
 				return ((InternalEList<?>)getByComponent()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.SSP_STATEMENT__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -380,7 +365,7 @@ public class SspStatementImpl extends MinimalEObjectImpl.Container implements Ss
 				getByComponent().addAll((Collection<? extends ByComponent>)newValue);
 				return;
 			case OSCALPackage.SSP_STATEMENT__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.SSP_STATEMENT__STATEMENT_ID:
 				setStatementId((String)newValue);
@@ -413,7 +398,7 @@ public class SspStatementImpl extends MinimalEObjectImpl.Container implements Ss
 				getByComponent().clear();
 				return;
 			case OSCALPackage.SSP_STATEMENT__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.SSP_STATEMENT__STATEMENT_ID:
 				setStatementId(STATEMENT_ID_EDEFAULT);
@@ -442,7 +427,7 @@ public class SspStatementImpl extends MinimalEObjectImpl.Container implements Ss
 			case OSCALPackage.SSP_STATEMENT__BY_COMPONENT:
 				return byComponent != null && !byComponent.isEmpty();
 			case OSCALPackage.SSP_STATEMENT__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.SSP_STATEMENT__STATEMENT_ID:
 				return STATEMENT_ID_EDEFAULT == null ? statementId != null : !STATEMENT_ID_EDEFAULT.equals(statementId);
 			case OSCALPackage.SSP_STATEMENT__UUID:
@@ -461,7 +446,9 @@ public class SspStatementImpl extends MinimalEObjectImpl.Container implements Ss
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (statementId: ");
+		result.append(" (remarks: ");
+		result.append(remarks);
+		result.append(", statementId: ");
 		result.append(statementId);
 		result.append(", uuid: ");
 		result.append(uuid);

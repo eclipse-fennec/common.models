@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EValidator;
@@ -36,8 +35,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 
 import org.eclipse.emf.ecore.xmi.impl.EcoreResourceFactoryImpl;
-
-import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,13 +63,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	private EClass alterEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markupAnchorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -121,13 +111,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass markupBlockQuoteEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass categorizationEClass = null;
 
 	/**
@@ -136,13 +119,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	private EClass citationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markupCodeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,13 +216,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass markupImageEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass implementedComponentEClass = null;
 
 	/**
@@ -268,35 +237,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass inlineMarkupEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markupInsertEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass leveragedAuthorizationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markupListItemEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markupListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -331,20 +272,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass markupLineDatatypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markupMultilineDatatypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass mitigatingFactorEClass = null;
 
 	/**
@@ -353,13 +280,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	private EClass onDateEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markupOrderedListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1115,13 +1035,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass markupPreformattedEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass providedEClass = null;
 
 	/**
@@ -1172,13 +1085,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	private EClass responsibilityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass revisionsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1255,27 +1161,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass markupTableCellEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markupTableRowEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass markupTableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass termsAndConditionsEClass = null;
 
 	/**
@@ -1305,20 +1190,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	private EClass withinDateRangeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum alignTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType alignTypeObjectEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1473,6 +1344,20 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	private EDataType informationTypeIdTypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType markupLineDatatypeEDataType = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType markupMultilineDatatypeEDataType = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1847,9 +1732,6 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		XMLTypePackage.eINSTANCE.eClass();
-
 		// Load packages
 		theOSCALPackage.loadPackage();
 
@@ -1893,8 +1775,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAdd_Title() {
-        return (EReference)getAdd().getEStructuralFeatures().get(0);
+	public EAttribute getAdd_Title() {
+        return (EAttribute)getAdd().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1965,7 +1847,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAlter() {
 		if (alterEClass == null) {
-			alterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(3);
+			alterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(1);
 		}
 		return alterEClass;
 	}
@@ -2006,152 +1888,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMarkupAnchor() {
-		if (markupAnchorEClass == null) {
-			markupAnchorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(4);
-		}
-		return markupAnchorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupAnchor_Mixed() {
-        return (EAttribute)getMarkupAnchor().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupAnchor_PhraseMarkupGroup() {
-        return (EAttribute)getMarkupAnchor().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupAnchor_Code() {
-        return (EReference)getMarkupAnchor().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupAnchor_Em() {
-        return (EReference)getMarkupAnchor().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupAnchor_I() {
-        return (EReference)getMarkupAnchor().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupAnchor_B() {
-        return (EReference)getMarkupAnchor().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupAnchor_Strong() {
-        return (EReference)getMarkupAnchor().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupAnchor_Sub() {
-        return (EReference)getMarkupAnchor().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupAnchor_Sup() {
-        return (EReference)getMarkupAnchor().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupAnchor_Q() {
-        return (EReference)getMarkupAnchor().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupAnchor_Img() {
-        return (EReference)getMarkupAnchor().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupAnchor_Href() {
-        return (EAttribute)getMarkupAnchor().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupAnchor_Title() {
-        return (EAttribute)getMarkupAnchor().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getAssessmentLog() {
 		if (assessmentLogEClass == null) {
-			assessmentLogEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(7);
+			assessmentLogEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(2);
 		}
 		return assessmentLogEClass;
 	}
@@ -2174,7 +1913,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentPlatform() {
 		if (assessmentPlatformEClass == null) {
-			assessmentPlatformEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(8);
+			assessmentPlatformEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(3);
 		}
 		return assessmentPlatformEClass;
 	}
@@ -2185,8 +1924,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentPlatform_Title() {
-        return (EReference)getAssessmentPlatform().getEStructuralFeatures().get(0);
+	public EAttribute getAssessmentPlatform_Title() {
+        return (EAttribute)getAssessmentPlatform().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2225,8 +1964,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentPlatform_Remarks() {
-        return (EReference)getAssessmentPlatform().getEStructuralFeatures().get(4);
+	public EAttribute getAssessmentPlatform_Remarks() {
+        return (EAttribute)getAssessmentPlatform().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2247,7 +1986,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssociatedActivity() {
 		if (associatedActivityEClass == null) {
-			associatedActivityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(9);
+			associatedActivityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(4);
 		}
 		return associatedActivityEClass;
 	}
@@ -2298,8 +2037,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssociatedActivity_Remarks() {
-        return (EReference)getAssociatedActivity().getEStructuralFeatures().get(4);
+	public EAttribute getAssociatedActivity_Remarks() {
+        return (EAttribute)getAssociatedActivity().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2320,7 +2059,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAtFrequency() {
 		if (atFrequencyEClass == null) {
-			atFrequencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(10);
+			atFrequencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(5);
 		}
 		return atFrequencyEClass;
 	}
@@ -2331,8 +2070,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAtFrequency_Remarks() {
-        return (EReference)getAtFrequency().getEStructuralFeatures().get(0);
+	public EAttribute getAtFrequency_Remarks() {
+        return (EAttribute)getAtFrequency().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2363,7 +2102,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAttestation() {
 		if (attestationEClass == null) {
-			attestationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(11);
+			attestationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(6);
 		}
 		return attestationEClass;
 	}
@@ -2396,7 +2135,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getBase64() {
 		if (base64EClass == null) {
-			base64EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(13);
+			base64EClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(7);
 		}
 		return base64EClass;
 	}
@@ -2437,172 +2176,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMarkupBlockQuote() {
-		if (markupBlockQuoteEClass == null) {
-			markupBlockQuoteEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(14);
-		}
-		return markupBlockQuoteEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupBlockQuote_BlockElementGroup() {
-        return (EAttribute)getMarkupBlockQuote().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_H1() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_H2() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_H3() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_H4() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_H5() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_H6() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_Ul() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_Ol() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_Pre() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_Hr() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_Blockquote() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_P() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_Table() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupBlockQuote_Img() {
-        return (EReference)getMarkupBlockQuote().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getCategorization() {
 		if (categorizationEClass == null) {
-			categorizationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(17);
+			categorizationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(8);
 		}
 		return categorizationEClass;
 	}
@@ -2635,7 +2211,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getCitation() {
 		if (citationEClass == null) {
-			citationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(19);
+			citationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(9);
 		}
 		return citationEClass;
 	}
@@ -2646,8 +2222,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCitation_Text() {
-        return (EReference)getCitation().getEStructuralFeatures().get(0);
+	public EAttribute getCitation_Text() {
+        return (EAttribute)getCitation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2676,32 +2252,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMarkupCode() {
-		if (markupCodeEClass == null) {
-			markupCodeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(21);
-		}
-		return markupCodeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupCode_Class() {
-        return (EAttribute)getMarkupCode().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getCombine() {
 		if (combineEClass == null) {
-			combineEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(23);
+			combineEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(10);
 		}
 		return combineEClass;
 	}
@@ -2724,7 +2277,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getControlObjectiveSelection() {
 		if (controlObjectiveSelectionEClass == null) {
-			controlObjectiveSelectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(24);
+			controlObjectiveSelectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(11);
 		}
 		return controlObjectiveSelectionEClass;
 	}
@@ -2735,8 +2288,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getControlObjectiveSelection_Description() {
-        return (EReference)getControlObjectiveSelection().getEStructuralFeatures().get(0);
+	public EAttribute getControlObjectiveSelection_Description() {
+        return (EAttribute)getControlObjectiveSelection().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2795,8 +2348,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getControlObjectiveSelection_Remarks() {
-        return (EReference)getControlObjectiveSelection().getEStructuralFeatures().get(6);
+	public EAttribute getControlObjectiveSelection_Remarks() {
+        return (EAttribute)getControlObjectiveSelection().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2807,7 +2360,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getControlSelection() {
 		if (controlSelectionEClass == null) {
-			controlSelectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(25);
+			controlSelectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(12);
 		}
 		return controlSelectionEClass;
 	}
@@ -2818,8 +2371,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getControlSelection_Description() {
-        return (EReference)getControlSelection().getEStructuralFeatures().get(0);
+	public EAttribute getControlSelection_Description() {
+        return (EAttribute)getControlSelection().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2878,8 +2431,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getControlSelection_Remarks() {
-        return (EReference)getControlSelection().getEStructuralFeatures().get(6);
+	public EAttribute getControlSelection_Remarks() {
+        return (EAttribute)getControlSelection().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2890,7 +2443,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getCustom() {
 		if (customEClass == null) {
-			customEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(27);
+			customEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(13);
 		}
 		return customEClass;
 	}
@@ -2923,7 +2476,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getDependency() {
 		if (dependencyEClass == null) {
-			dependencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(33);
+			dependencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(14);
 		}
 		return dependencyEClass;
 	}
@@ -2934,8 +2487,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDependency_Remarks() {
-        return (EReference)getDependency().getEStructuralFeatures().get(0);
+	public EAttribute getDependency_Remarks() {
+        return (EAttribute)getDependency().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2956,7 +2509,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getDocumentRoot() {
 		if (documentRootEClass == null) {
-			documentRootEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(34);
+			documentRootEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(15);
 		}
 		return documentRootEClass;
 	}
@@ -3077,9 +2630,19 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getDocumentRoot_Schema() {
+        return (EAttribute)getDocumentRoot().getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getRiskLogEntry() {
 		if (riskLogEntryEClass == null) {
-			riskLogEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(39);
+			riskLogEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(16);
 		}
 		return riskLogEntryEClass;
 	}
@@ -3090,8 +2653,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRiskLogEntry_Title() {
-        return (EReference)getRiskLogEntry().getEStructuralFeatures().get(0);
+	public EAttribute getRiskLogEntry_Title() {
+        return (EAttribute)getRiskLogEntry().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3100,8 +2663,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRiskLogEntry_Description() {
-        return (EReference)getRiskLogEntry().getEStructuralFeatures().get(1);
+	public EAttribute getRiskLogEntry_Description() {
+        return (EAttribute)getRiskLogEntry().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3180,8 +2743,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRiskLogEntry_Remarks() {
-        return (EReference)getRiskLogEntry().getEStructuralFeatures().get(9);
+	public EAttribute getRiskLogEntry_Remarks() {
+        return (EAttribute)getRiskLogEntry().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -3202,7 +2765,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentLogEntry() {
 		if (assessmentLogEntryEClass == null) {
-			assessmentLogEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(40);
+			assessmentLogEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(17);
 		}
 		return assessmentLogEntryEClass;
 	}
@@ -3213,8 +2776,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentLogEntry_Title() {
-        return (EReference)getAssessmentLogEntry().getEStructuralFeatures().get(0);
+	public EAttribute getAssessmentLogEntry_Title() {
+        return (EAttribute)getAssessmentLogEntry().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3223,8 +2786,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentLogEntry_Description() {
-        return (EReference)getAssessmentLogEntry().getEStructuralFeatures().get(1);
+	public EAttribute getAssessmentLogEntry_Description() {
+        return (EAttribute)getAssessmentLogEntry().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3293,8 +2856,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentLogEntry_Remarks() {
-        return (EReference)getAssessmentLogEntry().getEStructuralFeatures().get(8);
+	public EAttribute getAssessmentLogEntry_Remarks() {
+        return (EAttribute)getAssessmentLogEntry().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -3315,7 +2878,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getExport() {
 		if (exportEClass == null) {
-			exportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(42);
+			exportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(18);
 		}
 		return exportEClass;
 	}
@@ -3326,8 +2889,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getExport_Description() {
-        return (EReference)getExport().getEStructuralFeatures().get(0);
+	public EAttribute getExport_Description() {
+        return (EAttribute)getExport().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3376,8 +2939,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getExport_Remarks() {
-        return (EReference)getExport().getEStructuralFeatures().get(5);
+	public EAttribute getExport_Remarks() {
+        return (EAttribute)getExport().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -3388,7 +2951,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getExternalId() {
 		if (externalIdEClass == null) {
-			externalIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(44);
+			externalIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(19);
 		}
 		return externalIdEClass;
 	}
@@ -3421,7 +2984,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getFacet() {
 		if (facetEClass == null) {
-			facetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(45);
+			facetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(20);
 		}
 		return facetEClass;
 	}
@@ -3452,8 +3015,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFacet_Remarks() {
-        return (EReference)getFacet().getEStructuralFeatures().get(2);
+	public EAttribute getFacet_Remarks() {
+        return (EAttribute)getFacet().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -3494,7 +3057,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getFlat() {
 		if (flatEClass == null) {
-			flatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(46);
+			flatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(21);
 		}
 		return flatEClass;
 	}
@@ -3507,7 +3070,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getIdentifiedSubject() {
 		if (identifiedSubjectEClass == null) {
-			identifiedSubjectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(47);
+			identifiedSubjectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(22);
 		}
 		return identifiedSubjectEClass;
 	}
@@ -3538,52 +3101,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMarkupImage() {
-		if (markupImageEClass == null) {
-			markupImageEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(48);
-		}
-		return markupImageEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupImage_Alt() {
-        return (EAttribute)getMarkupImage().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupImage_Src() {
-        return (EAttribute)getMarkupImage().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupImage_Title() {
-        return (EAttribute)getMarkupImage().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getImplementedComponent() {
 		if (implementedComponentEClass == null) {
-			implementedComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(50);
+			implementedComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(23);
 		}
 		return implementedComponentEClass;
 	}
@@ -3624,8 +3144,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getImplementedComponent_Remarks() {
-        return (EReference)getImplementedComponent().getEStructuralFeatures().get(3);
+	public EAttribute getImplementedComponent_Remarks() {
+        return (EAttribute)getImplementedComponent().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -3646,7 +3166,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getInformationType() {
 		if (informationTypeEClass == null) {
-			informationTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(52);
+			informationTypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(24);
 		}
 		return informationTypeEClass;
 	}
@@ -3657,8 +3177,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getInformationType_Title() {
-        return (EReference)getInformationType().getEStructuralFeatures().get(0);
+	public EAttribute getInformationType_Title() {
+        return (EAttribute)getInformationType().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3667,8 +3187,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getInformationType_Description() {
-        return (EReference)getInformationType().getEStructuralFeatures().get(1);
+	public EAttribute getInformationType_Description() {
+        return (EAttribute)getInformationType().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -3749,7 +3269,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getInherited() {
 		if (inheritedEClass == null) {
-			inheritedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(53);
+			inheritedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(25);
 		}
 		return inheritedEClass;
 	}
@@ -3760,8 +3280,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getInherited_Description() {
-        return (EReference)getInherited().getEStructuralFeatures().get(0);
+	public EAttribute getInherited_Description() {
+        return (EAttribute)getInherited().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3820,195 +3340,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getInlineMarkup() {
-		if (inlineMarkupEClass == null) {
-			inlineMarkupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(54);
-		}
-		return inlineMarkupEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getInlineMarkup_Mixed() {
-        return (EAttribute)getInlineMarkup().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getInlineMarkup_InlineMarkupGroup() {
-        return (EAttribute)getInlineMarkup().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_A() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_Insert() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_Br() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_Code() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_Em() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_I() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_B() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_Strong() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_Sub() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_Sup() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_Q() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getInlineMarkup_Img() {
-        return (EReference)getInlineMarkup().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMarkupInsert() {
-		if (markupInsertEClass == null) {
-			markupInsertEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(55);
-		}
-		return markupInsertEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupInsert_IdRef() {
-        return (EAttribute)getMarkupInsert().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupInsert_Type() {
-        return (EAttribute)getMarkupInsert().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getLeveragedAuthorization() {
 		if (leveragedAuthorizationEClass == null) {
-			leveragedAuthorizationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(56);
+			leveragedAuthorizationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(26);
 		}
 		return leveragedAuthorizationEClass;
 	}
@@ -4019,8 +3353,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLeveragedAuthorization_Title() {
-        return (EReference)getLeveragedAuthorization().getEStructuralFeatures().get(0);
+	public EAttribute getLeveragedAuthorization_Title() {
+        return (EAttribute)getLeveragedAuthorization().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4069,8 +3403,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLeveragedAuthorization_Remarks() {
-        return (EReference)getLeveragedAuthorization().getEStructuralFeatures().get(5);
+	public EAttribute getLeveragedAuthorization_Remarks() {
+        return (EAttribute)getLeveragedAuthorization().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -4089,305 +3423,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMarkupListItem() {
-		if (markupListItemEClass == null) {
-			markupListItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(57);
-		}
-		return markupListItemEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupListItem_Mixed() {
-        return (EAttribute)getMarkupListItem().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupListItem_Group() {
-        return (EAttribute)getMarkupListItem().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_A() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Insert() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Br() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Code() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Em() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_I() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_B() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Strong() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Sub() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Sup() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Q() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Img() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Ul() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Ol() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Pre() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Hr() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_Blockquote() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_H1() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_H2() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(20);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_H3() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(21);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_H4() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(22);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_H5() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(23);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_H6() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(24);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupListItem_P() {
-        return (EReference)getMarkupListItem().getEStructuralFeatures().get(25);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMarkupList() {
-		if (markupListEClass == null) {
-			markupListEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(58);
-		}
-		return markupListEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupList_Li() {
-        return (EReference)getMarkupList().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getResultLocalDefinitions() {
 		if (resultLocalDefinitionsEClass == null) {
-			resultLocalDefinitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(59);
+			resultLocalDefinitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(27);
 		}
 		return resultLocalDefinitionsEClass;
 	}
@@ -4450,7 +3488,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentResultsLocalDefinitions() {
 		if (assessmentResultsLocalDefinitionsEClass == null) {
-			assessmentResultsLocalDefinitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(60);
+			assessmentResultsLocalDefinitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(28);
 		}
 		return assessmentResultsLocalDefinitionsEClass;
 	}
@@ -4481,8 +3519,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentResultsLocalDefinitions_Remarks() {
-        return (EReference)getAssessmentResultsLocalDefinitions().getEStructuralFeatures().get(2);
+	public EAttribute getAssessmentResultsLocalDefinitions_Remarks() {
+        return (EAttribute)getAssessmentResultsLocalDefinitions().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -4493,7 +3531,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentPlanLocalDefinitions() {
 		if (assessmentPlanLocalDefinitionsEClass == null) {
-			assessmentPlanLocalDefinitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(61);
+			assessmentPlanLocalDefinitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(29);
 		}
 		return assessmentPlanLocalDefinitionsEClass;
 	}
@@ -4554,8 +3592,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentPlanLocalDefinitions_Remarks() {
-        return (EReference)getAssessmentPlanLocalDefinitions().getEStructuralFeatures().get(5);
+	public EAttribute getAssessmentPlanLocalDefinitions_Remarks() {
+        return (EAttribute)getAssessmentPlanLocalDefinitions().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -4566,7 +3604,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getLocation() {
 		if (locationEClass == null) {
-			locationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(62);
+			locationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(30);
 		}
 		return locationEClass;
 	}
@@ -4577,8 +3615,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLocation_Title() {
-        return (EReference)getLocation().getEStructuralFeatures().get(0);
+	public EAttribute getLocation_Title() {
+        return (EAttribute)getLocation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4647,8 +3685,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLocation_Remarks() {
-        return (EReference)getLocation().getEStructuralFeatures().get(7);
+	public EAttribute getLocation_Remarks() {
+        return (EAttribute)getLocation().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -4667,185 +3705,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMarkupLineDatatype() {
-		if (markupLineDatatypeEClass == null) {
-			markupLineDatatypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(63);
-		}
-		return markupLineDatatypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMarkupMultilineDatatype() {
-		if (markupMultilineDatatypeEClass == null) {
-			markupMultilineDatatypeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(64);
-		}
-		return markupMultilineDatatypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupMultilineDatatype_BlockElementGroup() {
-        return (EAttribute)getMarkupMultilineDatatype().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_H1() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_H2() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_H3() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_H4() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_H5() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_H6() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_Ul() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_Ol() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_Pre() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_Hr() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_Blockquote() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_P() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_Table() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupMultilineDatatype_Img() {
-        return (EReference)getMarkupMultilineDatatype().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getMitigatingFactor() {
 		if (mitigatingFactorEClass == null) {
-			mitigatingFactorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(67);
+			mitigatingFactorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(31);
 		}
 		return mitigatingFactorEClass;
 	}
@@ -4856,8 +3718,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMitigatingFactor_Description() {
-        return (EReference)getMitigatingFactor().getEStructuralFeatures().get(0);
+	public EAttribute getMitigatingFactor_Description() {
+        return (EAttribute)getMitigatingFactor().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4918,7 +3780,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getOnDate() {
 		if (onDateEClass == null) {
-			onDateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(70);
+			onDateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(32);
 		}
 		return onDateEClass;
 	}
@@ -4929,8 +3791,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getOnDate_Remarks() {
-        return (EReference)getOnDate().getEStructuralFeatures().get(0);
+	public EAttribute getOnDate_Remarks() {
+        return (EAttribute)getOnDate().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -4949,32 +3811,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMarkupOrderedList() {
-		if (markupOrderedListEClass == null) {
-			markupOrderedListEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(71);
-		}
-		return markupOrderedListEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupOrderedList_Start() {
-        return (EAttribute)getMarkupOrderedList().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getPoamItemOrigin() {
 		if (poamItemOriginEClass == null) {
-			poamItemOriginEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(72);
+			poamItemOriginEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(33);
 		}
 		return poamItemOriginEClass;
 	}
@@ -4997,7 +3836,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentPlan() {
 		if (assessmentPlanEClass == null) {
-			assessmentPlanEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(73);
+			assessmentPlanEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(34);
 		}
 		return assessmentPlanEClass;
 	}
@@ -5110,7 +3949,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentResults() {
 		if (assessmentResultsEClass == null) {
-			assessmentResultsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(74);
+			assessmentResultsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(35);
 		}
 		return assessmentResultsEClass;
 	}
@@ -5183,7 +4022,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getImportAp() {
 		if (importApEClass == null) {
-			importApEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(75);
+			importApEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(36);
 		}
 		return importApEClass;
 	}
@@ -5194,8 +4033,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getImportAp_Remarks() {
-        return (EReference)getImportAp().getEStructuralFeatures().get(0);
+	public EAttribute getImportAp_Remarks() {
+        return (EAttribute)getImportAp().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5216,7 +4055,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getResult() {
 		if (resultEClass == null) {
-			resultEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(76);
+			resultEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(37);
 		}
 		return resultEClass;
 	}
@@ -5227,8 +4066,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResult_Title() {
-        return (EReference)getResult().getEStructuralFeatures().get(0);
+	public EAttribute getResult_Title() {
+        return (EAttribute)getResult().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5237,8 +4076,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResult_Description() {
-        return (EReference)getResult().getEStructuralFeatures().get(1);
+	public EAttribute getResult_Description() {
+        return (EAttribute)getResult().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5357,8 +4196,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResult_Remarks() {
-        return (EReference)getResult().getEStructuralFeatures().get(13);
+	public EAttribute getResult_Remarks() {
+        return (EAttribute)getResult().getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -5379,7 +4218,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getActivity() {
 		if (activityEClass == null) {
-			activityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(77);
+			activityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(38);
 		}
 		return activityEClass;
 	}
@@ -5390,8 +4229,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getActivity_Title() {
-        return (EReference)getActivity().getEStructuralFeatures().get(0);
+	public EAttribute getActivity_Title() {
+        return (EAttribute)getActivity().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5400,8 +4239,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getActivity_Description() {
-        return (EReference)getActivity().getEStructuralFeatures().get(1);
+	public EAttribute getActivity_Description() {
+        return (EAttribute)getActivity().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -5460,8 +4299,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getActivity_Remarks() {
-        return (EReference)getActivity().getEStructuralFeatures().get(7);
+	public EAttribute getActivity_Remarks() {
+        return (EAttribute)getActivity().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -5482,7 +4321,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentAssets() {
 		if (assessmentAssetsEClass == null) {
-			assessmentAssetsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(78);
+			assessmentAssetsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(39);
 		}
 		return assessmentAssetsEClass;
 	}
@@ -5515,7 +4354,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentMethod() {
 		if (assessmentMethodEClass == null) {
-			assessmentMethodEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(79);
+			assessmentMethodEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(40);
 		}
 		return assessmentMethodEClass;
 	}
@@ -5526,8 +4365,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentMethod_Description() {
-        return (EReference)getAssessmentMethod().getEStructuralFeatures().get(0);
+	public EAttribute getAssessmentMethod_Description() {
+        return (EAttribute)getAssessmentMethod().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5566,8 +4405,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentMethod_Remarks() {
-        return (EReference)getAssessmentMethod().getEStructuralFeatures().get(4);
+	public EAttribute getAssessmentMethod_Remarks() {
+        return (EAttribute)getAssessmentMethod().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -5588,7 +4427,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentPart() {
 		if (assessmentPartEClass == null) {
-			assessmentPartEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(80);
+			assessmentPartEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(41);
 		}
 		return assessmentPartEClass;
 	}
@@ -5599,8 +4438,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentPart_Title() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(0);
+	public EAttribute getAssessmentPart_Title() {
+        return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5619,7 +4458,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getAssessmentPart_BlockElementGroup() {
+	public EAttribute getAssessmentPart_Prose() {
         return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(2);
 	}
 
@@ -5629,7 +4468,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentPart_H1() {
+	public EReference getAssessmentPart_Part() {
         return (EReference)getAssessmentPart().getEStructuralFeatures().get(3);
 	}
 
@@ -5639,7 +4478,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentPart_H2() {
+	public EReference getAssessmentPart_Link() {
         return (EReference)getAssessmentPart().getEStructuralFeatures().get(4);
 	}
 
@@ -5649,148 +4488,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentPart_H3() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_H4() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_H5() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_H6() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_Ul() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_Ol() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_Pre() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_Hr() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_Blockquote() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_P() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_Table() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_Img() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_Part() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getAssessmentPart_Link() {
-        return (EReference)getAssessmentPart().getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getAssessmentPart_Class() {
-        return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(19);
+        return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -5800,7 +4499,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 */
 	@Override
 	public EAttribute getAssessmentPart_Name() {
-        return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(20);
+        return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -5810,7 +4509,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 */
 	@Override
 	public EAttribute getAssessmentPart_Ns() {
-        return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(21);
+        return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -5820,7 +4519,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 */
 	@Override
 	public EAttribute getAssessmentPart_Uuid() {
-        return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(22);
+        return (EAttribute)getAssessmentPart().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -5831,7 +4530,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentSubject() {
 		if (assessmentSubjectEClass == null) {
-			assessmentSubjectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(81);
+			assessmentSubjectEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(42);
 		}
 		return assessmentSubjectEClass;
 	}
@@ -5842,8 +4541,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentSubject_Description() {
-        return (EReference)getAssessmentSubject().getEStructuralFeatures().get(0);
+	public EAttribute getAssessmentSubject_Description() {
+        return (EAttribute)getAssessmentSubject().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5902,8 +4601,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentSubject_Remarks() {
-        return (EReference)getAssessmentSubject().getEStructuralFeatures().get(6);
+	public EAttribute getAssessmentSubject_Remarks() {
+        return (EAttribute)getAssessmentSubject().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -5924,7 +4623,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentSubjectPlaceholder() {
 		if (assessmentSubjectPlaceholderEClass == null) {
-			assessmentSubjectPlaceholderEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(82);
+			assessmentSubjectPlaceholderEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(43);
 		}
 		return assessmentSubjectPlaceholderEClass;
 	}
@@ -5935,8 +4634,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentSubjectPlaceholder_Description() {
-        return (EReference)getAssessmentSubjectPlaceholder().getEStructuralFeatures().get(0);
+	public EAttribute getAssessmentSubjectPlaceholder_Description() {
+        return (EAttribute)getAssessmentSubjectPlaceholder().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -5975,8 +4674,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssessmentSubjectPlaceholder_Remarks() {
-        return (EReference)getAssessmentSubjectPlaceholder().getEStructuralFeatures().get(4);
+	public EAttribute getAssessmentSubjectPlaceholder_Remarks() {
+        return (EAttribute)getAssessmentSubjectPlaceholder().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -5997,7 +4696,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssociatedRisk() {
 		if (associatedRiskEClass == null) {
-			associatedRiskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(83);
+			associatedRiskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(44);
 		}
 		return associatedRiskEClass;
 	}
@@ -6008,8 +4707,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAssociatedRisk_Remarks() {
-        return (EReference)getAssociatedRisk().getEStructuralFeatures().get(0);
+	public EAttribute getAssociatedRisk_Remarks() {
+        return (EAttribute)getAssociatedRisk().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6030,7 +4729,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getCharacterization() {
 		if (characterizationEClass == null) {
-			characterizationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(84);
+			characterizationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(45);
 		}
 		return characterizationEClass;
 	}
@@ -6083,7 +4782,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getFinding() {
 		if (findingEClass == null) {
-			findingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(85);
+			findingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(46);
 		}
 		return findingEClass;
 	}
@@ -6094,8 +4793,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFinding_Title() {
-        return (EReference)getFinding().getEStructuralFeatures().get(0);
+	public EAttribute getFinding_Title() {
+        return (EAttribute)getFinding().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6104,8 +4803,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFinding_Description() {
-        return (EReference)getFinding().getEStructuralFeatures().get(1);
+	public EAttribute getFinding_Description() {
+        return (EAttribute)getFinding().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -6184,8 +4883,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFinding_Remarks() {
-        return (EReference)getFinding().getEStructuralFeatures().get(9);
+	public EAttribute getFinding_Remarks() {
+        return (EAttribute)getFinding().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -6206,7 +4905,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getFindingTarget() {
 		if (findingTargetEClass == null) {
-			findingTargetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(86);
+			findingTargetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(47);
 		}
 		return findingTargetEClass;
 	}
@@ -6217,8 +4916,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFindingTarget_Title() {
-        return (EReference)getFindingTarget().getEStructuralFeatures().get(0);
+	public EAttribute getFindingTarget_Title() {
+        return (EAttribute)getFindingTarget().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6227,8 +4926,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFindingTarget_Description() {
-        return (EReference)getFindingTarget().getEStructuralFeatures().get(1);
+	public EAttribute getFindingTarget_Description() {
+        return (EAttribute)getFindingTarget().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -6277,8 +4976,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFindingTarget_Remarks() {
-        return (EReference)getFindingTarget().getEStructuralFeatures().get(6);
+	public EAttribute getFindingTarget_Remarks() {
+        return (EAttribute)getFindingTarget().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -6309,7 +5008,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getImportSsp() {
 		if (importSspEClass == null) {
-			importSspEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(87);
+			importSspEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(48);
 		}
 		return importSspEClass;
 	}
@@ -6320,8 +5019,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getImportSsp_Remarks() {
-        return (EReference)getImportSsp().getEStructuralFeatures().get(0);
+	public EAttribute getImportSsp_Remarks() {
+        return (EAttribute)getImportSsp().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6342,7 +5041,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getLocalObjective() {
 		if (localObjectiveEClass == null) {
-			localObjectiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(88);
+			localObjectiveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(49);
 		}
 		return localObjectiveEClass;
 	}
@@ -6353,8 +5052,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLocalObjective_Description() {
-        return (EReference)getLocalObjective().getEStructuralFeatures().get(0);
+	public EAttribute getLocalObjective_Description() {
+        return (EAttribute)getLocalObjective().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6393,8 +5092,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLocalObjective_Remarks() {
-        return (EReference)getLocalObjective().getEStructuralFeatures().get(4);
+	public EAttribute getLocalObjective_Remarks() {
+        return (EAttribute)getLocalObjective().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -6415,7 +5114,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getLoggedBy() {
 		if (loggedByEClass == null) {
-			loggedByEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(89);
+			loggedByEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(50);
 		}
 		return loggedByEClass;
 	}
@@ -6426,8 +5125,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLoggedBy_Remarks() {
-        return (EReference)getLoggedBy().getEStructuralFeatures().get(0);
+	public EAttribute getLoggedBy_Remarks() {
+        return (EAttribute)getLoggedBy().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6458,7 +5157,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getObservation() {
 		if (observationEClass == null) {
-			observationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(90);
+			observationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(51);
 		}
 		return observationEClass;
 	}
@@ -6469,8 +5168,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getObservation_Title() {
-        return (EReference)getObservation().getEStructuralFeatures().get(0);
+	public EAttribute getObservation_Title() {
+        return (EAttribute)getObservation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6479,8 +5178,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getObservation_Description() {
-        return (EReference)getObservation().getEStructuralFeatures().get(1);
+	public EAttribute getObservation_Description() {
+        return (EAttribute)getObservation().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -6579,8 +5278,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getObservation_Remarks() {
-        return (EReference)getObservation().getEStructuralFeatures().get(11);
+	public EAttribute getObservation_Remarks() {
+        return (EAttribute)getObservation().getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -6601,7 +5300,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getOriginActor() {
 		if (originActorEClass == null) {
-			originActorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(91);
+			originActorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(52);
 		}
 		return originActorEClass;
 	}
@@ -6664,7 +5363,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getOrigin() {
 		if (originEClass == null) {
-			originEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(92);
+			originEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(53);
 		}
 		return originEClass;
 	}
@@ -6697,7 +5396,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRelatedObservation() {
 		if (relatedObservationEClass == null) {
-			relatedObservationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(93);
+			relatedObservationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(54);
 		}
 		return relatedObservationEClass;
 	}
@@ -6708,8 +5407,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRelatedObservation_Remarks() {
-        return (EReference)getRelatedObservation().getEStructuralFeatures().get(0);
+	public EAttribute getRelatedObservation_Remarks() {
+        return (EAttribute)getRelatedObservation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6730,7 +5429,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRelatedTask() {
 		if (relatedTaskEClass == null) {
-			relatedTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(94);
+			relatedTaskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(55);
 		}
 		return relatedTaskEClass;
 	}
@@ -6791,8 +5490,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRelatedTask_Remarks() {
-        return (EReference)getRelatedTask().getEStructuralFeatures().get(5);
+	public EAttribute getRelatedTask_Remarks() {
+        return (EAttribute)getRelatedTask().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -6813,7 +5512,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getResponse() {
 		if (responseEClass == null) {
-			responseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(95);
+			responseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(56);
 		}
 		return responseEClass;
 	}
@@ -6824,8 +5523,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResponse_Title() {
-        return (EReference)getResponse().getEStructuralFeatures().get(0);
+	public EAttribute getResponse_Title() {
+        return (EAttribute)getResponse().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6834,8 +5533,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResponse_Description() {
-        return (EReference)getResponse().getEStructuralFeatures().get(1);
+	public EAttribute getResponse_Description() {
+        return (EAttribute)getResponse().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -6894,8 +5593,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResponse_Remarks() {
-        return (EReference)getResponse().getEStructuralFeatures().get(7);
+	public EAttribute getResponse_Remarks() {
+        return (EAttribute)getResponse().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -6926,7 +5625,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getReviewedControls() {
 		if (reviewedControlsEClass == null) {
-			reviewedControlsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(96);
+			reviewedControlsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(57);
 		}
 		return reviewedControlsEClass;
 	}
@@ -6937,8 +5636,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getReviewedControls_Description() {
-        return (EReference)getReviewedControls().getEStructuralFeatures().get(0);
+	public EAttribute getReviewedControls_Description() {
+        return (EAttribute)getReviewedControls().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -6987,8 +5686,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getReviewedControls_Remarks() {
-        return (EReference)getReviewedControls().getEStructuralFeatures().get(5);
+	public EAttribute getReviewedControls_Remarks() {
+        return (EAttribute)getReviewedControls().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -6999,7 +5698,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRisk() {
 		if (riskEClass == null) {
-			riskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(97);
+			riskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(58);
 		}
 		return riskEClass;
 	}
@@ -7010,8 +5709,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRisk_Title() {
-        return (EReference)getRisk().getEStructuralFeatures().get(0);
+	public EAttribute getRisk_Title() {
+        return (EAttribute)getRisk().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7020,8 +5719,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRisk_Description() {
-        return (EReference)getRisk().getEStructuralFeatures().get(1);
+	public EAttribute getRisk_Description() {
+        return (EAttribute)getRisk().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -7030,8 +5729,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRisk_Statement() {
-        return (EReference)getRisk().getEStructuralFeatures().get(2);
+	public EAttribute getRisk_Statement() {
+        return (EAttribute)getRisk().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -7162,7 +5861,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAssessmentSelectControlById() {
 		if (assessmentSelectControlByIdEClass == null) {
-			assessmentSelectControlByIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(99);
+			assessmentSelectControlByIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(59);
 		}
 		return assessmentSelectControlByIdEClass;
 	}
@@ -7195,7 +5894,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSelectObjectiveById() {
 		if (selectObjectiveByIdEClass == null) {
-			selectObjectiveByIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(100);
+			selectObjectiveByIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(60);
 		}
 		return selectObjectiveByIdEClass;
 	}
@@ -7206,8 +5905,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSelectObjectiveById_Remarks() {
-        return (EReference)getSelectObjectiveById().getEStructuralFeatures().get(0);
+	public EAttribute getSelectObjectiveById_Remarks() {
+        return (EAttribute)getSelectObjectiveById().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7228,7 +5927,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSelectSubjectById() {
 		if (selectSubjectByIdEClass == null) {
-			selectSubjectByIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(101);
+			selectSubjectByIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(61);
 		}
 		return selectSubjectByIdEClass;
 	}
@@ -7259,8 +5958,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSelectSubjectById_Remarks() {
-        return (EReference)getSelectSubjectById().getEStructuralFeatures().get(2);
+	public EAttribute getSelectSubjectById_Remarks() {
+        return (EAttribute)getSelectSubjectById().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -7291,7 +5990,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSubjectReference() {
 		if (subjectReferenceEClass == null) {
-			subjectReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(102);
+			subjectReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(62);
 		}
 		return subjectReferenceEClass;
 	}
@@ -7302,8 +6001,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSubjectReference_Title() {
-        return (EReference)getSubjectReference().getEStructuralFeatures().get(0);
+	public EAttribute getSubjectReference_Title() {
+        return (EAttribute)getSubjectReference().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7332,8 +6031,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSubjectReference_Remarks() {
-        return (EReference)getSubjectReference().getEStructuralFeatures().get(3);
+	public EAttribute getSubjectReference_Remarks() {
+        return (EAttribute)getSubjectReference().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -7364,7 +6063,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getTask() {
 		if (taskEClass == null) {
-			taskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(103);
+			taskEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(63);
 		}
 		return taskEClass;
 	}
@@ -7375,8 +6074,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getTask_Title() {
-        return (EReference)getTask().getEStructuralFeatures().get(0);
+	public EAttribute getTask_Title() {
+        return (EAttribute)getTask().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7385,8 +6084,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getTask_Description() {
-        return (EReference)getTask().getEStructuralFeatures().get(1);
+	public EAttribute getTask_Description() {
+        return (EAttribute)getTask().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -7475,8 +6174,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getTask_Remarks() {
-        return (EReference)getTask().getEStructuralFeatures().get(10);
+	public EAttribute getTask_Remarks() {
+        return (EAttribute)getTask().getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -7507,7 +6206,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getThreatId() {
 		if (threatIdEClass == null) {
-			threatIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(104);
+			threatIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(64);
 		}
 		return threatIdEClass;
 	}
@@ -7550,7 +6249,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getCatalog() {
 		if (catalogEClass == null) {
-			catalogEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(105);
+			catalogEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(65);
 		}
 		return catalogEClass;
 	}
@@ -7623,7 +6322,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getControl() {
 		if (controlEClass == null) {
-			controlEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(106);
+			controlEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(66);
 		}
 		return controlEClass;
 	}
@@ -7634,8 +6333,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getControl_Title() {
-        return (EReference)getControl().getEStructuralFeatures().get(0);
+	public EAttribute getControl_Title() {
+        return (EAttribute)getControl().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7716,7 +6415,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getCatalogGroup() {
 		if (catalogGroupEClass == null) {
-			catalogGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(107);
+			catalogGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(67);
 		}
 		return catalogGroupEClass;
 	}
@@ -7727,8 +6426,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCatalogGroup_Title() {
-        return (EReference)getCatalogGroup().getEStructuralFeatures().get(0);
+	public EAttribute getCatalogGroup_Title() {
+        return (EAttribute)getCatalogGroup().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7819,7 +6518,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getCapability() {
 		if (capabilityEClass == null) {
-			capabilityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(108);
+			capabilityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(68);
 		}
 		return capabilityEClass;
 	}
@@ -7830,8 +6529,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCapability_Description() {
-        return (EReference)getCapability().getEStructuralFeatures().get(0);
+	public EAttribute getCapability_Description() {
+        return (EAttribute)getCapability().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -7880,8 +6579,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getCapability_Remarks() {
-        return (EReference)getCapability().getEStructuralFeatures().get(5);
+	public EAttribute getCapability_Remarks() {
+        return (EAttribute)getCapability().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -7912,7 +6611,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getComponentDefinition() {
 		if (componentDefinitionEClass == null) {
-			componentDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(109);
+			componentDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(69);
 		}
 		return componentDefinitionEClass;
 	}
@@ -7985,7 +6684,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getComponentControlImplementation() {
 		if (componentControlImplementationEClass == null) {
-			componentControlImplementationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(110);
+			componentControlImplementationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(70);
 		}
 		return componentControlImplementationEClass;
 	}
@@ -7996,8 +6695,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getComponentControlImplementation_Description() {
-        return (EReference)getComponentControlImplementation().getEStructuralFeatures().get(0);
+	public EAttribute getComponentControlImplementation_Description() {
+        return (EAttribute)getComponentControlImplementation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8068,7 +6767,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getDefinedComponent() {
 		if (definedComponentEClass == null) {
-			definedComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(111);
+			definedComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(71);
 		}
 		return definedComponentEClass;
 	}
@@ -8079,8 +6778,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDefinedComponent_Title() {
-        return (EReference)getDefinedComponent().getEStructuralFeatures().get(0);
+	public EAttribute getDefinedComponent_Title() {
+        return (EAttribute)getDefinedComponent().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8089,8 +6788,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDefinedComponent_Description() {
-        return (EReference)getDefinedComponent().getEStructuralFeatures().get(1);
+	public EAttribute getDefinedComponent_Description() {
+        return (EAttribute)getDefinedComponent().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -8099,8 +6798,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDefinedComponent_Purpose() {
-        return (EReference)getDefinedComponent().getEStructuralFeatures().get(2);
+	public EAttribute getDefinedComponent_Purpose() {
+        return (EAttribute)getDefinedComponent().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -8159,8 +6858,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDefinedComponent_Remarks() {
-        return (EReference)getDefinedComponent().getEStructuralFeatures().get(8);
+	public EAttribute getDefinedComponent_Remarks() {
+        return (EAttribute)getDefinedComponent().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -8191,7 +6890,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getComponentImplementedRequirement() {
 		if (componentImplementedRequirementEClass == null) {
-			componentImplementedRequirementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(112);
+			componentImplementedRequirementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(72);
 		}
 		return componentImplementedRequirementEClass;
 	}
@@ -8202,8 +6901,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getComponentImplementedRequirement_Description() {
-        return (EReference)getComponentImplementedRequirement().getEStructuralFeatures().get(0);
+	public EAttribute getComponentImplementedRequirement_Description() {
+        return (EAttribute)getComponentImplementedRequirement().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8262,8 +6961,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getComponentImplementedRequirement_Remarks() {
-        return (EReference)getComponentImplementedRequirement().getEStructuralFeatures().get(6);
+	public EAttribute getComponentImplementedRequirement_Remarks() {
+        return (EAttribute)getComponentImplementedRequirement().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -8294,7 +6993,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getImportComponentDefinition() {
 		if (importComponentDefinitionEClass == null) {
-			importComponentDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(113);
+			importComponentDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(73);
 		}
 		return importComponentDefinitionEClass;
 	}
@@ -8305,8 +7004,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getImportComponentDefinition_Remarks() {
-        return (EReference)getImportComponentDefinition().getEStructuralFeatures().get(0);
+	public EAttribute getImportComponentDefinition_Remarks() {
+        return (EAttribute)getImportComponentDefinition().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8327,7 +7026,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getIncorporatesComponent() {
 		if (incorporatesComponentEClass == null) {
-			incorporatesComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(114);
+			incorporatesComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(74);
 		}
 		return incorporatesComponentEClass;
 	}
@@ -8338,8 +7037,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getIncorporatesComponent_Description() {
-        return (EReference)getIncorporatesComponent().getEStructuralFeatures().get(0);
+	public EAttribute getIncorporatesComponent_Description() {
+        return (EAttribute)getIncorporatesComponent().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8360,7 +7059,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getComponentStatement() {
 		if (componentStatementEClass == null) {
-			componentStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(115);
+			componentStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(75);
 		}
 		return componentStatementEClass;
 	}
@@ -8371,8 +7070,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getComponentStatement_Description() {
-        return (EReference)getComponentStatement().getEStructuralFeatures().get(0);
+	public EAttribute getComponentStatement_Description() {
+        return (EAttribute)getComponentStatement().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8411,8 +7110,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getComponentStatement_Remarks() {
-        return (EReference)getComponentStatement().getEStructuralFeatures().get(4);
+	public EAttribute getComponentStatement_Remarks() {
+        return (EAttribute)getComponentStatement().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -8443,7 +7142,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getIncludeAll() {
 		if (includeAllEClass == null) {
-			includeAllEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(116);
+			includeAllEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(76);
 		}
 		return includeAllEClass;
 	}
@@ -8456,7 +7155,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getMatching() {
 		if (matchingEClass == null) {
-			matchingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(117);
+			matchingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(77);
 		}
 		return matchingEClass;
 	}
@@ -8467,8 +7166,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMatching_Remarks() {
-        return (EReference)getMatching().getEStructuralFeatures().get(0);
+	public EAttribute getMatching_Remarks() {
+        return (EAttribute)getMatching().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8489,7 +7188,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getParameter() {
 		if (parameterEClass == null) {
-			parameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(118);
+			parameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(78);
 		}
 		return parameterEClass;
 	}
@@ -8520,8 +7219,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getParameter_Label() {
-        return (EReference)getParameter().getEStructuralFeatures().get(2);
+	public EAttribute getParameter_Label() {
+        return (EAttribute)getParameter().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -8530,8 +7229,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getParameter_Usage() {
-        return (EReference)getParameter().getEStructuralFeatures().get(3);
+	public EAttribute getParameter_Usage() {
+        return (EAttribute)getParameter().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -8580,8 +7279,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getParameter_Remarks() {
-        return (EReference)getParameter().getEStructuralFeatures().get(8);
+	public EAttribute getParameter_Remarks() {
+        return (EAttribute)getParameter().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -8622,7 +7321,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getParameterConstraint() {
 		if (parameterConstraintEClass == null) {
-			parameterConstraintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(119);
+			parameterConstraintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(79);
 		}
 		return parameterConstraintEClass;
 	}
@@ -8633,8 +7332,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getParameterConstraint_Description() {
-        return (EReference)getParameterConstraint().getEStructuralFeatures().get(0);
+	public EAttribute getParameterConstraint_Description() {
+        return (EAttribute)getParameterConstraint().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8655,7 +7354,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getParameterGuideline() {
 		if (parameterGuidelineEClass == null) {
-			parameterGuidelineEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(120);
+			parameterGuidelineEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(80);
 		}
 		return parameterGuidelineEClass;
 	}
@@ -8666,148 +7365,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getParameterGuideline_BlockElementGroup() {
+	public EAttribute getParameterGuideline_Prose() {
         return (EAttribute)getParameterGuideline().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_H1() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_H2() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_H3() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_H4() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_H5() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_H6() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_Ul() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_Ol() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_Pre() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_Hr() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_Blockquote() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_P() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_Table() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getParameterGuideline_Img() {
-        return (EReference)getParameterGuideline().getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -8818,7 +7377,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getParameterSelection() {
 		if (parameterSelectionEClass == null) {
-			parameterSelectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(121);
+			parameterSelectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(81);
 		}
 		return parameterSelectionEClass;
 	}
@@ -8829,8 +7388,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getParameterSelection_Choice() {
-        return (EReference)getParameterSelection().getEStructuralFeatures().get(0);
+	public EAttribute getParameterSelection_Choice() {
+        return (EAttribute)getParameterSelection().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8851,7 +7410,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getPart() {
 		if (partEClass == null) {
-			partEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(123);
+			partEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(82);
 		}
 		return partEClass;
 	}
@@ -8862,8 +7421,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPart_Title() {
-        return (EReference)getPart().getEStructuralFeatures().get(0);
+	public EAttribute getPart_Title() {
+        return (EAttribute)getPart().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -8882,7 +7441,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPart_BlockElementGroup() {
+	public EAttribute getPart_Prose() {
         return (EAttribute)getPart().getEStructuralFeatures().get(2);
 	}
 
@@ -8892,7 +7451,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPart_H1() {
+	public EReference getPart_Part() {
         return (EReference)getPart().getEStructuralFeatures().get(3);
 	}
 
@@ -8902,7 +7461,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPart_H2() {
+	public EReference getPart_Link() {
         return (EReference)getPart().getEStructuralFeatures().get(4);
 	}
 
@@ -8912,148 +7471,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPart_H3() {
-        return (EReference)getPart().getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_H4() {
-        return (EReference)getPart().getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_H5() {
-        return (EReference)getPart().getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_H6() {
-        return (EReference)getPart().getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_Ul() {
-        return (EReference)getPart().getEStructuralFeatures().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_Ol() {
-        return (EReference)getPart().getEStructuralFeatures().get(10);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_Pre() {
-        return (EReference)getPart().getEStructuralFeatures().get(11);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_Hr() {
-        return (EReference)getPart().getEStructuralFeatures().get(12);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_Blockquote() {
-        return (EReference)getPart().getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_P() {
-        return (EReference)getPart().getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_Table() {
-        return (EReference)getPart().getEStructuralFeatures().get(15);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_Img() {
-        return (EReference)getPart().getEStructuralFeatures().get(16);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_Part() {
-        return (EReference)getPart().getEStructuralFeatures().get(17);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPart_Link() {
-        return (EReference)getPart().getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getPart_Class() {
-        return (EAttribute)getPart().getEStructuralFeatures().get(19);
+        return (EAttribute)getPart().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -9063,7 +7482,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 */
 	@Override
 	public EAttribute getPart_Id() {
-        return (EAttribute)getPart().getEStructuralFeatures().get(20);
+        return (EAttribute)getPart().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -9073,7 +7492,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 */
 	@Override
 	public EAttribute getPart_Name() {
-        return (EAttribute)getPart().getEStructuralFeatures().get(21);
+        return (EAttribute)getPart().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -9083,7 +7502,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 */
 	@Override
 	public EAttribute getPart_Ns() {
-        return (EAttribute)getPart().getEStructuralFeatures().get(22);
+        return (EAttribute)getPart().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -9094,7 +7513,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getControlSelectControlById() {
 		if (controlSelectControlByIdEClass == null) {
-			controlSelectControlByIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(124);
+			controlSelectControlByIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(83);
 		}
 		return controlSelectControlByIdEClass;
 	}
@@ -9137,7 +7556,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAuthorizedPrivilege() {
 		if (authorizedPrivilegeEClass == null) {
-			authorizedPrivilegeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(126);
+			authorizedPrivilegeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(84);
 		}
 		return authorizedPrivilegeEClass;
 	}
@@ -9148,8 +7567,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAuthorizedPrivilege_Title() {
-        return (EReference)getAuthorizedPrivilege().getEStructuralFeatures().get(0);
+	public EAttribute getAuthorizedPrivilege_Title() {
+        return (EAttribute)getAuthorizedPrivilege().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9158,8 +7577,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAuthorizedPrivilege_Description() {
-        return (EReference)getAuthorizedPrivilege().getEStructuralFeatures().get(1);
+	public EAttribute getAuthorizedPrivilege_Description() {
+        return (EAttribute)getAuthorizedPrivilege().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -9180,7 +7599,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getImplementationStatus() {
 		if (implementationStatusEClass == null) {
-			implementationStatusEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(128);
+			implementationStatusEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(85);
 		}
 		return implementationStatusEClass;
 	}
@@ -9191,8 +7610,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getImplementationStatus_Remarks() {
-        return (EReference)getImplementationStatus().getEStructuralFeatures().get(0);
+	public EAttribute getImplementationStatus_Remarks() {
+        return (EAttribute)getImplementationStatus().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9213,7 +7632,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getInventoryItem() {
 		if (inventoryItemEClass == null) {
-			inventoryItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(129);
+			inventoryItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(86);
 		}
 		return inventoryItemEClass;
 	}
@@ -9224,8 +7643,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getInventoryItem_Description() {
-        return (EReference)getInventoryItem().getEStructuralFeatures().get(0);
+	public EAttribute getInventoryItem_Description() {
+        return (EAttribute)getInventoryItem().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9274,8 +7693,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getInventoryItem_Remarks() {
-        return (EReference)getInventoryItem().getEStructuralFeatures().get(5);
+	public EAttribute getInventoryItem_Remarks() {
+        return (EAttribute)getInventoryItem().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -9296,7 +7715,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getPortRange() {
 		if (portRangeEClass == null) {
-			portRangeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(130);
+			portRangeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(87);
 		}
 		return portRangeEClass;
 	}
@@ -9307,8 +7726,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPortRange_Remarks() {
-        return (EReference)getPortRange().getEStructuralFeatures().get(0);
+	public EAttribute getPortRange_Remarks() {
+        return (EAttribute)getPortRange().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9349,7 +7768,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getProtocol() {
 		if (protocolEClass == null) {
-			protocolEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(131);
+			protocolEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(88);
 		}
 		return protocolEClass;
 	}
@@ -9360,8 +7779,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProtocol_Title() {
-        return (EReference)getProtocol().getEStructuralFeatures().get(0);
+	public EAttribute getProtocol_Title() {
+        return (EAttribute)getProtocol().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9402,7 +7821,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSetParameter() {
 		if (setParameterEClass == null) {
-			setParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(132);
+			setParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(89);
 		}
 		return setParameterEClass;
 	}
@@ -9423,8 +7842,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSetParameter_Remarks() {
-        return (EReference)getSetParameter().getEStructuralFeatures().get(1);
+	public EAttribute getSetParameter_Remarks() {
+        return (EAttribute)getSetParameter().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -9445,7 +7864,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSystemComponent() {
 		if (systemComponentEClass == null) {
-			systemComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(133);
+			systemComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(90);
 		}
 		return systemComponentEClass;
 	}
@@ -9456,8 +7875,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemComponent_Title() {
-        return (EReference)getSystemComponent().getEStructuralFeatures().get(0);
+	public EAttribute getSystemComponent_Title() {
+        return (EAttribute)getSystemComponent().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9466,8 +7885,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemComponent_Description() {
-        return (EReference)getSystemComponent().getEStructuralFeatures().get(1);
+	public EAttribute getSystemComponent_Description() {
+        return (EAttribute)getSystemComponent().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -9476,8 +7895,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemComponent_Purpose() {
-        return (EReference)getSystemComponent().getEStructuralFeatures().get(2);
+	public EAttribute getSystemComponent_Purpose() {
+        return (EAttribute)getSystemComponent().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -9536,8 +7955,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemComponent_Remarks() {
-        return (EReference)getSystemComponent().getEStructuralFeatures().get(8);
+	public EAttribute getSystemComponent_Remarks() {
+        return (EAttribute)getSystemComponent().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -9568,7 +7987,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSystemId() {
 		if (systemIdEClass == null) {
-			systemIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(134);
+			systemIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(91);
 		}
 		return systemIdEClass;
 	}
@@ -9601,7 +8020,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSystemUser() {
 		if (systemUserEClass == null) {
-			systemUserEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(135);
+			systemUserEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(92);
 		}
 		return systemUserEClass;
 	}
@@ -9612,8 +8031,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemUser_Title() {
-        return (EReference)getSystemUser().getEStructuralFeatures().get(0);
+	public EAttribute getSystemUser_Title() {
+        return (EAttribute)getSystemUser().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -9632,8 +8051,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemUser_Description() {
-        return (EReference)getSystemUser().getEStructuralFeatures().get(2);
+	public EAttribute getSystemUser_Description() {
+        return (EAttribute)getSystemUser().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -9682,8 +8101,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemUser_Remarks() {
-        return (EReference)getSystemUser().getEStructuralFeatures().get(7);
+	public EAttribute getSystemUser_Remarks() {
+        return (EAttribute)getSystemUser().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -9704,7 +8123,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getConfidenceScore() {
 		if (confidenceScoreEClass == null) {
-			confidenceScoreEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(136);
+			confidenceScoreEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(93);
 		}
 		return confidenceScoreEClass;
 	}
@@ -9737,7 +8156,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getCoverage() {
 		if (coverageEClass == null) {
-			coverageEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(137);
+			coverageEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(94);
 		}
 		return coverageEClass;
 	}
@@ -9770,7 +8189,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getGapSummary() {
 		if (gapSummaryEClass == null) {
-			gapSummaryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(138);
+			gapSummaryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(95);
 		}
 		return gapSummaryEClass;
 	}
@@ -9803,7 +8222,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getMapEntry() {
 		if (mapEntryEClass == null) {
-			mapEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(139);
+			mapEntryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(96);
 		}
 		return mapEntryEClass;
 	}
@@ -9894,8 +8313,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMapEntry_Remarks() {
-        return (EReference)getMapEntry().getEStructuralFeatures().get(8);
+	public EAttribute getMapEntry_Remarks() {
+        return (EAttribute)getMapEntry().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -9936,7 +8355,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getMapping() {
 		if (mappingEClass == null) {
-			mappingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(140);
+			mappingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(97);
 		}
 		return mappingEClass;
 	}
@@ -9997,8 +8416,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMapping_Remarks() {
-        return (EReference)getMapping().getEStructuralFeatures().get(5);
+	public EAttribute getMapping_Remarks() {
+        return (EAttribute)getMapping().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -10007,8 +8426,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMapping_MappingDescription() {
-        return (EReference)getMapping().getEStructuralFeatures().get(6);
+	public EAttribute getMapping_MappingDescription() {
+        return (EAttribute)getMapping().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -10099,7 +8518,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getMappingItem() {
 		if (mappingItemEClass == null) {
-			mappingItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(141);
+			mappingItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(98);
 		}
 		return mappingItemEClass;
 	}
@@ -10130,8 +8549,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMappingItem_Remarks() {
-        return (EReference)getMappingItem().getEStructuralFeatures().get(2);
+	public EAttribute getMappingItem_Remarks() {
+        return (EAttribute)getMappingItem().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -10162,7 +8581,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getMappingProvenance() {
 		if (mappingProvenanceEClass == null) {
-			mappingProvenanceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(142);
+			mappingProvenanceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(99);
 		}
 		return mappingProvenanceEClass;
 	}
@@ -10193,8 +8612,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMappingProvenance_MappingDescription() {
-        return (EReference)getMappingProvenance().getEStructuralFeatures().get(2);
+	public EAttribute getMappingProvenance_MappingDescription() {
+        return (EAttribute)getMappingProvenance().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -10233,8 +8652,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMappingProvenance_Remarks() {
-        return (EReference)getMappingProvenance().getEStructuralFeatures().get(6);
+	public EAttribute getMappingProvenance_Remarks() {
+        return (EAttribute)getMappingProvenance().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -10275,7 +8694,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getMappingResourceReference() {
 		if (mappingResourceReferenceEClass == null) {
-			mappingResourceReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(143);
+			mappingResourceReferenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(100);
 		}
 		return mappingResourceReferenceEClass;
 	}
@@ -10306,8 +8725,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMappingResourceReference_Remarks() {
-        return (EReference)getMappingResourceReference().getEStructuralFeatures().get(2);
+	public EAttribute getMappingResourceReference_Remarks() {
+        return (EAttribute)getMappingResourceReference().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -10348,7 +8767,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getQualifierItem() {
 		if (qualifierItemEClass == null) {
-			qualifierItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(145);
+			qualifierItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(101);
 		}
 		return qualifierItemEClass;
 	}
@@ -10359,8 +8778,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getQualifierItem_Description() {
-        return (EReference)getQualifierItem().getEStructuralFeatures().get(0);
+	public EAttribute getQualifierItem_Description() {
+        return (EAttribute)getQualifierItem().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10369,8 +8788,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getQualifierItem_Remarks() {
-        return (EReference)getQualifierItem().getEStructuralFeatures().get(1);
+	public EAttribute getQualifierItem_Remarks() {
+        return (EAttribute)getQualifierItem().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -10411,7 +8830,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getMappingCollection() {
 		if (mappingCollectionEClass == null) {
-			mappingCollectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(146);
+			mappingCollectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(102);
 		}
 		return mappingCollectionEClass;
 	}
@@ -10474,7 +8893,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAction() {
 		if (actionEClass == null) {
-			actionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(147);
+			actionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(103);
 		}
 		return actionEClass;
 	}
@@ -10515,8 +8934,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAction_Remarks() {
-        return (EReference)getAction().getEStructuralFeatures().get(3);
+	public EAttribute getAction_Remarks() {
+        return (EAttribute)getAction().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -10567,7 +8986,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAddress() {
 		if (addressEClass == null) {
-			addressEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(148);
+			addressEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(104);
 		}
 		return addressEClass;
 	}
@@ -10640,7 +9059,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getBackMatter() {
 		if (backMatterEClass == null) {
-			backMatterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(150);
+			backMatterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(105);
 		}
 		return backMatterEClass;
 	}
@@ -10663,7 +9082,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getDocumentId() {
 		if (documentIdEClass == null) {
-			documentIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(151);
+			documentIdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(106);
 		}
 		return documentIdEClass;
 	}
@@ -10696,7 +9115,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getHash() {
 		if (hashEClass == null) {
-			hashEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(153);
+			hashEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(107);
 		}
 		return hashEClass;
 	}
@@ -10729,7 +9148,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getLink() {
 		if (linkEClass == null) {
-			linkEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(155);
+			linkEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(108);
 		}
 		return linkEClass;
 	}
@@ -10740,8 +9159,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getLink_Text() {
-        return (EReference)getLink().getEStructuralFeatures().get(0);
+	public EAttribute getLink_Text() {
+        return (EAttribute)getLink().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10792,7 +9211,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getMetadata() {
 		if (metadataEClass == null) {
-			metadataEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(157);
+			metadataEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(109);
 		}
 		return metadataEClass;
 	}
@@ -10803,8 +9222,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMetadata_Title() {
-        return (EReference)getMetadata().getEStructuralFeatures().get(0);
+	public EAttribute getMetadata_Title() {
+        return (EAttribute)getMetadata().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -10853,7 +9272,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMetadata_Revisions() {
+	public EReference getMetadata_Revision() {
         return (EReference)getMetadata().getEStructuralFeatures().get(5);
 	}
 
@@ -10943,8 +9362,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getMetadata_Remarks() {
-        return (EReference)getMetadata().getEStructuralFeatures().get(14);
+	public EAttribute getMetadata_Remarks() {
+        return (EAttribute)getMetadata().getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -10955,7 +9374,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getProperty() {
 		if (propertyEClass == null) {
-			propertyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(160);
+			propertyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(110);
 		}
 		return propertyEClass;
 	}
@@ -10966,8 +9385,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProperty_Remarks() {
-        return (EReference)getProperty().getEStructuralFeatures().get(0);
+	public EAttribute getProperty_Remarks() {
+        return (EAttribute)getProperty().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11038,7 +9457,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getResponsibleParty() {
 		if (responsiblePartyEClass == null) {
-			responsiblePartyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(162);
+			responsiblePartyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(111);
 		}
 		return responsiblePartyEClass;
 	}
@@ -11079,8 +9498,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResponsibleParty_Remarks() {
-        return (EReference)getResponsibleParty().getEStructuralFeatures().get(3);
+	public EAttribute getResponsibleParty_Remarks() {
+        return (EAttribute)getResponsibleParty().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -11101,7 +9520,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getResponsibleRole() {
 		if (responsibleRoleEClass == null) {
-			responsibleRoleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(163);
+			responsibleRoleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(112);
 		}
 		return responsibleRoleEClass;
 	}
@@ -11142,8 +9561,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResponsibleRole_Remarks() {
-        return (EReference)getResponsibleRole().getEStructuralFeatures().get(3);
+	public EAttribute getResponsibleRole_Remarks() {
+        return (EAttribute)getResponsibleRole().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -11164,7 +9583,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getTelephoneNumber() {
 		if (telephoneNumberEClass == null) {
-			telephoneNumberEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(165);
+			telephoneNumberEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(113);
 		}
 		return telephoneNumberEClass;
 	}
@@ -11197,7 +9616,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getPoamLocalDefinitions() {
 		if (poamLocalDefinitionsEClass == null) {
-			poamLocalDefinitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(167);
+			poamLocalDefinitionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(114);
 		}
 		return poamLocalDefinitionsEClass;
 	}
@@ -11238,8 +9657,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPoamLocalDefinitions_Remarks() {
-        return (EReference)getPoamLocalDefinitions().getEStructuralFeatures().get(3);
+	public EAttribute getPoamLocalDefinitions_Remarks() {
+        return (EAttribute)getPoamLocalDefinitions().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -11250,7 +9669,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getPlanOfActionAndMilestones() {
 		if (planOfActionAndMilestonesEClass == null) {
-			planOfActionAndMilestonesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(168);
+			planOfActionAndMilestonesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(115);
 		}
 		return planOfActionAndMilestonesEClass;
 	}
@@ -11363,7 +9782,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getPoamItem() {
 		if (poamItemEClass == null) {
-			poamItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(169);
+			poamItemEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(116);
 		}
 		return poamItemEClass;
 	}
@@ -11374,8 +9793,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPoamItem_Title() {
-        return (EReference)getPoamItem().getEStructuralFeatures().get(0);
+	public EAttribute getPoamItem_Title() {
+        return (EAttribute)getPoamItem().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11384,8 +9803,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPoamItem_Description() {
-        return (EReference)getPoamItem().getEStructuralFeatures().get(1);
+	public EAttribute getPoamItem_Description() {
+        return (EAttribute)getPoamItem().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -11454,8 +9873,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPoamItem_Remarks() {
-        return (EReference)getPoamItem().getEStructuralFeatures().get(8);
+	public EAttribute getPoamItem_Remarks() {
+        return (EAttribute)getPoamItem().getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -11476,7 +9895,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getProfileGroup() {
 		if (profileGroupEClass == null) {
-			profileGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(170);
+			profileGroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(117);
 		}
 		return profileGroupEClass;
 	}
@@ -11487,8 +9906,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProfileGroup_Title() {
-        return (EReference)getProfileGroup().getEStructuralFeatures().get(0);
+	public EAttribute getProfileGroup_Title() {
+        return (EAttribute)getProfileGroup().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11579,7 +9998,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getImport() {
 		if (importEClass == null) {
-			importEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(171);
+			importEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(118);
 		}
 		return importEClass;
 	}
@@ -11632,7 +10051,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getInsertControls() {
 		if (insertControlsEClass == null) {
-			insertControlsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(172);
+			insertControlsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(119);
 		}
 		return insertControlsEClass;
 	}
@@ -11685,7 +10104,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getMerge() {
 		if (mergeEClass == null) {
-			mergeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(173);
+			mergeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(120);
 		}
 		return mergeEClass;
 	}
@@ -11738,7 +10157,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getModify() {
 		if (modifyEClass == null) {
-			modifyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(174);
+			modifyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(121);
 		}
 		return modifyEClass;
 	}
@@ -11771,7 +10190,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getProfile() {
 		if (profileEClass == null) {
-			profileEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(175);
+			profileEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(122);
 		}
 		return profileEClass;
 	}
@@ -11844,7 +10263,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getAuthorizationBoundary() {
 		if (authorizationBoundaryEClass == null) {
-			authorizationBoundaryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(176);
+			authorizationBoundaryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(123);
 		}
 		return authorizationBoundaryEClass;
 	}
@@ -11855,8 +10274,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAuthorizationBoundary_Description() {
-        return (EReference)getAuthorizationBoundary().getEStructuralFeatures().get(0);
+	public EAttribute getAuthorizationBoundary_Description() {
+        return (EAttribute)getAuthorizationBoundary().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -11895,8 +10314,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getAuthorizationBoundary_Remarks() {
-        return (EReference)getAuthorizationBoundary().getEStructuralFeatures().get(4);
+	public EAttribute getAuthorizationBoundary_Remarks() {
+        return (EAttribute)getAuthorizationBoundary().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -11907,7 +10326,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getByComponent() {
 		if (byComponentEClass == null) {
-			byComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(178);
+			byComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(124);
 		}
 		return byComponentEClass;
 	}
@@ -11918,8 +10337,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getByComponent_Description() {
-        return (EReference)getByComponent().getEStructuralFeatures().get(0);
+	public EAttribute getByComponent_Description() {
+        return (EAttribute)getByComponent().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12008,8 +10427,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getByComponent_Remarks() {
-        return (EReference)getByComponent().getEStructuralFeatures().get(9);
+	public EAttribute getByComponent_Remarks() {
+        return (EAttribute)getByComponent().getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -12040,7 +10459,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSspControlImplementation() {
 		if (sspControlImplementationEClass == null) {
-			sspControlImplementationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(179);
+			sspControlImplementationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(125);
 		}
 		return sspControlImplementationEClass;
 	}
@@ -12051,8 +10470,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSspControlImplementation_Description() {
-        return (EReference)getSspControlImplementation().getEStructuralFeatures().get(0);
+	public EAttribute getSspControlImplementation_Description() {
+        return (EAttribute)getSspControlImplementation().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12083,7 +10502,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getDataFlow() {
 		if (dataFlowEClass == null) {
-			dataFlowEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(180);
+			dataFlowEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(126);
 		}
 		return dataFlowEClass;
 	}
@@ -12094,8 +10513,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDataFlow_Description() {
-        return (EReference)getDataFlow().getEStructuralFeatures().get(0);
+	public EAttribute getDataFlow_Description() {
+        return (EAttribute)getDataFlow().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12134,8 +10553,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDataFlow_Remarks() {
-        return (EReference)getDataFlow().getEStructuralFeatures().get(4);
+	public EAttribute getDataFlow_Remarks() {
+        return (EAttribute)getDataFlow().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -12146,7 +10565,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getDiagram() {
 		if (diagramEClass == null) {
-			diagramEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(182);
+			diagramEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(127);
 		}
 		return diagramEClass;
 	}
@@ -12157,8 +10576,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDiagram_Description() {
-        return (EReference)getDiagram().getEStructuralFeatures().get(0);
+	public EAttribute getDiagram_Description() {
+        return (EAttribute)getDiagram().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12187,8 +10606,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDiagram_Caption() {
-        return (EReference)getDiagram().getEStructuralFeatures().get(3);
+	public EAttribute getDiagram_Caption() {
+        return (EAttribute)getDiagram().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -12197,8 +10616,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getDiagram_Remarks() {
-        return (EReference)getDiagram().getEStructuralFeatures().get(4);
+	public EAttribute getDiagram_Remarks() {
+        return (EAttribute)getDiagram().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -12219,7 +10638,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getImpact() {
 		if (impactEClass == null) {
-			impactEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(183);
+			impactEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(128);
 		}
 		return impactEClass;
 	}
@@ -12270,8 +10689,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getImpact_AdjustmentJustification() {
-        return (EReference)getImpact().getEStructuralFeatures().get(4);
+	public EAttribute getImpact_AdjustmentJustification() {
+        return (EAttribute)getImpact().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -12282,7 +10701,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSspImplementedRequirement() {
 		if (sspImplementedRequirementEClass == null) {
-			sspImplementedRequirementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(184);
+			sspImplementedRequirementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(129);
 		}
 		return sspImplementedRequirementEClass;
 	}
@@ -12353,8 +10772,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSspImplementedRequirement_Remarks() {
-        return (EReference)getSspImplementedRequirement().getEStructuralFeatures().get(6);
+	public EAttribute getSspImplementedRequirement_Remarks() {
+        return (EAttribute)getSspImplementedRequirement().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -12385,7 +10804,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getImportProfile() {
 		if (importProfileEClass == null) {
-			importProfileEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(185);
+			importProfileEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(130);
 		}
 		return importProfileEClass;
 	}
@@ -12396,8 +10815,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getImportProfile_Remarks() {
-        return (EReference)getImportProfile().getEStructuralFeatures().get(0);
+	public EAttribute getImportProfile_Remarks() {
+        return (EAttribute)getImportProfile().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12418,7 +10837,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getNetworkArchitecture() {
 		if (networkArchitectureEClass == null) {
-			networkArchitectureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(186);
+			networkArchitectureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(131);
 		}
 		return networkArchitectureEClass;
 	}
@@ -12429,8 +10848,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getNetworkArchitecture_Description() {
-        return (EReference)getNetworkArchitecture().getEStructuralFeatures().get(0);
+	public EAttribute getNetworkArchitecture_Description() {
+        return (EAttribute)getNetworkArchitecture().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12469,8 +10888,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getNetworkArchitecture_Remarks() {
-        return (EReference)getNetworkArchitecture().getEStructuralFeatures().get(4);
+	public EAttribute getNetworkArchitecture_Remarks() {
+        return (EAttribute)getNetworkArchitecture().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -12481,7 +10900,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSecurityImpactLevel() {
 		if (securityImpactLevelEClass == null) {
-			securityImpactLevelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(187);
+			securityImpactLevelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(132);
 		}
 		return securityImpactLevelEClass;
 	}
@@ -12524,7 +10943,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSspStatement() {
 		if (sspStatementEClass == null) {
-			sspStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(189);
+			sspStatementEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(133);
 		}
 		return sspStatementEClass;
 	}
@@ -12575,8 +10994,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSspStatement_Remarks() {
-        return (EReference)getSspStatement().getEStructuralFeatures().get(4);
+	public EAttribute getSspStatement_Remarks() {
+        return (EAttribute)getSspStatement().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -12607,7 +11026,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSystemStatus() {
 		if (systemStatusEClass == null) {
-			systemStatusEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(190);
+			systemStatusEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(134);
 		}
 		return systemStatusEClass;
 	}
@@ -12618,8 +11037,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemStatus_Remarks() {
-        return (EReference)getSystemStatus().getEStructuralFeatures().get(0);
+	public EAttribute getSystemStatus_Remarks() {
+        return (EAttribute)getSystemStatus().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -12640,7 +11059,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSystemCharacteristics() {
 		if (systemCharacteristicsEClass == null) {
-			systemCharacteristicsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(191);
+			systemCharacteristicsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(135);
 		}
 		return systemCharacteristicsEClass;
 	}
@@ -12681,8 +11100,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemCharacteristics_Description() {
-        return (EReference)getSystemCharacteristics().getEStructuralFeatures().get(3);
+	public EAttribute getSystemCharacteristics_Description() {
+        return (EAttribute)getSystemCharacteristics().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -12801,8 +11220,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemCharacteristics_Remarks() {
-        return (EReference)getSystemCharacteristics().getEStructuralFeatures().get(15);
+	public EAttribute getSystemCharacteristics_Remarks() {
+        return (EAttribute)getSystemCharacteristics().getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -12813,7 +11232,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSystemImplementation() {
 		if (systemImplementationEClass == null) {
-			systemImplementationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(192);
+			systemImplementationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(136);
 		}
 		return systemImplementationEClass;
 	}
@@ -12884,8 +11303,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemImplementation_Remarks() {
-        return (EReference)getSystemImplementation().getEStructuralFeatures().get(6);
+	public EAttribute getSystemImplementation_Remarks() {
+        return (EAttribute)getSystemImplementation().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -12896,7 +11315,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSystemInformation() {
 		if (systemInformationEClass == null) {
-			systemInformationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(193);
+			systemInformationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(137);
 		}
 		return systemInformationEClass;
 	}
@@ -12939,7 +11358,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSystemSecurityPlan() {
 		if (systemSecurityPlanEClass == null) {
-			systemSecurityPlanEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(194);
+			systemSecurityPlanEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(138);
 		}
 		return systemSecurityPlanEClass;
 	}
@@ -13022,7 +11441,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getParty() {
 		if (partyEClass == null) {
-			partyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(195);
+			partyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(139);
 		}
 		return partyEClass;
 	}
@@ -13133,8 +11552,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getParty_Remarks() {
-        return (EReference)getParty().getEStructuralFeatures().get(10);
+	public EAttribute getParty_Remarks() {
+        return (EAttribute)getParty().getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -13163,22 +11582,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMarkupPreformatted() {
-		if (markupPreformattedEClass == null) {
-			markupPreformattedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(199);
-		}
-		return markupPreformattedEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getProvided() {
 		if (providedEClass == null) {
-			providedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(200);
+			providedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(140);
 		}
 		return providedEClass;
 	}
@@ -13189,8 +11595,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProvided_Description() {
-        return (EReference)getProvided().getEStructuralFeatures().get(0);
+	public EAttribute getProvided_Description() {
+        return (EAttribute)getProvided().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13229,8 +11635,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProvided_Remarks() {
-        return (EReference)getProvided().getEStructuralFeatures().get(4);
+	public EAttribute getProvided_Remarks() {
+        return (EAttribute)getProvided().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -13251,7 +11657,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRelatedFinding() {
 		if (relatedFindingEClass == null) {
-			relatedFindingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(201);
+			relatedFindingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(141);
 		}
 		return relatedFindingEClass;
 	}
@@ -13262,8 +11668,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRelatedFinding_Remarks() {
-        return (EReference)getRelatedFinding().getEStructuralFeatures().get(0);
+	public EAttribute getRelatedFinding_Remarks() {
+        return (EAttribute)getRelatedFinding().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13284,7 +11690,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRelatedResponse() {
 		if (relatedResponseEClass == null) {
-			relatedResponseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(202);
+			relatedResponseEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(142);
 		}
 		return relatedResponseEClass;
 	}
@@ -13325,8 +11731,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRelatedResponse_Remarks() {
-        return (EReference)getRelatedResponse().getEStructuralFeatures().get(3);
+	public EAttribute getRelatedResponse_Remarks() {
+        return (EAttribute)getRelatedResponse().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -13347,7 +11753,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRelevantEvidence() {
 		if (relevantEvidenceEClass == null) {
-			relevantEvidenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(204);
+			relevantEvidenceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(143);
 		}
 		return relevantEvidenceEClass;
 	}
@@ -13358,8 +11764,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRelevantEvidence_Description() {
-        return (EReference)getRelevantEvidence().getEStructuralFeatures().get(0);
+	public EAttribute getRelevantEvidence_Description() {
+        return (EAttribute)getRelevantEvidence().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13388,8 +11794,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRelevantEvidence_Remarks() {
-        return (EReference)getRelevantEvidence().getEStructuralFeatures().get(3);
+	public EAttribute getRelevantEvidence_Remarks() {
+        return (EAttribute)getRelevantEvidence().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -13410,7 +11816,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRemove() {
 		if (removeEClass == null) {
-			removeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(205);
+			removeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(144);
 		}
 		return removeEClass;
 	}
@@ -13421,8 +11827,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRemove_Remarks() {
-        return (EReference)getRemove().getEStructuralFeatures().get(0);
+	public EAttribute getRemove_Remarks() {
+        return (EAttribute)getRemove().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13483,7 +11889,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRequiredAsset() {
 		if (requiredAssetEClass == null) {
-			requiredAssetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(206);
+			requiredAssetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(145);
 		}
 		return requiredAssetEClass;
 	}
@@ -13504,8 +11910,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRequiredAsset_Title() {
-        return (EReference)getRequiredAsset().getEStructuralFeatures().get(1);
+	public EAttribute getRequiredAsset_Title() {
+        return (EAttribute)getRequiredAsset().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13514,8 +11920,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRequiredAsset_Description() {
-        return (EReference)getRequiredAsset().getEStructuralFeatures().get(2);
+	public EAttribute getRequiredAsset_Description() {
+        return (EAttribute)getRequiredAsset().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -13544,8 +11950,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRequiredAsset_Remarks() {
-        return (EReference)getRequiredAsset().getEStructuralFeatures().get(5);
+	public EAttribute getRequiredAsset_Remarks() {
+        return (EAttribute)getRequiredAsset().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -13566,7 +11972,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getBackMatterResource() {
 		if (backMatterResourceEClass == null) {
-			backMatterResourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(207);
+			backMatterResourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(146);
 		}
 		return backMatterResourceEClass;
 	}
@@ -13577,8 +11983,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getBackMatterResource_Title() {
-        return (EReference)getBackMatterResource().getEStructuralFeatures().get(0);
+	public EAttribute getBackMatterResource_Title() {
+        return (EAttribute)getBackMatterResource().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13587,8 +11993,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getBackMatterResource_Description() {
-        return (EReference)getBackMatterResource().getEStructuralFeatures().get(1);
+	public EAttribute getBackMatterResource_Description() {
+        return (EAttribute)getBackMatterResource().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -13647,8 +12053,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getBackMatterResource_Remarks() {
-        return (EReference)getBackMatterResource().getEStructuralFeatures().get(7);
+	public EAttribute getBackMatterResource_Remarks() {
+        return (EAttribute)getBackMatterResource().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -13669,7 +12075,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getResponsibility() {
 		if (responsibilityEClass == null) {
-			responsibilityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(208);
+			responsibilityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(147);
 		}
 		return responsibilityEClass;
 	}
@@ -13680,8 +12086,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResponsibility_Description() {
-        return (EReference)getResponsibility().getEStructuralFeatures().get(0);
+	public EAttribute getResponsibility_Description() {
+        return (EAttribute)getResponsibility().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13720,8 +12126,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getResponsibility_Remarks() {
-        return (EReference)getResponsibility().getEStructuralFeatures().get(4);
+	public EAttribute getResponsibility_Remarks() {
+        return (EAttribute)getResponsibility().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -13750,32 +12156,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getRevisions() {
-		if (revisionsEClass == null) {
-			revisionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(209);
-		}
-		return revisionsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getRevisions_Revision() {
-        return (EReference)getRevisions().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getRevision() {
 		if (revisionEClass == null) {
-			revisionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(210);
+			revisionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(148);
 		}
 		return revisionEClass;
 	}
@@ -13786,8 +12169,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRevision_Title() {
-        return (EReference)getRevision().getEStructuralFeatures().get(0);
+	public EAttribute getRevision_Title() {
+        return (EAttribute)getRevision().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13856,8 +12239,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRevision_Remarks() {
-        return (EReference)getRevision().getEStructuralFeatures().get(7);
+	public EAttribute getRevision_Remarks() {
+        return (EAttribute)getRevision().getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -13868,7 +12251,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRiskLog() {
 		if (riskLogEClass == null) {
-			riskLogEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(211);
+			riskLogEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(149);
 		}
 		return riskLogEClass;
 	}
@@ -13891,7 +12274,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRlink() {
 		if (rlinkEClass == null) {
-			rlinkEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(212);
+			rlinkEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(150);
 		}
 		return rlinkEClass;
 	}
@@ -13934,7 +12317,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getRole() {
 		if (roleEClass == null) {
-			roleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(213);
+			roleEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(151);
 		}
 		return roleEClass;
 	}
@@ -13945,8 +12328,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRole_Title() {
-        return (EReference)getRole().getEStructuralFeatures().get(0);
+	public EAttribute getRole_Title() {
+        return (EAttribute)getRole().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -13965,8 +12348,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRole_Description() {
-        return (EReference)getRole().getEStructuralFeatures().get(2);
+	public EAttribute getRole_Description() {
+        return (EAttribute)getRole().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -13995,8 +12378,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getRole_Remarks() {
-        return (EReference)getRole().getEStructuralFeatures().get(5);
+	public EAttribute getRole_Remarks() {
+        return (EAttribute)getRole().getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -14017,7 +12400,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSatisfied() {
 		if (satisfiedEClass == null) {
-			satisfiedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(214);
+			satisfiedEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(152);
 		}
 		return satisfiedEClass;
 	}
@@ -14028,8 +12411,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSatisfied_Description() {
-        return (EReference)getSatisfied().getEStructuralFeatures().get(0);
+	public EAttribute getSatisfied_Description() {
+        return (EAttribute)getSatisfied().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14068,8 +12451,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSatisfied_Remarks() {
-        return (EReference)getSatisfied().getEStructuralFeatures().get(4);
+	public EAttribute getSatisfied_Remarks() {
+        return (EAttribute)getSatisfied().getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -14100,7 +12483,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getProfileSetParameter() {
 		if (profileSetParameterEClass == null) {
-			profileSetParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(219);
+			profileSetParameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(153);
 		}
 		return profileSetParameterEClass;
 	}
@@ -14131,8 +12514,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProfileSetParameter_Label() {
-        return (EReference)getProfileSetParameter().getEStructuralFeatures().get(2);
+	public EAttribute getProfileSetParameter_Label() {
+        return (EAttribute)getProfileSetParameter().getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -14141,8 +12524,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getProfileSetParameter_Usage() {
-        return (EReference)getProfileSetParameter().getEStructuralFeatures().get(3);
+	public EAttribute getProfileSetParameter_Usage() {
+        return (EAttribute)getProfileSetParameter().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -14223,7 +12606,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getPlaceholderSource() {
 		if (placeholderSourceEClass == null) {
-			placeholderSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(223);
+			placeholderSourceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(154);
 		}
 		return placeholderSourceEClass;
 	}
@@ -14234,8 +12617,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPlaceholderSource_Remarks() {
-        return (EReference)getPlaceholderSource().getEStructuralFeatures().get(0);
+	public EAttribute getPlaceholderSource_Remarks() {
+        return (EAttribute)getPlaceholderSource().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14256,7 +12639,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getFindingTargetStatus() {
 		if (findingTargetStatusEClass == null) {
-			findingTargetStatusEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(229);
+			findingTargetStatusEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(155);
 		}
 		return findingTargetStatusEClass;
 	}
@@ -14267,8 +12650,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getFindingTargetStatus_Remarks() {
-        return (EReference)getFindingTargetStatus().getEStructuralFeatures().get(0);
+	public EAttribute getFindingTargetStatus_Remarks() {
+        return (EAttribute)getFindingTargetStatus().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14299,7 +12682,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getSystemComponentStatus() {
 		if (systemComponentStatusEClass == null) {
-			systemComponentStatusEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(230);
+			systemComponentStatusEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(156);
 		}
 		return systemComponentStatusEClass;
 	}
@@ -14310,8 +12693,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getSystemComponentStatus_Remarks() {
-        return (EReference)getSystemComponentStatus().getEStructuralFeatures().get(0);
+	public EAttribute getSystemComponentStatus_Remarks() {
+        return (EAttribute)getSystemComponentStatus().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14332,7 +12715,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getStep() {
 		if (stepEClass == null) {
-			stepEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(231);
+			stepEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(157);
 		}
 		return stepEClass;
 	}
@@ -14343,8 +12726,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getStep_Title() {
-        return (EReference)getStep().getEStructuralFeatures().get(0);
+	public EAttribute getStep_Title() {
+        return (EAttribute)getStep().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14353,8 +12736,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getStep_Description() {
-        return (EReference)getStep().getEStructuralFeatures().get(1);
+	public EAttribute getStep_Description() {
+        return (EAttribute)getStep().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -14403,8 +12786,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getStep_Remarks() {
-        return (EReference)getStep().getEStructuralFeatures().get(6);
+	public EAttribute getStep_Remarks() {
+        return (EAttribute)getStep().getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -14423,98 +12806,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getMarkupTableCell() {
-		if (markupTableCellEClass == null) {
-			markupTableCellEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(235);
-		}
-		return markupTableCellEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupTableCell_Align() {
-        return (EAttribute)getMarkupTableCell().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMarkupTableRow() {
-		if (markupTableRowEClass == null) {
-			markupTableRowEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(236);
-		}
-		return markupTableRowEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMarkupTableRow_Group() {
-        return (EAttribute)getMarkupTableRow().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupTableRow_Td() {
-        return (EReference)getMarkupTableRow().getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupTableRow_Th() {
-        return (EReference)getMarkupTableRow().getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMarkupTable() {
-		if (markupTableEClass == null) {
-			markupTableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(237);
-		}
-		return markupTableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMarkupTable_Tr() {
-        return (EReference)getMarkupTable().getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getTermsAndConditions() {
 		if (termsAndConditionsEClass == null) {
-			termsAndConditionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(238);
+			termsAndConditionsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(158);
 		}
 		return termsAndConditionsEClass;
 	}
@@ -14537,7 +12831,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getConstraintTest() {
 		if (constraintTestEClass == null) {
-			constraintTestEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(239);
+			constraintTestEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(159);
 		}
 		return constraintTestEClass;
 	}
@@ -14558,8 +12852,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getConstraintTest_Remarks() {
-        return (EReference)getConstraintTest().getEStructuralFeatures().get(1);
+	public EAttribute getConstraintTest_Remarks() {
+        return (EAttribute)getConstraintTest().getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -14570,7 +12864,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getTiming() {
 		if (timingEClass == null) {
-			timingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(240);
+			timingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(160);
 		}
 		return timingEClass;
 	}
@@ -14613,7 +12907,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getUsesComponent() {
 		if (usesComponentEClass == null) {
-			usesComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(246);
+			usesComponentEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(161);
 		}
 		return usesComponentEClass;
 	}
@@ -14654,8 +12948,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getUsesComponent_Remarks() {
-        return (EReference)getUsesComponent().getEStructuralFeatures().get(3);
+	public EAttribute getUsesComponent_Remarks() {
+        return (EAttribute)getUsesComponent().getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -14676,7 +12970,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EClass getWithinDateRange() {
 		if (withinDateRangeEClass == null) {
-			withinDateRangeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(249);
+			withinDateRangeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(162);
 		}
 		return withinDateRangeEClass;
 	}
@@ -14687,8 +12981,8 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getWithinDateRange_Remarks() {
-        return (EReference)getWithinDateRange().getEStructuralFeatures().get(0);
+	public EAttribute getWithinDateRange_Remarks() {
+        return (EAttribute)getWithinDateRange().getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -14717,35 +13011,9 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
-	public EEnum getAlignType() {
-		if (alignTypeEEnum == null) {
-			alignTypeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(1);
-		}
-		return alignTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EDataType getAlignTypeObject() {
-		if (alignTypeObjectEDataType == null) {
-			alignTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(2);
-		}
-		return alignTypeObjectEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EDataType getAsIsType() {
 		if (asIsTypeEDataType == null) {
-			asIsTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(5);
+			asIsTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(163);
 		}
 		return asIsTypeEDataType;
 	}
@@ -14758,7 +13026,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getAsIsTypeObject() {
 		if (asIsTypeObjectEDataType == null) {
-			asIsTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(6);
+			asIsTypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(164);
 		}
 		return asIsTypeObjectEDataType;
 	}
@@ -14771,7 +13039,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getBase64Datatype() {
 		if (base64DatatypeEDataType == null) {
-			base64DatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(12);
+			base64DatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(165);
 		}
 		return base64DatatypeEDataType;
 	}
@@ -14784,7 +13052,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getBooleanDatatype() {
 		if (booleanDatatypeEDataType == null) {
-			booleanDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(15);
+			booleanDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(166);
 		}
 		return booleanDatatypeEDataType;
 	}
@@ -14797,7 +13065,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getBooleanDatatypeObject() {
 		if (booleanDatatypeObjectEDataType == null) {
-			booleanDatatypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(16);
+			booleanDatatypeObjectEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(167);
 		}
 		return booleanDatatypeObjectEDataType;
 	}
@@ -14810,7 +13078,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getCategoryType() {
 		if (categoryTypeEDataType == null) {
-			categoryTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(18);
+			categoryTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(168);
 		}
 		return categoryTypeEDataType;
 	}
@@ -14823,7 +13091,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getCityType() {
 		if (cityTypeEDataType == null) {
-			cityTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(20);
+			cityTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(169);
 		}
 		return cityTypeEDataType;
 	}
@@ -14836,7 +13104,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getCollectedType() {
 		if (collectedTypeEDataType == null) {
-			collectedTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(22);
+			collectedTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(170);
 		}
 		return collectedTypeEDataType;
 	}
@@ -14849,7 +13117,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getCountryType() {
 		if (countryTypeEDataType == null) {
-			countryTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(26);
+			countryTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(171);
 		}
 		return countryTypeEDataType;
 	}
@@ -14862,7 +13130,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getDateDatatype() {
 		if (dateDatatypeEDataType == null) {
-			dateDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(28);
+			dateDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(172);
 		}
 		return dateDatatypeEDataType;
 	}
@@ -14875,7 +13143,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getDateTimeDatatype() {
 		if (dateTimeDatatypeEDataType == null) {
-			dateTimeDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(29);
+			dateTimeDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(173);
 		}
 		return dateTimeDatatypeEDataType;
 	}
@@ -14888,7 +13156,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getDateTimeWithTimezoneDatatype() {
 		if (dateTimeWithTimezoneDatatypeEDataType == null) {
-			dateTimeWithTimezoneDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(30);
+			dateTimeWithTimezoneDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(174);
 		}
 		return dateTimeWithTimezoneDatatypeEDataType;
 	}
@@ -14901,7 +13169,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getDeadlineType() {
 		if (deadlineTypeEDataType == null) {
-			deadlineTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(31);
+			deadlineTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(175);
 		}
 		return deadlineTypeEDataType;
 	}
@@ -14914,7 +13182,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getDecimalDatatype() {
 		if (decimalDatatypeEDataType == null) {
-			decimalDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(32);
+			decimalDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(176);
 		}
 		return decimalDatatypeEDataType;
 	}
@@ -14927,7 +13195,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getEmailAddressDatatype() {
 		if (emailAddressDatatypeEDataType == null) {
-			emailAddressDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(35);
+			emailAddressDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(177);
 		}
 		return emailAddressDatatypeEDataType;
 	}
@@ -14940,7 +13208,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getEndType() {
 		if (endTypeEDataType == null) {
-			endTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(36);
+			endTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(178);
 		}
 		return endTypeEDataType;
 	}
@@ -14953,7 +13221,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getEndType1() {
 		if (endType1EDataType == null) {
-			endType1EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(37);
+			endType1EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(179);
 		}
 		return endType1EDataType;
 	}
@@ -14966,7 +13234,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getEndType2() {
 		if (endType2EDataType == null) {
-			endType2EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(38);
+			endType2EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(180);
 		}
 		return endType2EDataType;
 	}
@@ -14979,7 +13247,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getExpiresType() {
 		if (expiresTypeEDataType == null) {
-			expiresTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(41);
+			expiresTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(181);
 		}
 		return expiresTypeEDataType;
 	}
@@ -14992,7 +13260,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getExpressionType() {
 		if (expressionTypeEDataType == null) {
-			expressionTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(43);
+			expressionTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(182);
 		}
 		return expressionTypeEDataType;
 	}
@@ -15005,7 +13273,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getImplementationStatementUuidType() {
 		if (implementationStatementUuidTypeEDataType == null) {
-			implementationStatementUuidTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(49);
+			implementationStatementUuidTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(183);
 		}
 		return implementationStatementUuidTypeEDataType;
 	}
@@ -15018,7 +13286,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getInformationTypeIdType() {
 		if (informationTypeIdTypeEDataType == null) {
-			informationTypeIdTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(51);
+			informationTypeIdTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(184);
 		}
 		return informationTypeIdTypeEDataType;
 	}
@@ -15029,9 +13297,35 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	 * @generated
 	 */
 	@Override
+	public EDataType getMarkupLineDatatype() {
+		if (markupLineDatatypeEDataType == null) {
+			markupLineDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(185);
+		}
+		return markupLineDatatypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EDataType getMarkupMultilineDatatype() {
+		if (markupMultilineDatatypeEDataType == null) {
+			markupMultilineDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(186);
+		}
+		return markupMultilineDatatypeEDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EDataType getMemberOfOrganizationType() {
 		if (memberOfOrganizationTypeEDataType == null) {
-			memberOfOrganizationTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(65);
+			memberOfOrganizationTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(187);
 		}
 		return memberOfOrganizationTypeEDataType;
 	}
@@ -15044,7 +13338,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getMethodType() {
 		if (methodTypeEDataType == null) {
-			methodTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(66);
+			methodTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(188);
 		}
 		return methodTypeEDataType;
 	}
@@ -15057,7 +13351,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getNameType() {
 		if (nameTypeEDataType == null) {
-			nameTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(68);
+			nameTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(189);
 		}
 		return nameTypeEDataType;
 	}
@@ -15070,7 +13364,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getNonNegativeIntegerDatatype() {
 		if (nonNegativeIntegerDatatypeEDataType == null) {
-			nonNegativeIntegerDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(69);
+			nonNegativeIntegerDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(190);
 		}
 		return nonNegativeIntegerDatatypeEDataType;
 	}
@@ -15083,7 +13377,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalAssessmentCommonRiskStatusFIELD() {
 		if (oscalAssessmentCommonRiskStatusFIELDEDataType == null) {
-			oscalAssessmentCommonRiskStatusFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(98);
+			oscalAssessmentCommonRiskStatusFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(191);
 		}
 		return oscalAssessmentCommonRiskStatusFIELDEDataType;
 	}
@@ -15096,7 +13390,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalControlCommonParameterValueFIELD() {
 		if (oscalControlCommonParameterValueFIELDEDataType == null) {
-			oscalControlCommonParameterValueFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(122);
+			oscalControlCommonParameterValueFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(192);
 		}
 		return oscalControlCommonParameterValueFIELDEDataType;
 	}
@@ -15109,7 +13403,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalControlCommonWithIdFIELD() {
 		if (oscalControlCommonWithIdFIELDEDataType == null) {
-			oscalControlCommonWithIdFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(125);
+			oscalControlCommonWithIdFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(193);
 		}
 		return oscalControlCommonWithIdFIELDEDataType;
 	}
@@ -15122,7 +13416,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalImplementationCommonFunctionPerformedFIELD() {
 		if (oscalImplementationCommonFunctionPerformedFIELDEDataType == null) {
-			oscalImplementationCommonFunctionPerformedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(127);
+			oscalImplementationCommonFunctionPerformedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(194);
 		}
 		return oscalImplementationCommonFunctionPerformedFIELDEDataType;
 	}
@@ -15135,7 +13429,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMappingCommonPercentageFIELD() {
 		if (oscalMappingCommonPercentageFIELDEDataType == null) {
-			oscalMappingCommonPercentageFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(144);
+			oscalMappingCommonPercentageFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(195);
 		}
 		return oscalMappingCommonPercentageFIELDEDataType;
 	}
@@ -15148,7 +13442,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMetadataAddrLineFIELD() {
 		if (oscalMetadataAddrLineFIELDEDataType == null) {
-			oscalMetadataAddrLineFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(149);
+			oscalMetadataAddrLineFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(196);
 		}
 		return oscalMetadataAddrLineFIELDEDataType;
 	}
@@ -15161,7 +13455,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMetadataEmailAddressFIELD() {
 		if (oscalMetadataEmailAddressFIELDEDataType == null) {
-			oscalMetadataEmailAddressFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(152);
+			oscalMetadataEmailAddressFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(197);
 		}
 		return oscalMetadataEmailAddressFIELDEDataType;
 	}
@@ -15174,7 +13468,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMetadataLastModifiedFIELD() {
 		if (oscalMetadataLastModifiedFIELDEDataType == null) {
-			oscalMetadataLastModifiedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(154);
+			oscalMetadataLastModifiedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(198);
 		}
 		return oscalMetadataLastModifiedFIELDEDataType;
 	}
@@ -15187,7 +13481,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMetadataLocationUuidFIELD() {
 		if (oscalMetadataLocationUuidFIELDEDataType == null) {
-			oscalMetadataLocationUuidFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(156);
+			oscalMetadataLocationUuidFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(199);
 		}
 		return oscalMetadataLocationUuidFIELDEDataType;
 	}
@@ -15200,7 +13494,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMetadataOscalVersionFIELD() {
 		if (oscalMetadataOscalVersionFIELDEDataType == null) {
-			oscalMetadataOscalVersionFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(158);
+			oscalMetadataOscalVersionFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(200);
 		}
 		return oscalMetadataOscalVersionFIELDEDataType;
 	}
@@ -15213,7 +13507,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMetadataPartyUuidFIELD() {
 		if (oscalMetadataPartyUuidFIELDEDataType == null) {
-			oscalMetadataPartyUuidFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(159);
+			oscalMetadataPartyUuidFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(201);
 		}
 		return oscalMetadataPartyUuidFIELDEDataType;
 	}
@@ -15226,7 +13520,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMetadataPublishedFIELD() {
 		if (oscalMetadataPublishedFIELDEDataType == null) {
-			oscalMetadataPublishedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(161);
+			oscalMetadataPublishedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(202);
 		}
 		return oscalMetadataPublishedFIELDEDataType;
 	}
@@ -15239,7 +13533,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMetadataRoleIdFIELD() {
 		if (oscalMetadataRoleIdFIELDEDataType == null) {
-			oscalMetadataRoleIdFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(164);
+			oscalMetadataRoleIdFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(203);
 		}
 		return oscalMetadataRoleIdFIELDEDataType;
 	}
@@ -15252,7 +13546,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalMetadataVersionFIELD() {
 		if (oscalMetadataVersionFIELDEDataType == null) {
-			oscalMetadataVersionFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(166);
+			oscalMetadataVersionFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(204);
 		}
 		return oscalMetadataVersionFIELDEDataType;
 	}
@@ -15265,7 +13559,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalSspBaseFIELD() {
 		if (oscalSspBaseFIELDEDataType == null) {
-			oscalSspBaseFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(177);
+			oscalSspBaseFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(205);
 		}
 		return oscalSspBaseFIELDEDataType;
 	}
@@ -15278,7 +13572,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalSspDateAuthorizedFIELD() {
 		if (oscalSspDateAuthorizedFIELDEDataType == null) {
-			oscalSspDateAuthorizedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(181);
+			oscalSspDateAuthorizedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(206);
 		}
 		return oscalSspDateAuthorizedFIELDEDataType;
 	}
@@ -15291,7 +13585,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getOscalSspSelectedFIELD() {
 		if (oscalSspSelectedFIELDEDataType == null) {
-			oscalSspSelectedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(188);
+			oscalSspSelectedFIELDEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(207);
 		}
 		return oscalSspSelectedFIELDEDataType;
 	}
@@ -15304,7 +13598,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getPartyUuidType() {
 		if (partyUuidTypeEDataType == null) {
-			partyUuidTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(196);
+			partyUuidTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(208);
 		}
 		return partyUuidTypeEDataType;
 	}
@@ -15317,7 +13611,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getPositiveIntegerDatatype() {
 		if (positiveIntegerDatatypeEDataType == null) {
-			positiveIntegerDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(197);
+			positiveIntegerDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(209);
 		}
 		return positiveIntegerDatatypeEDataType;
 	}
@@ -15330,7 +13624,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getPostalCodeType() {
 		if (postalCodeTypeEDataType == null) {
-			postalCodeTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(198);
+			postalCodeTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(210);
 		}
 		return postalCodeTypeEDataType;
 	}
@@ -15343,7 +13637,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getRelationshipType() {
 		if (relationshipTypeEDataType == null) {
-			relationshipTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(203);
+			relationshipTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(211);
 		}
 		return relationshipTypeEDataType;
 	}
@@ -15356,7 +13650,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getSecurityObjectiveAvailabilityType() {
 		if (securityObjectiveAvailabilityTypeEDataType == null) {
-			securityObjectiveAvailabilityTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(215);
+			securityObjectiveAvailabilityTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(212);
 		}
 		return securityObjectiveAvailabilityTypeEDataType;
 	}
@@ -15369,7 +13663,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getSecurityObjectiveConfidentialityType() {
 		if (securityObjectiveConfidentialityTypeEDataType == null) {
-			securityObjectiveConfidentialityTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(216);
+			securityObjectiveConfidentialityTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(213);
 		}
 		return securityObjectiveConfidentialityTypeEDataType;
 	}
@@ -15382,7 +13676,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getSecurityObjectiveIntegrityType() {
 		if (securityObjectiveIntegrityTypeEDataType == null) {
-			securityObjectiveIntegrityTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(217);
+			securityObjectiveIntegrityTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(214);
 		}
 		return securityObjectiveIntegrityTypeEDataType;
 	}
@@ -15395,7 +13689,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getSecuritySensitivityLevelType() {
 		if (securitySensitivityLevelTypeEDataType == null) {
-			securitySensitivityLevelTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(218);
+			securitySensitivityLevelTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(215);
 		}
 		return securitySensitivityLevelTypeEDataType;
 	}
@@ -15408,7 +13702,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getShortNameType() {
 		if (shortNameTypeEDataType == null) {
-			shortNameTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(220);
+			shortNameTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(216);
 		}
 		return shortNameTypeEDataType;
 	}
@@ -15421,7 +13715,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getShortNameType1() {
 		if (shortNameType1EDataType == null) {
-			shortNameType1EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(221);
+			shortNameType1EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(217);
 		}
 		return shortNameType1EDataType;
 	}
@@ -15434,7 +13728,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getShortNameType2() {
 		if (shortNameType2EDataType == null) {
-			shortNameType2EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(222);
+			shortNameType2EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(218);
 		}
 		return shortNameType2EDataType;
 	}
@@ -15447,7 +13741,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getStartType() {
 		if (startTypeEDataType == null) {
-			startTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(224);
+			startTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(219);
 		}
 		return startTypeEDataType;
 	}
@@ -15460,7 +13754,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getStartType1() {
 		if (startType1EDataType == null) {
-			startType1EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(225);
+			startType1EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(220);
 		}
 		return startType1EDataType;
 	}
@@ -15473,7 +13767,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getStartType2() {
 		if (startType2EDataType == null) {
-			startType2EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(226);
+			startType2EDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(221);
 		}
 		return startType2EDataType;
 	}
@@ -15486,7 +13780,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getStatementIdType() {
 		if (statementIdTypeEDataType == null) {
-			statementIdTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(227);
+			statementIdTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(222);
 		}
 		return statementIdTypeEDataType;
 	}
@@ -15499,7 +13793,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getStateType() {
 		if (stateTypeEDataType == null) {
-			stateTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(228);
+			stateTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(223);
 		}
 		return stateTypeEDataType;
 	}
@@ -15512,7 +13806,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getStringDatatype() {
 		if (stringDatatypeEDataType == null) {
-			stringDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(232);
+			stringDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(224);
 		}
 		return stringDatatypeEDataType;
 	}
@@ -15525,7 +13819,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getSystemNameShortType() {
 		if (systemNameShortTypeEDataType == null) {
-			systemNameShortTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(233);
+			systemNameShortTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(225);
 		}
 		return systemNameShortTypeEDataType;
 	}
@@ -15538,7 +13832,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getSystemNameType() {
 		if (systemNameTypeEDataType == null) {
-			systemNameTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(234);
+			systemNameTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(226);
 		}
 		return systemNameTypeEDataType;
 	}
@@ -15551,7 +13845,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getTokenDatatype() {
 		if (tokenDatatypeEDataType == null) {
-			tokenDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(241);
+			tokenDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(227);
 		}
 		return tokenDatatypeEDataType;
 	}
@@ -15564,7 +13858,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getTypeType() {
 		if (typeTypeEDataType == null) {
-			typeTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(242);
+			typeTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(228);
 		}
 		return typeTypeEDataType;
 	}
@@ -15577,7 +13871,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getURIDatatype() {
 		if (uriDatatypeEDataType == null) {
-			uriDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(243);
+			uriDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(229);
 		}
 		return uriDatatypeEDataType;
 	}
@@ -15590,7 +13884,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getURIReferenceDatatype() {
 		if (uriReferenceDatatypeEDataType == null) {
-			uriReferenceDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(244);
+			uriReferenceDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(230);
 		}
 		return uriReferenceDatatypeEDataType;
 	}
@@ -15603,7 +13897,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getUrlType() {
 		if (urlTypeEDataType == null) {
-			urlTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(245);
+			urlTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(231);
 		}
 		return urlTypeEDataType;
 	}
@@ -15616,7 +13910,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getUUIDDatatype() {
 		if (uuidDatatypeEDataType == null) {
-			uuidDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(247);
+			uuidDatatypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(232);
 		}
 		return uuidDatatypeEDataType;
 	}
@@ -15629,7 +13923,7 @@ public class OSCALPackageImpl extends EPackageImpl implements OSCALPackage {
 	@Override
 	public EDataType getValueType() {
 		if (valueTypeEDataType == null) {
-			valueTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(248);
+			valueTypeEDataType = (EDataType)EPackage.Registry.INSTANCE.getEPackage(OSCALPackage.eNS_URI).getEClassifiers().get(233);
 		}
 		return valueTypeEDataType;
 	}
