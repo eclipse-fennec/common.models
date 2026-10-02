@@ -53,6 +53,10 @@ Notable schema sources:
 * **Jakarta Persistence** — Eclipse Public License 2.0 / Eclipse
   Distribution License 1.0
 * **CycloneDX** schema — Apache License 2.0
+* **NIST OSCAL** 1.2.3 schema — public domain (17 U.S.C. § 105) and CC0 1.0
+  worldwide; source: National Institute of Standards and Technology,
+  https://github.com/usnistgov/OSCAL (see
+  `gov.nist.oscal.model/model/xsd/LICENSE-NIST-OSCAL.md`)
 * **DocBook** — DocBook Project Licence
 * **OData CSDL** — Microsoft Open Specification Promise
 
