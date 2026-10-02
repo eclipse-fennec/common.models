@@ -136,6 +136,7 @@ original schema it was generated from**, see
 | `org.apache.maven.model` | Apache Maven POM 4.0 model |
 | `org.cyclonedx.schema` | CycloneDX 1.6 Software Bill of Materials (SBOM) |
 | `org.docbook.model` | DocBook 5.0 documentation format |
+| `gov.nist.oscal.model` | NIST OSCAL 1.2.3 — Open Security Controls Assessment Language |
 | `org.odata.csdl.model` | OData CSDL 4.01 (Common Schema Definition Language) |
 | `org.openmicroscopy` | OME (Open Microscopy Environment) data model |
 

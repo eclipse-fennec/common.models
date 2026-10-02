@@ -1,0 +1,165 @@
+/*
+ * Copyright (c) 2026 Contributors to the Eclipse Foundation.
+ * 
+ * This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *   Data In Motion Consulting - initial implementation
+ */
+package gov.nist.csrc.ns.oscal;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
+
+import org.osgi.annotation.versioning.ProviderType;
+
+/**
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Export</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ * <!-- begin-model-doc -->
+ * 
+ *                        
+ *   <b xmlns="http://csrc.nist.gov/ns/oscal/1.0">Export</b>
+ *   : Identifies content intended for external consumption, such as with leveraged organizations.
+ * 
+ * <!-- end-model-doc -->
+ *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link gov.nist.csrc.ns.oscal.Export#getDescription <em>Description</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.Export#getProp <em>Prop</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.Export#getLink <em>Link</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.Export#getProvided <em>Provided</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.Export#getResponsibility <em>Responsibility</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.Export#getRemarks <em>Remarks</em>}</li>
+ * </ul>
+ *
+ * @see gov.nist.csrc.ns.oscal.OSCALPackage#getExport()
+ * @model extendedMetaData="name='export_._type' kind='elementOnly'"
+ * @generated
+ */
+@ProviderType
+public interface Export extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * 
+	 *                                 
+	 *   <b xmlns="http://csrc.nist.gov/ns/oscal/1.0">Control Implementation Export Description</b>
+	 *   : An implementation statement that describes the aspects of the control or control statement implementation that can be available to another system leveraging this system.
+	 * 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Description</em>' containment reference.
+	 * @see #setDescription(MarkupMultilineDatatype)
+	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getExport_Description()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='description' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	MarkupMultilineDatatype getDescription();
+
+	/**
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Export#getDescription <em>Description</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' containment reference.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(MarkupMultilineDatatype value);
+
+	/**
+	 * Returns the value of the '<em><b>Prop</b></em>' containment reference list.
+	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.Property}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prop</em>' containment reference list.
+	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getExport_Prop()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='prop' namespace='##targetNamespace'"
+	 *        annotation="http://eclipse.org/fennec/codec key='props'"
+	 * @generated
+	 */
+	EList<Property> getProp();
+
+	/**
+	 * Returns the value of the '<em><b>Link</b></em>' containment reference list.
+	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.Link}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Link</em>' containment reference list.
+	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getExport_Link()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='link' namespace='##targetNamespace'"
+	 *        annotation="http://eclipse.org/fennec/codec key='links'"
+	 * @generated
+	 */
+	EList<Link> getLink();
+
+	/**
+	 * Returns the value of the '<em><b>Provided</b></em>' containment reference list.
+	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.Provided}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Provided</em>' containment reference list.
+	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getExport_Provided()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='provided' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	EList<Provided> getProvided();
+
+	/**
+	 * Returns the value of the '<em><b>Responsibility</b></em>' containment reference list.
+	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.Responsibility}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Responsibility</em>' containment reference list.
+	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getExport_Responsibility()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='responsibility' namespace='##targetNamespace'"
+	 *        annotation="http://eclipse.org/fennec/codec key='responsibilities'"
+	 * @generated
+	 */
+	EList<Responsibility> getResponsibility();
+
+	/**
+	 * Returns the value of the '<em><b>Remarks</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * 
+	 *                              
+	 *   <b xmlns="http://csrc.nist.gov/ns/oscal/1.0">Remarks</b>
+	 *   : Additional commentary about the containing object.
+	 * 
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Remarks</em>' containment reference.
+	 * @see #setRemarks(MarkupMultilineDatatype)
+	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getExport_Remarks()
+	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='remarks' namespace='##targetNamespace'"
+	 * @generated
+	 */
+	MarkupMultilineDatatype getRemarks();
+
+	/**
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Export#getRemarks <em>Remarks</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Remarks</em>' containment reference.
+	 * @see #getRemarks()
+	 * @generated
+	 */
+	void setRemarks(MarkupMultilineDatatype value);
+
+} // Export
