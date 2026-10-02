@@ -37,7 +37,12 @@
 	bnd.identity;id='org.eclipse.fennec.gdpr.model',\
 	bnd.identity;id='org.eclipse.fennec.gdpr.report.model',\
 	bnd.identity;id='org.eclipse.fennec.gdpr.report.history.model',\
-	bnd.identity;id='gov.nist.oscal.model'
+	bnd.identity;id='gov.nist.oscal.model',\
+	bnd.identity;id='org.eclipse.fennec.compliance.corpus.model',\
+	bnd.identity;id='org.eclipse.fennec.compliance.context.model',\
+	bnd.identity;id='org.eclipse.fennec.compliance.inventory.model',\
+	bnd.identity;id='org.eclipse.fennec.compliance.report.model',\
+	bnd.identity;id='org.eclipse.fennec.compliance.report.history.model'
 -runbundles: \
 	net.opengis.gml3.model;version=snapshot,\
 	net.opengis.kml.model;version=snapshot,\
@@ -91,4 +96,9 @@
 	org.eclipse.fennec.gdpr.model;version=snapshot,\
 	org.eclipse.fennec.gdpr.report.model;version=snapshot,\
 	org.eclipse.fennec.gdpr.report.history.model;version=snapshot,\
-	gov.nist.oscal.model;version=snapshot
+	gov.nist.oscal.model;version=snapshot,\
+	org.eclipse.fennec.compliance.corpus.model;version=snapshot,\
+	org.eclipse.fennec.compliance.context.model;version=snapshot,\
+	org.eclipse.fennec.compliance.inventory.model;version=snapshot,\
+	org.eclipse.fennec.compliance.report.model;version=snapshot,\
+	org.eclipse.fennec.compliance.report.history.model;version=snapshot

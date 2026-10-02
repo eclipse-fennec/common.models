@@ -147,6 +147,21 @@ original schema it was generated from**, see
 | `org.eclipse.fennec.model` | Fennec collection, PushStream and utility models |
 | `org.eclipse.fennec.query.model` | Fennec EMF query model |
 
+### Compliance
+
+Shared compliance models for GDPR, BSI IT-Grundschutz++, ISO/IEC 27001, CRA, EU AI Act, KRITIS and the BSI Technical Guidelines (see [#55](https://github.com/eclipse-fennec/common.models/issues/55)).
+
+| Module | Description |
+|---|---|
+| `org.eclipse.fennec.compliance.corpus.model` | Normative texts: legal acts (Formex), control catalogs (OSCAL), technical documents |
+| `org.eclipse.fennec.compliance.context.model` | Compliance contexts: requirements, taxonomies, roles, crosswalks, by-id references |
+| `org.eclipse.fennec.compliance.inventory.model` | Assets, protection needs, measures (TOMs), applicability, processing activities, risk methodology |
+| `org.eclipse.fennec.compliance.report.model` | Findings, evidence and risk treatment of a review against compliance contexts |
+| `org.eclipse.fennec.compliance.report.history.model` | Revisions of the reports of one subject as flat rows |
+| `org.eclipse.fennec.gdpr.model` | **Deprecated**, replaced by `compliance.corpus.model` |
+| `org.eclipse.fennec.gdpr.report.model` | **Deprecated**, replaced by `compliance.report.model` |
+| `org.eclipse.fennec.gdpr.report.history.model` | **Deprecated**, replaced by `compliance.report.history.model` |
+
 ## Adding a New Model Module
 
 See **[docs/adding-a-model.md](docs/adding-a-model.md)** for the full walkthrough:
