@@ -11,14 +11,11 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.ConstraintTest;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -59,14 +56,24 @@ public class ConstraintTestImpl extends MinimalEObjectImpl.Container implements 
 	protected String expression = EXPRESSION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,7 +123,7 @@ public class ConstraintTestImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -125,48 +132,12 @@ public class ConstraintTestImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
+	@Override
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
 		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.CONSTRAINT_TEST__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CONSTRAINT_TEST__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CONSTRAINT_TEST__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CONSTRAINT_TEST__REMARKS, newRemarks, newRemarks));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OSCALPackage.CONSTRAINT_TEST__REMARKS:
-				return basicSetRemarks(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CONSTRAINT_TEST__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -197,7 +168,7 @@ public class ConstraintTestImpl extends MinimalEObjectImpl.Container implements 
 				setExpression((String)newValue);
 				return;
 			case OSCALPackage.CONSTRAINT_TEST__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -215,7 +186,7 @@ public class ConstraintTestImpl extends MinimalEObjectImpl.Container implements 
 				setExpression(EXPRESSION_EDEFAULT);
 				return;
 			case OSCALPackage.CONSTRAINT_TEST__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -232,7 +203,7 @@ public class ConstraintTestImpl extends MinimalEObjectImpl.Container implements 
 			case OSCALPackage.CONSTRAINT_TEST__EXPRESSION:
 				return EXPRESSION_EDEFAULT == null ? expression != null : !EXPRESSION_EDEFAULT.equals(expression);
 			case OSCALPackage.CONSTRAINT_TEST__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -249,6 +220,8 @@ public class ConstraintTestImpl extends MinimalEObjectImpl.Container implements 
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (expression: ");
 		result.append(expression);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(')');
 		return result.toString();
 	}

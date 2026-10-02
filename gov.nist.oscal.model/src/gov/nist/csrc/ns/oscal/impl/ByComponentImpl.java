@@ -15,7 +15,6 @@ import gov.nist.csrc.ns.oscal.Export;
 import gov.nist.csrc.ns.oscal.ImplementationStatus;
 import gov.nist.csrc.ns.oscal.Inherited;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleRole;
@@ -64,14 +63,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByComponent {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -154,14 +163,24 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 	protected EList<ResponsibleRole> responsibleRole;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getComponentUuid() <em>Component Uuid</em>}' attribute.
@@ -228,7 +247,7 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -237,34 +256,12 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.BY_COMPONENT__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.BY_COMPONENT__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.BY_COMPONENT__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.BY_COMPONENT__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.BY_COMPONENT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -441,7 +438,7 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -450,34 +447,12 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.BY_COMPONENT__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.BY_COMPONENT__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.BY_COMPONENT__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.BY_COMPONENT__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.BY_COMPONENT__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -534,8 +509,6 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.BY_COMPONENT__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.BY_COMPONENT__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.BY_COMPONENT__LINK:
@@ -552,8 +525,6 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 				return ((InternalEList<?>)getSatisfied()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.BY_COMPONENT__RESPONSIBLE_ROLE:
 				return ((InternalEList<?>)getResponsibleRole()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.BY_COMPONENT__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -604,7 +575,7 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.BY_COMPONENT__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.BY_COMPONENT__PROP:
 				getProp().clear();
@@ -637,7 +608,7 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 				getResponsibleRole().addAll((Collection<? extends ResponsibleRole>)newValue);
 				return;
 			case OSCALPackage.BY_COMPONENT__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.BY_COMPONENT__COMPONENT_UUID:
 				setComponentUuid((String)newValue);
@@ -658,7 +629,7 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.BY_COMPONENT__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.BY_COMPONENT__PROP:
 				getProp().clear();
@@ -685,7 +656,7 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 				getResponsibleRole().clear();
 				return;
 			case OSCALPackage.BY_COMPONENT__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.BY_COMPONENT__COMPONENT_UUID:
 				setComponentUuid(COMPONENT_UUID_EDEFAULT);
@@ -706,7 +677,7 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.BY_COMPONENT__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.BY_COMPONENT__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.BY_COMPONENT__LINK:
@@ -724,7 +695,7 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 			case OSCALPackage.BY_COMPONENT__RESPONSIBLE_ROLE:
 				return responsibleRole != null && !responsibleRole.isEmpty();
 			case OSCALPackage.BY_COMPONENT__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.BY_COMPONENT__COMPONENT_UUID:
 				return COMPONENT_UUID_EDEFAULT == null ? componentUuid != null : !COMPONENT_UUID_EDEFAULT.equals(componentUuid);
 			case OSCALPackage.BY_COMPONENT__UUID:
@@ -743,7 +714,11 @@ public class ByComponentImpl extends MinimalEObjectImpl.Container implements ByC
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (componentUuid: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", componentUuid: ");
 		result.append(componentUuid);
 		result.append(", uuid: ");
 		result.append(uuid);

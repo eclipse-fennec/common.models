@@ -45,7 +45,7 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface Citation extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Text</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -55,24 +55,24 @@ public interface Citation extends EObject {
 	 *   : A line of citation text.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Text</em>' containment reference.
-	 * @see #setText(MarkupLineDatatype)
+	 * @return the value of the '<em>Text</em>' attribute.
+	 * @see #setText(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getCitation_Text()
-	 * @model containment="true" required="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupLineDatatype" required="true"
 	 *        extendedMetaData="kind='element' name='text' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupLineDatatype getText();
+	String getText();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Citation#getText <em>Text</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Citation#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Text</em>' containment reference.
+	 * @param value the new value of the '<em>Text</em>' attribute.
 	 * @see #getText()
 	 * @generated
 	 */
-	void setText(MarkupLineDatatype value);
+	void setText(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Prop</b></em>' containment reference list.

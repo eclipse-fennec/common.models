@@ -11,8 +11,6 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Observation;
 import gov.nist.csrc.ns.oscal.Origin;
@@ -66,24 +64,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ObservationImpl extends MinimalEObjectImpl.Container implements Observation {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -196,14 +214,24 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	protected XMLGregorianCalendar expires = EXPIRES_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -250,7 +278,7 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -259,14 +287,12 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
+	@Override
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
 		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.OBSERVATION__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.OBSERVATION__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -275,27 +301,7 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	 * @generated
 	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.OBSERVATION__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.OBSERVATION__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.OBSERVATION__TITLE, newTitle, newTitle));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -304,34 +310,12 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.OBSERVATION__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.OBSERVATION__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.OBSERVATION__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.OBSERVATION__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.OBSERVATION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -477,7 +461,7 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -486,34 +470,12 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.OBSERVATION__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.OBSERVATION__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.OBSERVATION__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.OBSERVATION__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.OBSERVATION__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -547,10 +509,6 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.OBSERVATION__TITLE:
-				return basicSetTitle(null, msgs);
-			case OSCALPackage.OBSERVATION__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.OBSERVATION__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.OBSERVATION__LINK:
@@ -561,8 +519,6 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 				return ((InternalEList<?>)getSubject()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.OBSERVATION__RELEVANT_EVIDENCE:
 				return ((InternalEList<?>)getRelevantEvidence()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.OBSERVATION__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -615,10 +571,10 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.OBSERVATION__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.OBSERVATION__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.OBSERVATION__PROP:
 				getProp().clear();
@@ -655,7 +611,7 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 				setExpires((XMLGregorianCalendar)newValue);
 				return;
 			case OSCALPackage.OBSERVATION__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.OBSERVATION__UUID:
 				setUuid((String)newValue);
@@ -673,10 +629,10 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.OBSERVATION__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.OBSERVATION__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.OBSERVATION__PROP:
 				getProp().clear();
@@ -706,7 +662,7 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 				setExpires(EXPIRES_EDEFAULT);
 				return;
 			case OSCALPackage.OBSERVATION__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.OBSERVATION__UUID:
 				setUuid(UUID_EDEFAULT);
@@ -724,9 +680,9 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.OBSERVATION__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.OBSERVATION__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.OBSERVATION__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.OBSERVATION__LINK:
@@ -746,7 +702,7 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 			case OSCALPackage.OBSERVATION__EXPIRES:
 				return EXPIRES_EDEFAULT == null ? expires != null : !EXPIRES_EDEFAULT.equals(expires);
 			case OSCALPackage.OBSERVATION__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.OBSERVATION__UUID:
 				return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
 		}
@@ -763,7 +719,11 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (method: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", method: ");
 		result.append(method);
 		result.append(", type: ");
 		result.append(type);
@@ -771,6 +731,8 @@ public class ObservationImpl extends MinimalEObjectImpl.Container implements Obs
 		result.append(collected);
 		result.append(", expires: ");
 		result.append(expires);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(", uuid: ");
 		result.append(uuid);
 		result.append(')');

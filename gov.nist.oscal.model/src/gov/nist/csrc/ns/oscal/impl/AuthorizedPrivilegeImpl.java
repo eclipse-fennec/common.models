@@ -11,19 +11,15 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.AuthorizedPrivilege;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -47,24 +43,44 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  */
 public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implements AuthorizedPrivilege {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getFunctionPerformed() <em>Function Performed</em>}' attribute list.
@@ -101,7 +117,7 @@ public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -110,14 +126,12 @@ public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
+	@Override
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
 		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.AUTHORIZED_PRIVILEGE__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.AUTHORIZED_PRIVILEGE__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -126,27 +140,7 @@ public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.AUTHORIZED_PRIVILEGE__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.AUTHORIZED_PRIVILEGE__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.AUTHORIZED_PRIVILEGE__TITLE, newTitle, newTitle));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -155,34 +149,12 @@ public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.AUTHORIZED_PRIVILEGE__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.AUTHORIZED_PRIVILEGE__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.AUTHORIZED_PRIVILEGE__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.AUTHORIZED_PRIVILEGE__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.AUTHORIZED_PRIVILEGE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -196,22 +168,6 @@ public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implem
 			functionPerformed = new EDataTypeEList<String>(String.class, this, OSCALPackage.AUTHORIZED_PRIVILEGE__FUNCTION_PERFORMED);
 		}
 		return functionPerformed;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OSCALPackage.AUTHORIZED_PRIVILEGE__TITLE:
-				return basicSetTitle(null, msgs);
-			case OSCALPackage.AUTHORIZED_PRIVILEGE__DESCRIPTION:
-				return basicSetDescription(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -242,10 +198,10 @@ public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.AUTHORIZED_PRIVILEGE__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.AUTHORIZED_PRIVILEGE__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.AUTHORIZED_PRIVILEGE__FUNCTION_PERFORMED:
 				getFunctionPerformed().clear();
@@ -264,10 +220,10 @@ public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.AUTHORIZED_PRIVILEGE__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.AUTHORIZED_PRIVILEGE__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.AUTHORIZED_PRIVILEGE__FUNCTION_PERFORMED:
 				getFunctionPerformed().clear();
@@ -285,9 +241,9 @@ public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implem
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.AUTHORIZED_PRIVILEGE__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.AUTHORIZED_PRIVILEGE__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.AUTHORIZED_PRIVILEGE__FUNCTION_PERFORMED:
 				return functionPerformed != null && !functionPerformed.isEmpty();
 		}
@@ -304,7 +260,11 @@ public class AuthorizedPrivilegeImpl extends MinimalEObjectImpl.Container implem
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (functionPerformed: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", functionPerformed: ");
 		result.append(functionPerformed);
 		result.append(')');
 		return result.toString();

@@ -11,14 +11,11 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.FindingTargetStatus;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -40,14 +37,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class FindingTargetStatusImpl extends MinimalEObjectImpl.Container implements FindingTargetStatus {
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getReason() <em>Reason</em>}' attribute.
@@ -114,7 +121,7 @@ public class FindingTargetStatusImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -123,34 +130,12 @@ public class FindingTargetStatusImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING_TARGET_STATUS__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.FINDING_TARGET_STATUS__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.FINDING_TARGET_STATUS__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING_TARGET_STATUS__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING_TARGET_STATUS__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -205,20 +190,6 @@ public class FindingTargetStatusImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OSCALPackage.FINDING_TARGET_STATUS__REMARKS:
-				return basicSetRemarks(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case OSCALPackage.FINDING_TARGET_STATUS__REMARKS:
@@ -240,7 +211,7 @@ public class FindingTargetStatusImpl extends MinimalEObjectImpl.Container implem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.FINDING_TARGET_STATUS__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.FINDING_TARGET_STATUS__REASON:
 				setReason((String)newValue);
@@ -261,7 +232,7 @@ public class FindingTargetStatusImpl extends MinimalEObjectImpl.Container implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.FINDING_TARGET_STATUS__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.FINDING_TARGET_STATUS__REASON:
 				setReason(REASON_EDEFAULT);
@@ -282,7 +253,7 @@ public class FindingTargetStatusImpl extends MinimalEObjectImpl.Container implem
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.FINDING_TARGET_STATUS__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.FINDING_TARGET_STATUS__REASON:
 				return REASON_EDEFAULT == null ? reason != null : !REASON_EDEFAULT.equals(reason);
 			case OSCALPackage.FINDING_TARGET_STATUS__STATE:
@@ -301,7 +272,9 @@ public class FindingTargetStatusImpl extends MinimalEObjectImpl.Container implem
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (reason: ");
+		result.append(" (remarks: ");
+		result.append(remarks);
+		result.append(", reason: ");
 		result.append(reason);
 		result.append(", state: ");
 		result.append(state);

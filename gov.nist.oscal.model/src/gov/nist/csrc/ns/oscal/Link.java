@@ -45,7 +45,7 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface Link extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Text</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -55,24 +55,24 @@ public interface Link extends EObject {
 	 *   : A textual label to associate with the link, which may be used for presentation in a tool.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Text</em>' containment reference.
-	 * @see #setText(MarkupLineDatatype)
+	 * @return the value of the '<em>Text</em>' attribute.
+	 * @see #setText(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getLink_Text()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupLineDatatype"
 	 *        extendedMetaData="kind='element' name='text' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupLineDatatype getText();
+	String getText();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Link#getText <em>Text</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Link#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Text</em>' containment reference.
+	 * @param value the new value of the '<em>Text</em>' attribute.
 	 * @see #getText()
 	 * @generated
 	 */
-	void setText(MarkupLineDatatype value);
+	void setText(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Href</b></em>' attribute.

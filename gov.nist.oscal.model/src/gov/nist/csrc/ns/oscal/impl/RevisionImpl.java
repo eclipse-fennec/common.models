@@ -11,8 +11,6 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.Revision;
@@ -57,14 +55,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class RevisionImpl extends MinimalEObjectImpl.Container implements Revision {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPublished() <em>Published</em>}' attribute.
@@ -167,14 +175,24 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 	protected EList<Link> link;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,7 +219,7 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -210,34 +228,12 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
-		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.REVISION__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.REVISION__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.REVISION__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.REVISION__TITLE, newTitle, newTitle));
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
+		title = newTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.REVISION__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -364,7 +360,7 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -373,34 +369,12 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.REVISION__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.REVISION__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.REVISION__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.REVISION__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.REVISION__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -411,14 +385,10 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.REVISION__TITLE:
-				return basicSetTitle(null, msgs);
 			case OSCALPackage.REVISION__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.REVISION__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.REVISION__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -461,7 +431,7 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.REVISION__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.REVISION__PUBLISHED:
 				setPublished((XMLGregorianCalendar)newValue);
@@ -484,7 +454,7 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
 			case OSCALPackage.REVISION__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -499,7 +469,7 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.REVISION__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.REVISION__PUBLISHED:
 				setPublished(PUBLISHED_EDEFAULT);
@@ -520,7 +490,7 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 				getLink().clear();
 				return;
 			case OSCALPackage.REVISION__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -535,7 +505,7 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.REVISION__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.REVISION__PUBLISHED:
 				return PUBLISHED_EDEFAULT == null ? published != null : !PUBLISHED_EDEFAULT.equals(published);
 			case OSCALPackage.REVISION__LAST_MODIFIED:
@@ -549,7 +519,7 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 			case OSCALPackage.REVISION__LINK:
 				return link != null && !link.isEmpty();
 			case OSCALPackage.REVISION__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -564,7 +534,9 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (published: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", published: ");
 		result.append(published);
 		result.append(", lastModified: ");
 		result.append(lastModified);
@@ -572,6 +544,8 @@ public class RevisionImpl extends MinimalEObjectImpl.Container implements Revisi
 		result.append(version);
 		result.append(", oscalVersion: ");
 		result.append(oscalVersion);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(')');
 		return result.toString();
 	}

@@ -11,14 +11,11 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -42,14 +39,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	/**
-	 * The cached value of the '{@link #getText() <em>Text</em>}' containment reference.
+	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype text;
+	protected static final String TEXT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getText()
+	 * @generated
+	 * @ordered
+	 */
+	protected String text = TEXT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getHref() <em>Href</em>}' attribute.
@@ -156,7 +163,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getText() {
+	public String getText() {
 		return text;
 	}
 
@@ -165,34 +172,12 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetText(MarkupLineDatatype newText, NotificationChain msgs) {
-		MarkupLineDatatype oldText = text;
-		text = newText;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.LINK__TEXT, oldText, newText);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setText(MarkupLineDatatype newText) {
-		if (newText != text) {
-			NotificationChain msgs = null;
-			if (text != null)
-				msgs = ((InternalEObject)text).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.LINK__TEXT, null, msgs);
-			if (newText != null)
-				msgs = ((InternalEObject)newText).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.LINK__TEXT, null, msgs);
-			msgs = basicSetText(newText, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.LINK__TEXT, newText, newText));
+	public void setText(String newText) {
+		String oldText = text;
+		text = newText;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.LINK__TEXT, oldText, text));
 	}
 
 	/**
@@ -293,20 +278,6 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OSCALPackage.LINK__TEXT:
-				return basicSetText(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case OSCALPackage.LINK__TEXT:
@@ -332,7 +303,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.LINK__TEXT:
-				setText((MarkupLineDatatype)newValue);
+				setText((String)newValue);
 				return;
 			case OSCALPackage.LINK__HREF:
 				setHref((String)newValue);
@@ -359,7 +330,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.LINK__TEXT:
-				setText((MarkupLineDatatype)null);
+				setText(TEXT_EDEFAULT);
 				return;
 			case OSCALPackage.LINK__HREF:
 				setHref(HREF_EDEFAULT);
@@ -386,7 +357,7 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.LINK__TEXT:
-				return text != null;
+				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 			case OSCALPackage.LINK__HREF:
 				return HREF_EDEFAULT == null ? href != null : !HREF_EDEFAULT.equals(href);
 			case OSCALPackage.LINK__MEDIA_TYPE:
@@ -409,7 +380,9 @@ public class LinkImpl extends MinimalEObjectImpl.Container implements Link {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (href: ");
+		result.append(" (text: ");
+		result.append(text);
+		result.append(", href: ");
 		result.append(href);
 		result.append(", mediaType: ");
 		result.append(mediaType);

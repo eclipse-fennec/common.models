@@ -10,15 +10,12 @@
  */
 package gov.nist.csrc.ns.oscal.impl;
 
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.QualifierItem;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -42,24 +39,44 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class QualifierItemImpl extends MinimalEObjectImpl.Container implements QualifierItem {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
@@ -146,7 +163,7 @@ public class QualifierItemImpl extends MinimalEObjectImpl.Container implements Q
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -155,14 +172,12 @@ public class QualifierItemImpl extends MinimalEObjectImpl.Container implements Q
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
+	@Override
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
 		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.QUALIFIER_ITEM__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.QUALIFIER_ITEM__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -171,27 +186,7 @@ public class QualifierItemImpl extends MinimalEObjectImpl.Container implements Q
 	 * @generated
 	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.QUALIFIER_ITEM__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.QUALIFIER_ITEM__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.QUALIFIER_ITEM__DESCRIPTION, newDescription, newDescription));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -200,34 +195,12 @@ public class QualifierItemImpl extends MinimalEObjectImpl.Container implements Q
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.QUALIFIER_ITEM__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.QUALIFIER_ITEM__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.QUALIFIER_ITEM__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.QUALIFIER_ITEM__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.QUALIFIER_ITEM__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -305,22 +278,6 @@ public class QualifierItemImpl extends MinimalEObjectImpl.Container implements Q
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OSCALPackage.QUALIFIER_ITEM__DESCRIPTION:
-				return basicSetDescription(null, msgs);
-			case OSCALPackage.QUALIFIER_ITEM__REMARKS:
-				return basicSetRemarks(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case OSCALPackage.QUALIFIER_ITEM__DESCRIPTION:
@@ -346,10 +303,10 @@ public class QualifierItemImpl extends MinimalEObjectImpl.Container implements Q
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.QUALIFIER_ITEM__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.QUALIFIER_ITEM__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.QUALIFIER_ITEM__CATEGORY:
 				setCategory((String)newValue);
@@ -373,10 +330,10 @@ public class QualifierItemImpl extends MinimalEObjectImpl.Container implements Q
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.QUALIFIER_ITEM__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.QUALIFIER_ITEM__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.QUALIFIER_ITEM__CATEGORY:
 				setCategory(CATEGORY_EDEFAULT);
@@ -400,9 +357,9 @@ public class QualifierItemImpl extends MinimalEObjectImpl.Container implements Q
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.QUALIFIER_ITEM__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.QUALIFIER_ITEM__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.QUALIFIER_ITEM__CATEGORY:
 				return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
 			case OSCALPackage.QUALIFIER_ITEM__PREDICATE:
@@ -423,7 +380,11 @@ public class QualifierItemImpl extends MinimalEObjectImpl.Container implements Q
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (category: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", category: ");
 		result.append(category);
 		result.append(", predicate: ");
 		result.append(predicate);

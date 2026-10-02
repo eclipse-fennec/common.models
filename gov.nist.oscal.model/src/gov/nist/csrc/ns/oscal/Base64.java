@@ -51,6 +51,7 @@ public interface Base64 extends EObject {
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getBase64_Value()
 	 * @model dataType="gov.nist.csrc.ns.oscal.Base64Datatype"
 	 *        extendedMetaData="name=':0' kind='simple'"
+	 *        annotation="http://eclipse.org/fennec/codec key='value'"
 	 * @generated
 	 */
 	byte[] getValue();

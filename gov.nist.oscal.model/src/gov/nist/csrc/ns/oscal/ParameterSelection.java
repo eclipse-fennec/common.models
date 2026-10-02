@@ -44,8 +44,8 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface ParameterSelection extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Choice</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.MarkupLineDatatype}.
+	 * Returns the value of the '<em><b>Choice</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -55,13 +55,13 @@ public interface ParameterSelection extends EObject {
 	 *   : A value selection among several such options.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Choice</em>' containment reference list.
+	 * @return the value of the '<em>Choice</em>' attribute list.
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getParameterSelection_Choice()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupLineDatatype"
 	 *        extendedMetaData="kind='element' name='choice' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	EList<MarkupLineDatatype> getChoice();
+	EList<String> getChoice();
 
 	/**
 	 * Returns the value of the '<em><b>How Many</b></em>' attribute.

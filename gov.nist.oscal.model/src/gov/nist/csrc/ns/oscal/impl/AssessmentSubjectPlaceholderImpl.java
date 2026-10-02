@@ -12,7 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.AssessmentSubjectPlaceholder;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.PlaceholderSource;
 import gov.nist.csrc.ns.oscal.Property;
@@ -53,14 +52,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Container implements AssessmentSubjectPlaceholder {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' containment reference list.
@@ -93,14 +102,24 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 	protected EList<Link> link;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -147,7 +166,7 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -156,34 +175,12 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -231,7 +228,7 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -240,34 +237,12 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -301,16 +276,12 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__SOURCE:
 				return ((InternalEList<?>)getSource()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -349,7 +320,7 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__SOURCE:
 				getSource().clear();
@@ -364,7 +335,7 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__UUID:
 				setUuid((String)newValue);
@@ -382,7 +353,7 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__SOURCE:
 				getSource().clear();
@@ -394,7 +365,7 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 				getLink().clear();
 				return;
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__UUID:
 				setUuid(UUID_EDEFAULT);
@@ -412,7 +383,7 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__SOURCE:
 				return source != null && !source.isEmpty();
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__PROP:
@@ -420,7 +391,7 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__LINK:
 				return link != null && !link.isEmpty();
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.ASSESSMENT_SUBJECT_PLACEHOLDER__UUID:
 				return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
 		}
@@ -437,7 +408,11 @@ public class AssessmentSubjectPlaceholderImpl extends MinimalEObjectImpl.Contain
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (uuid: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", uuid: ");
 		result.append(uuid);
 		result.append(')');
 		return result.toString();

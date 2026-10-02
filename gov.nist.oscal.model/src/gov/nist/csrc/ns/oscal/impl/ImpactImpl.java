@@ -12,7 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Impact;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 
@@ -111,14 +110,24 @@ public class ImpactImpl extends MinimalEObjectImpl.Container implements Impact {
 	protected String selected = SELECTED_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAdjustmentJustification() <em>Adjustment Justification</em>}' containment reference.
+	 * The default value of the '{@link #getAdjustmentJustification() <em>Adjustment Justification</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAdjustmentJustification()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype adjustmentJustification;
+	protected static final String ADJUSTMENT_JUSTIFICATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAdjustmentJustification() <em>Adjustment Justification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdjustmentJustification()
+	 * @generated
+	 * @ordered
+	 */
+	protected String adjustmentJustification = ADJUSTMENT_JUSTIFICATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -217,7 +226,7 @@ public class ImpactImpl extends MinimalEObjectImpl.Container implements Impact {
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getAdjustmentJustification() {
+	public String getAdjustmentJustification() {
 		return adjustmentJustification;
 	}
 
@@ -226,34 +235,12 @@ public class ImpactImpl extends MinimalEObjectImpl.Container implements Impact {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAdjustmentJustification(MarkupMultilineDatatype newAdjustmentJustification, NotificationChain msgs) {
-		MarkupMultilineDatatype oldAdjustmentJustification = adjustmentJustification;
-		adjustmentJustification = newAdjustmentJustification;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.IMPACT__ADJUSTMENT_JUSTIFICATION, oldAdjustmentJustification, newAdjustmentJustification);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setAdjustmentJustification(MarkupMultilineDatatype newAdjustmentJustification) {
-		if (newAdjustmentJustification != adjustmentJustification) {
-			NotificationChain msgs = null;
-			if (adjustmentJustification != null)
-				msgs = ((InternalEObject)adjustmentJustification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.IMPACT__ADJUSTMENT_JUSTIFICATION, null, msgs);
-			if (newAdjustmentJustification != null)
-				msgs = ((InternalEObject)newAdjustmentJustification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.IMPACT__ADJUSTMENT_JUSTIFICATION, null, msgs);
-			msgs = basicSetAdjustmentJustification(newAdjustmentJustification, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.IMPACT__ADJUSTMENT_JUSTIFICATION, newAdjustmentJustification, newAdjustmentJustification));
+	public void setAdjustmentJustification(String newAdjustmentJustification) {
+		String oldAdjustmentJustification = adjustmentJustification;
+		adjustmentJustification = newAdjustmentJustification;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.IMPACT__ADJUSTMENT_JUSTIFICATION, oldAdjustmentJustification, adjustmentJustification));
 	}
 
 	/**
@@ -268,8 +255,6 @@ public class ImpactImpl extends MinimalEObjectImpl.Container implements Impact {
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.IMPACT__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.IMPACT__ADJUSTMENT_JUSTIFICATION:
-				return basicSetAdjustmentJustification(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -320,7 +305,7 @@ public class ImpactImpl extends MinimalEObjectImpl.Container implements Impact {
 				setSelected((String)newValue);
 				return;
 			case OSCALPackage.IMPACT__ADJUSTMENT_JUSTIFICATION:
-				setAdjustmentJustification((MarkupMultilineDatatype)newValue);
+				setAdjustmentJustification((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -347,7 +332,7 @@ public class ImpactImpl extends MinimalEObjectImpl.Container implements Impact {
 				setSelected(SELECTED_EDEFAULT);
 				return;
 			case OSCALPackage.IMPACT__ADJUSTMENT_JUSTIFICATION:
-				setAdjustmentJustification((MarkupMultilineDatatype)null);
+				setAdjustmentJustification(ADJUSTMENT_JUSTIFICATION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -370,7 +355,7 @@ public class ImpactImpl extends MinimalEObjectImpl.Container implements Impact {
 			case OSCALPackage.IMPACT__SELECTED:
 				return SELECTED_EDEFAULT == null ? selected != null : !SELECTED_EDEFAULT.equals(selected);
 			case OSCALPackage.IMPACT__ADJUSTMENT_JUSTIFICATION:
-				return adjustmentJustification != null;
+				return ADJUSTMENT_JUSTIFICATION_EDEFAULT == null ? adjustmentJustification != null : !ADJUSTMENT_JUSTIFICATION_EDEFAULT.equals(adjustmentJustification);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -389,6 +374,8 @@ public class ImpactImpl extends MinimalEObjectImpl.Container implements Impact {
 		result.append(base);
 		result.append(", selected: ");
 		result.append(selected);
+		result.append(", adjustmentJustification: ");
+		result.append(adjustmentJustification);
 		result.append(')');
 		return result.toString();
 	}

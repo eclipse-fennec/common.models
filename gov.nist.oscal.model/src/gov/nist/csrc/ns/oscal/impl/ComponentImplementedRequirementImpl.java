@@ -13,7 +13,6 @@ package gov.nist.csrc.ns.oscal.impl;
 import gov.nist.csrc.ns.oscal.ComponentImplementedRequirement;
 import gov.nist.csrc.ns.oscal.ComponentStatement;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleRole;
@@ -58,14 +57,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Container implements ComponentImplementedRequirement {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -118,14 +127,24 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 	protected EList<ComponentStatement> statement;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getControlId() <em>Control Id</em>}' attribute.
@@ -192,7 +211,7 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -201,34 +220,12 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -302,7 +299,7 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -311,34 +308,12 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -395,8 +370,6 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__LINK:
@@ -407,8 +380,6 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 				return ((InternalEList<?>)getResponsibleRole()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__STATEMENT:
 				return ((InternalEList<?>)getStatement()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -453,7 +424,7 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__PROP:
 				getProp().clear();
@@ -476,7 +447,7 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 				getStatement().addAll((Collection<? extends ComponentStatement>)newValue);
 				return;
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__CONTROL_ID:
 				setControlId((String)newValue);
@@ -497,7 +468,7 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__PROP:
 				getProp().clear();
@@ -515,7 +486,7 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 				getStatement().clear();
 				return;
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__CONTROL_ID:
 				setControlId(CONTROL_ID_EDEFAULT);
@@ -536,7 +507,7 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__LINK:
@@ -548,7 +519,7 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__STATEMENT:
 				return statement != null && !statement.isEmpty();
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__CONTROL_ID:
 				return CONTROL_ID_EDEFAULT == null ? controlId != null : !CONTROL_ID_EDEFAULT.equals(controlId);
 			case OSCALPackage.COMPONENT_IMPLEMENTED_REQUIREMENT__UUID:
@@ -567,7 +538,11 @@ public class ComponentImplementedRequirementImpl extends MinimalEObjectImpl.Cont
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (controlId: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", controlId: ");
 		result.append(controlId);
 		result.append(", uuid: ");
 		result.append(uuid);

@@ -14,7 +14,6 @@ package gov.nist.csrc.ns.oscal;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.fennec.emf.osgi.annotation.provide.EPackage;
@@ -38,7 +37,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * @generated
  */
 @ProviderType
-@EPackage(uri = OSCALPackage.eNS_URI, fingerprint = "fp1:b64827998f63ccc9c1357aa69c5fb49e32dd1bf07845e045701ab431fcfa54da", genModel = "/model/oscal.genmodel", genModelSourceLocations = {"model/oscal.genmodel","gov.nist.oscal.model/model/oscal.genmodel"}, ecore = "/model/oscal.ecore", ecoreSourceLocations = "/model/oscal.ecore")
+@EPackage(uri = OSCALPackage.eNS_URI, fingerprint = "fp1:8f61f081163bfe1095f4617da68086714ea2303f2f2ef36e20764a3584de9ca8", genModel = "/model/oscal.genmodel", genModelSourceLocations = {"model/oscal.genmodel","gov.nist.oscal.model/model/oscal.genmodel"}, ecore = "/model/oscal.ecore", ecoreSourceLocations = "/model/oscal.ecore")
 public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	/**
 	 * The package name.
@@ -83,7 +82,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ADD = 0;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -219,151 +218,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ALTER_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupAnchorImpl <em>Markup Anchor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupAnchorImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupAnchor()
-	 * @generated
-	 */
-	int MARKUP_ANCHOR = 2;
-
-	/**
-	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__MIXED = 0;
-
-	/**
-	 * The feature id for the '<em><b>Phrase Markup Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__PHRASE_MARKUP_GROUP = 1;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__CODE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Em</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__EM = 3;
-
-	/**
-	 * The feature id for the '<em><b>I</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__I = 4;
-
-	/**
-	 * The feature id for the '<em><b>B</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__B = 5;
-
-	/**
-	 * The feature id for the '<em><b>Strong</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__STRONG = 6;
-
-	/**
-	 * The feature id for the '<em><b>Sub</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__SUB = 7;
-
-	/**
-	 * The feature id for the '<em><b>Sup</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__SUP = 8;
-
-	/**
-	 * The feature id for the '<em><b>Q</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__Q = 9;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__IMG = 10;
-
-	/**
-	 * The feature id for the '<em><b>Href</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__HREF = 11;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR__TITLE = 12;
-
-	/**
-	 * The number of structural features of the '<em>Markup Anchor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR_FEATURE_COUNT = 13;
-
-	/**
-	 * The number of operations of the '<em>Markup Anchor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ANCHOR_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.AssessmentLogImpl <em>Assessment Log</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -371,7 +225,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentLog()
 	 * @generated
 	 */
-	int ASSESSMENT_LOG = 3;
+	int ASSESSMENT_LOG = 2;
 
 	/**
 	 * The feature id for the '<em><b>Entry</b></em>' containment reference list.
@@ -408,10 +262,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentPlatform()
 	 * @generated
 	 */
-	int ASSESSMENT_PLATFORM = 4;
+	int ASSESSMENT_PLATFORM = 3;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -447,7 +301,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSESSMENT_PLATFORM__USES_COMPONENT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -490,7 +344,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssociatedActivity()
 	 * @generated
 	 */
-	int ASSOCIATED_ACTIVITY = 5;
+	int ASSOCIATED_ACTIVITY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -529,7 +383,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSOCIATED_ACTIVITY__SUBJECT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -572,10 +426,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAtFrequency()
 	 * @generated
 	 */
-	int AT_FREQUENCY = 6;
+	int AT_FREQUENCY = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -627,7 +481,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAttestation()
 	 * @generated
 	 */
-	int ATTESTATION = 7;
+	int ATTESTATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Responsible Party</b></em>' containment reference list.
@@ -673,7 +527,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getBase64()
 	 * @generated
 	 */
-	int BASE64 = 8;
+	int BASE64 = 7;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -721,169 +575,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int BASE64_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupBlockQuoteImpl <em>Markup Block Quote</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupBlockQuoteImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupBlockQuote()
-	 * @generated
-	 */
-	int MARKUP_BLOCK_QUOTE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Block Element Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__BLOCK_ELEMENT_GROUP = 0;
-
-	/**
-	 * The feature id for the '<em><b>H1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__H1 = 1;
-
-	/**
-	 * The feature id for the '<em><b>H2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__H2 = 2;
-
-	/**
-	 * The feature id for the '<em><b>H3</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__H3 = 3;
-
-	/**
-	 * The feature id for the '<em><b>H4</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__H4 = 4;
-
-	/**
-	 * The feature id for the '<em><b>H5</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__H5 = 5;
-
-	/**
-	 * The feature id for the '<em><b>H6</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__H6 = 6;
-
-	/**
-	 * The feature id for the '<em><b>Ul</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__UL = 7;
-
-	/**
-	 * The feature id for the '<em><b>Ol</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__OL = 8;
-
-	/**
-	 * The feature id for the '<em><b>Pre</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__PRE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Hr</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__HR = 10;
-
-	/**
-	 * The feature id for the '<em><b>Blockquote</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__BLOCKQUOTE = 11;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__P = 12;
-
-	/**
-	 * The feature id for the '<em><b>Table</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__TABLE = 13;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE__IMG = 14;
-
-	/**
-	 * The number of structural features of the '<em>Markup Block Quote</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE_FEATURE_COUNT = 15;
-
-	/**
-	 * The number of operations of the '<em>Markup Block Quote</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_BLOCK_QUOTE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.CategorizationImpl <em>Categorization</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -891,7 +582,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCategorization()
 	 * @generated
 	 */
-	int CATEGORIZATION = 10;
+	int CATEGORIZATION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Information Type Id</b></em>' attribute list.
@@ -937,10 +628,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCitation()
 	 * @generated
 	 */
-	int CITATION = 11;
+	int CITATION = 9;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' containment reference.
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -985,323 +676,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int CITATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.InlineMarkupImpl <em>Inline Markup</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.InlineMarkupImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getInlineMarkup()
-	 * @generated
-	 */
-	int INLINE_MARKUP = 30;
-
-	/**
-	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__MIXED = 0;
-
-	/**
-	 * The feature id for the '<em><b>Inline Markup Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__INLINE_MARKUP_GROUP = 1;
-
-	/**
-	 * The feature id for the '<em><b>A</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__A = 2;
-
-	/**
-	 * The feature id for the '<em><b>Insert</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__INSERT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Br</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__BR = 4;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__CODE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Em</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__EM = 6;
-
-	/**
-	 * The feature id for the '<em><b>I</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__I = 7;
-
-	/**
-	 * The feature id for the '<em><b>B</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__B = 8;
-
-	/**
-	 * The feature id for the '<em><b>Strong</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__STRONG = 9;
-
-	/**
-	 * The feature id for the '<em><b>Sub</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__SUB = 10;
-
-	/**
-	 * The feature id for the '<em><b>Sup</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__SUP = 11;
-
-	/**
-	 * The feature id for the '<em><b>Q</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__Q = 12;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP__IMG = 13;
-
-	/**
-	 * The number of structural features of the '<em>Inline Markup</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP_FEATURE_COUNT = 14;
-
-	/**
-	 * The number of operations of the '<em>Inline Markup</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INLINE_MARKUP_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupCodeImpl <em>Markup Code</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupCodeImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupCode()
-	 * @generated
-	 */
-	int MARKUP_CODE = 12;
-
-	/**
-	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__MIXED = INLINE_MARKUP__MIXED;
-
-	/**
-	 * The feature id for the '<em><b>Inline Markup Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__INLINE_MARKUP_GROUP = INLINE_MARKUP__INLINE_MARKUP_GROUP;
-
-	/**
-	 * The feature id for the '<em><b>A</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__A = INLINE_MARKUP__A;
-
-	/**
-	 * The feature id for the '<em><b>Insert</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__INSERT = INLINE_MARKUP__INSERT;
-
-	/**
-	 * The feature id for the '<em><b>Br</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__BR = INLINE_MARKUP__BR;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__CODE = INLINE_MARKUP__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Em</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__EM = INLINE_MARKUP__EM;
-
-	/**
-	 * The feature id for the '<em><b>I</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__I = INLINE_MARKUP__I;
-
-	/**
-	 * The feature id for the '<em><b>B</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__B = INLINE_MARKUP__B;
-
-	/**
-	 * The feature id for the '<em><b>Strong</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__STRONG = INLINE_MARKUP__STRONG;
-
-	/**
-	 * The feature id for the '<em><b>Sub</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__SUB = INLINE_MARKUP__SUB;
-
-	/**
-	 * The feature id for the '<em><b>Sup</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__SUP = INLINE_MARKUP__SUP;
-
-	/**
-	 * The feature id for the '<em><b>Q</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__Q = INLINE_MARKUP__Q;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__IMG = INLINE_MARKUP__IMG;
-
-	/**
-	 * The feature id for the '<em><b>Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE__CLASS = INLINE_MARKUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Markup Code</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE_FEATURE_COUNT = INLINE_MARKUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Markup Code</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_CODE_OPERATION_COUNT = INLINE_MARKUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.CombineImpl <em>Combine</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1309,7 +683,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCombine()
 	 * @generated
 	 */
-	int COMBINE = 13;
+	int COMBINE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Method</b></em>' attribute.
@@ -1346,10 +720,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getControlObjectiveSelection()
 	 * @generated
 	 */
-	int CONTROL_OBJECTIVE_SELECTION = 14;
+	int CONTROL_OBJECTIVE_SELECTION = 11;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1403,7 +777,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int CONTROL_OBJECTIVE_SELECTION__EXCLUDE_OBJECTIVE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1437,10 +811,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getControlSelection()
 	 * @generated
 	 */
-	int CONTROL_SELECTION = 15;
+	int CONTROL_SELECTION = 12;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1494,7 +868,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int CONTROL_SELECTION__EXCLUDE_CONTROL = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1528,7 +902,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCustom()
 	 * @generated
 	 */
-	int CUSTOM = 16;
+	int CUSTOM = 13;
 
 	/**
 	 * The feature id for the '<em><b>Group</b></em>' containment reference list.
@@ -1574,10 +948,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDependency()
 	 * @generated
 	 */
-	int DEPENDENCY = 17;
+	int DEPENDENCY = 14;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1620,7 +994,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDocumentRoot()
 	 * @generated
 	 */
-	int DOCUMENT_ROOT = 18;
+	int DOCUMENT_ROOT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
@@ -1722,13 +1096,22 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int DOCUMENT_ROOT__SYSTEM_SECURITY_PLAN = 10;
 
 	/**
+	 * The feature id for the '<em><b>Schema</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENT_ROOT__SCHEMA = 11;
+
+	/**
 	 * The number of structural features of the '<em>Document Root</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENT_ROOT_FEATURE_COUNT = 11;
+	int DOCUMENT_ROOT_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>Document Root</em>' class.
@@ -1747,10 +1130,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRiskLogEntry()
 	 * @generated
 	 */
-	int RISK_LOG_ENTRY = 19;
+	int RISK_LOG_ENTRY = 16;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1759,7 +1142,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RISK_LOG_ENTRY__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1831,7 +1214,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RISK_LOG_ENTRY__RELATED_RESPONSE = 8;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1874,10 +1257,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentLogEntry()
 	 * @generated
 	 */
-	int ASSESSMENT_LOG_ENTRY = 20;
+	int ASSESSMENT_LOG_ENTRY = 17;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1886,7 +1269,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSESSMENT_LOG_ENTRY__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1949,7 +1332,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSESSMENT_LOG_ENTRY__RELATED_TASK = 7;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1992,10 +1375,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getExport()
 	 * @generated
 	 */
-	int EXPORT = 21;
+	int EXPORT = 18;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2040,7 +1423,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int EXPORT__RESPONSIBILITY = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2074,7 +1457,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getExternalId()
 	 * @generated
 	 */
-	int EXTERNAL_ID = 22;
+	int EXTERNAL_ID = 19;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2120,7 +1503,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getFacet()
 	 * @generated
 	 */
-	int FACET = 23;
+	int FACET = 20;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -2141,7 +1524,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int FACET__LINK = 1;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2202,7 +1585,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getFlat()
 	 * @generated
 	 */
-	int FLAT = 24;
+	int FLAT = 21;
 
 	/**
 	 * The number of structural features of the '<em>Flat</em>' class.
@@ -2230,7 +1613,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getIdentifiedSubject()
 	 * @generated
 	 */
-	int IDENTIFIED_SUBJECT = 25;
+	int IDENTIFIED_SUBJECT = 22;
 
 	/**
 	 * The feature id for the '<em><b>Subject</b></em>' containment reference list.
@@ -2269,61 +1652,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int IDENTIFIED_SUBJECT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupImageImpl <em>Markup Image</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupImageImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupImage()
-	 * @generated
-	 */
-	int MARKUP_IMAGE = 26;
-
-	/**
-	 * The feature id for the '<em><b>Alt</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_IMAGE__ALT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Src</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_IMAGE__SRC = 1;
-
-	/**
-	 * The feature id for the '<em><b>Title</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_IMAGE__TITLE = 2;
-
-	/**
-	 * The number of structural features of the '<em>Markup Image</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_IMAGE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Markup Image</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_IMAGE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.ImplementedComponentImpl <em>Implemented Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2331,7 +1659,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getImplementedComponent()
 	 * @generated
 	 */
-	int IMPLEMENTED_COMPONENT = 27;
+	int IMPLEMENTED_COMPONENT = 23;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -2361,7 +1689,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int IMPLEMENTED_COMPONENT__RESPONSIBLE_PARTY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2404,10 +1732,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getInformationType()
 	 * @generated
 	 */
-	int INFORMATION_TYPE = 28;
+	int INFORMATION_TYPE = 24;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2416,7 +1744,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int INFORMATION_TYPE__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2513,10 +1841,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getInherited()
 	 * @generated
 	 */
-	int INHERITED = 29;
+	int INHERITED = 25;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2588,52 +1916,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int INHERITED_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupInsertImpl <em>Markup Insert</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupInsertImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupInsert()
-	 * @generated
-	 */
-	int MARKUP_INSERT = 31;
-
-	/**
-	 * The feature id for the '<em><b>Id Ref</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_INSERT__ID_REF = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_INSERT__TYPE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Markup Insert</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_INSERT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Markup Insert</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_INSERT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.LeveragedAuthorizationImpl <em>Leveraged Authorization</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2641,10 +1923,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getLeveragedAuthorization()
 	 * @generated
 	 */
-	int LEVERAGED_AUTHORIZATION = 32;
+	int LEVERAGED_AUTHORIZATION = 26;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2689,7 +1971,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int LEVERAGED_AUTHORIZATION__DATE_AUTHORIZED = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2725,305 +2007,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int LEVERAGED_AUTHORIZATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupListItemImpl <em>Markup List Item</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupListItemImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupListItem()
-	 * @generated
-	 */
-	int MARKUP_LIST_ITEM = 33;
-
-	/**
-	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__MIXED = 0;
-
-	/**
-	 * The feature id for the '<em><b>Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__GROUP = 1;
-
-	/**
-	 * The feature id for the '<em><b>A</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__A = 2;
-
-	/**
-	 * The feature id for the '<em><b>Insert</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__INSERT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Br</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__BR = 4;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__CODE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Em</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__EM = 6;
-
-	/**
-	 * The feature id for the '<em><b>I</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__I = 7;
-
-	/**
-	 * The feature id for the '<em><b>B</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__B = 8;
-
-	/**
-	 * The feature id for the '<em><b>Strong</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__STRONG = 9;
-
-	/**
-	 * The feature id for the '<em><b>Sub</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__SUB = 10;
-
-	/**
-	 * The feature id for the '<em><b>Sup</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__SUP = 11;
-
-	/**
-	 * The feature id for the '<em><b>Q</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__Q = 12;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__IMG = 13;
-
-	/**
-	 * The feature id for the '<em><b>Ul</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__UL = 14;
-
-	/**
-	 * The feature id for the '<em><b>Ol</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__OL = 15;
-
-	/**
-	 * The feature id for the '<em><b>Pre</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__PRE = 16;
-
-	/**
-	 * The feature id for the '<em><b>Hr</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__HR = 17;
-
-	/**
-	 * The feature id for the '<em><b>Blockquote</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__BLOCKQUOTE = 18;
-
-	/**
-	 * The feature id for the '<em><b>H1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__H1 = 19;
-
-	/**
-	 * The feature id for the '<em><b>H2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__H2 = 20;
-
-	/**
-	 * The feature id for the '<em><b>H3</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__H3 = 21;
-
-	/**
-	 * The feature id for the '<em><b>H4</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__H4 = 22;
-
-	/**
-	 * The feature id for the '<em><b>H5</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__H5 = 23;
-
-	/**
-	 * The feature id for the '<em><b>H6</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__H6 = 24;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM__P = 25;
-
-	/**
-	 * The number of structural features of the '<em>Markup List Item</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM_FEATURE_COUNT = 26;
-
-	/**
-	 * The number of operations of the '<em>Markup List Item</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_ITEM_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupListImpl <em>Markup List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupListImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupList()
-	 * @generated
-	 */
-	int MARKUP_LIST = 34;
-
-	/**
-	 * The feature id for the '<em><b>Li</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST__LI = 0;
-
-	/**
-	 * The number of structural features of the '<em>Markup List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Markup List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LIST_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.ResultLocalDefinitionsImpl <em>Result Local Definitions</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3031,7 +2014,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getResultLocalDefinitions()
 	 * @generated
 	 */
-	int RESULT_LOCAL_DEFINITIONS = 35;
+	int RESULT_LOCAL_DEFINITIONS = 27;
 
 	/**
 	 * The feature id for the '<em><b>Component</b></em>' containment reference list.
@@ -3104,7 +2087,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentResultsLocalDefinitions()
 	 * @generated
 	 */
-	int ASSESSMENT_RESULTS_LOCAL_DEFINITIONS = 36;
+	int ASSESSMENT_RESULTS_LOCAL_DEFINITIONS = 28;
 
 	/**
 	 * The feature id for the '<em><b>Objectives And Methods</b></em>' containment reference list.
@@ -3125,7 +2108,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSESSMENT_RESULTS_LOCAL_DEFINITIONS__ACTIVITY = 1;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3159,7 +2142,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentPlanLocalDefinitions()
 	 * @generated
 	 */
-	int ASSESSMENT_PLAN_LOCAL_DEFINITIONS = 37;
+	int ASSESSMENT_PLAN_LOCAL_DEFINITIONS = 29;
 
 	/**
 	 * The feature id for the '<em><b>Component</b></em>' containment reference list.
@@ -3207,7 +2190,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSESSMENT_PLAN_LOCAL_DEFINITIONS__ACTIVITY = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3241,10 +2224,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getLocation()
 	 * @generated
 	 */
-	int LOCATION = 38;
+	int LOCATION = 30;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3307,7 +2290,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int LOCATION__LINK = 6;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3343,323 +2326,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int LOCATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupLineDatatypeImpl <em>Markup Line Datatype</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupLineDatatypeImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupLineDatatype()
-	 * @generated
-	 */
-	int MARKUP_LINE_DATATYPE = 39;
-
-	/**
-	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__MIXED = INLINE_MARKUP__MIXED;
-
-	/**
-	 * The feature id for the '<em><b>Inline Markup Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__INLINE_MARKUP_GROUP = INLINE_MARKUP__INLINE_MARKUP_GROUP;
-
-	/**
-	 * The feature id for the '<em><b>A</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__A = INLINE_MARKUP__A;
-
-	/**
-	 * The feature id for the '<em><b>Insert</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__INSERT = INLINE_MARKUP__INSERT;
-
-	/**
-	 * The feature id for the '<em><b>Br</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__BR = INLINE_MARKUP__BR;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__CODE = INLINE_MARKUP__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Em</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__EM = INLINE_MARKUP__EM;
-
-	/**
-	 * The feature id for the '<em><b>I</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__I = INLINE_MARKUP__I;
-
-	/**
-	 * The feature id for the '<em><b>B</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__B = INLINE_MARKUP__B;
-
-	/**
-	 * The feature id for the '<em><b>Strong</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__STRONG = INLINE_MARKUP__STRONG;
-
-	/**
-	 * The feature id for the '<em><b>Sub</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__SUB = INLINE_MARKUP__SUB;
-
-	/**
-	 * The feature id for the '<em><b>Sup</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__SUP = INLINE_MARKUP__SUP;
-
-	/**
-	 * The feature id for the '<em><b>Q</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__Q = INLINE_MARKUP__Q;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE__IMG = INLINE_MARKUP__IMG;
-
-	/**
-	 * The number of structural features of the '<em>Markup Line Datatype</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE_FEATURE_COUNT = INLINE_MARKUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Markup Line Datatype</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_LINE_DATATYPE_OPERATION_COUNT = INLINE_MARKUP_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupMultilineDatatypeImpl <em>Markup Multiline Datatype</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupMultilineDatatypeImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	int MARKUP_MULTILINE_DATATYPE = 40;
-
-	/**
-	 * The feature id for the '<em><b>Block Element Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__BLOCK_ELEMENT_GROUP = 0;
-
-	/**
-	 * The feature id for the '<em><b>H1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__H1 = 1;
-
-	/**
-	 * The feature id for the '<em><b>H2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__H2 = 2;
-
-	/**
-	 * The feature id for the '<em><b>H3</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__H3 = 3;
-
-	/**
-	 * The feature id for the '<em><b>H4</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__H4 = 4;
-
-	/**
-	 * The feature id for the '<em><b>H5</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__H5 = 5;
-
-	/**
-	 * The feature id for the '<em><b>H6</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__H6 = 6;
-
-	/**
-	 * The feature id for the '<em><b>Ul</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__UL = 7;
-
-	/**
-	 * The feature id for the '<em><b>Ol</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__OL = 8;
-
-	/**
-	 * The feature id for the '<em><b>Pre</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__PRE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Hr</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__HR = 10;
-
-	/**
-	 * The feature id for the '<em><b>Blockquote</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__BLOCKQUOTE = 11;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__P = 12;
-
-	/**
-	 * The feature id for the '<em><b>Table</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__TABLE = 13;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE__IMG = 14;
-
-	/**
-	 * The number of structural features of the '<em>Markup Multiline Datatype</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE_FEATURE_COUNT = 15;
-
-	/**
-	 * The number of operations of the '<em>Markup Multiline Datatype</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_MULTILINE_DATATYPE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MitigatingFactorImpl <em>Mitigating Factor</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3667,10 +2333,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMitigatingFactor()
 	 * @generated
 	 */
-	int MITIGATING_FACTOR = 41;
+	int MITIGATING_FACTOR = 31;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3749,10 +2415,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOnDate()
 	 * @generated
 	 */
-	int ON_DATE = 42;
+	int ON_DATE = 32;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3788,52 +2454,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ON_DATE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupOrderedListImpl <em>Markup Ordered List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupOrderedListImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupOrderedList()
-	 * @generated
-	 */
-	int MARKUP_ORDERED_LIST = 43;
-
-	/**
-	 * The feature id for the '<em><b>Li</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ORDERED_LIST__LI = MARKUP_LIST__LI;
-
-	/**
-	 * The feature id for the '<em><b>Start</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ORDERED_LIST__START = MARKUP_LIST_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Markup Ordered List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ORDERED_LIST_FEATURE_COUNT = MARKUP_LIST_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Markup Ordered List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_ORDERED_LIST_OPERATION_COUNT = MARKUP_LIST_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.PoamItemOriginImpl <em>Poam Item Origin</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3841,7 +2461,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPoamItemOrigin()
 	 * @generated
 	 */
-	int POAM_ITEM_ORIGIN = 44;
+	int POAM_ITEM_ORIGIN = 33;
 
 	/**
 	 * The feature id for the '<em><b>Actor</b></em>' containment reference list.
@@ -3878,7 +2498,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentPlan()
 	 * @generated
 	 */
-	int ASSESSMENT_PLAN = 45;
+	int ASSESSMENT_PLAN = 34;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
@@ -3996,7 +2616,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentResults()
 	 * @generated
 	 */
-	int ASSESSMENT_RESULTS = 46;
+	int ASSESSMENT_RESULTS = 35;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
@@ -4078,10 +2698,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getImportAp()
 	 * @generated
 	 */
-	int IMPORT_AP = 47;
+	int IMPORT_AP = 36;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4124,10 +2744,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getResult()
 	 * @generated
 	 */
-	int RESULT = 48;
+	int RESULT = 37;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4136,7 +2756,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RESULT__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4244,7 +2864,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RESULT__FINDING = 12;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4287,10 +2907,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getActivity()
 	 * @generated
 	 */
-	int ACTIVITY = 49;
+	int ACTIVITY = 38;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4299,7 +2919,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ACTIVITY__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4353,7 +2973,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ACTIVITY__RESPONSIBLE_ROLE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4396,7 +3016,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentAssets()
 	 * @generated
 	 */
-	int ASSESSMENT_ASSETS = 50;
+	int ASSESSMENT_ASSETS = 39;
 
 	/**
 	 * The feature id for the '<em><b>Component</b></em>' containment reference list.
@@ -4442,10 +3062,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentMethod()
 	 * @generated
 	 */
-	int ASSESSMENT_METHOD = 51;
+	int ASSESSMENT_METHOD = 40;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4481,7 +3101,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSESSMENT_METHOD__PART = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4524,10 +3144,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentPart()
 	 * @generated
 	 */
-	int ASSESSMENT_PART = 52;
+	int ASSESSMENT_PART = 41;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4545,139 +3165,13 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSESSMENT_PART__PROP = 1;
 
 	/**
-	 * The feature id for the '<em><b>Block Element Group</b></em>' attribute list.
+	 * The feature id for the '<em><b>Prose</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_PART__BLOCK_ELEMENT_GROUP = 2;
-
-	/**
-	 * The feature id for the '<em><b>H1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__H1 = 3;
-
-	/**
-	 * The feature id for the '<em><b>H2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__H2 = 4;
-
-	/**
-	 * The feature id for the '<em><b>H3</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__H3 = 5;
-
-	/**
-	 * The feature id for the '<em><b>H4</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__H4 = 6;
-
-	/**
-	 * The feature id for the '<em><b>H5</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__H5 = 7;
-
-	/**
-	 * The feature id for the '<em><b>H6</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__H6 = 8;
-
-	/**
-	 * The feature id for the '<em><b>Ul</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__UL = 9;
-
-	/**
-	 * The feature id for the '<em><b>Ol</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__OL = 10;
-
-	/**
-	 * The feature id for the '<em><b>Pre</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__PRE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Hr</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__HR = 12;
-
-	/**
-	 * The feature id for the '<em><b>Blockquote</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__BLOCKQUOTE = 13;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__P = 14;
-
-	/**
-	 * The feature id for the '<em><b>Table</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__TABLE = 15;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ASSESSMENT_PART__IMG = 16;
+	int ASSESSMENT_PART__PROSE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Part</b></em>' containment reference list.
@@ -4686,7 +3180,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_PART__PART = 17;
+	int ASSESSMENT_PART__PART = 3;
 
 	/**
 	 * The feature id for the '<em><b>Link</b></em>' containment reference list.
@@ -4695,7 +3189,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_PART__LINK = 18;
+	int ASSESSMENT_PART__LINK = 4;
 
 	/**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -4704,7 +3198,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_PART__CLASS = 19;
+	int ASSESSMENT_PART__CLASS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4713,7 +3207,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_PART__NAME = 20;
+	int ASSESSMENT_PART__NAME = 6;
 
 	/**
 	 * The feature id for the '<em><b>Ns</b></em>' attribute.
@@ -4722,7 +3216,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_PART__NS = 21;
+	int ASSESSMENT_PART__NS = 7;
 
 	/**
 	 * The feature id for the '<em><b>Uuid</b></em>' attribute.
@@ -4731,7 +3225,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_PART__UUID = 22;
+	int ASSESSMENT_PART__UUID = 8;
 
 	/**
 	 * The number of structural features of the '<em>Assessment Part</em>' class.
@@ -4740,7 +3234,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSESSMENT_PART_FEATURE_COUNT = 23;
+	int ASSESSMENT_PART_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Assessment Part</em>' class.
@@ -4759,10 +3253,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentSubject()
 	 * @generated
 	 */
-	int ASSESSMENT_SUBJECT = 53;
+	int ASSESSMENT_SUBJECT = 42;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4816,7 +3310,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSESSMENT_SUBJECT__EXCLUDE_SUBJECT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4859,10 +3353,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentSubjectPlaceholder()
 	 * @generated
 	 */
-	int ASSESSMENT_SUBJECT_PLACEHOLDER = 54;
+	int ASSESSMENT_SUBJECT_PLACEHOLDER = 43;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4898,7 +3392,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ASSESSMENT_SUBJECT_PLACEHOLDER__LINK = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4941,10 +3435,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssociatedRisk()
 	 * @generated
 	 */
-	int ASSOCIATED_RISK = 55;
+	int ASSOCIATED_RISK = 44;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4987,7 +3481,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCharacterization()
 	 * @generated
 	 */
-	int CHARACTERIZATION = 56;
+	int CHARACTERIZATION = 45;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -5051,10 +3545,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getFinding()
 	 * @generated
 	 */
-	int FINDING = 57;
+	int FINDING = 46;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5063,7 +3557,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int FINDING__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5135,7 +3629,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int FINDING__ASSOCIATED_RISK = 8;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5178,10 +3672,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getFindingTarget()
 	 * @generated
 	 */
-	int FINDING_TARGET = 58;
+	int FINDING_TARGET = 47;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5190,7 +3684,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int FINDING_TARGET__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5235,7 +3729,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int FINDING_TARGET__IMPLEMENTATION_STATUS = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5287,10 +3781,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getImportSsp()
 	 * @generated
 	 */
-	int IMPORT_SSP = 59;
+	int IMPORT_SSP = 48;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5333,10 +3827,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getLocalObjective()
 	 * @generated
 	 */
-	int LOCAL_OBJECTIVE = 60;
+	int LOCAL_OBJECTIVE = 49;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5372,7 +3866,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int LOCAL_OBJECTIVE__PART = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5415,10 +3909,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getLoggedBy()
 	 * @generated
 	 */
-	int LOGGED_BY = 61;
+	int LOGGED_BY = 50;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5470,10 +3964,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getObservation()
 	 * @generated
 	 */
-	int OBSERVATION = 62;
+	int OBSERVATION = 51;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5482,7 +3976,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int OBSERVATION__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5572,7 +4066,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int OBSERVATION__EXPIRES = 10;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5615,7 +4109,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOriginActor()
 	 * @generated
 	 */
-	int ORIGIN_ACTOR = 63;
+	int ORIGIN_ACTOR = 52;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -5688,7 +4182,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOrigin()
 	 * @generated
 	 */
-	int ORIGIN = 64;
+	int ORIGIN = 53;
 
 	/**
 	 * The feature id for the '<em><b>Actor</b></em>' containment reference list.
@@ -5734,10 +4228,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRelatedObservation()
 	 * @generated
 	 */
-	int RELATED_OBSERVATION = 65;
+	int RELATED_OBSERVATION = 54;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5780,7 +4274,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRelatedTask()
 	 * @generated
 	 */
-	int RELATED_TASK = 66;
+	int RELATED_TASK = 55;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -5828,7 +4322,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RELATED_TASK__IDENTIFIED_SUBJECT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5871,10 +4365,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getResponse()
 	 * @generated
 	 */
-	int RESPONSE = 67;
+	int RESPONSE = 56;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5883,7 +4377,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RESPONSE__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5937,7 +4431,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RESPONSE__TASK = 6;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5989,10 +4483,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getReviewedControls()
 	 * @generated
 	 */
-	int REVIEWED_CONTROLS = 68;
+	int REVIEWED_CONTROLS = 57;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6037,7 +4531,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int REVIEWED_CONTROLS__CONTROL_OBJECTIVE_SELECTION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6071,10 +4565,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRisk()
 	 * @generated
 	 */
-	int RISK = 69;
+	int RISK = 58;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6083,7 +4577,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RISK__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6092,7 +4586,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RISK__DESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Statement</b></em>' containment reference.
+	 * The feature id for the '<em><b>Statement</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6234,7 +4728,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAssessmentSelectControlById()
 	 * @generated
 	 */
-	int ASSESSMENT_SELECT_CONTROL_BY_ID = 70;
+	int ASSESSMENT_SELECT_CONTROL_BY_ID = 59;
 
 	/**
 	 * The feature id for the '<em><b>Statement Id</b></em>' attribute list.
@@ -6280,10 +4774,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSelectObjectiveById()
 	 * @generated
 	 */
-	int SELECT_OBJECTIVE_BY_ID = 71;
+	int SELECT_OBJECTIVE_BY_ID = 60;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6326,7 +4820,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSelectSubjectById()
 	 * @generated
 	 */
-	int SELECT_SUBJECT_BY_ID = 72;
+	int SELECT_SUBJECT_BY_ID = 61;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -6347,7 +4841,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SELECT_SUBJECT_BY_ID__LINK = 1;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6399,10 +4893,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSubjectReference()
 	 * @generated
 	 */
-	int SUBJECT_REFERENCE = 73;
+	int SUBJECT_REFERENCE = 62;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6429,7 +4923,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SUBJECT_REFERENCE__LINK = 2;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6481,10 +4975,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getTask()
 	 * @generated
 	 */
-	int TASK = 74;
+	int TASK = 63;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6493,7 +4987,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int TASK__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6574,7 +5068,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int TASK__RESPONSIBLE_ROLE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6626,7 +5120,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getThreatId()
 	 * @generated
 	 */
-	int THREAT_ID = 75;
+	int THREAT_ID = 64;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -6681,7 +5175,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCatalog()
 	 * @generated
 	 */
-	int CATALOG = 76;
+	int CATALOG = 65;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
@@ -6763,10 +5257,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getControl()
 	 * @generated
 	 */
-	int CONTROL = 77;
+	int CONTROL = 66;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6863,10 +5357,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCatalogGroup()
 	 * @generated
 	 */
-	int CATALOG_GROUP = 78;
+	int CATALOG_GROUP = 67;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6972,10 +5466,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCapability()
 	 * @generated
 	 */
-	int CAPABILITY = 79;
+	int CAPABILITY = 68;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7020,7 +5514,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int CAPABILITY__CONTROL_IMPLEMENTATION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7072,7 +5566,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getComponentDefinition()
 	 * @generated
 	 */
-	int COMPONENT_DEFINITION = 80;
+	int COMPONENT_DEFINITION = 69;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
@@ -7154,10 +5648,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getComponentControlImplementation()
 	 * @generated
 	 */
-	int COMPONENT_CONTROL_IMPLEMENTATION = 81;
+	int COMPONENT_CONTROL_IMPLEMENTATION = 70;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7245,10 +5739,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDefinedComponent()
 	 * @generated
 	 */
-	int DEFINED_COMPONENT = 82;
+	int DEFINED_COMPONENT = 71;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7257,7 +5751,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int DEFINED_COMPONENT__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7266,7 +5760,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int DEFINED_COMPONENT__DESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Purpose</b></em>' containment reference.
+	 * The feature id for the '<em><b>Purpose</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7320,7 +5814,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int DEFINED_COMPONENT__CONTROL_IMPLEMENTATION = 7;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7372,10 +5866,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getComponentImplementedRequirement()
 	 * @generated
 	 */
-	int COMPONENT_IMPLEMENTED_REQUIREMENT = 83;
+	int COMPONENT_IMPLEMENTED_REQUIREMENT = 72;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7429,7 +5923,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int COMPONENT_IMPLEMENTED_REQUIREMENT__STATEMENT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7481,10 +5975,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getImportComponentDefinition()
 	 * @generated
 	 */
-	int IMPORT_COMPONENT_DEFINITION = 84;
+	int IMPORT_COMPONENT_DEFINITION = 73;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7527,10 +6021,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getIncorporatesComponent()
 	 * @generated
 	 */
-	int INCORPORATES_COMPONENT = 85;
+	int INCORPORATES_COMPONENT = 74;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7573,10 +6067,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getComponentStatement()
 	 * @generated
 	 */
-	int COMPONENT_STATEMENT = 86;
+	int COMPONENT_STATEMENT = 75;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7612,7 +6106,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int COMPONENT_STATEMENT__RESPONSIBLE_ROLE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7664,7 +6158,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getIncludeAll()
 	 * @generated
 	 */
-	int INCLUDE_ALL = 87;
+	int INCLUDE_ALL = 76;
 
 	/**
 	 * The number of structural features of the '<em>Include All</em>' class.
@@ -7692,10 +6186,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMatching()
 	 * @generated
 	 */
-	int MATCHING = 88;
+	int MATCHING = 77;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7738,7 +6232,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getParameter()
 	 * @generated
 	 */
-	int PARAMETER = 89;
+	int PARAMETER = 78;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -7759,7 +6253,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int PARAMETER__LINK = 1;
 
 	/**
-	 * The feature id for the '<em><b>Label</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7768,7 +6262,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int PARAMETER__LABEL = 2;
 
 	/**
-	 * The feature id for the '<em><b>Usage</b></em>' containment reference.
+	 * The feature id for the '<em><b>Usage</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7813,7 +6307,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int PARAMETER__SELECT = 7;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7874,10 +6368,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getParameterConstraint()
 	 * @generated
 	 */
-	int PARAMETER_CONSTRAINT = 90;
+	int PARAMETER_CONSTRAINT = 79;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -7920,142 +6414,16 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getParameterGuideline()
 	 * @generated
 	 */
-	int PARAMETER_GUIDELINE = 91;
+	int PARAMETER_GUIDELINE = 80;
 
 	/**
-	 * The feature id for the '<em><b>Block Element Group</b></em>' attribute list.
+	 * The feature id for the '<em><b>Prose</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_GUIDELINE__BLOCK_ELEMENT_GROUP = 0;
-
-	/**
-	 * The feature id for the '<em><b>H1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__H1 = 1;
-
-	/**
-	 * The feature id for the '<em><b>H2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__H2 = 2;
-
-	/**
-	 * The feature id for the '<em><b>H3</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__H3 = 3;
-
-	/**
-	 * The feature id for the '<em><b>H4</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__H4 = 4;
-
-	/**
-	 * The feature id for the '<em><b>H5</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__H5 = 5;
-
-	/**
-	 * The feature id for the '<em><b>H6</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__H6 = 6;
-
-	/**
-	 * The feature id for the '<em><b>Ul</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__UL = 7;
-
-	/**
-	 * The feature id for the '<em><b>Ol</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__OL = 8;
-
-	/**
-	 * The feature id for the '<em><b>Pre</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__PRE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Hr</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__HR = 10;
-
-	/**
-	 * The feature id for the '<em><b>Blockquote</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__BLOCKQUOTE = 11;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__P = 12;
-
-	/**
-	 * The feature id for the '<em><b>Table</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__TABLE = 13;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PARAMETER_GUIDELINE__IMG = 14;
+	int PARAMETER_GUIDELINE__PROSE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Parameter Guideline</em>' class.
@@ -8064,7 +6432,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PARAMETER_GUIDELINE_FEATURE_COUNT = 15;
+	int PARAMETER_GUIDELINE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Parameter Guideline</em>' class.
@@ -8083,10 +6451,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getParameterSelection()
 	 * @generated
 	 */
-	int PARAMETER_SELECTION = 92;
+	int PARAMETER_SELECTION = 81;
 
 	/**
-	 * The feature id for the '<em><b>Choice</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Choice</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8129,10 +6497,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPart()
 	 * @generated
 	 */
-	int PART = 93;
+	int PART = 82;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8150,139 +6518,13 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int PART__PROP = 1;
 
 	/**
-	 * The feature id for the '<em><b>Block Element Group</b></em>' attribute list.
+	 * The feature id for the '<em><b>Prose</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PART__BLOCK_ELEMENT_GROUP = 2;
-
-	/**
-	 * The feature id for the '<em><b>H1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__H1 = 3;
-
-	/**
-	 * The feature id for the '<em><b>H2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__H2 = 4;
-
-	/**
-	 * The feature id for the '<em><b>H3</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__H3 = 5;
-
-	/**
-	 * The feature id for the '<em><b>H4</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__H4 = 6;
-
-	/**
-	 * The feature id for the '<em><b>H5</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__H5 = 7;
-
-	/**
-	 * The feature id for the '<em><b>H6</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__H6 = 8;
-
-	/**
-	 * The feature id for the '<em><b>Ul</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__UL = 9;
-
-	/**
-	 * The feature id for the '<em><b>Ol</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__OL = 10;
-
-	/**
-	 * The feature id for the '<em><b>Pre</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__PRE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Hr</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__HR = 12;
-
-	/**
-	 * The feature id for the '<em><b>Blockquote</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__BLOCKQUOTE = 13;
-
-	/**
-	 * The feature id for the '<em><b>P</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__P = 14;
-
-	/**
-	 * The feature id for the '<em><b>Table</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__TABLE = 15;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART__IMG = 16;
+	int PART__PROSE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Part</b></em>' containment reference list.
@@ -8291,7 +6533,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PART__PART = 17;
+	int PART__PART = 3;
 
 	/**
 	 * The feature id for the '<em><b>Link</b></em>' containment reference list.
@@ -8300,7 +6542,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PART__LINK = 18;
+	int PART__LINK = 4;
 
 	/**
 	 * The feature id for the '<em><b>Class</b></em>' attribute.
@@ -8309,7 +6551,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PART__CLASS = 19;
+	int PART__CLASS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -8318,7 +6560,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PART__ID = 20;
+	int PART__ID = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -8327,7 +6569,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PART__NAME = 21;
+	int PART__NAME = 7;
 
 	/**
 	 * The feature id for the '<em><b>Ns</b></em>' attribute.
@@ -8336,7 +6578,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PART__NS = 22;
+	int PART__NS = 8;
 
 	/**
 	 * The number of structural features of the '<em>Part</em>' class.
@@ -8345,7 +6587,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PART_FEATURE_COUNT = 23;
+	int PART_FEATURE_COUNT = 9;
 
 	/**
 	 * The number of operations of the '<em>Part</em>' class.
@@ -8364,7 +6606,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getControlSelectControlById()
 	 * @generated
 	 */
-	int CONTROL_SELECT_CONTROL_BY_ID = 94;
+	int CONTROL_SELECT_CONTROL_BY_ID = 83;
 
 	/**
 	 * The feature id for the '<em><b>With Id</b></em>' attribute list.
@@ -8419,10 +6661,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAuthorizedPrivilege()
 	 * @generated
 	 */
-	int AUTHORIZED_PRIVILEGE = 95;
+	int AUTHORIZED_PRIVILEGE = 84;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8431,7 +6673,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int AUTHORIZED_PRIVILEGE__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8474,10 +6716,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getImplementationStatus()
 	 * @generated
 	 */
-	int IMPLEMENTATION_STATUS = 96;
+	int IMPLEMENTATION_STATUS = 85;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8520,10 +6762,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getInventoryItem()
 	 * @generated
 	 */
-	int INVENTORY_ITEM = 97;
+	int INVENTORY_ITEM = 86;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8568,7 +6810,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int INVENTORY_ITEM__IMPLEMENTED_COMPONENT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8611,10 +6853,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPortRange()
 	 * @generated
 	 */
-	int PORT_RANGE = 98;
+	int PORT_RANGE = 87;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8675,10 +6917,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getProtocol()
 	 * @generated
 	 */
-	int PROTOCOL = 99;
+	int PROTOCOL = 88;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8739,7 +6981,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSetParameter()
 	 * @generated
 	 */
-	int SET_PARAMETER = 100;
+	int SET_PARAMETER = 89;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute list.
@@ -8751,7 +6993,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SET_PARAMETER__VALUE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8794,10 +7036,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemComponent()
 	 * @generated
 	 */
-	int SYSTEM_COMPONENT = 101;
+	int SYSTEM_COMPONENT = 90;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8806,7 +7048,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_COMPONENT__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8815,7 +7057,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_COMPONENT__DESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Purpose</b></em>' containment reference.
+	 * The feature id for the '<em><b>Purpose</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8869,7 +7111,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_COMPONENT__PROTOCOL = 7;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8921,7 +7163,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemId()
 	 * @generated
 	 */
-	int SYSTEM_ID = 102;
+	int SYSTEM_ID = 91;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -8967,10 +7209,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemUser()
 	 * @generated
 	 */
-	int SYSTEM_USER = 103;
+	int SYSTEM_USER = 92;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -8988,7 +7230,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_USER__SHORT_NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9033,7 +7275,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_USER__AUTHORIZED_PRIVILEGE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9076,7 +7318,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getConfidenceScore()
 	 * @generated
 	 */
-	int CONFIDENCE_SCORE = 104;
+	int CONFIDENCE_SCORE = 93;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' attribute.
@@ -9122,7 +7364,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCoverage()
 	 * @generated
 	 */
-	int COVERAGE = 105;
+	int COVERAGE = 94;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -9168,7 +7410,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getGapSummary()
 	 * @generated
 	 */
-	int GAP_SUMMARY = 106;
+	int GAP_SUMMARY = 95;
 
 	/**
 	 * The feature id for the '<em><b>Unmapped Controls</b></em>' containment reference list.
@@ -9214,7 +7456,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMapEntry()
 	 * @generated
 	 */
-	int MAP_ENTRY = 107;
+	int MAP_ENTRY = 96;
 
 	/**
 	 * The feature id for the '<em><b>Relationship</b></em>' attribute.
@@ -9289,7 +7531,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int MAP_ENTRY__LINK = 7;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9350,7 +7592,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMapping()
 	 * @generated
 	 */
-	int MAPPING = 108;
+	int MAPPING = 97;
 
 	/**
 	 * The feature id for the '<em><b>Source Resource</b></em>' containment reference.
@@ -9398,7 +7640,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int MAPPING__LINK = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9407,7 +7649,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int MAPPING__REMARKS = 5;
 
 	/**
-	 * The feature id for the '<em><b>Mapping Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Mapping Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9513,7 +7755,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMappingItem()
 	 * @generated
 	 */
-	int MAPPING_ITEM = 109;
+	int MAPPING_ITEM = 98;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -9534,7 +7776,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int MAPPING_ITEM__LINK = 1;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9586,7 +7828,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMappingProvenance()
 	 * @generated
 	 */
-	int MAPPING_PROVENANCE = 110;
+	int MAPPING_PROVENANCE = 99;
 
 	/**
 	 * The feature id for the '<em><b>Confidence Score</b></em>' containment reference.
@@ -9607,7 +7849,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int MAPPING_PROVENANCE__COVERAGE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Mapping Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Mapping Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9643,7 +7885,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int MAPPING_PROVENANCE__LINK = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9704,7 +7946,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMappingResourceReference()
 	 * @generated
 	 */
-	int MAPPING_RESOURCE_REFERENCE = 111;
+	int MAPPING_RESOURCE_REFERENCE = 100;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -9725,7 +7967,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int MAPPING_RESOURCE_REFERENCE__LINK = 1;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9786,10 +8028,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getQualifierItem()
 	 * @generated
 	 */
-	int QUALIFIER_ITEM = 112;
+	int QUALIFIER_ITEM = 101;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9798,7 +8040,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int QUALIFIER_ITEM__DESCRIPTION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -9859,7 +8101,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMappingCollection()
 	 * @generated
 	 */
-	int MAPPING_COLLECTION = 113;
+	int MAPPING_COLLECTION = 102;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
@@ -9932,7 +8174,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 114;
+	int ACTION = 103;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -9962,7 +8204,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ACTION__RESPONSIBLE_PARTY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -10032,7 +8274,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAddress()
 	 * @generated
 	 */
-	int ADDRESS = 115;
+	int ADDRESS = 104;
 
 	/**
 	 * The feature id for the '<em><b>Addr Line</b></em>' attribute list.
@@ -10114,7 +8356,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getBackMatter()
 	 * @generated
 	 */
-	int BACK_MATTER = 116;
+	int BACK_MATTER = 105;
 
 	/**
 	 * The feature id for the '<em><b>Resource</b></em>' containment reference list.
@@ -10151,7 +8393,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDocumentId()
 	 * @generated
 	 */
-	int DOCUMENT_ID = 117;
+	int DOCUMENT_ID = 106;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -10197,7 +8439,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getHash()
 	 * @generated
 	 */
-	int HASH = 118;
+	int HASH = 107;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -10243,10 +8485,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getLink()
 	 * @generated
 	 */
-	int LINK = 119;
+	int LINK = 108;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' containment reference.
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -10316,10 +8558,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMetadata()
 	 * @generated
 	 */
-	int METADATA = 120;
+	int METADATA = 109;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -10364,13 +8606,13 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int METADATA__OSCAL_VERSION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Revisions</b></em>' containment reference.
+	 * The feature id for the '<em><b>Revision</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METADATA__REVISIONS = 5;
+	int METADATA__REVISION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Document Id</b></em>' containment reference list.
@@ -10445,7 +8687,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int METADATA__ACTION = 13;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -10479,10 +8721,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getProperty()
 	 * @generated
 	 */
-	int PROPERTY = 121;
+	int PROPERTY = 110;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -10570,7 +8812,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getResponsibleParty()
 	 * @generated
 	 */
-	int RESPONSIBLE_PARTY = 122;
+	int RESPONSIBLE_PARTY = 111;
 
 	/**
 	 * The feature id for the '<em><b>Party Uuid</b></em>' attribute list.
@@ -10600,7 +8842,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RESPONSIBLE_PARTY__LINK = 2;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -10643,7 +8885,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getResponsibleRole()
 	 * @generated
 	 */
-	int RESPONSIBLE_ROLE = 123;
+	int RESPONSIBLE_ROLE = 112;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -10673,7 +8915,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RESPONSIBLE_ROLE__PARTY_UUID = 2;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -10716,7 +8958,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getTelephoneNumber()
 	 * @generated
 	 */
-	int TELEPHONE_NUMBER = 124;
+	int TELEPHONE_NUMBER = 113;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -10762,7 +9004,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPoamLocalDefinitions()
 	 * @generated
 	 */
-	int POAM_LOCAL_DEFINITIONS = 125;
+	int POAM_LOCAL_DEFINITIONS = 114;
 
 	/**
 	 * The feature id for the '<em><b>Component</b></em>' containment reference list.
@@ -10792,7 +9034,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int POAM_LOCAL_DEFINITIONS__ASSESSMENT_ASSETS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -10826,7 +9068,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPlanOfActionAndMilestones()
 	 * @generated
 	 */
-	int PLAN_OF_ACTION_AND_MILESTONES = 126;
+	int PLAN_OF_ACTION_AND_MILESTONES = 115;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
@@ -10944,10 +9186,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPoamItem()
 	 * @generated
 	 */
-	int POAM_ITEM = 127;
+	int POAM_ITEM = 116;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -10956,7 +9198,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int POAM_ITEM__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11019,7 +9261,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int POAM_ITEM__ASSOCIATED_RISK = 7;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11062,10 +9304,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getProfileGroup()
 	 * @generated
 	 */
-	int PROFILE_GROUP = 128;
+	int PROFILE_GROUP = 117;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11171,7 +9413,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getImport()
 	 * @generated
 	 */
-	int IMPORT = 129;
+	int IMPORT = 118;
 
 	/**
 	 * The feature id for the '<em><b>Include All</b></em>' containment reference.
@@ -11235,7 +9477,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getInsertControls()
 	 * @generated
 	 */
-	int INSERT_CONTROLS = 130;
+	int INSERT_CONTROLS = 119;
 
 	/**
 	 * The feature id for the '<em><b>Include All</b></em>' containment reference.
@@ -11299,7 +9541,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMerge()
 	 * @generated
 	 */
-	int MERGE = 131;
+	int MERGE = 120;
 
 	/**
 	 * The feature id for the '<em><b>Combine</b></em>' containment reference.
@@ -11363,7 +9605,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getModify()
 	 * @generated
 	 */
-	int MODIFY = 132;
+	int MODIFY = 121;
 
 	/**
 	 * The feature id for the '<em><b>Set Parameter</b></em>' containment reference list.
@@ -11409,7 +9651,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getProfile()
 	 * @generated
 	 */
-	int PROFILE = 133;
+	int PROFILE = 122;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
@@ -11491,10 +9733,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAuthorizationBoundary()
 	 * @generated
 	 */
-	int AUTHORIZATION_BOUNDARY = 134;
+	int AUTHORIZATION_BOUNDARY = 123;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11530,7 +9772,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int AUTHORIZATION_BOUNDARY__DIAGRAM = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11564,10 +9806,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getByComponent()
 	 * @generated
 	 */
-	int BY_COMPONENT = 135;
+	int BY_COMPONENT = 124;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11648,7 +9890,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int BY_COMPONENT__RESPONSIBLE_ROLE = 8;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11700,10 +9942,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSspControlImplementation()
 	 * @generated
 	 */
-	int SSP_CONTROL_IMPLEMENTATION = 136;
+	int SSP_CONTROL_IMPLEMENTATION = 125;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11755,10 +9997,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDataFlow()
 	 * @generated
 	 */
-	int DATA_FLOW = 137;
+	int DATA_FLOW = 126;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11794,7 +10036,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int DATA_FLOW__DIAGRAM = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11828,10 +10070,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDiagram()
 	 * @generated
 	 */
-	int DIAGRAM = 138;
+	int DIAGRAM = 127;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11858,7 +10100,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int DIAGRAM__LINK = 2;
 
 	/**
-	 * The feature id for the '<em><b>Caption</b></em>' containment reference.
+	 * The feature id for the '<em><b>Caption</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11867,7 +10109,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int DIAGRAM__CAPTION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11910,7 +10152,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getImpact()
 	 * @generated
 	 */
-	int IMPACT = 139;
+	int IMPACT = 128;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -11949,7 +10191,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int IMPACT__SELECTED = 3;
 
 	/**
-	 * The feature id for the '<em><b>Adjustment Justification</b></em>' containment reference.
+	 * The feature id for the '<em><b>Adjustment Justification</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -11983,7 +10225,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSspImplementedRequirement()
 	 * @generated
 	 */
-	int SSP_IMPLEMENTED_REQUIREMENT = 140;
+	int SSP_IMPLEMENTED_REQUIREMENT = 129;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -12040,7 +10282,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SSP_IMPLEMENTED_REQUIREMENT__BY_COMPONENT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12092,10 +10334,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getImportProfile()
 	 * @generated
 	 */
-	int IMPORT_PROFILE = 141;
+	int IMPORT_PROFILE = 130;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12138,10 +10380,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getNetworkArchitecture()
 	 * @generated
 	 */
-	int NETWORK_ARCHITECTURE = 142;
+	int NETWORK_ARCHITECTURE = 131;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12177,7 +10419,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int NETWORK_ARCHITECTURE__DIAGRAM = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12211,7 +10453,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSecurityImpactLevel()
 	 * @generated
 	 */
-	int SECURITY_IMPACT_LEVEL = 143;
+	int SECURITY_IMPACT_LEVEL = 132;
 
 	/**
 	 * The feature id for the '<em><b>Security Objective Confidentiality</b></em>' attribute.
@@ -12266,7 +10508,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSspStatement()
 	 * @generated
 	 */
-	int SSP_STATEMENT = 144;
+	int SSP_STATEMENT = 133;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -12305,7 +10547,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SSP_STATEMENT__BY_COMPONENT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12357,10 +10599,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemStatus()
 	 * @generated
 	 */
-	int SYSTEM_STATUS = 145;
+	int SYSTEM_STATUS = 134;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12403,7 +10645,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemCharacteristics()
 	 * @generated
 	 */
-	int SYSTEM_CHARACTERISTICS = 146;
+	int SYSTEM_CHARACTERISTICS = 135;
 
 	/**
 	 * The feature id for the '<em><b>System Id</b></em>' containment reference list.
@@ -12433,7 +10675,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_CHARACTERISTICS__SYSTEM_NAME_SHORT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12541,7 +10783,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_CHARACTERISTICS__RESPONSIBLE_PARTY = 14;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12575,7 +10817,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemImplementation()
 	 * @generated
 	 */
-	int SYSTEM_IMPLEMENTATION = 147;
+	int SYSTEM_IMPLEMENTATION = 136;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -12632,7 +10874,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SYSTEM_IMPLEMENTATION__INVENTORY_ITEM = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12666,7 +10908,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemInformation()
 	 * @generated
 	 */
-	int SYSTEM_INFORMATION = 148;
+	int SYSTEM_INFORMATION = 137;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -12721,7 +10963,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemSecurityPlan()
 	 * @generated
 	 */
-	int SYSTEM_SECURITY_PLAN = 149;
+	int SYSTEM_SECURITY_PLAN = 138;
 
 	/**
 	 * The feature id for the '<em><b>Metadata</b></em>' containment reference.
@@ -12812,7 +11054,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getParty()
 	 * @generated
 	 */
-	int PARTY = 150;
+	int PARTY = 139;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -12905,7 +11147,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int PARTY__MEMBER_OF_ORGANIZATION = 9;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -12950,160 +11192,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int PARTY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupPreformattedImpl <em>Markup Preformatted</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupPreformattedImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupPreformatted()
-	 * @generated
-	 */
-	int MARKUP_PREFORMATTED = 151;
-
-	/**
-	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__MIXED = INLINE_MARKUP__MIXED;
-
-	/**
-	 * The feature id for the '<em><b>Inline Markup Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__INLINE_MARKUP_GROUP = INLINE_MARKUP__INLINE_MARKUP_GROUP;
-
-	/**
-	 * The feature id for the '<em><b>A</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__A = INLINE_MARKUP__A;
-
-	/**
-	 * The feature id for the '<em><b>Insert</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__INSERT = INLINE_MARKUP__INSERT;
-
-	/**
-	 * The feature id for the '<em><b>Br</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__BR = INLINE_MARKUP__BR;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__CODE = INLINE_MARKUP__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Em</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__EM = INLINE_MARKUP__EM;
-
-	/**
-	 * The feature id for the '<em><b>I</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__I = INLINE_MARKUP__I;
-
-	/**
-	 * The feature id for the '<em><b>B</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__B = INLINE_MARKUP__B;
-
-	/**
-	 * The feature id for the '<em><b>Strong</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__STRONG = INLINE_MARKUP__STRONG;
-
-	/**
-	 * The feature id for the '<em><b>Sub</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__SUB = INLINE_MARKUP__SUB;
-
-	/**
-	 * The feature id for the '<em><b>Sup</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__SUP = INLINE_MARKUP__SUP;
-
-	/**
-	 * The feature id for the '<em><b>Q</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__Q = INLINE_MARKUP__Q;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED__IMG = INLINE_MARKUP__IMG;
-
-	/**
-	 * The number of structural features of the '<em>Markup Preformatted</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED_FEATURE_COUNT = INLINE_MARKUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Markup Preformatted</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_PREFORMATTED_OPERATION_COUNT = INLINE_MARKUP_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.ProvidedImpl <em>Provided</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13111,10 +11199,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getProvided()
 	 * @generated
 	 */
-	int PROVIDED = 152;
+	int PROVIDED = 140;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13150,7 +11238,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int PROVIDED__RESPONSIBLE_ROLE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13193,10 +11281,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRelatedFinding()
 	 * @generated
 	 */
-	int RELATED_FINDING = 153;
+	int RELATED_FINDING = 141;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13239,7 +11327,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRelatedResponse()
 	 * @generated
 	 */
-	int RELATED_RESPONSE = 154;
+	int RELATED_RESPONSE = 142;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -13269,7 +11357,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RELATED_RESPONSE__RELATED_TASK = 2;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13312,10 +11400,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRelevantEvidence()
 	 * @generated
 	 */
-	int RELEVANT_EVIDENCE = 155;
+	int RELEVANT_EVIDENCE = 143;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13342,7 +11430,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RELEVANT_EVIDENCE__LINK = 2;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13385,10 +11473,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRemove()
 	 * @generated
 	 */
-	int REMOVE = 156;
+	int REMOVE = 144;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13467,7 +11555,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRequiredAsset()
 	 * @generated
 	 */
-	int REQUIRED_ASSET = 157;
+	int REQUIRED_ASSET = 145;
 
 	/**
 	 * The feature id for the '<em><b>Subject</b></em>' containment reference list.
@@ -13479,7 +11567,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int REQUIRED_ASSET__SUBJECT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13488,7 +11576,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int REQUIRED_ASSET__TITLE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13515,7 +11603,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int REQUIRED_ASSET__LINK = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13558,10 +11646,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getBackMatterResource()
 	 * @generated
 	 */
-	int BACK_MATTER_RESOURCE = 158;
+	int BACK_MATTER_RESOURCE = 146;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13570,7 +11658,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int BACK_MATTER_RESOURCE__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13624,7 +11712,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int BACK_MATTER_RESOURCE__BASE64 = 6;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13667,10 +11755,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getResponsibility()
 	 * @generated
 	 */
-	int RESPONSIBILITY = 159;
+	int RESPONSIBILITY = 147;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13706,7 +11794,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RESPONSIBILITY__RESPONSIBLE_ROLE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13751,43 +11839,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int RESPONSIBILITY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.RevisionsImpl <em>Revisions</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.RevisionsImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRevisions()
-	 * @generated
-	 */
-	int REVISIONS = 160;
-
-	/**
-	 * The feature id for the '<em><b>Revision</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVISIONS__REVISION = 0;
-
-	/**
-	 * The number of structural features of the '<em>Revisions</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVISIONS_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Revisions</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVISIONS_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.RevisionImpl <em>Revision</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -13795,10 +11846,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRevision()
 	 * @generated
 	 */
-	int REVISION = 161;
+	int REVISION = 148;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13861,7 +11912,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int REVISION__LINK = 6;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -13895,7 +11946,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRiskLog()
 	 * @generated
 	 */
-	int RISK_LOG = 162;
+	int RISK_LOG = 149;
 
 	/**
 	 * The feature id for the '<em><b>Entry</b></em>' containment reference list.
@@ -13932,7 +11983,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRlink()
 	 * @generated
 	 */
-	int RLINK = 163;
+	int RLINK = 150;
 
 	/**
 	 * The feature id for the '<em><b>Hash</b></em>' containment reference list.
@@ -13987,10 +12038,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRole()
 	 * @generated
 	 */
-	int ROLE = 164;
+	int ROLE = 151;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14008,7 +12059,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ROLE__SHORT_NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14035,7 +12086,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int ROLE__LINK = 4;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14078,10 +12129,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSatisfied()
 	 * @generated
 	 */
-	int SATISFIED = 165;
+	int SATISFIED = 152;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14117,7 +12168,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int SATISFIED__RESPONSIBLE_ROLE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14169,7 +12220,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getProfileSetParameter()
 	 * @generated
 	 */
-	int PROFILE_SET_PARAMETER = 166;
+	int PROFILE_SET_PARAMETER = 153;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -14190,7 +12241,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int PROFILE_SET_PARAMETER__LINK = 1;
 
 	/**
-	 * The feature id for the '<em><b>Label</b></em>' containment reference.
+	 * The feature id for the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14199,7 +12250,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int PROFILE_SET_PARAMETER__LABEL = 2;
 
 	/**
-	 * The feature id for the '<em><b>Usage</b></em>' containment reference.
+	 * The feature id for the '<em><b>Usage</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14296,10 +12347,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPlaceholderSource()
 	 * @generated
 	 */
-	int PLACEHOLDER_SOURCE = 167;
+	int PLACEHOLDER_SOURCE = 154;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14342,10 +12393,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getFindingTargetStatus()
 	 * @generated
 	 */
-	int FINDING_TARGET_STATUS = 168;
+	int FINDING_TARGET_STATUS = 155;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14397,10 +12448,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemComponentStatus()
 	 * @generated
 	 */
-	int SYSTEM_COMPONENT_STATUS = 169;
+	int SYSTEM_COMPONENT_STATUS = 156;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14443,10 +12494,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getStep()
 	 * @generated
 	 */
-	int STEP = 170;
+	int STEP = 157;
 
 	/**
-	 * The feature id for the '<em><b>Title</b></em>' containment reference.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14455,7 +12506,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int STEP__TITLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14500,7 +12551,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int STEP__RESPONSIBLE_ROLE = 5;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14536,261 +12587,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int STEP_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupTableCellImpl <em>Markup Table Cell</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupTableCellImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupTableCell()
-	 * @generated
-	 */
-	int MARKUP_TABLE_CELL = 171;
-
-	/**
-	 * The feature id for the '<em><b>Mixed</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__MIXED = INLINE_MARKUP__MIXED;
-
-	/**
-	 * The feature id for the '<em><b>Inline Markup Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__INLINE_MARKUP_GROUP = INLINE_MARKUP__INLINE_MARKUP_GROUP;
-
-	/**
-	 * The feature id for the '<em><b>A</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__A = INLINE_MARKUP__A;
-
-	/**
-	 * The feature id for the '<em><b>Insert</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__INSERT = INLINE_MARKUP__INSERT;
-
-	/**
-	 * The feature id for the '<em><b>Br</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__BR = INLINE_MARKUP__BR;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__CODE = INLINE_MARKUP__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Em</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__EM = INLINE_MARKUP__EM;
-
-	/**
-	 * The feature id for the '<em><b>I</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__I = INLINE_MARKUP__I;
-
-	/**
-	 * The feature id for the '<em><b>B</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__B = INLINE_MARKUP__B;
-
-	/**
-	 * The feature id for the '<em><b>Strong</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__STRONG = INLINE_MARKUP__STRONG;
-
-	/**
-	 * The feature id for the '<em><b>Sub</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__SUB = INLINE_MARKUP__SUB;
-
-	/**
-	 * The feature id for the '<em><b>Sup</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__SUP = INLINE_MARKUP__SUP;
-
-	/**
-	 * The feature id for the '<em><b>Q</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__Q = INLINE_MARKUP__Q;
-
-	/**
-	 * The feature id for the '<em><b>Img</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__IMG = INLINE_MARKUP__IMG;
-
-	/**
-	 * The feature id for the '<em><b>Align</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL__ALIGN = INLINE_MARKUP_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Markup Table Cell</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL_FEATURE_COUNT = INLINE_MARKUP_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Markup Table Cell</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_CELL_OPERATION_COUNT = INLINE_MARKUP_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupTableRowImpl <em>Markup Table Row</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupTableRowImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupTableRow()
-	 * @generated
-	 */
-	int MARKUP_TABLE_ROW = 172;
-
-	/**
-	 * The feature id for the '<em><b>Group</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_ROW__GROUP = 0;
-
-	/**
-	 * The feature id for the '<em><b>Td</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_ROW__TD = 1;
-
-	/**
-	 * The feature id for the '<em><b>Th</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_ROW__TH = 2;
-
-	/**
-	 * The number of structural features of the '<em>Markup Table Row</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_ROW_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Markup Table Row</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_ROW_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.MarkupTableImpl <em>Markup Table</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.impl.MarkupTableImpl
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupTable()
-	 * @generated
-	 */
-	int MARKUP_TABLE = 173;
-
-	/**
-	 * The feature id for the '<em><b>Tr</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE__TR = 0;
-
-	/**
-	 * The number of structural features of the '<em>Markup Table</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Markup Table</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MARKUP_TABLE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.impl.TermsAndConditionsImpl <em>Terms And Conditions</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -14798,7 +12594,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getTermsAndConditions()
 	 * @generated
 	 */
-	int TERMS_AND_CONDITIONS = 174;
+	int TERMS_AND_CONDITIONS = 158;
 
 	/**
 	 * The feature id for the '<em><b>Part</b></em>' containment reference list.
@@ -14835,7 +12631,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getConstraintTest()
 	 * @generated
 	 */
-	int CONSTRAINT_TEST = 175;
+	int CONSTRAINT_TEST = 159;
 
 	/**
 	 * The feature id for the '<em><b>Expression</b></em>' attribute.
@@ -14847,7 +12643,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int CONSTRAINT_TEST__EXPRESSION = 0;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -14881,7 +12677,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getTiming()
 	 * @generated
 	 */
-	int TIMING = 176;
+	int TIMING = 160;
 
 	/**
 	 * The feature id for the '<em><b>On Date</b></em>' containment reference.
@@ -14936,7 +12732,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getUsesComponent()
 	 * @generated
 	 */
-	int USES_COMPONENT = 177;
+	int USES_COMPONENT = 161;
 
 	/**
 	 * The feature id for the '<em><b>Prop</b></em>' containment reference list.
@@ -14966,7 +12762,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int USES_COMPONENT__RESPONSIBLE_PARTY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -15009,10 +12805,10 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getWithinDateRange()
 	 * @generated
 	 */
-	int WITHIN_DATE_RANGE = 178;
+	int WITHIN_DATE_RANGE = 162;
 
 	/**
-	 * The feature id for the '<em><b>Remarks</b></em>' containment reference.
+	 * The feature id for the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -15057,33 +12853,13 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	int WITHIN_DATE_RANGE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link gov.nist.csrc.ns.oscal.AlignType <em>Align Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.AlignType
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAlignType()
-	 * @generated
-	 */
-	int ALIGN_TYPE = 179;
-
-	/**
-	 * The meta object id for the '<em>Align Type Object</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see gov.nist.csrc.ns.oscal.AlignType
-	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAlignTypeObject()
-	 * @generated
-	 */
-	int ALIGN_TYPE_OBJECT = 180;
-
-	/**
 	 * The meta object id for the '<em>As Is Type</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAsIsType()
 	 * @generated
 	 */
-	int AS_IS_TYPE = 181;
+	int AS_IS_TYPE = 163;
 
 	/**
 	 * The meta object id for the '<em>As Is Type Object</em>' data type.
@@ -15093,7 +12869,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getAsIsTypeObject()
 	 * @generated
 	 */
-	int AS_IS_TYPE_OBJECT = 182;
+	int AS_IS_TYPE_OBJECT = 164;
 
 	/**
 	 * The meta object id for the '<em>Base64 Datatype</em>' data type.
@@ -15102,7 +12878,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getBase64Datatype()
 	 * @generated
 	 */
-	int BASE64_DATATYPE = 183;
+	int BASE64_DATATYPE = 165;
 
 	/**
 	 * The meta object id for the '<em>Boolean Datatype</em>' data type.
@@ -15111,7 +12887,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getBooleanDatatype()
 	 * @generated
 	 */
-	int BOOLEAN_DATATYPE = 184;
+	int BOOLEAN_DATATYPE = 166;
 
 	/**
 	 * The meta object id for the '<em>Boolean Datatype Object</em>' data type.
@@ -15121,7 +12897,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getBooleanDatatypeObject()
 	 * @generated
 	 */
-	int BOOLEAN_DATATYPE_OBJECT = 185;
+	int BOOLEAN_DATATYPE_OBJECT = 167;
 
 	/**
 	 * The meta object id for the '<em>Category Type</em>' data type.
@@ -15131,7 +12907,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCategoryType()
 	 * @generated
 	 */
-	int CATEGORY_TYPE = 186;
+	int CATEGORY_TYPE = 168;
 
 	/**
 	 * The meta object id for the '<em>City Type</em>' data type.
@@ -15141,7 +12917,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCityType()
 	 * @generated
 	 */
-	int CITY_TYPE = 187;
+	int CITY_TYPE = 169;
 
 	/**
 	 * The meta object id for the '<em>Collected Type</em>' data type.
@@ -15151,7 +12927,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCollectedType()
 	 * @generated
 	 */
-	int COLLECTED_TYPE = 188;
+	int COLLECTED_TYPE = 170;
 
 	/**
 	 * The meta object id for the '<em>Country Type</em>' data type.
@@ -15161,7 +12937,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getCountryType()
 	 * @generated
 	 */
-	int COUNTRY_TYPE = 189;
+	int COUNTRY_TYPE = 171;
 
 	/**
 	 * The meta object id for the '<em>Date Datatype</em>' data type.
@@ -15171,7 +12947,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDateDatatype()
 	 * @generated
 	 */
-	int DATE_DATATYPE = 190;
+	int DATE_DATATYPE = 172;
 
 	/**
 	 * The meta object id for the '<em>Date Time Datatype</em>' data type.
@@ -15181,7 +12957,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDateTimeDatatype()
 	 * @generated
 	 */
-	int DATE_TIME_DATATYPE = 191;
+	int DATE_TIME_DATATYPE = 173;
 
 	/**
 	 * The meta object id for the '<em>Date Time With Timezone Datatype</em>' data type.
@@ -15191,7 +12967,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDateTimeWithTimezoneDatatype()
 	 * @generated
 	 */
-	int DATE_TIME_WITH_TIMEZONE_DATATYPE = 192;
+	int DATE_TIME_WITH_TIMEZONE_DATATYPE = 174;
 
 	/**
 	 * The meta object id for the '<em>Deadline Type</em>' data type.
@@ -15201,7 +12977,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDeadlineType()
 	 * @generated
 	 */
-	int DEADLINE_TYPE = 193;
+	int DEADLINE_TYPE = 175;
 
 	/**
 	 * The meta object id for the '<em>Decimal Datatype</em>' data type.
@@ -15211,7 +12987,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getDecimalDatatype()
 	 * @generated
 	 */
-	int DECIMAL_DATATYPE = 194;
+	int DECIMAL_DATATYPE = 176;
 
 	/**
 	 * The meta object id for the '<em>Email Address Datatype</em>' data type.
@@ -15221,7 +12997,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getEmailAddressDatatype()
 	 * @generated
 	 */
-	int EMAIL_ADDRESS_DATATYPE = 195;
+	int EMAIL_ADDRESS_DATATYPE = 177;
 
 	/**
 	 * The meta object id for the '<em>End Type</em>' data type.
@@ -15231,7 +13007,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getEndType()
 	 * @generated
 	 */
-	int END_TYPE = 196;
+	int END_TYPE = 178;
 
 	/**
 	 * The meta object id for the '<em>End Type1</em>' data type.
@@ -15241,7 +13017,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getEndType1()
 	 * @generated
 	 */
-	int END_TYPE1 = 197;
+	int END_TYPE1 = 179;
 
 	/**
 	 * The meta object id for the '<em>End Type2</em>' data type.
@@ -15251,7 +13027,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getEndType2()
 	 * @generated
 	 */
-	int END_TYPE2 = 198;
+	int END_TYPE2 = 180;
 
 	/**
 	 * The meta object id for the '<em>Expires Type</em>' data type.
@@ -15261,7 +13037,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getExpiresType()
 	 * @generated
 	 */
-	int EXPIRES_TYPE = 199;
+	int EXPIRES_TYPE = 181;
 
 	/**
 	 * The meta object id for the '<em>Expression Type</em>' data type.
@@ -15271,7 +13047,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getExpressionType()
 	 * @generated
 	 */
-	int EXPRESSION_TYPE = 200;
+	int EXPRESSION_TYPE = 182;
 
 	/**
 	 * The meta object id for the '<em>Implementation Statement Uuid Type</em>' data type.
@@ -15281,7 +13057,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getImplementationStatementUuidType()
 	 * @generated
 	 */
-	int IMPLEMENTATION_STATEMENT_UUID_TYPE = 201;
+	int IMPLEMENTATION_STATEMENT_UUID_TYPE = 183;
 
 	/**
 	 * The meta object id for the '<em>Information Type Id Type</em>' data type.
@@ -15291,7 +13067,27 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getInformationTypeIdType()
 	 * @generated
 	 */
-	int INFORMATION_TYPE_ID_TYPE = 202;
+	int INFORMATION_TYPE_ID_TYPE = 184;
+
+	/**
+	 * The meta object id for the '<em>Markup Line Datatype</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupLineDatatype()
+	 * @generated
+	 */
+	int MARKUP_LINE_DATATYPE = 185;
+
+	/**
+	 * The meta object id for the '<em>Markup Multiline Datatype</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.String
+	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMarkupMultilineDatatype()
+	 * @generated
+	 */
+	int MARKUP_MULTILINE_DATATYPE = 186;
 
 	/**
 	 * The meta object id for the '<em>Member Of Organization Type</em>' data type.
@@ -15301,7 +13097,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMemberOfOrganizationType()
 	 * @generated
 	 */
-	int MEMBER_OF_ORGANIZATION_TYPE = 203;
+	int MEMBER_OF_ORGANIZATION_TYPE = 187;
 
 	/**
 	 * The meta object id for the '<em>Method Type</em>' data type.
@@ -15311,7 +13107,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getMethodType()
 	 * @generated
 	 */
-	int METHOD_TYPE = 204;
+	int METHOD_TYPE = 188;
 
 	/**
 	 * The meta object id for the '<em>Name Type</em>' data type.
@@ -15321,7 +13117,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getNameType()
 	 * @generated
 	 */
-	int NAME_TYPE = 205;
+	int NAME_TYPE = 189;
 
 	/**
 	 * The meta object id for the '<em>Non Negative Integer Datatype</em>' data type.
@@ -15331,7 +13127,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getNonNegativeIntegerDatatype()
 	 * @generated
 	 */
-	int NON_NEGATIVE_INTEGER_DATATYPE = 206;
+	int NON_NEGATIVE_INTEGER_DATATYPE = 190;
 
 	/**
 	 * The meta object id for the '<em>Oscal Assessment Common Risk Status FIELD</em>' data type.
@@ -15341,7 +13137,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalAssessmentCommonRiskStatusFIELD()
 	 * @generated
 	 */
-	int OSCAL_ASSESSMENT_COMMON_RISK_STATUS_FIELD = 207;
+	int OSCAL_ASSESSMENT_COMMON_RISK_STATUS_FIELD = 191;
 
 	/**
 	 * The meta object id for the '<em>Oscal Control Common Parameter Value FIELD</em>' data type.
@@ -15351,7 +13147,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalControlCommonParameterValueFIELD()
 	 * @generated
 	 */
-	int OSCAL_CONTROL_COMMON_PARAMETER_VALUE_FIELD = 208;
+	int OSCAL_CONTROL_COMMON_PARAMETER_VALUE_FIELD = 192;
 
 	/**
 	 * The meta object id for the '<em>Oscal Control Common With Id FIELD</em>' data type.
@@ -15361,7 +13157,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalControlCommonWithIdFIELD()
 	 * @generated
 	 */
-	int OSCAL_CONTROL_COMMON_WITH_ID_FIELD = 209;
+	int OSCAL_CONTROL_COMMON_WITH_ID_FIELD = 193;
 
 	/**
 	 * The meta object id for the '<em>Oscal Implementation Common Function Performed FIELD</em>' data type.
@@ -15371,7 +13167,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalImplementationCommonFunctionPerformedFIELD()
 	 * @generated
 	 */
-	int OSCAL_IMPLEMENTATION_COMMON_FUNCTION_PERFORMED_FIELD = 210;
+	int OSCAL_IMPLEMENTATION_COMMON_FUNCTION_PERFORMED_FIELD = 194;
 
 	/**
 	 * The meta object id for the '<em>Oscal Mapping Common Percentage FIELD</em>' data type.
@@ -15381,7 +13177,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMappingCommonPercentageFIELD()
 	 * @generated
 	 */
-	int OSCAL_MAPPING_COMMON_PERCENTAGE_FIELD = 211;
+	int OSCAL_MAPPING_COMMON_PERCENTAGE_FIELD = 195;
 
 	/**
 	 * The meta object id for the '<em>Oscal Metadata Addr Line FIELD</em>' data type.
@@ -15391,7 +13187,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMetadataAddrLineFIELD()
 	 * @generated
 	 */
-	int OSCAL_METADATA_ADDR_LINE_FIELD = 212;
+	int OSCAL_METADATA_ADDR_LINE_FIELD = 196;
 
 	/**
 	 * The meta object id for the '<em>Oscal Metadata Email Address FIELD</em>' data type.
@@ -15401,7 +13197,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMetadataEmailAddressFIELD()
 	 * @generated
 	 */
-	int OSCAL_METADATA_EMAIL_ADDRESS_FIELD = 213;
+	int OSCAL_METADATA_EMAIL_ADDRESS_FIELD = 197;
 
 	/**
 	 * The meta object id for the '<em>Oscal Metadata Last Modified FIELD</em>' data type.
@@ -15411,7 +13207,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMetadataLastModifiedFIELD()
 	 * @generated
 	 */
-	int OSCAL_METADATA_LAST_MODIFIED_FIELD = 214;
+	int OSCAL_METADATA_LAST_MODIFIED_FIELD = 198;
 
 	/**
 	 * The meta object id for the '<em>Oscal Metadata Location Uuid FIELD</em>' data type.
@@ -15421,7 +13217,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMetadataLocationUuidFIELD()
 	 * @generated
 	 */
-	int OSCAL_METADATA_LOCATION_UUID_FIELD = 215;
+	int OSCAL_METADATA_LOCATION_UUID_FIELD = 199;
 
 	/**
 	 * The meta object id for the '<em>Oscal Metadata Oscal Version FIELD</em>' data type.
@@ -15431,7 +13227,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMetadataOscalVersionFIELD()
 	 * @generated
 	 */
-	int OSCAL_METADATA_OSCAL_VERSION_FIELD = 216;
+	int OSCAL_METADATA_OSCAL_VERSION_FIELD = 200;
 
 	/**
 	 * The meta object id for the '<em>Oscal Metadata Party Uuid FIELD</em>' data type.
@@ -15441,7 +13237,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMetadataPartyUuidFIELD()
 	 * @generated
 	 */
-	int OSCAL_METADATA_PARTY_UUID_FIELD = 217;
+	int OSCAL_METADATA_PARTY_UUID_FIELD = 201;
 
 	/**
 	 * The meta object id for the '<em>Oscal Metadata Published FIELD</em>' data type.
@@ -15451,7 +13247,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMetadataPublishedFIELD()
 	 * @generated
 	 */
-	int OSCAL_METADATA_PUBLISHED_FIELD = 218;
+	int OSCAL_METADATA_PUBLISHED_FIELD = 202;
 
 	/**
 	 * The meta object id for the '<em>Oscal Metadata Role Id FIELD</em>' data type.
@@ -15461,7 +13257,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMetadataRoleIdFIELD()
 	 * @generated
 	 */
-	int OSCAL_METADATA_ROLE_ID_FIELD = 219;
+	int OSCAL_METADATA_ROLE_ID_FIELD = 203;
 
 	/**
 	 * The meta object id for the '<em>Oscal Metadata Version FIELD</em>' data type.
@@ -15471,7 +13267,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalMetadataVersionFIELD()
 	 * @generated
 	 */
-	int OSCAL_METADATA_VERSION_FIELD = 220;
+	int OSCAL_METADATA_VERSION_FIELD = 204;
 
 	/**
 	 * The meta object id for the '<em>Oscal Ssp Base FIELD</em>' data type.
@@ -15481,7 +13277,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalSspBaseFIELD()
 	 * @generated
 	 */
-	int OSCAL_SSP_BASE_FIELD = 221;
+	int OSCAL_SSP_BASE_FIELD = 205;
 
 	/**
 	 * The meta object id for the '<em>Oscal Ssp Date Authorized FIELD</em>' data type.
@@ -15491,7 +13287,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalSspDateAuthorizedFIELD()
 	 * @generated
 	 */
-	int OSCAL_SSP_DATE_AUTHORIZED_FIELD = 222;
+	int OSCAL_SSP_DATE_AUTHORIZED_FIELD = 206;
 
 	/**
 	 * The meta object id for the '<em>Oscal Ssp Selected FIELD</em>' data type.
@@ -15501,7 +13297,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getOscalSspSelectedFIELD()
 	 * @generated
 	 */
-	int OSCAL_SSP_SELECTED_FIELD = 223;
+	int OSCAL_SSP_SELECTED_FIELD = 207;
 
 	/**
 	 * The meta object id for the '<em>Party Uuid Type</em>' data type.
@@ -15511,7 +13307,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPartyUuidType()
 	 * @generated
 	 */
-	int PARTY_UUID_TYPE = 224;
+	int PARTY_UUID_TYPE = 208;
 
 	/**
 	 * The meta object id for the '<em>Positive Integer Datatype</em>' data type.
@@ -15521,7 +13317,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPositiveIntegerDatatype()
 	 * @generated
 	 */
-	int POSITIVE_INTEGER_DATATYPE = 225;
+	int POSITIVE_INTEGER_DATATYPE = 209;
 
 	/**
 	 * The meta object id for the '<em>Postal Code Type</em>' data type.
@@ -15531,7 +13327,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getPostalCodeType()
 	 * @generated
 	 */
-	int POSTAL_CODE_TYPE = 226;
+	int POSTAL_CODE_TYPE = 210;
 
 	/**
 	 * The meta object id for the '<em>Relationship Type</em>' data type.
@@ -15541,7 +13337,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getRelationshipType()
 	 * @generated
 	 */
-	int RELATIONSHIP_TYPE = 227;
+	int RELATIONSHIP_TYPE = 211;
 
 	/**
 	 * The meta object id for the '<em>Security Objective Availability Type</em>' data type.
@@ -15551,7 +13347,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSecurityObjectiveAvailabilityType()
 	 * @generated
 	 */
-	int SECURITY_OBJECTIVE_AVAILABILITY_TYPE = 228;
+	int SECURITY_OBJECTIVE_AVAILABILITY_TYPE = 212;
 
 	/**
 	 * The meta object id for the '<em>Security Objective Confidentiality Type</em>' data type.
@@ -15561,7 +13357,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSecurityObjectiveConfidentialityType()
 	 * @generated
 	 */
-	int SECURITY_OBJECTIVE_CONFIDENTIALITY_TYPE = 229;
+	int SECURITY_OBJECTIVE_CONFIDENTIALITY_TYPE = 213;
 
 	/**
 	 * The meta object id for the '<em>Security Objective Integrity Type</em>' data type.
@@ -15571,7 +13367,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSecurityObjectiveIntegrityType()
 	 * @generated
 	 */
-	int SECURITY_OBJECTIVE_INTEGRITY_TYPE = 230;
+	int SECURITY_OBJECTIVE_INTEGRITY_TYPE = 214;
 
 	/**
 	 * The meta object id for the '<em>Security Sensitivity Level Type</em>' data type.
@@ -15581,7 +13377,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSecuritySensitivityLevelType()
 	 * @generated
 	 */
-	int SECURITY_SENSITIVITY_LEVEL_TYPE = 231;
+	int SECURITY_SENSITIVITY_LEVEL_TYPE = 215;
 
 	/**
 	 * The meta object id for the '<em>Short Name Type</em>' data type.
@@ -15591,7 +13387,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getShortNameType()
 	 * @generated
 	 */
-	int SHORT_NAME_TYPE = 232;
+	int SHORT_NAME_TYPE = 216;
 
 	/**
 	 * The meta object id for the '<em>Short Name Type1</em>' data type.
@@ -15601,7 +13397,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getShortNameType1()
 	 * @generated
 	 */
-	int SHORT_NAME_TYPE1 = 233;
+	int SHORT_NAME_TYPE1 = 217;
 
 	/**
 	 * The meta object id for the '<em>Short Name Type2</em>' data type.
@@ -15611,7 +13407,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getShortNameType2()
 	 * @generated
 	 */
-	int SHORT_NAME_TYPE2 = 234;
+	int SHORT_NAME_TYPE2 = 218;
 
 	/**
 	 * The meta object id for the '<em>Start Type</em>' data type.
@@ -15621,7 +13417,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getStartType()
 	 * @generated
 	 */
-	int START_TYPE = 235;
+	int START_TYPE = 219;
 
 	/**
 	 * The meta object id for the '<em>Start Type1</em>' data type.
@@ -15631,7 +13427,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getStartType1()
 	 * @generated
 	 */
-	int START_TYPE1 = 236;
+	int START_TYPE1 = 220;
 
 	/**
 	 * The meta object id for the '<em>Start Type2</em>' data type.
@@ -15641,7 +13437,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getStartType2()
 	 * @generated
 	 */
-	int START_TYPE2 = 237;
+	int START_TYPE2 = 221;
 
 	/**
 	 * The meta object id for the '<em>Statement Id Type</em>' data type.
@@ -15651,7 +13447,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getStatementIdType()
 	 * @generated
 	 */
-	int STATEMENT_ID_TYPE = 238;
+	int STATEMENT_ID_TYPE = 222;
 
 	/**
 	 * The meta object id for the '<em>State Type</em>' data type.
@@ -15661,7 +13457,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getStateType()
 	 * @generated
 	 */
-	int STATE_TYPE = 239;
+	int STATE_TYPE = 223;
 
 	/**
 	 * The meta object id for the '<em>String Datatype</em>' data type.
@@ -15671,7 +13467,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getStringDatatype()
 	 * @generated
 	 */
-	int STRING_DATATYPE = 240;
+	int STRING_DATATYPE = 224;
 
 	/**
 	 * The meta object id for the '<em>System Name Short Type</em>' data type.
@@ -15681,7 +13477,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemNameShortType()
 	 * @generated
 	 */
-	int SYSTEM_NAME_SHORT_TYPE = 241;
+	int SYSTEM_NAME_SHORT_TYPE = 225;
 
 	/**
 	 * The meta object id for the '<em>System Name Type</em>' data type.
@@ -15691,7 +13487,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getSystemNameType()
 	 * @generated
 	 */
-	int SYSTEM_NAME_TYPE = 242;
+	int SYSTEM_NAME_TYPE = 226;
 
 	/**
 	 * The meta object id for the '<em>Token Datatype</em>' data type.
@@ -15701,7 +13497,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getTokenDatatype()
 	 * @generated
 	 */
-	int TOKEN_DATATYPE = 243;
+	int TOKEN_DATATYPE = 227;
 
 	/**
 	 * The meta object id for the '<em>Type Type</em>' data type.
@@ -15711,7 +13507,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getTypeType()
 	 * @generated
 	 */
-	int TYPE_TYPE = 244;
+	int TYPE_TYPE = 228;
 
 	/**
 	 * The meta object id for the '<em>URI Datatype</em>' data type.
@@ -15721,7 +13517,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getURIDatatype()
 	 * @generated
 	 */
-	int URI_DATATYPE = 245;
+	int URI_DATATYPE = 229;
 
 	/**
 	 * The meta object id for the '<em>URI Reference Datatype</em>' data type.
@@ -15731,7 +13527,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getURIReferenceDatatype()
 	 * @generated
 	 */
-	int URI_REFERENCE_DATATYPE = 246;
+	int URI_REFERENCE_DATATYPE = 230;
 
 	/**
 	 * The meta object id for the '<em>Url Type</em>' data type.
@@ -15741,7 +13537,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getUrlType()
 	 * @generated
 	 */
-	int URL_TYPE = 247;
+	int URL_TYPE = 231;
 
 	/**
 	 * The meta object id for the '<em>UUID Datatype</em>' data type.
@@ -15751,7 +13547,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getUUIDDatatype()
 	 * @generated
 	 */
-	int UUID_DATATYPE = 248;
+	int UUID_DATATYPE = 232;
 
 	/**
 	 * The meta object id for the '<em>Value Type</em>' data type.
@@ -15761,7 +13557,7 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @see gov.nist.csrc.ns.oscal.impl.OSCALPackageImpl#getValueType()
 	 * @generated
 	 */
-	int VALUE_TYPE = 249;
+	int VALUE_TYPE = 233;
 
 
 	/**
@@ -15775,15 +13571,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAdd();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Add#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Add#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Add#getTitle()
 	 * @see #getAdd()
 	 * @generated
 	 */
-	EReference getAdd_Title();
+	EAttribute getAdd_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Add#getParam <em>Param</em>}'.
@@ -15895,159 +13691,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getAlter_ControlId();
 
 	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupAnchor <em>Markup Anchor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Anchor</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor
-	 * @generated
-	 */
-	EClass getMarkupAnchor();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getMixed <em>Mixed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Mixed</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getMixed()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EAttribute getMarkupAnchor_Mixed();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getPhraseMarkupGroup <em>Phrase Markup Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Phrase Markup Group</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getPhraseMarkupGroup()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EAttribute getMarkupAnchor_PhraseMarkupGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getCode <em>Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Code</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getCode()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EReference getMarkupAnchor_Code();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getEm <em>Em</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Em</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getEm()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EReference getMarkupAnchor_Em();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getI <em>I</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>I</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getI()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EReference getMarkupAnchor_I();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getB <em>B</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>B</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getB()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EReference getMarkupAnchor_B();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getStrong <em>Strong</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Strong</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getStrong()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EReference getMarkupAnchor_Strong();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getSub <em>Sub</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getSub()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EReference getMarkupAnchor_Sub();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getSup <em>Sup</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sup</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getSup()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EReference getMarkupAnchor_Sup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getQ <em>Q</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Q</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getQ()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EReference getMarkupAnchor_Q();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getImg <em>Img</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Img</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getImg()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EReference getMarkupAnchor_Img();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getHref <em>Href</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Href</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getHref()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EAttribute getMarkupAnchor_Href();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupAnchor#getTitle <em>Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Title</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupAnchor#getTitle()
-	 * @see #getMarkupAnchor()
-	 * @generated
-	 */
-	EAttribute getMarkupAnchor_Title();
-
-	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.AssessmentLog <em>Assessment Log</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16079,15 +13722,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAssessmentPlatform();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentPlatform#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentPlatform#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentPlatform#getTitle()
 	 * @see #getAssessmentPlatform()
 	 * @generated
 	 */
-	EReference getAssessmentPlatform_Title();
+	EAttribute getAssessmentPlatform_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPlatform#getProp <em>Prop</em>}'.
@@ -16123,15 +13766,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAssessmentPlatform_UsesComponent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentPlatform#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentPlatform#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentPlatform#getRemarks()
 	 * @see #getAssessmentPlatform()
 	 * @generated
 	 */
-	EReference getAssessmentPlatform_Remarks();
+	EAttribute getAssessmentPlatform_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentPlatform#getUuid <em>Uuid</em>}'.
@@ -16199,15 +13842,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAssociatedActivity_Subject();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssociatedActivity#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssociatedActivity#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssociatedActivity#getRemarks()
 	 * @see #getAssociatedActivity()
 	 * @generated
 	 */
-	EReference getAssociatedActivity_Remarks();
+	EAttribute getAssociatedActivity_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssociatedActivity#getActivityUuid <em>Activity Uuid</em>}'.
@@ -16231,15 +13874,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAtFrequency();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AtFrequency#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AtFrequency#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AtFrequency#getRemarks()
 	 * @see #getAtFrequency()
 	 * @generated
 	 */
-	EReference getAtFrequency_Remarks();
+	EAttribute getAtFrequency_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AtFrequency#getPeriod <em>Period</em>}'.
@@ -16339,181 +13982,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getBase64_MediaType();
 
 	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote <em>Markup Block Quote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Block Quote</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote
-	 * @generated
-	 */
-	EClass getMarkupBlockQuote();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getBlockElementGroup <em>Block Element Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Block Element Group</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getBlockElementGroup()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EAttribute getMarkupBlockQuote_BlockElementGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH1 <em>H1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H1</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH1()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_H1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH2 <em>H2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H2</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH2()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_H2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH3 <em>H3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H3</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH3()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_H3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH4 <em>H4</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H4</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH4()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_H4();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH5 <em>H5</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H5</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH5()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_H5();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH6 <em>H6</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H6</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getH6()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_H6();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getUl <em>Ul</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ul</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getUl()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_Ul();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getOl <em>Ol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ol</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getOl()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_Ol();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getPre <em>Pre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pre</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getPre()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_Pre();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getHr <em>Hr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Hr</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getHr()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_Hr();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getBlockquote <em>Blockquote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Blockquote</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getBlockquote()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_Blockquote();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>P</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getP()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_P();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getTable <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Table</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getTable()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_Table();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupBlockQuote#getImg <em>Img</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Img</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupBlockQuote#getImg()
-	 * @see #getMarkupBlockQuote()
-	 * @generated
-	 */
-	EReference getMarkupBlockQuote_Img();
-
-	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Categorization <em>Categorization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -16556,15 +14024,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getCitation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Citation#getText <em>Text</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Citation#getText <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Text</em>'.
+	 * @return the meta object for the attribute '<em>Text</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Citation#getText()
 	 * @see #getCitation()
 	 * @generated
 	 */
-	EReference getCitation_Text();
+	EAttribute getCitation_Text();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Citation#getProp <em>Prop</em>}'.
@@ -16587,27 +14055,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EReference getCitation_Link();
-
-	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupCode <em>Markup Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Code</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupCode
-	 * @generated
-	 */
-	EClass getMarkupCode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupCode#getClass_ <em>Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Class</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupCode#getClass_()
-	 * @see #getMarkupCode()
-	 * @generated
-	 */
-	EAttribute getMarkupCode_Class();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Combine <em>Combine</em>}'.
@@ -16641,15 +14088,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getControlObjectiveSelection();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ControlObjectiveSelection#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ControlObjectiveSelection#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ControlObjectiveSelection#getDescription()
 	 * @see #getControlObjectiveSelection()
 	 * @generated
 	 */
-	EReference getControlObjectiveSelection_Description();
+	EAttribute getControlObjectiveSelection_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ControlObjectiveSelection#getProp <em>Prop</em>}'.
@@ -16707,15 +14154,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getControlObjectiveSelection_ExcludeObjective();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ControlObjectiveSelection#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ControlObjectiveSelection#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ControlObjectiveSelection#getRemarks()
 	 * @see #getControlObjectiveSelection()
 	 * @generated
 	 */
-	EReference getControlObjectiveSelection_Remarks();
+	EAttribute getControlObjectiveSelection_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.ControlSelection <em>Control Selection</em>}'.
@@ -16728,15 +14175,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getControlSelection();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ControlSelection#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ControlSelection#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ControlSelection#getDescription()
 	 * @see #getControlSelection()
 	 * @generated
 	 */
-	EReference getControlSelection_Description();
+	EAttribute getControlSelection_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ControlSelection#getProp <em>Prop</em>}'.
@@ -16794,15 +14241,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getControlSelection_ExcludeControl();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ControlSelection#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ControlSelection#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ControlSelection#getRemarks()
 	 * @see #getControlSelection()
 	 * @generated
 	 */
-	EReference getControlSelection_Remarks();
+	EAttribute getControlSelection_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Custom <em>Custom</em>}'.
@@ -16847,15 +14294,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getDependency();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Dependency#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Dependency#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Dependency#getRemarks()
 	 * @see #getDependency()
 	 * @generated
 	 */
-	EReference getDependency_Remarks();
+	EAttribute getDependency_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Dependency#getTaskUuid <em>Task Uuid</em>}'.
@@ -17000,6 +14447,17 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getDocumentRoot_SystemSecurityPlan();
 
 	/**
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.DocumentRoot#getSchema <em>Schema</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Schema</em>'.
+	 * @see gov.nist.csrc.ns.oscal.DocumentRoot#getSchema()
+	 * @see #getDocumentRoot()
+	 * @generated
+	 */
+	EAttribute getDocumentRoot_Schema();
+
+	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.RiskLogEntry <em>Risk Log Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17010,26 +14468,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getRiskLogEntry();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RiskLogEntry#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RiskLogEntry#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RiskLogEntry#getTitle()
 	 * @see #getRiskLogEntry()
 	 * @generated
 	 */
-	EReference getRiskLogEntry_Title();
+	EAttribute getRiskLogEntry_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RiskLogEntry#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RiskLogEntry#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RiskLogEntry#getDescription()
 	 * @see #getRiskLogEntry()
 	 * @generated
 	 */
-	EReference getRiskLogEntry_Description();
+	EAttribute getRiskLogEntry_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RiskLogEntry#getStart <em>Start</em>}'.
@@ -17109,15 +14567,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getRiskLogEntry_RelatedResponse();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RiskLogEntry#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RiskLogEntry#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RiskLogEntry#getRemarks()
 	 * @see #getRiskLogEntry()
 	 * @generated
 	 */
-	EReference getRiskLogEntry_Remarks();
+	EAttribute getRiskLogEntry_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RiskLogEntry#getUuid <em>Uuid</em>}'.
@@ -17141,26 +14599,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAssessmentLogEntry();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentLogEntry#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentLogEntry#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentLogEntry#getTitle()
 	 * @see #getAssessmentLogEntry()
 	 * @generated
 	 */
-	EReference getAssessmentLogEntry_Title();
+	EAttribute getAssessmentLogEntry_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentLogEntry#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentLogEntry#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentLogEntry#getDescription()
 	 * @see #getAssessmentLogEntry()
 	 * @generated
 	 */
-	EReference getAssessmentLogEntry_Description();
+	EAttribute getAssessmentLogEntry_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentLogEntry#getStart <em>Start</em>}'.
@@ -17229,15 +14687,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAssessmentLogEntry_RelatedTask();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentLogEntry#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentLogEntry#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentLogEntry#getRemarks()
 	 * @see #getAssessmentLogEntry()
 	 * @generated
 	 */
-	EReference getAssessmentLogEntry_Remarks();
+	EAttribute getAssessmentLogEntry_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentLogEntry#getUuid <em>Uuid</em>}'.
@@ -17261,15 +14719,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getExport();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Export#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Export#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Export#getDescription()
 	 * @see #getExport()
 	 * @generated
 	 */
-	EReference getExport_Description();
+	EAttribute getExport_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Export#getProp <em>Prop</em>}'.
@@ -17316,15 +14774,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getExport_Responsibility();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Export#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Export#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Export#getRemarks()
 	 * @see #getExport()
 	 * @generated
 	 */
-	EReference getExport_Remarks();
+	EAttribute getExport_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.ExternalId <em>External Id</em>}'.
@@ -17391,15 +14849,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getFacet_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Facet#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Facet#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Facet#getRemarks()
 	 * @see #getFacet()
 	 * @generated
 	 */
-	EReference getFacet_Remarks();
+	EAttribute getFacet_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Facet#getName <em>Name</em>}'.
@@ -17477,49 +14935,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getIdentifiedSubject_SubjectPlaceholderUuid();
 
 	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupImage <em>Markup Image</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Image</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupImage
-	 * @generated
-	 */
-	EClass getMarkupImage();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupImage#getAlt <em>Alt</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Alt</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupImage#getAlt()
-	 * @see #getMarkupImage()
-	 * @generated
-	 */
-	EAttribute getMarkupImage_Alt();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupImage#getSrc <em>Src</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Src</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupImage#getSrc()
-	 * @see #getMarkupImage()
-	 * @generated
-	 */
-	EAttribute getMarkupImage_Src();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupImage#getTitle <em>Title</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Title</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupImage#getTitle()
-	 * @see #getMarkupImage()
-	 * @generated
-	 */
-	EAttribute getMarkupImage_Title();
-
-	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.ImplementedComponent <em>Implemented Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17563,15 +14978,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getImplementedComponent_ResponsibleParty();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ImplementedComponent#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImplementedComponent#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ImplementedComponent#getRemarks()
 	 * @see #getImplementedComponent()
 	 * @generated
 	 */
-	EReference getImplementedComponent_Remarks();
+	EAttribute getImplementedComponent_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImplementedComponent#getComponentUuid <em>Component Uuid</em>}'.
@@ -17595,26 +15010,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getInformationType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.InformationType#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.InformationType#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.InformationType#getTitle()
 	 * @see #getInformationType()
 	 * @generated
 	 */
-	EReference getInformationType_Title();
+	EAttribute getInformationType_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.InformationType#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.InformationType#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.InformationType#getDescription()
 	 * @see #getInformationType()
 	 * @generated
 	 */
-	EReference getInformationType_Description();
+	EAttribute getInformationType_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InformationType#getCategorization <em>Categorization</em>}'.
@@ -17704,15 +15119,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getInherited();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Inherited#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Inherited#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Inherited#getDescription()
 	 * @see #getInherited()
 	 * @generated
 	 */
-	EReference getInherited_Description();
+	EAttribute getInherited_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Inherited#getProp <em>Prop</em>}'.
@@ -17770,202 +15185,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getInherited_Uuid();
 
 	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.InlineMarkup <em>Inline Markup</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Inline Markup</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup
-	 * @generated
-	 */
-	EClass getInlineMarkup();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getMixed <em>Mixed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Mixed</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getMixed()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EAttribute getInlineMarkup_Mixed();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getInlineMarkupGroup <em>Inline Markup Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Inline Markup Group</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getInlineMarkupGroup()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EAttribute getInlineMarkup_InlineMarkupGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getA <em>A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>A</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getA()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_A();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getInsert <em>Insert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Insert</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getInsert()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_Insert();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getBr <em>Br</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Br</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getBr()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_Br();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getCode <em>Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Code</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getCode()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_Code();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getEm <em>Em</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Em</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getEm()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_Em();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getI <em>I</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>I</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getI()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_I();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getB <em>B</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>B</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getB()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_B();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getStrong <em>Strong</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Strong</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getStrong()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_Strong();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getSub <em>Sub</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getSub()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_Sub();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getSup <em>Sup</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sup</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getSup()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_Sup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getQ <em>Q</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Q</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getQ()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_Q();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InlineMarkup#getImg <em>Img</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Img</em>'.
-	 * @see gov.nist.csrc.ns.oscal.InlineMarkup#getImg()
-	 * @see #getInlineMarkup()
-	 * @generated
-	 */
-	EReference getInlineMarkup_Img();
-
-	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupInsert <em>Markup Insert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Insert</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupInsert
-	 * @generated
-	 */
-	EClass getMarkupInsert();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupInsert#getIdRef <em>Id Ref</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Ref</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupInsert#getIdRef()
-	 * @see #getMarkupInsert()
-	 * @generated
-	 */
-	EAttribute getMarkupInsert_IdRef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupInsert#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupInsert#getType()
-	 * @see #getMarkupInsert()
-	 * @generated
-	 */
-	EAttribute getMarkupInsert_Type();
-
-	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.LeveragedAuthorization <em>Leveraged Authorization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -17976,15 +15195,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getLeveragedAuthorization();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.LeveragedAuthorization#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.LeveragedAuthorization#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.LeveragedAuthorization#getTitle()
 	 * @see #getLeveragedAuthorization()
 	 * @generated
 	 */
-	EReference getLeveragedAuthorization_Title();
+	EAttribute getLeveragedAuthorization_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.LeveragedAuthorization#getProp <em>Prop</em>}'.
@@ -18031,15 +15250,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getLeveragedAuthorization_DateAuthorized();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.LeveragedAuthorization#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.LeveragedAuthorization#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.LeveragedAuthorization#getRemarks()
 	 * @see #getLeveragedAuthorization()
 	 * @generated
 	 */
-	EReference getLeveragedAuthorization_Remarks();
+	EAttribute getLeveragedAuthorization_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.LeveragedAuthorization#getUuid <em>Uuid</em>}'.
@@ -18051,323 +15270,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getLeveragedAuthorization_Uuid();
-
-	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupListItem <em>Markup List Item</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup List Item</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem
-	 * @generated
-	 */
-	EClass getMarkupListItem();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getMixed <em>Mixed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Mixed</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getMixed()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EAttribute getMarkupListItem_Mixed();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getGroup <em>Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Group</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getGroup()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EAttribute getMarkupListItem_Group();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getA <em>A</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>A</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getA()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_A();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getInsert <em>Insert</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Insert</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getInsert()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Insert();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getBr <em>Br</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Br</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getBr()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Br();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getCode <em>Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Code</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getCode()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Code();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getEm <em>Em</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Em</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getEm()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Em();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getI <em>I</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>I</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getI()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_I();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getB <em>B</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>B</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getB()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_B();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getStrong <em>Strong</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Strong</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getStrong()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Strong();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getSub <em>Sub</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getSub()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Sub();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getSup <em>Sup</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sup</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getSup()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Sup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getQ <em>Q</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Q</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getQ()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Q();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getImg <em>Img</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Img</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getImg()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Img();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getUl <em>Ul</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ul</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getUl()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Ul();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getOl <em>Ol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ol</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getOl()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Ol();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getPre <em>Pre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pre</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getPre()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Pre();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getHr <em>Hr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Hr</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getHr()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Hr();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getBlockquote <em>Blockquote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Blockquote</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getBlockquote()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_Blockquote();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getH1 <em>H1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H1</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getH1()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_H1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getH2 <em>H2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H2</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getH2()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_H2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getH3 <em>H3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H3</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getH3()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_H3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getH4 <em>H4</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H4</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getH4()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_H4();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getH5 <em>H5</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H5</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getH5()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_H5();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getH6 <em>H6</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H6</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getH6()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_H6();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupListItem#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>P</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupListItem#getP()
-	 * @see #getMarkupListItem()
-	 * @generated
-	 */
-	EReference getMarkupListItem_P();
-
-	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupList <em>Markup List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup List</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupList
-	 * @generated
-	 */
-	EClass getMarkupList();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupList#getLi <em>Li</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Li</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupList#getLi()
-	 * @see #getMarkupList()
-	 * @generated
-	 */
-	EReference getMarkupList_Li();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.ResultLocalDefinitions <em>Result Local Definitions</em>}'.
@@ -18467,15 +15369,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAssessmentResultsLocalDefinitions_Activity();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentResultsLocalDefinitions#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentResultsLocalDefinitions#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentResultsLocalDefinitions#getRemarks()
 	 * @see #getAssessmentResultsLocalDefinitions()
 	 * @generated
 	 */
-	EReference getAssessmentResultsLocalDefinitions_Remarks();
+	EAttribute getAssessmentResultsLocalDefinitions_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.AssessmentPlanLocalDefinitions <em>Assessment Plan Local Definitions</em>}'.
@@ -18543,15 +15445,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAssessmentPlanLocalDefinitions_Activity();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentPlanLocalDefinitions#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentPlanLocalDefinitions#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentPlanLocalDefinitions#getRemarks()
 	 * @see #getAssessmentPlanLocalDefinitions()
 	 * @generated
 	 */
-	EReference getAssessmentPlanLocalDefinitions_Remarks();
+	EAttribute getAssessmentPlanLocalDefinitions_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Location <em>Location</em>}'.
@@ -18564,15 +15466,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getLocation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Location#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Location#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Location#getTitle()
 	 * @see #getLocation()
 	 * @generated
 	 */
-	EReference getLocation_Title();
+	EAttribute getLocation_Title();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Location#getAddress <em>Address</em>}'.
@@ -18641,15 +15543,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getLocation_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Location#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Location#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Location#getRemarks()
 	 * @see #getLocation()
 	 * @generated
 	 */
-	EReference getLocation_Remarks();
+	EAttribute getLocation_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Location#getUuid <em>Uuid</em>}'.
@@ -18663,191 +15565,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getLocation_Uuid();
 
 	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupLineDatatype <em>Markup Line Datatype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Line Datatype</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupLineDatatype
-	 * @generated
-	 */
-	EClass getMarkupLineDatatype();
-
-	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype <em>Markup Multiline Datatype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Multiline Datatype</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype
-	 * @generated
-	 */
-	EClass getMarkupMultilineDatatype();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getBlockElementGroup <em>Block Element Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Block Element Group</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getBlockElementGroup()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EAttribute getMarkupMultilineDatatype_BlockElementGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH1 <em>H1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H1</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH1()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_H1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH2 <em>H2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H2</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH2()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_H2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH3 <em>H3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H3</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH3()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_H3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH4 <em>H4</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H4</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH4()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_H4();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH5 <em>H5</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H5</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH5()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_H5();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH6 <em>H6</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H6</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getH6()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_H6();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getUl <em>Ul</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ul</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getUl()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_Ul();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getOl <em>Ol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ol</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getOl()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_Ol();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getPre <em>Pre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pre</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getPre()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_Pre();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getHr <em>Hr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Hr</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getHr()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_Hr();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getBlockquote <em>Blockquote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Blockquote</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getBlockquote()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_Blockquote();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>P</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getP()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_P();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getTable <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Table</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getTable()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_Table();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getImg <em>Img</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Img</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupMultilineDatatype#getImg()
-	 * @see #getMarkupMultilineDatatype()
-	 * @generated
-	 */
-	EReference getMarkupMultilineDatatype_Img();
-
-	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MitigatingFactor <em>Mitigating Factor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -18858,15 +15575,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getMitigatingFactor();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.MitigatingFactor#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MitigatingFactor#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.MitigatingFactor#getDescription()
 	 * @see #getMitigatingFactor()
 	 * @generated
 	 */
-	EReference getMitigatingFactor_Description();
+	EAttribute getMitigatingFactor_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MitigatingFactor#getProp <em>Prop</em>}'.
@@ -18934,15 +15651,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getOnDate();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.OnDate#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.OnDate#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.OnDate#getRemarks()
 	 * @see #getOnDate()
 	 * @generated
 	 */
-	EReference getOnDate_Remarks();
+	EAttribute getOnDate_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.OnDate#getDate <em>Date</em>}'.
@@ -18954,27 +15671,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getOnDate_Date();
-
-	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupOrderedList <em>Markup Ordered List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Ordered List</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupOrderedList
-	 * @generated
-	 */
-	EClass getMarkupOrderedList();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupOrderedList#getStart <em>Start</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Start</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupOrderedList#getStart()
-	 * @see #getMarkupOrderedList()
-	 * @generated
-	 */
-	EAttribute getMarkupOrderedList_Start();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.PoamItemOrigin <em>Poam Item Origin</em>}'.
@@ -19204,15 +15900,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getImportAp();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ImportAp#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImportAp#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ImportAp#getRemarks()
 	 * @see #getImportAp()
 	 * @generated
 	 */
-	EReference getImportAp_Remarks();
+	EAttribute getImportAp_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImportAp#getHref <em>Href</em>}'.
@@ -19236,26 +15932,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getResult();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Result#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Result#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Result#getTitle()
 	 * @see #getResult()
 	 * @generated
 	 */
-	EReference getResult_Title();
+	EAttribute getResult_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Result#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Result#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Result#getDescription()
 	 * @see #getResult()
 	 * @generated
 	 */
-	EReference getResult_Description();
+	EAttribute getResult_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Result#getStart <em>Start</em>}'.
@@ -19379,15 +16075,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getResult_Finding();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Result#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Result#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Result#getRemarks()
 	 * @see #getResult()
 	 * @generated
 	 */
-	EReference getResult_Remarks();
+	EAttribute getResult_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Result#getUuid <em>Uuid</em>}'.
@@ -19411,26 +16107,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getActivity();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Activity#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Activity#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Activity#getTitle()
 	 * @see #getActivity()
 	 * @generated
 	 */
-	EReference getActivity_Title();
+	EAttribute getActivity_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Activity#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Activity#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Activity#getDescription()
 	 * @see #getActivity()
 	 * @generated
 	 */
-	EReference getActivity_Description();
+	EAttribute getActivity_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Activity#getProp <em>Prop</em>}'.
@@ -19488,15 +16184,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getActivity_ResponsibleRole();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Activity#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Activity#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Activity#getRemarks()
 	 * @see #getActivity()
 	 * @generated
 	 */
-	EReference getActivity_Remarks();
+	EAttribute getActivity_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Activity#getUuid <em>Uuid</em>}'.
@@ -19552,15 +16248,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAssessmentMethod();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentMethod#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentMethod#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentMethod#getDescription()
 	 * @see #getAssessmentMethod()
 	 * @generated
 	 */
-	EReference getAssessmentMethod_Description();
+	EAttribute getAssessmentMethod_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentMethod#getProp <em>Prop</em>}'.
@@ -19596,15 +16292,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAssessmentMethod_Part();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentMethod#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentMethod#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentMethod#getRemarks()
 	 * @see #getAssessmentMethod()
 	 * @generated
 	 */
-	EReference getAssessmentMethod_Remarks();
+	EAttribute getAssessmentMethod_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentMethod#getUuid <em>Uuid</em>}'.
@@ -19628,15 +16324,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAssessmentPart();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getTitle()
 	 * @see #getAssessmentPart()
 	 * @generated
 	 */
-	EReference getAssessmentPart_Title();
+	EAttribute getAssessmentPart_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getProp <em>Prop</em>}'.
@@ -19650,169 +16346,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAssessmentPart_Prop();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getBlockElementGroup <em>Block Element Group</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getProse <em>Prose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Block Element Group</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getBlockElementGroup()
+	 * @return the meta object for the attribute '<em>Prose</em>'.
+	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getProse()
 	 * @see #getAssessmentPart()
 	 * @generated
 	 */
-	EAttribute getAssessmentPart_BlockElementGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH1 <em>H1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H1</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getH1()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_H1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH2 <em>H2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H2</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getH2()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_H2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH3 <em>H3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H3</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getH3()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_H3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH4 <em>H4</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H4</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getH4()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_H4();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH5 <em>H5</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H5</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getH5()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_H5();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH6 <em>H6</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H6</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getH6()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_H6();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getUl <em>Ul</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ul</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getUl()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_Ul();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getOl <em>Ol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ol</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getOl()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_Ol();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getPre <em>Pre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pre</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getPre()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_Pre();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getHr <em>Hr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Hr</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getHr()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_Hr();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getBlockquote <em>Blockquote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Blockquote</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getBlockquote()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_Blockquote();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>P</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getP()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_P();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getTable <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Table</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getTable()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_Table();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getImg <em>Img</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Img</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AssessmentPart#getImg()
-	 * @see #getAssessmentPart()
-	 * @generated
-	 */
-	EReference getAssessmentPart_Img();
+	EAttribute getAssessmentPart_Prose();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getPart <em>Part</em>}'.
@@ -19891,15 +16433,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAssessmentSubject();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentSubject#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentSubject#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentSubject#getDescription()
 	 * @see #getAssessmentSubject()
 	 * @generated
 	 */
-	EReference getAssessmentSubject_Description();
+	EAttribute getAssessmentSubject_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentSubject#getProp <em>Prop</em>}'.
@@ -19957,15 +16499,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAssessmentSubject_ExcludeSubject();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentSubject#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentSubject#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentSubject#getRemarks()
 	 * @see #getAssessmentSubject()
 	 * @generated
 	 */
-	EReference getAssessmentSubject_Remarks();
+	EAttribute getAssessmentSubject_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentSubject#getType <em>Type</em>}'.
@@ -19989,15 +16531,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAssessmentSubjectPlaceholder();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentSubjectPlaceholder#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentSubjectPlaceholder#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentSubjectPlaceholder#getDescription()
 	 * @see #getAssessmentSubjectPlaceholder()
 	 * @generated
 	 */
-	EReference getAssessmentSubjectPlaceholder_Description();
+	EAttribute getAssessmentSubjectPlaceholder_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AssessmentSubjectPlaceholder#getSource <em>Source</em>}'.
@@ -20033,15 +16575,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAssessmentSubjectPlaceholder_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssessmentSubjectPlaceholder#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentSubjectPlaceholder#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssessmentSubjectPlaceholder#getRemarks()
 	 * @see #getAssessmentSubjectPlaceholder()
 	 * @generated
 	 */
-	EReference getAssessmentSubjectPlaceholder_Remarks();
+	EAttribute getAssessmentSubjectPlaceholder_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssessmentSubjectPlaceholder#getUuid <em>Uuid</em>}'.
@@ -20065,15 +16607,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAssociatedRisk();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AssociatedRisk#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssociatedRisk#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AssociatedRisk#getRemarks()
 	 * @see #getAssociatedRisk()
 	 * @generated
 	 */
-	EReference getAssociatedRisk_Remarks();
+	EAttribute getAssociatedRisk_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AssociatedRisk#getRiskUuid <em>Risk Uuid</em>}'.
@@ -20151,26 +16693,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getFinding();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Finding#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Finding#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Finding#getTitle()
 	 * @see #getFinding()
 	 * @generated
 	 */
-	EReference getFinding_Title();
+	EAttribute getFinding_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Finding#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Finding#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Finding#getDescription()
 	 * @see #getFinding()
 	 * @generated
 	 */
-	EReference getFinding_Description();
+	EAttribute getFinding_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Finding#getProp <em>Prop</em>}'.
@@ -20250,15 +16792,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getFinding_AssociatedRisk();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Finding#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Finding#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Finding#getRemarks()
 	 * @see #getFinding()
 	 * @generated
 	 */
-	EReference getFinding_Remarks();
+	EAttribute getFinding_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Finding#getUuid <em>Uuid</em>}'.
@@ -20282,26 +16824,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getFindingTarget();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.FindingTarget#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.FindingTarget#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.FindingTarget#getTitle()
 	 * @see #getFindingTarget()
 	 * @generated
 	 */
-	EReference getFindingTarget_Title();
+	EAttribute getFindingTarget_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.FindingTarget#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.FindingTarget#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.FindingTarget#getDescription()
 	 * @see #getFindingTarget()
 	 * @generated
 	 */
-	EReference getFindingTarget_Description();
+	EAttribute getFindingTarget_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.FindingTarget#getProp <em>Prop</em>}'.
@@ -20348,15 +16890,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getFindingTarget_ImplementationStatus();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.FindingTarget#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.FindingTarget#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.FindingTarget#getRemarks()
 	 * @see #getFindingTarget()
 	 * @generated
 	 */
-	EReference getFindingTarget_Remarks();
+	EAttribute getFindingTarget_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.FindingTarget#getTargetId <em>Target Id</em>}'.
@@ -20391,15 +16933,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getImportSsp();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ImportSsp#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImportSsp#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ImportSsp#getRemarks()
 	 * @see #getImportSsp()
 	 * @generated
 	 */
-	EReference getImportSsp_Remarks();
+	EAttribute getImportSsp_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImportSsp#getHref <em>Href</em>}'.
@@ -20423,15 +16965,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getLocalObjective();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.LocalObjective#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.LocalObjective#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.LocalObjective#getDescription()
 	 * @see #getLocalObjective()
 	 * @generated
 	 */
-	EReference getLocalObjective_Description();
+	EAttribute getLocalObjective_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.LocalObjective#getProp <em>Prop</em>}'.
@@ -20467,15 +17009,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getLocalObjective_Part();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.LocalObjective#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.LocalObjective#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.LocalObjective#getRemarks()
 	 * @see #getLocalObjective()
 	 * @generated
 	 */
-	EReference getLocalObjective_Remarks();
+	EAttribute getLocalObjective_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.LocalObjective#getControlId <em>Control Id</em>}'.
@@ -20499,15 +17041,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getLoggedBy();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.LoggedBy#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.LoggedBy#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.LoggedBy#getRemarks()
 	 * @see #getLoggedBy()
 	 * @generated
 	 */
-	EReference getLoggedBy_Remarks();
+	EAttribute getLoggedBy_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.LoggedBy#getPartyUuid <em>Party Uuid</em>}'.
@@ -20542,26 +17084,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getObservation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Observation#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Observation#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Observation#getTitle()
 	 * @see #getObservation()
 	 * @generated
 	 */
-	EReference getObservation_Title();
+	EAttribute getObservation_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Observation#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Observation#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Observation#getDescription()
 	 * @see #getObservation()
 	 * @generated
 	 */
-	EReference getObservation_Description();
+	EAttribute getObservation_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Observation#getProp <em>Prop</em>}'.
@@ -20663,15 +17205,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getObservation_Expires();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Observation#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Observation#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Observation#getRemarks()
 	 * @see #getObservation()
 	 * @generated
 	 */
-	EReference getObservation_Remarks();
+	EAttribute getObservation_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Observation#getUuid <em>Uuid</em>}'.
@@ -20792,15 +17334,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getRelatedObservation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RelatedObservation#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelatedObservation#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RelatedObservation#getRemarks()
 	 * @see #getRelatedObservation()
 	 * @generated
 	 */
-	EReference getRelatedObservation_Remarks();
+	EAttribute getRelatedObservation_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelatedObservation#getObservationUuid <em>Observation Uuid</em>}'.
@@ -20879,15 +17421,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getRelatedTask_IdentifiedSubject();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RelatedTask#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelatedTask#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RelatedTask#getRemarks()
 	 * @see #getRelatedTask()
 	 * @generated
 	 */
-	EReference getRelatedTask_Remarks();
+	EAttribute getRelatedTask_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelatedTask#getTaskUuid <em>Task Uuid</em>}'.
@@ -20911,26 +17453,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getResponse();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Response#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Response#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Response#getTitle()
 	 * @see #getResponse()
 	 * @generated
 	 */
-	EReference getResponse_Title();
+	EAttribute getResponse_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Response#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Response#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Response#getDescription()
 	 * @see #getResponse()
 	 * @generated
 	 */
-	EReference getResponse_Description();
+	EAttribute getResponse_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Response#getProp <em>Prop</em>}'.
@@ -20988,15 +17530,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getResponse_Task();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Response#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Response#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Response#getRemarks()
 	 * @see #getResponse()
 	 * @generated
 	 */
-	EReference getResponse_Remarks();
+	EAttribute getResponse_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Response#getLifecycle <em>Lifecycle</em>}'.
@@ -21031,15 +17573,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getReviewedControls();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ReviewedControls#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ReviewedControls#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ReviewedControls#getDescription()
 	 * @see #getReviewedControls()
 	 * @generated
 	 */
-	EReference getReviewedControls_Description();
+	EAttribute getReviewedControls_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ReviewedControls#getProp <em>Prop</em>}'.
@@ -21086,15 +17628,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getReviewedControls_ControlObjectiveSelection();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ReviewedControls#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ReviewedControls#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ReviewedControls#getRemarks()
 	 * @see #getReviewedControls()
 	 * @generated
 	 */
-	EReference getReviewedControls_Remarks();
+	EAttribute getReviewedControls_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Risk <em>Risk</em>}'.
@@ -21107,37 +17649,37 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getRisk();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Risk#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Risk#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Risk#getTitle()
 	 * @see #getRisk()
 	 * @generated
 	 */
-	EReference getRisk_Title();
+	EAttribute getRisk_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Risk#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Risk#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Risk#getDescription()
 	 * @see #getRisk()
 	 * @generated
 	 */
-	EReference getRisk_Description();
+	EAttribute getRisk_Description();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Risk#getStatement <em>Statement</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Risk#getStatement <em>Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Statement</em>'.
+	 * @return the meta object for the attribute '<em>Statement</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Risk#getStatement()
 	 * @see #getRisk()
 	 * @generated
 	 */
-	EReference getRisk_Statement();
+	EAttribute getRisk_Statement();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Risk#getProp <em>Prop</em>}'.
@@ -21314,15 +17856,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSelectObjectiveById();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SelectObjectiveById#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SelectObjectiveById#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SelectObjectiveById#getRemarks()
 	 * @see #getSelectObjectiveById()
 	 * @generated
 	 */
-	EReference getSelectObjectiveById_Remarks();
+	EAttribute getSelectObjectiveById_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SelectObjectiveById#getObjectiveId <em>Objective Id</em>}'.
@@ -21368,15 +17910,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getSelectSubjectById_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SelectSubjectById#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SelectSubjectById#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SelectSubjectById#getRemarks()
 	 * @see #getSelectSubjectById()
 	 * @generated
 	 */
-	EReference getSelectSubjectById_Remarks();
+	EAttribute getSelectSubjectById_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SelectSubjectById#getSubjectUuid <em>Subject Uuid</em>}'.
@@ -21411,15 +17953,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSubjectReference();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SubjectReference#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SubjectReference#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SubjectReference#getTitle()
 	 * @see #getSubjectReference()
 	 * @generated
 	 */
-	EReference getSubjectReference_Title();
+	EAttribute getSubjectReference_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.SubjectReference#getProp <em>Prop</em>}'.
@@ -21444,15 +17986,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getSubjectReference_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SubjectReference#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SubjectReference#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SubjectReference#getRemarks()
 	 * @see #getSubjectReference()
 	 * @generated
 	 */
-	EReference getSubjectReference_Remarks();
+	EAttribute getSubjectReference_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SubjectReference#getSubjectUuid <em>Subject Uuid</em>}'.
@@ -21487,26 +18029,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getTask();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Task#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Task#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Task#getTitle()
 	 * @see #getTask()
 	 * @generated
 	 */
-	EReference getTask_Title();
+	EAttribute getTask_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Task#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Task#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Task#getDescription()
 	 * @see #getTask()
 	 * @generated
 	 */
-	EReference getTask_Description();
+	EAttribute getTask_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Task#getProp <em>Prop</em>}'.
@@ -21597,15 +18139,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getTask_ResponsibleRole();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Task#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Task#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Task#getRemarks()
 	 * @see #getTask()
 	 * @generated
 	 */
-	EReference getTask_Remarks();
+	EAttribute getTask_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Task#getType <em>Type</em>}'.
@@ -21759,15 +18301,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getControl();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Control#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Control#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Control#getTitle()
 	 * @see #getControl()
 	 * @generated
 	 */
-	EReference getControl_Title();
+	EAttribute getControl_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Control#getParam <em>Param</em>}'.
@@ -21857,15 +18399,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getCatalogGroup();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.CatalogGroup#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.CatalogGroup#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.CatalogGroup#getTitle()
 	 * @see #getCatalogGroup()
 	 * @generated
 	 */
-	EReference getCatalogGroup_Title();
+	EAttribute getCatalogGroup_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.CatalogGroup#getParam <em>Param</em>}'.
@@ -21966,15 +18508,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getCapability();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Capability#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Capability#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Capability#getDescription()
 	 * @see #getCapability()
 	 * @generated
 	 */
-	EReference getCapability_Description();
+	EAttribute getCapability_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Capability#getProp <em>Prop</em>}'.
@@ -22021,15 +18563,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getCapability_ControlImplementation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Capability#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Capability#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Capability#getRemarks()
 	 * @see #getCapability()
 	 * @generated
 	 */
-	EReference getCapability_Remarks();
+	EAttribute getCapability_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Capability#getName <em>Name</em>}'.
@@ -22140,15 +18682,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getComponentControlImplementation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ComponentControlImplementation#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ComponentControlImplementation#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ComponentControlImplementation#getDescription()
 	 * @see #getComponentControlImplementation()
 	 * @generated
 	 */
-	EReference getComponentControlImplementation_Description();
+	EAttribute getComponentControlImplementation_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ComponentControlImplementation#getProp <em>Prop</em>}'.
@@ -22227,37 +18769,37 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getDefinedComponent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.DefinedComponent#getTitle()
 	 * @see #getDefinedComponent()
 	 * @generated
 	 */
-	EReference getDefinedComponent_Title();
+	EAttribute getDefinedComponent_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.DefinedComponent#getDescription()
 	 * @see #getDefinedComponent()
 	 * @generated
 	 */
-	EReference getDefinedComponent_Description();
+	EAttribute getDefinedComponent_Description();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getPurpose <em>Purpose</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getPurpose <em>Purpose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Purpose</em>'.
+	 * @return the meta object for the attribute '<em>Purpose</em>'.
 	 * @see gov.nist.csrc.ns.oscal.DefinedComponent#getPurpose()
 	 * @see #getDefinedComponent()
 	 * @generated
 	 */
-	EReference getDefinedComponent_Purpose();
+	EAttribute getDefinedComponent_Purpose();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getProp <em>Prop</em>}'.
@@ -22315,15 +18857,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getDefinedComponent_ControlImplementation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.DefinedComponent#getRemarks()
 	 * @see #getDefinedComponent()
 	 * @generated
 	 */
-	EReference getDefinedComponent_Remarks();
+	EAttribute getDefinedComponent_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.DefinedComponent#getType <em>Type</em>}'.
@@ -22358,15 +18900,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getComponentImplementedRequirement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ComponentImplementedRequirement#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ComponentImplementedRequirement#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ComponentImplementedRequirement#getDescription()
 	 * @see #getComponentImplementedRequirement()
 	 * @generated
 	 */
-	EReference getComponentImplementedRequirement_Description();
+	EAttribute getComponentImplementedRequirement_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ComponentImplementedRequirement#getProp <em>Prop</em>}'.
@@ -22424,15 +18966,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getComponentImplementedRequirement_Statement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ComponentImplementedRequirement#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ComponentImplementedRequirement#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ComponentImplementedRequirement#getRemarks()
 	 * @see #getComponentImplementedRequirement()
 	 * @generated
 	 */
-	EReference getComponentImplementedRequirement_Remarks();
+	EAttribute getComponentImplementedRequirement_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ComponentImplementedRequirement#getControlId <em>Control Id</em>}'.
@@ -22467,15 +19009,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getImportComponentDefinition();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ImportComponentDefinition#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImportComponentDefinition#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ImportComponentDefinition#getRemarks()
 	 * @see #getImportComponentDefinition()
 	 * @generated
 	 */
-	EReference getImportComponentDefinition_Remarks();
+	EAttribute getImportComponentDefinition_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImportComponentDefinition#getHref <em>Href</em>}'.
@@ -22499,15 +19041,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getIncorporatesComponent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.IncorporatesComponent#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.IncorporatesComponent#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.IncorporatesComponent#getDescription()
 	 * @see #getIncorporatesComponent()
 	 * @generated
 	 */
-	EReference getIncorporatesComponent_Description();
+	EAttribute getIncorporatesComponent_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.IncorporatesComponent#getComponentUuid <em>Component Uuid</em>}'.
@@ -22531,15 +19073,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getComponentStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ComponentStatement#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ComponentStatement#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ComponentStatement#getDescription()
 	 * @see #getComponentStatement()
 	 * @generated
 	 */
-	EReference getComponentStatement_Description();
+	EAttribute getComponentStatement_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ComponentStatement#getProp <em>Prop</em>}'.
@@ -22575,15 +19117,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getComponentStatement_ResponsibleRole();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ComponentStatement#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ComponentStatement#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ComponentStatement#getRemarks()
 	 * @see #getComponentStatement()
 	 * @generated
 	 */
-	EReference getComponentStatement_Remarks();
+	EAttribute getComponentStatement_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ComponentStatement#getStatementId <em>Statement Id</em>}'.
@@ -22628,15 +19170,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getMatching();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Matching#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Matching#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Matching#getRemarks()
 	 * @see #getMatching()
 	 * @generated
 	 */
-	EReference getMatching_Remarks();
+	EAttribute getMatching_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Matching#getPattern <em>Pattern</em>}'.
@@ -22682,26 +19224,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getParameter_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Parameter#getLabel <em>Label</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Parameter#getLabel <em>Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Label</em>'.
+	 * @return the meta object for the attribute '<em>Label</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Parameter#getLabel()
 	 * @see #getParameter()
 	 * @generated
 	 */
-	EReference getParameter_Label();
+	EAttribute getParameter_Label();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Parameter#getUsage <em>Usage</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Parameter#getUsage <em>Usage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Usage</em>'.
+	 * @return the meta object for the attribute '<em>Usage</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Parameter#getUsage()
 	 * @see #getParameter()
 	 * @generated
 	 */
-	EReference getParameter_Usage();
+	EAttribute getParameter_Usage();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Parameter#getConstraint <em>Constraint</em>}'.
@@ -22748,15 +19290,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getParameter_Select();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Parameter#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Parameter#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Parameter#getRemarks()
 	 * @see #getParameter()
 	 * @generated
 	 */
-	EReference getParameter_Remarks();
+	EAttribute getParameter_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Parameter#getClass_ <em>Class</em>}'.
@@ -22802,15 +19344,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getParameterConstraint();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ParameterConstraint#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ParameterConstraint#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ParameterConstraint#getDescription()
 	 * @see #getParameterConstraint()
 	 * @generated
 	 */
-	EReference getParameterConstraint_Description();
+	EAttribute getParameterConstraint_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterConstraint#getTest <em>Test</em>}'.
@@ -22834,169 +19376,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getParameterGuideline();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getBlockElementGroup <em>Block Element Group</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getProse <em>Prose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Block Element Group</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getBlockElementGroup()
+	 * @return the meta object for the attribute '<em>Prose</em>'.
+	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getProse()
 	 * @see #getParameterGuideline()
 	 * @generated
 	 */
-	EAttribute getParameterGuideline_BlockElementGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getH1 <em>H1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H1</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getH1()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_H1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getH2 <em>H2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H2</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getH2()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_H2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getH3 <em>H3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H3</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getH3()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_H3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getH4 <em>H4</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H4</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getH4()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_H4();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getH5 <em>H5</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H5</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getH5()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_H5();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getH6 <em>H6</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H6</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getH6()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_H6();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getUl <em>Ul</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ul</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getUl()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_Ul();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getOl <em>Ol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ol</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getOl()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_Ol();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getPre <em>Pre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pre</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getPre()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_Pre();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getHr <em>Hr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Hr</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getHr()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_Hr();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getBlockquote <em>Blockquote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Blockquote</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getBlockquote()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_Blockquote();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>P</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getP()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_P();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getTable <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Table</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getTable()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_Table();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterGuideline#getImg <em>Img</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Img</em>'.
-	 * @see gov.nist.csrc.ns.oscal.ParameterGuideline#getImg()
-	 * @see #getParameterGuideline()
-	 * @generated
-	 */
-	EReference getParameterGuideline_Img();
+	EAttribute getParameterGuideline_Prose();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.ParameterSelection <em>Parameter Selection</em>}'.
@@ -23009,15 +19397,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getParameterSelection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ParameterSelection#getChoice <em>Choice</em>}'.
+	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.ParameterSelection#getChoice <em>Choice</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Choice</em>'.
+	 * @return the meta object for the attribute list '<em>Choice</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ParameterSelection#getChoice()
 	 * @see #getParameterSelection()
 	 * @generated
 	 */
-	EReference getParameterSelection_Choice();
+	EAttribute getParameterSelection_Choice();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ParameterSelection#getHowMany <em>How Many</em>}'.
@@ -23041,15 +19429,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getPart();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Part#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Part#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Part#getTitle()
 	 * @see #getPart()
 	 * @generated
 	 */
-	EReference getPart_Title();
+	EAttribute getPart_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getProp <em>Prop</em>}'.
@@ -23063,169 +19451,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getPart_Prop();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.Part#getBlockElementGroup <em>Block Element Group</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Part#getProse <em>Prose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Block Element Group</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getBlockElementGroup()
+	 * @return the meta object for the attribute '<em>Prose</em>'.
+	 * @see gov.nist.csrc.ns.oscal.Part#getProse()
 	 * @see #getPart()
 	 * @generated
 	 */
-	EAttribute getPart_BlockElementGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getH1 <em>H1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H1</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getH1()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_H1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getH2 <em>H2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H2</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getH2()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_H2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getH3 <em>H3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H3</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getH3()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_H3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getH4 <em>H4</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H4</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getH4()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_H4();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getH5 <em>H5</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H5</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getH5()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_H5();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getH6 <em>H6</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>H6</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getH6()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_H6();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getUl <em>Ul</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ul</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getUl()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_Ul();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getOl <em>Ol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Ol</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getOl()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_Ol();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getPre <em>Pre</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pre</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getPre()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_Pre();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getHr <em>Hr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Hr</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getHr()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_Hr();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getBlockquote <em>Blockquote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Blockquote</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getBlockquote()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_Blockquote();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getP <em>P</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>P</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getP()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_P();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getTable <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Table</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getTable()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_Table();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getImg <em>Img</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Img</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Part#getImg()
-	 * @see #getPart()
-	 * @generated
-	 */
-	EReference getPart_Img();
+	EAttribute getPart_Prose();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Part#getPart <em>Part</em>}'.
@@ -23347,26 +19581,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAuthorizedPrivilege();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getTitle()
 	 * @see #getAuthorizedPrivilege()
 	 * @generated
 	 */
-	EReference getAuthorizedPrivilege_Title();
+	EAttribute getAuthorizedPrivilege_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getDescription()
 	 * @see #getAuthorizedPrivilege()
 	 * @generated
 	 */
-	EReference getAuthorizedPrivilege_Description();
+	EAttribute getAuthorizedPrivilege_Description();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.AuthorizedPrivilege#getFunctionPerformed <em>Function Performed</em>}'.
@@ -23390,15 +19624,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getImplementationStatus();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ImplementationStatus#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImplementationStatus#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ImplementationStatus#getRemarks()
 	 * @see #getImplementationStatus()
 	 * @generated
 	 */
-	EReference getImplementationStatus_Remarks();
+	EAttribute getImplementationStatus_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImplementationStatus#getState <em>State</em>}'.
@@ -23422,15 +19656,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getInventoryItem();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.InventoryItem#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.InventoryItem#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.InventoryItem#getDescription()
 	 * @see #getInventoryItem()
 	 * @generated
 	 */
-	EReference getInventoryItem_Description();
+	EAttribute getInventoryItem_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.InventoryItem#getProp <em>Prop</em>}'.
@@ -23477,15 +19711,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getInventoryItem_ImplementedComponent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.InventoryItem#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.InventoryItem#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.InventoryItem#getRemarks()
 	 * @see #getInventoryItem()
 	 * @generated
 	 */
-	EReference getInventoryItem_Remarks();
+	EAttribute getInventoryItem_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.InventoryItem#getUuid <em>Uuid</em>}'.
@@ -23509,15 +19743,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getPortRange();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.PortRange#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.PortRange#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.PortRange#getRemarks()
 	 * @see #getPortRange()
 	 * @generated
 	 */
-	EReference getPortRange_Remarks();
+	EAttribute getPortRange_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.PortRange#getEnd <em>End</em>}'.
@@ -23563,15 +19797,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getProtocol();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Protocol#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Protocol#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Protocol#getTitle()
 	 * @see #getProtocol()
 	 * @generated
 	 */
-	EReference getProtocol_Title();
+	EAttribute getProtocol_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Protocol#getPortRange <em>Port Range</em>}'.
@@ -23628,15 +19862,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getSetParameter_Value();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SetParameter#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SetParameter#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SetParameter#getRemarks()
 	 * @see #getSetParameter()
 	 * @generated
 	 */
-	EReference getSetParameter_Remarks();
+	EAttribute getSetParameter_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SetParameter#getParamId <em>Param Id</em>}'.
@@ -23660,37 +19894,37 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSystemComponent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemComponent#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemComponent#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemComponent#getTitle()
 	 * @see #getSystemComponent()
 	 * @generated
 	 */
-	EReference getSystemComponent_Title();
+	EAttribute getSystemComponent_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemComponent#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemComponent#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemComponent#getDescription()
 	 * @see #getSystemComponent()
 	 * @generated
 	 */
-	EReference getSystemComponent_Description();
+	EAttribute getSystemComponent_Description();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemComponent#getPurpose <em>Purpose</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemComponent#getPurpose <em>Purpose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Purpose</em>'.
+	 * @return the meta object for the attribute '<em>Purpose</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemComponent#getPurpose()
 	 * @see #getSystemComponent()
 	 * @generated
 	 */
-	EReference getSystemComponent_Purpose();
+	EAttribute getSystemComponent_Purpose();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.SystemComponent#getProp <em>Prop</em>}'.
@@ -23748,15 +19982,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getSystemComponent_Protocol();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemComponent#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemComponent#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemComponent#getRemarks()
 	 * @see #getSystemComponent()
 	 * @generated
 	 */
-	EReference getSystemComponent_Remarks();
+	EAttribute getSystemComponent_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemComponent#getType <em>Type</em>}'.
@@ -23823,15 +20057,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSystemUser();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemUser#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemUser#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemUser#getTitle()
 	 * @see #getSystemUser()
 	 * @generated
 	 */
-	EReference getSystemUser_Title();
+	EAttribute getSystemUser_Title();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemUser#getShortName <em>Short Name</em>}'.
@@ -23845,15 +20079,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getSystemUser_ShortName();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemUser#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemUser#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemUser#getDescription()
 	 * @see #getSystemUser()
 	 * @generated
 	 */
-	EReference getSystemUser_Description();
+	EAttribute getSystemUser_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.SystemUser#getProp <em>Prop</em>}'.
@@ -23900,15 +20134,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getSystemUser_AuthorizedPrivilege();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemUser#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemUser#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemUser#getRemarks()
 	 * @see #getSystemUser()
 	 * @generated
 	 */
-	EReference getSystemUser_Remarks();
+	EAttribute getSystemUser_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemUser#getUuid <em>Uuid</em>}'.
@@ -24116,15 +20350,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getMapEntry_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.MapEntry#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MapEntry#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.MapEntry#getRemarks()
 	 * @see #getMapEntry()
 	 * @generated
 	 */
-	EReference getMapEntry_Remarks();
+	EAttribute getMapEntry_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MapEntry#getMatchingRationale <em>Matching Rationale</em>}'.
@@ -24225,26 +20459,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getMapping_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Mapping#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Mapping#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Mapping#getRemarks()
 	 * @see #getMapping()
 	 * @generated
 	 */
-	EReference getMapping_Remarks();
+	EAttribute getMapping_Remarks();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Mapping#getMappingDescription <em>Mapping Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Mapping#getMappingDescription <em>Mapping Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Mapping Description</em>'.
+	 * @return the meta object for the attribute '<em>Mapping Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Mapping#getMappingDescription()
 	 * @see #getMapping()
 	 * @generated
 	 */
-	EReference getMapping_MappingDescription();
+	EAttribute getMapping_MappingDescription();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Mapping#getSourceGapSummary <em>Source Gap Summary</em>}'.
@@ -24367,15 +20601,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getMappingItem_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.MappingItem#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MappingItem#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.MappingItem#getRemarks()
 	 * @see #getMappingItem()
 	 * @generated
 	 */
-	EReference getMappingItem_Remarks();
+	EAttribute getMappingItem_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MappingItem#getIdRef <em>Id Ref</em>}'.
@@ -24432,15 +20666,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getMappingProvenance_Coverage();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getMappingDescription <em>Mapping Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getMappingDescription <em>Mapping Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Mapping Description</em>'.
+	 * @return the meta object for the attribute '<em>Mapping Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.MappingProvenance#getMappingDescription()
 	 * @see #getMappingProvenance()
 	 * @generated
 	 */
-	EReference getMappingProvenance_MappingDescription();
+	EAttribute getMappingProvenance_MappingDescription();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getResponsibleParty <em>Responsible Party</em>}'.
@@ -24476,15 +20710,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getMappingProvenance_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.MappingProvenance#getRemarks()
 	 * @see #getMappingProvenance()
 	 * @generated
 	 */
-	EReference getMappingProvenance_Remarks();
+	EAttribute getMappingProvenance_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MappingProvenance#getMatchingRationale <em>Matching Rationale</em>}'.
@@ -24552,15 +20786,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getMappingResourceReference_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.MappingResourceReference#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MappingResourceReference#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.MappingResourceReference#getRemarks()
 	 * @see #getMappingResourceReference()
 	 * @generated
 	 */
-	EReference getMappingResourceReference_Remarks();
+	EAttribute getMappingResourceReference_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MappingResourceReference#getHref <em>Href</em>}'.
@@ -24606,26 +20840,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getQualifierItem();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.QualifierItem#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.QualifierItem#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.QualifierItem#getDescription()
 	 * @see #getQualifierItem()
 	 * @generated
 	 */
-	EReference getQualifierItem_Description();
+	EAttribute getQualifierItem_Description();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.QualifierItem#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.QualifierItem#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.QualifierItem#getRemarks()
 	 * @see #getQualifierItem()
 	 * @generated
 	 */
-	EReference getQualifierItem_Remarks();
+	EAttribute getQualifierItem_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.QualifierItem#getCategory <em>Category</em>}'.
@@ -24769,15 +21003,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAction_ResponsibleParty();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Action#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Action#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Action#getRemarks()
 	 * @see #getAction()
 	 * @generated
 	 */
-	EReference getAction_Remarks();
+	EAttribute getAction_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Action#getDate <em>Date</em>}'.
@@ -24995,15 +21229,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getLink();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Link#getText <em>Text</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Link#getText <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Text</em>'.
+	 * @return the meta object for the attribute '<em>Text</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Link#getText()
 	 * @see #getLink()
 	 * @generated
 	 */
-	EReference getLink_Text();
+	EAttribute getLink_Text();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Link#getHref <em>Href</em>}'.
@@ -25060,15 +21294,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getMetadata();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Metadata#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Metadata#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Metadata#getTitle()
 	 * @see #getMetadata()
 	 * @generated
 	 */
-	EReference getMetadata_Title();
+	EAttribute getMetadata_Title();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Metadata#getPublished <em>Published</em>}'.
@@ -25115,15 +21349,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getMetadata_OscalVersion();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Metadata#getRevisions <em>Revisions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Metadata#getRevision <em>Revision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Revisions</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Metadata#getRevisions()
+	 * @return the meta object for the containment reference list '<em>Revision</em>'.
+	 * @see gov.nist.csrc.ns.oscal.Metadata#getRevision()
 	 * @see #getMetadata()
 	 * @generated
 	 */
-	EReference getMetadata_Revisions();
+	EReference getMetadata_Revision();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Metadata#getDocumentId <em>Document Id</em>}'.
@@ -25214,15 +21448,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getMetadata_Action();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Metadata#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Metadata#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Metadata#getRemarks()
 	 * @see #getMetadata()
 	 * @generated
 	 */
-	EReference getMetadata_Remarks();
+	EAttribute getMetadata_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Property <em>Property</em>}'.
@@ -25235,15 +21469,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getProperty();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Property#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Property#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Property#getRemarks()
 	 * @see #getProperty()
 	 * @generated
 	 */
-	EReference getProperty_Remarks();
+	EAttribute getProperty_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Property#getClass_ <em>Class</em>}'.
@@ -25355,15 +21589,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getResponsibleParty_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ResponsibleParty#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ResponsibleParty#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ResponsibleParty#getRemarks()
 	 * @see #getResponsibleParty()
 	 * @generated
 	 */
-	EReference getResponsibleParty_Remarks();
+	EAttribute getResponsibleParty_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ResponsibleParty#getRoleId <em>Role Id</em>}'.
@@ -25420,15 +21654,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getResponsibleRole_PartyUuid();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ResponsibleRole#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ResponsibleRole#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ResponsibleRole#getRemarks()
 	 * @see #getResponsibleRole()
 	 * @generated
 	 */
-	EReference getResponsibleRole_Remarks();
+	EAttribute getResponsibleRole_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ResponsibleRole#getRoleId <em>Role Id</em>}'.
@@ -25517,15 +21751,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getPoamLocalDefinitions_AssessmentAssets();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.PoamLocalDefinitions#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.PoamLocalDefinitions#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.PoamLocalDefinitions#getRemarks()
 	 * @see #getPoamLocalDefinitions()
 	 * @generated
 	 */
-	EReference getPoamLocalDefinitions_Remarks();
+	EAttribute getPoamLocalDefinitions_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.PlanOfActionAndMilestones <em>Plan Of Action And Milestones</em>}'.
@@ -25658,26 +21892,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getPoamItem();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.PoamItem#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.PoamItem#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.PoamItem#getTitle()
 	 * @see #getPoamItem()
 	 * @generated
 	 */
-	EReference getPoamItem_Title();
+	EAttribute getPoamItem_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.PoamItem#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.PoamItem#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.PoamItem#getDescription()
 	 * @see #getPoamItem()
 	 * @generated
 	 */
-	EReference getPoamItem_Description();
+	EAttribute getPoamItem_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.PoamItem#getProp <em>Prop</em>}'.
@@ -25746,15 +21980,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getPoamItem_AssociatedRisk();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.PoamItem#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.PoamItem#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.PoamItem#getRemarks()
 	 * @see #getPoamItem()
 	 * @generated
 	 */
-	EReference getPoamItem_Remarks();
+	EAttribute getPoamItem_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.PoamItem#getUuid <em>Uuid</em>}'.
@@ -25778,15 +22012,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getProfileGroup();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ProfileGroup#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ProfileGroup#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ProfileGroup#getTitle()
 	 * @see #getProfileGroup()
 	 * @generated
 	 */
-	EReference getProfileGroup_Title();
+	EAttribute getProfileGroup_Title();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ProfileGroup#getParam <em>Param</em>}'.
@@ -26157,15 +22391,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getAuthorizationBoundary();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AuthorizationBoundary#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AuthorizationBoundary#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AuthorizationBoundary#getDescription()
 	 * @see #getAuthorizationBoundary()
 	 * @generated
 	 */
-	EReference getAuthorizationBoundary_Description();
+	EAttribute getAuthorizationBoundary_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.AuthorizationBoundary#getProp <em>Prop</em>}'.
@@ -26201,15 +22435,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getAuthorizationBoundary_Diagram();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.AuthorizationBoundary#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.AuthorizationBoundary#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.AuthorizationBoundary#getRemarks()
 	 * @see #getAuthorizationBoundary()
 	 * @generated
 	 */
-	EReference getAuthorizationBoundary_Remarks();
+	EAttribute getAuthorizationBoundary_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.ByComponent <em>By Component</em>}'.
@@ -26222,15 +22456,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getByComponent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ByComponent#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ByComponent#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ByComponent#getDescription()
 	 * @see #getByComponent()
 	 * @generated
 	 */
-	EReference getByComponent_Description();
+	EAttribute getByComponent_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ByComponent#getProp <em>Prop</em>}'.
@@ -26321,15 +22555,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getByComponent_ResponsibleRole();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ByComponent#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ByComponent#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ByComponent#getRemarks()
 	 * @see #getByComponent()
 	 * @generated
 	 */
-	EReference getByComponent_Remarks();
+	EAttribute getByComponent_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ByComponent#getComponentUuid <em>Component Uuid</em>}'.
@@ -26364,15 +22598,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSspControlImplementation();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SspControlImplementation#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SspControlImplementation#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SspControlImplementation#getDescription()
 	 * @see #getSspControlImplementation()
 	 * @generated
 	 */
-	EReference getSspControlImplementation_Description();
+	EAttribute getSspControlImplementation_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.SspControlImplementation#getSetParameter <em>Set Parameter</em>}'.
@@ -26407,15 +22641,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getDataFlow();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.DataFlow#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.DataFlow#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.DataFlow#getDescription()
 	 * @see #getDataFlow()
 	 * @generated
 	 */
-	EReference getDataFlow_Description();
+	EAttribute getDataFlow_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.DataFlow#getProp <em>Prop</em>}'.
@@ -26451,15 +22685,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getDataFlow_Diagram();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.DataFlow#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.DataFlow#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.DataFlow#getRemarks()
 	 * @see #getDataFlow()
 	 * @generated
 	 */
-	EReference getDataFlow_Remarks();
+	EAttribute getDataFlow_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Diagram <em>Diagram</em>}'.
@@ -26472,15 +22706,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getDiagram();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Diagram#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Diagram#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Diagram#getDescription()
 	 * @see #getDiagram()
 	 * @generated
 	 */
-	EReference getDiagram_Description();
+	EAttribute getDiagram_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Diagram#getProp <em>Prop</em>}'.
@@ -26505,26 +22739,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getDiagram_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Diagram#getCaption <em>Caption</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Diagram#getCaption <em>Caption</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Caption</em>'.
+	 * @return the meta object for the attribute '<em>Caption</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Diagram#getCaption()
 	 * @see #getDiagram()
 	 * @generated
 	 */
-	EReference getDiagram_Caption();
+	EAttribute getDiagram_Caption();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Diagram#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Diagram#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Diagram#getRemarks()
 	 * @see #getDiagram()
 	 * @generated
 	 */
-	EReference getDiagram_Remarks();
+	EAttribute getDiagram_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Diagram#getUuid <em>Uuid</em>}'.
@@ -26592,15 +22826,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getImpact_Selected();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Impact#getAdjustmentJustification <em>Adjustment Justification</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Impact#getAdjustmentJustification <em>Adjustment Justification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Adjustment Justification</em>'.
+	 * @return the meta object for the attribute '<em>Adjustment Justification</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Impact#getAdjustmentJustification()
 	 * @see #getImpact()
 	 * @generated
 	 */
-	EReference getImpact_AdjustmentJustification();
+	EAttribute getImpact_AdjustmentJustification();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.SspImplementedRequirement <em>Ssp Implemented Requirement</em>}'.
@@ -26679,15 +22913,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getSspImplementedRequirement_ByComponent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SspImplementedRequirement#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SspImplementedRequirement#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SspImplementedRequirement#getRemarks()
 	 * @see #getSspImplementedRequirement()
 	 * @generated
 	 */
-	EReference getSspImplementedRequirement_Remarks();
+	EAttribute getSspImplementedRequirement_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SspImplementedRequirement#getControlId <em>Control Id</em>}'.
@@ -26722,15 +22956,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getImportProfile();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ImportProfile#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImportProfile#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ImportProfile#getRemarks()
 	 * @see #getImportProfile()
 	 * @generated
 	 */
-	EReference getImportProfile_Remarks();
+	EAttribute getImportProfile_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ImportProfile#getHref <em>Href</em>}'.
@@ -26754,15 +22988,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getNetworkArchitecture();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.NetworkArchitecture#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.NetworkArchitecture#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.NetworkArchitecture#getDescription()
 	 * @see #getNetworkArchitecture()
 	 * @generated
 	 */
-	EReference getNetworkArchitecture_Description();
+	EAttribute getNetworkArchitecture_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.NetworkArchitecture#getProp <em>Prop</em>}'.
@@ -26798,15 +23032,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getNetworkArchitecture_Diagram();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.NetworkArchitecture#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.NetworkArchitecture#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.NetworkArchitecture#getRemarks()
 	 * @see #getNetworkArchitecture()
 	 * @generated
 	 */
-	EReference getNetworkArchitecture_Remarks();
+	EAttribute getNetworkArchitecture_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.SecurityImpactLevel <em>Security Impact Level</em>}'.
@@ -26906,15 +23140,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getSspStatement_ByComponent();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SspStatement#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SspStatement#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SspStatement#getRemarks()
 	 * @see #getSspStatement()
 	 * @generated
 	 */
-	EReference getSspStatement_Remarks();
+	EAttribute getSspStatement_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SspStatement#getStatementId <em>Statement Id</em>}'.
@@ -26949,15 +23183,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSystemStatus();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemStatus#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemStatus#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemStatus#getRemarks()
 	 * @see #getSystemStatus()
 	 * @generated
 	 */
-	EReference getSystemStatus_Remarks();
+	EAttribute getSystemStatus_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemStatus#getState <em>State</em>}'.
@@ -27014,15 +23248,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getSystemCharacteristics_SystemNameShort();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemCharacteristics#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemCharacteristics#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemCharacteristics#getDescription()
 	 * @see #getSystemCharacteristics()
 	 * @generated
 	 */
-	EReference getSystemCharacteristics_Description();
+	EAttribute getSystemCharacteristics_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.SystemCharacteristics#getProp <em>Prop</em>}'.
@@ -27146,15 +23380,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getSystemCharacteristics_ResponsibleParty();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemCharacteristics#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemCharacteristics#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemCharacteristics#getRemarks()
 	 * @see #getSystemCharacteristics()
 	 * @generated
 	 */
-	EReference getSystemCharacteristics_Remarks();
+	EAttribute getSystemCharacteristics_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.SystemImplementation <em>System Implementation</em>}'.
@@ -27233,15 +23467,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getSystemImplementation_InventoryItem();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemImplementation#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemImplementation#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemImplementation#getRemarks()
 	 * @see #getSystemImplementation()
 	 * @generated
 	 */
-	EReference getSystemImplementation_Remarks();
+	EAttribute getSystemImplementation_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.SystemInformation <em>System Information</em>}'.
@@ -27494,15 +23728,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getParty_MemberOfOrganization();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Party#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Party#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Party#getRemarks()
 	 * @see #getParty()
 	 * @generated
 	 */
-	EReference getParty_Remarks();
+	EAttribute getParty_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Party#getType <em>Type</em>}'.
@@ -27527,16 +23761,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getParty_Uuid();
 
 	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupPreformatted <em>Markup Preformatted</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Preformatted</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupPreformatted
-	 * @generated
-	 */
-	EClass getMarkupPreformatted();
-
-	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Provided <em>Provided</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -27547,15 +23771,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getProvided();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Provided#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Provided#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Provided#getDescription()
 	 * @see #getProvided()
 	 * @generated
 	 */
-	EReference getProvided_Description();
+	EAttribute getProvided_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Provided#getProp <em>Prop</em>}'.
@@ -27591,15 +23815,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getProvided_ResponsibleRole();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Provided#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Provided#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Provided#getRemarks()
 	 * @see #getProvided()
 	 * @generated
 	 */
-	EReference getProvided_Remarks();
+	EAttribute getProvided_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Provided#getUuid <em>Uuid</em>}'.
@@ -27623,15 +23847,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getRelatedFinding();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RelatedFinding#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelatedFinding#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RelatedFinding#getRemarks()
 	 * @see #getRelatedFinding()
 	 * @generated
 	 */
-	EReference getRelatedFinding_Remarks();
+	EAttribute getRelatedFinding_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelatedFinding#getFindingUuid <em>Finding Uuid</em>}'.
@@ -27688,15 +23912,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getRelatedResponse_RelatedTask();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RelatedResponse#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelatedResponse#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RelatedResponse#getRemarks()
 	 * @see #getRelatedResponse()
 	 * @generated
 	 */
-	EReference getRelatedResponse_Remarks();
+	EAttribute getRelatedResponse_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelatedResponse#getResponseUuid <em>Response Uuid</em>}'.
@@ -27720,15 +23944,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getRelevantEvidence();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RelevantEvidence#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelevantEvidence#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RelevantEvidence#getDescription()
 	 * @see #getRelevantEvidence()
 	 * @generated
 	 */
-	EReference getRelevantEvidence_Description();
+	EAttribute getRelevantEvidence_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.RelevantEvidence#getProp <em>Prop</em>}'.
@@ -27753,15 +23977,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getRelevantEvidence_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RelevantEvidence#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelevantEvidence#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RelevantEvidence#getRemarks()
 	 * @see #getRelevantEvidence()
 	 * @generated
 	 */
-	EReference getRelevantEvidence_Remarks();
+	EAttribute getRelevantEvidence_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RelevantEvidence#getHref <em>Href</em>}'.
@@ -27785,15 +24009,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getRemove();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Remove#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Remove#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Remove#getRemarks()
 	 * @see #getRemove()
 	 * @generated
 	 */
-	EReference getRemove_Remarks();
+	EAttribute getRemove_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Remove#getByClass <em>By Class</em>}'.
@@ -27872,26 +24096,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getRequiredAsset_Subject();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RequiredAsset#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RequiredAsset#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RequiredAsset#getTitle()
 	 * @see #getRequiredAsset()
 	 * @generated
 	 */
-	EReference getRequiredAsset_Title();
+	EAttribute getRequiredAsset_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RequiredAsset#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RequiredAsset#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RequiredAsset#getDescription()
 	 * @see #getRequiredAsset()
 	 * @generated
 	 */
-	EReference getRequiredAsset_Description();
+	EAttribute getRequiredAsset_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.RequiredAsset#getProp <em>Prop</em>}'.
@@ -27916,15 +24140,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getRequiredAsset_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.RequiredAsset#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RequiredAsset#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.RequiredAsset#getRemarks()
 	 * @see #getRequiredAsset()
 	 * @generated
 	 */
-	EReference getRequiredAsset_Remarks();
+	EAttribute getRequiredAsset_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.RequiredAsset#getUuid <em>Uuid</em>}'.
@@ -27948,26 +24172,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getBackMatterResource();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.BackMatterResource#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.BackMatterResource#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.BackMatterResource#getTitle()
 	 * @see #getBackMatterResource()
 	 * @generated
 	 */
-	EReference getBackMatterResource_Title();
+	EAttribute getBackMatterResource_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.BackMatterResource#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.BackMatterResource#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.BackMatterResource#getDescription()
 	 * @see #getBackMatterResource()
 	 * @generated
 	 */
-	EReference getBackMatterResource_Description();
+	EAttribute getBackMatterResource_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.BackMatterResource#getProp <em>Prop</em>}'.
@@ -28025,15 +24249,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getBackMatterResource_Base64();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.BackMatterResource#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.BackMatterResource#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.BackMatterResource#getRemarks()
 	 * @see #getBackMatterResource()
 	 * @generated
 	 */
-	EReference getBackMatterResource_Remarks();
+	EAttribute getBackMatterResource_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.BackMatterResource#getUuid <em>Uuid</em>}'.
@@ -28057,15 +24281,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getResponsibility();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Responsibility#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Responsibility#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Responsibility#getDescription()
 	 * @see #getResponsibility()
 	 * @generated
 	 */
-	EReference getResponsibility_Description();
+	EAttribute getResponsibility_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Responsibility#getProp <em>Prop</em>}'.
@@ -28101,15 +24325,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getResponsibility_ResponsibleRole();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Responsibility#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Responsibility#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Responsibility#getRemarks()
 	 * @see #getResponsibility()
 	 * @generated
 	 */
-	EReference getResponsibility_Remarks();
+	EAttribute getResponsibility_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Responsibility#getProvidedUuid <em>Provided Uuid</em>}'.
@@ -28134,27 +24358,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getResponsibility_Uuid();
 
 	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Revisions <em>Revisions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Revisions</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Revisions
-	 * @generated
-	 */
-	EClass getRevisions();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Revisions#getRevision <em>Revision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Revision</em>'.
-	 * @see gov.nist.csrc.ns.oscal.Revisions#getRevision()
-	 * @see #getRevisions()
-	 * @generated
-	 */
-	EReference getRevisions_Revision();
-
-	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Revision <em>Revision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -28165,15 +24368,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getRevision();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Revision#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Revision#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Revision#getTitle()
 	 * @see #getRevision()
 	 * @generated
 	 */
-	EReference getRevision_Title();
+	EAttribute getRevision_Title();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Revision#getPublished <em>Published</em>}'.
@@ -28242,15 +24445,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getRevision_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Revision#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Revision#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Revision#getRemarks()
 	 * @see #getRevision()
 	 * @generated
 	 */
-	EReference getRevision_Remarks();
+	EAttribute getRevision_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.RiskLog <em>Risk Log</em>}'.
@@ -28327,15 +24530,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getRole();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Role#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Role#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Role#getTitle()
 	 * @see #getRole()
 	 * @generated
 	 */
-	EReference getRole_Title();
+	EAttribute getRole_Title();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Role#getShortName <em>Short Name</em>}'.
@@ -28349,15 +24552,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getRole_ShortName();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Role#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Role#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Role#getDescription()
 	 * @see #getRole()
 	 * @generated
 	 */
-	EReference getRole_Description();
+	EAttribute getRole_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Role#getProp <em>Prop</em>}'.
@@ -28382,15 +24585,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getRole_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Role#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Role#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Role#getRemarks()
 	 * @see #getRole()
 	 * @generated
 	 */
-	EReference getRole_Remarks();
+	EAttribute getRole_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Role#getId <em>Id</em>}'.
@@ -28414,15 +24617,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSatisfied();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Satisfied#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Satisfied#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Satisfied#getDescription()
 	 * @see #getSatisfied()
 	 * @generated
 	 */
-	EReference getSatisfied_Description();
+	EAttribute getSatisfied_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Satisfied#getProp <em>Prop</em>}'.
@@ -28458,15 +24661,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getSatisfied_ResponsibleRole();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Satisfied#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Satisfied#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Satisfied#getRemarks()
 	 * @see #getSatisfied()
 	 * @generated
 	 */
-	EReference getSatisfied_Remarks();
+	EAttribute getSatisfied_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Satisfied#getResponsibilityUuid <em>Responsibility Uuid</em>}'.
@@ -28523,26 +24726,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getProfileSetParameter_Link();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ProfileSetParameter#getLabel <em>Label</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ProfileSetParameter#getLabel <em>Label</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Label</em>'.
+	 * @return the meta object for the attribute '<em>Label</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ProfileSetParameter#getLabel()
 	 * @see #getProfileSetParameter()
 	 * @generated
 	 */
-	EReference getProfileSetParameter_Label();
+	EAttribute getProfileSetParameter_Label();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ProfileSetParameter#getUsage <em>Usage</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ProfileSetParameter#getUsage <em>Usage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Usage</em>'.
+	 * @return the meta object for the attribute '<em>Usage</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ProfileSetParameter#getUsage()
 	 * @see #getProfileSetParameter()
 	 * @generated
 	 */
-	EReference getProfileSetParameter_Usage();
+	EAttribute getProfileSetParameter_Usage();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.ProfileSetParameter#getConstraint <em>Constraint</em>}'.
@@ -28632,15 +24835,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getPlaceholderSource();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.PlaceholderSource#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.PlaceholderSource#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.PlaceholderSource#getRemarks()
 	 * @see #getPlaceholderSource()
 	 * @generated
 	 */
-	EReference getPlaceholderSource_Remarks();
+	EAttribute getPlaceholderSource_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.PlaceholderSource#getTaskUuid <em>Task Uuid</em>}'.
@@ -28664,15 +24867,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getFindingTargetStatus();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.FindingTargetStatus#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.FindingTargetStatus#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.FindingTargetStatus#getRemarks()
 	 * @see #getFindingTargetStatus()
 	 * @generated
 	 */
-	EReference getFindingTargetStatus_Remarks();
+	EAttribute getFindingTargetStatus_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.FindingTargetStatus#getReason <em>Reason</em>}'.
@@ -28707,15 +24910,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getSystemComponentStatus();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.SystemComponentStatus#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemComponentStatus#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.SystemComponentStatus#getRemarks()
 	 * @see #getSystemComponentStatus()
 	 * @generated
 	 */
-	EReference getSystemComponentStatus_Remarks();
+	EAttribute getSystemComponentStatus_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.SystemComponentStatus#getState <em>State</em>}'.
@@ -28739,26 +24942,26 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getStep();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Step#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Step#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Title</em>'.
+	 * @return the meta object for the attribute '<em>Title</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Step#getTitle()
 	 * @see #getStep()
 	 * @generated
 	 */
-	EReference getStep_Title();
+	EAttribute getStep_Title();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Step#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Step#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @return the meta object for the attribute '<em>Description</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Step#getDescription()
 	 * @see #getStep()
 	 * @generated
 	 */
-	EReference getStep_Description();
+	EAttribute getStep_Description();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.Step#getProp <em>Prop</em>}'.
@@ -28805,15 +25008,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getStep_ResponsibleRole();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.Step#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Step#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.Step#getRemarks()
 	 * @see #getStep()
 	 * @generated
 	 */
-	EReference getStep_Remarks();
+	EAttribute getStep_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.Step#getUuid <em>Uuid</em>}'.
@@ -28825,91 +25028,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getStep_Uuid();
-
-	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupTableCell <em>Markup Table Cell</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Table Cell</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTableCell
-	 * @generated
-	 */
-	EClass getMarkupTableCell();
-
-	/**
-	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.MarkupTableCell#getAlign <em>Align</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Align</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTableCell#getAlign()
-	 * @see #getMarkupTableCell()
-	 * @generated
-	 */
-	EAttribute getMarkupTableCell_Align();
-
-	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupTableRow <em>Markup Table Row</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Table Row</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTableRow
-	 * @generated
-	 */
-	EClass getMarkupTableRow();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link gov.nist.csrc.ns.oscal.MarkupTableRow#getGroup <em>Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Group</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTableRow#getGroup()
-	 * @see #getMarkupTableRow()
-	 * @generated
-	 */
-	EAttribute getMarkupTableRow_Group();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupTableRow#getTd <em>Td</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Td</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTableRow#getTd()
-	 * @see #getMarkupTableRow()
-	 * @generated
-	 */
-	EReference getMarkupTableRow_Td();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupTableRow#getTh <em>Th</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Th</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTableRow#getTh()
-	 * @see #getMarkupTableRow()
-	 * @generated
-	 */
-	EReference getMarkupTableRow_Th();
-
-	/**
-	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.MarkupTable <em>Markup Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Markup Table</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTable
-	 * @generated
-	 */
-	EClass getMarkupTable();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link gov.nist.csrc.ns.oscal.MarkupTable#getTr <em>Tr</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Tr</em>'.
-	 * @see gov.nist.csrc.ns.oscal.MarkupTable#getTr()
-	 * @see #getMarkupTable()
-	 * @generated
-	 */
-	EReference getMarkupTable_Tr();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.TermsAndConditions <em>Terms And Conditions</em>}'.
@@ -28954,15 +25072,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EAttribute getConstraintTest_Expression();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.ConstraintTest#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.ConstraintTest#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.ConstraintTest#getRemarks()
 	 * @see #getConstraintTest()
 	 * @generated
 	 */
-	EReference getConstraintTest_Remarks();
+	EAttribute getConstraintTest_Remarks();
 
 	/**
 	 * Returns the meta object for class '{@link gov.nist.csrc.ns.oscal.Timing <em>Timing</em>}'.
@@ -29051,15 +25169,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EReference getUsesComponent_ResponsibleParty();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.UsesComponent#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.UsesComponent#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.UsesComponent#getRemarks()
 	 * @see #getUsesComponent()
 	 * @generated
 	 */
-	EReference getUsesComponent_Remarks();
+	EAttribute getUsesComponent_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.UsesComponent#getComponentUuid <em>Component Uuid</em>}'.
@@ -29083,15 +25201,15 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	EClass getWithinDateRange();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link gov.nist.csrc.ns.oscal.WithinDateRange#getRemarks <em>Remarks</em>}'.
+	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.WithinDateRange#getRemarks <em>Remarks</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Remarks</em>'.
+	 * @return the meta object for the attribute '<em>Remarks</em>'.
 	 * @see gov.nist.csrc.ns.oscal.WithinDateRange#getRemarks()
 	 * @see #getWithinDateRange()
 	 * @generated
 	 */
-	EReference getWithinDateRange_Remarks();
+	EAttribute getWithinDateRange_Remarks();
 
 	/**
 	 * Returns the meta object for the attribute '{@link gov.nist.csrc.ns.oscal.WithinDateRange#getEnd <em>End</em>}'.
@@ -29114,28 +25232,6 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EAttribute getWithinDateRange_Start();
-
-	/**
-	 * Returns the meta object for enum '{@link gov.nist.csrc.ns.oscal.AlignType <em>Align Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Align Type</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AlignType
-	 * @generated
-	 */
-	EEnum getAlignType();
-
-	/**
-	 * Returns the meta object for data type '{@link gov.nist.csrc.ns.oscal.AlignType <em>Align Type Object</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Align Type Object</em>'.
-	 * @see gov.nist.csrc.ns.oscal.AlignType
-	 * @model instanceClass="gov.nist.csrc.ns.oscal.AlignType"
-	 *        extendedMetaData="name='alignType:Object' baseType='alignType'"
-	 * @generated
-	 */
-	EDataType getAlignTypeObject();
 
 	/**
 	 * Returns the meta object for data type '<em>As Is Type</em>'.
@@ -29504,6 +25600,36 @@ public interface OSCALPackage extends org.eclipse.emf.ecore.EPackage {
 	 * @generated
 	 */
 	EDataType getInformationTypeIdType();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Markup Line Datatype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Markdown string (OSCAL markup-line). In OSCAL JSON, markup is a Markdown string; it is kept as that string so that a JSON round trip is exact.
+     * <!-- end-model-doc -->
+	 * @return the meta object for data type '<em>Markup Line Datatype</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='MarkupLineDatatype' baseType='http://www.eclipse.org/emf/2003/XMLType#string'"
+	 * @generated
+	 */
+	EDataType getMarkupLineDatatype();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.String <em>Markup Multiline Datatype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+     * <!-- begin-model-doc -->
+     * Markdown string (OSCAL markup-multiline). In OSCAL JSON, markup is a Markdown string; it is kept as that string so that a JSON round trip is exact.
+     * <!-- end-model-doc -->
+	 * @return the meta object for data type '<em>Markup Multiline Datatype</em>'.
+	 * @see java.lang.String
+	 * @model instanceClass="java.lang.String"
+	 *        extendedMetaData="name='MarkupMultilineDatatype' baseType='http://www.eclipse.org/emf/2003/XMLType#string'"
+	 * @generated
+	 */
+	EDataType getMarkupMultilineDatatype();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>Member Of Organization Type</em>}'.

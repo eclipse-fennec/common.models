@@ -12,7 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Action;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleParty;
@@ -87,14 +86,24 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	protected EList<ResponsibleParty> responsibleParty;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
@@ -240,7 +249,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -249,34 +258,12 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.ACTION__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.ACTION__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.ACTION__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.ACTION__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.ACTION__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -385,8 +372,6 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.ACTION__RESPONSIBLE_PARTY:
 				return ((InternalEList<?>)getResponsibleParty()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.ACTION__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -441,7 +426,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 				getResponsibleParty().addAll((Collection<? extends ResponsibleParty>)newValue);
 				return;
 			case OSCALPackage.ACTION__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.ACTION__DATE:
 				setDate((XMLGregorianCalendar)newValue);
@@ -477,7 +462,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 				getResponsibleParty().clear();
 				return;
 			case OSCALPackage.ACTION__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.ACTION__DATE:
 				setDate(DATE_EDEFAULT);
@@ -510,7 +495,7 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 			case OSCALPackage.ACTION__RESPONSIBLE_PARTY:
 				return responsibleParty != null && !responsibleParty.isEmpty();
 			case OSCALPackage.ACTION__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.ACTION__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
 			case OSCALPackage.ACTION__SYSTEM:
@@ -533,7 +518,9 @@ public class ActionImpl extends MinimalEObjectImpl.Container implements Action {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (date: ");
+		result.append(" (remarks: ");
+		result.append(remarks);
+		result.append(", date: ");
 		result.append(date);
 		result.append(", system: ");
 		result.append(system);

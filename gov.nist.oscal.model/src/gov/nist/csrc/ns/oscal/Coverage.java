@@ -52,6 +52,7 @@ public interface Coverage extends EObject {
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getCoverage_Value()
 	 * @model dataType="gov.nist.csrc.ns.oscal.DecimalDatatype"
 	 *        extendedMetaData="name=':0' kind='simple'"
+	 *        annotation="http://eclipse.org/fennec/codec key='target-coverage'"
 	 * @generated
 	 */
 	BigDecimal getValue();

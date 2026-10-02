@@ -35,7 +35,7 @@ public class OSCALEPackageConfigurator implements EPackageConfigurator {
 	 * service property.
 	 * @generated
 	 */
-	public static final String FINGERPRINT = "fp1:b64827998f63ccc9c1357aa69c5fb49e32dd1bf07845e045701ab431fcfa54da";
+	public static final String FINGERPRINT = "fp1:8f61f081163bfe1095f4617da68086714ea2303f2f2ef36e20764a3584de9ca8";
 
 	private OSCALPackage ePackage;
 

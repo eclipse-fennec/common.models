@@ -12,7 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Inherited;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleRole;
@@ -53,14 +52,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class InheritedImpl extends MinimalEObjectImpl.Container implements Inherited {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -157,7 +166,7 @@ public class InheritedImpl extends MinimalEObjectImpl.Container implements Inher
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -166,34 +175,12 @@ public class InheritedImpl extends MinimalEObjectImpl.Container implements Inher
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.INHERITED__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.INHERITED__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.INHERITED__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.INHERITED__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.INHERITED__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -289,8 +276,6 @@ public class InheritedImpl extends MinimalEObjectImpl.Container implements Inher
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.INHERITED__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.INHERITED__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.INHERITED__LINK:
@@ -335,7 +320,7 @@ public class InheritedImpl extends MinimalEObjectImpl.Container implements Inher
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.INHERITED__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.INHERITED__PROP:
 				getProp().clear();
@@ -368,7 +353,7 @@ public class InheritedImpl extends MinimalEObjectImpl.Container implements Inher
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.INHERITED__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.INHERITED__PROP:
 				getProp().clear();
@@ -398,7 +383,7 @@ public class InheritedImpl extends MinimalEObjectImpl.Container implements Inher
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.INHERITED__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.INHERITED__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.INHERITED__LINK:
@@ -423,7 +408,9 @@ public class InheritedImpl extends MinimalEObjectImpl.Container implements Inher
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (providedUuid: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", providedUuid: ");
 		result.append(providedUuid);
 		result.append(", uuid: ");
 		result.append(uuid);

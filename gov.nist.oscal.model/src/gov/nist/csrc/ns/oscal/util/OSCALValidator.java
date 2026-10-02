@@ -114,8 +114,6 @@ public class OSCALValidator extends EObjectValidator {
 				return validateAdd((Add)value, diagnostics, context);
 			case OSCALPackage.ALTER:
 				return validateAlter((Alter)value, diagnostics, context);
-			case OSCALPackage.MARKUP_ANCHOR:
-				return validateMarkupAnchor((MarkupAnchor)value, diagnostics, context);
 			case OSCALPackage.ASSESSMENT_LOG:
 				return validateAssessmentLog((AssessmentLog)value, diagnostics, context);
 			case OSCALPackage.ASSESSMENT_PLATFORM:
@@ -128,14 +126,10 @@ public class OSCALValidator extends EObjectValidator {
 				return validateAttestation((Attestation)value, diagnostics, context);
 			case OSCALPackage.BASE64:
 				return validateBase64((Base64)value, diagnostics, context);
-			case OSCALPackage.MARKUP_BLOCK_QUOTE:
-				return validateMarkupBlockQuote((MarkupBlockQuote)value, diagnostics, context);
 			case OSCALPackage.CATEGORIZATION:
 				return validateCategorization((Categorization)value, diagnostics, context);
 			case OSCALPackage.CITATION:
 				return validateCitation((Citation)value, diagnostics, context);
-			case OSCALPackage.MARKUP_CODE:
-				return validateMarkupCode((MarkupCode)value, diagnostics, context);
 			case OSCALPackage.COMBINE:
 				return validateCombine((Combine)value, diagnostics, context);
 			case OSCALPackage.CONTROL_OBJECTIVE_SELECTION:
@@ -162,24 +156,14 @@ public class OSCALValidator extends EObjectValidator {
 				return validateFlat((Flat)value, diagnostics, context);
 			case OSCALPackage.IDENTIFIED_SUBJECT:
 				return validateIdentifiedSubject((IdentifiedSubject)value, diagnostics, context);
-			case OSCALPackage.MARKUP_IMAGE:
-				return validateMarkupImage((MarkupImage)value, diagnostics, context);
 			case OSCALPackage.IMPLEMENTED_COMPONENT:
 				return validateImplementedComponent((ImplementedComponent)value, diagnostics, context);
 			case OSCALPackage.INFORMATION_TYPE:
 				return validateInformationType((InformationType)value, diagnostics, context);
 			case OSCALPackage.INHERITED:
 				return validateInherited((Inherited)value, diagnostics, context);
-			case OSCALPackage.INLINE_MARKUP:
-				return validateInlineMarkup((InlineMarkup)value, diagnostics, context);
-			case OSCALPackage.MARKUP_INSERT:
-				return validateMarkupInsert((MarkupInsert)value, diagnostics, context);
 			case OSCALPackage.LEVERAGED_AUTHORIZATION:
 				return validateLeveragedAuthorization((LeveragedAuthorization)value, diagnostics, context);
-			case OSCALPackage.MARKUP_LIST_ITEM:
-				return validateMarkupListItem((MarkupListItem)value, diagnostics, context);
-			case OSCALPackage.MARKUP_LIST:
-				return validateMarkupList((MarkupList)value, diagnostics, context);
 			case OSCALPackage.RESULT_LOCAL_DEFINITIONS:
 				return validateResultLocalDefinitions((ResultLocalDefinitions)value, diagnostics, context);
 			case OSCALPackage.ASSESSMENT_RESULTS_LOCAL_DEFINITIONS:
@@ -188,16 +172,10 @@ public class OSCALValidator extends EObjectValidator {
 				return validateAssessmentPlanLocalDefinitions((AssessmentPlanLocalDefinitions)value, diagnostics, context);
 			case OSCALPackage.LOCATION:
 				return validateLocation((Location)value, diagnostics, context);
-			case OSCALPackage.MARKUP_LINE_DATATYPE:
-				return validateMarkupLineDatatype((MarkupLineDatatype)value, diagnostics, context);
-			case OSCALPackage.MARKUP_MULTILINE_DATATYPE:
-				return validateMarkupMultilineDatatype((MarkupMultilineDatatype)value, diagnostics, context);
 			case OSCALPackage.MITIGATING_FACTOR:
 				return validateMitigatingFactor((MitigatingFactor)value, diagnostics, context);
 			case OSCALPackage.ON_DATE:
 				return validateOnDate((OnDate)value, diagnostics, context);
-			case OSCALPackage.MARKUP_ORDERED_LIST:
-				return validateMarkupOrderedList((MarkupOrderedList)value, diagnostics, context);
 			case OSCALPackage.POAM_ITEM_ORIGIN:
 				return validatePoamItemOrigin((PoamItemOrigin)value, diagnostics, context);
 			case OSCALPackage.ASSESSMENT_PLAN:
@@ -412,8 +390,6 @@ public class OSCALValidator extends EObjectValidator {
 				return validateSystemSecurityPlan((SystemSecurityPlan)value, diagnostics, context);
 			case OSCALPackage.PARTY:
 				return validateParty((Party)value, diagnostics, context);
-			case OSCALPackage.MARKUP_PREFORMATTED:
-				return validateMarkupPreformatted((MarkupPreformatted)value, diagnostics, context);
 			case OSCALPackage.PROVIDED:
 				return validateProvided((Provided)value, diagnostics, context);
 			case OSCALPackage.RELATED_FINDING:
@@ -430,8 +406,6 @@ public class OSCALValidator extends EObjectValidator {
 				return validateBackMatterResource((BackMatterResource)value, diagnostics, context);
 			case OSCALPackage.RESPONSIBILITY:
 				return validateResponsibility((Responsibility)value, diagnostics, context);
-			case OSCALPackage.REVISIONS:
-				return validateRevisions((Revisions)value, diagnostics, context);
 			case OSCALPackage.REVISION:
 				return validateRevision((Revision)value, diagnostics, context);
 			case OSCALPackage.RISK_LOG:
@@ -452,12 +426,6 @@ public class OSCALValidator extends EObjectValidator {
 				return validateSystemComponentStatus((SystemComponentStatus)value, diagnostics, context);
 			case OSCALPackage.STEP:
 				return validateStep((Step)value, diagnostics, context);
-			case OSCALPackage.MARKUP_TABLE_CELL:
-				return validateMarkupTableCell((MarkupTableCell)value, diagnostics, context);
-			case OSCALPackage.MARKUP_TABLE_ROW:
-				return validateMarkupTableRow((MarkupTableRow)value, diagnostics, context);
-			case OSCALPackage.MARKUP_TABLE:
-				return validateMarkupTable((MarkupTable)value, diagnostics, context);
 			case OSCALPackage.TERMS_AND_CONDITIONS:
 				return validateTermsAndConditions((TermsAndConditions)value, diagnostics, context);
 			case OSCALPackage.CONSTRAINT_TEST:
@@ -468,10 +436,6 @@ public class OSCALValidator extends EObjectValidator {
 				return validateUsesComponent((UsesComponent)value, diagnostics, context);
 			case OSCALPackage.WITHIN_DATE_RANGE:
 				return validateWithinDateRange((WithinDateRange)value, diagnostics, context);
-			case OSCALPackage.ALIGN_TYPE:
-				return validateAlignType((AlignType)value, diagnostics, context);
-			case OSCALPackage.ALIGN_TYPE_OBJECT:
-				return validateAlignTypeObject((AlignType)value, diagnostics, context);
 			case OSCALPackage.AS_IS_TYPE:
 				return validateAsIsType((Boolean)value, diagnostics, context);
 			case OSCALPackage.AS_IS_TYPE_OBJECT:
@@ -516,6 +480,10 @@ public class OSCALValidator extends EObjectValidator {
 				return validateImplementationStatementUuidType((String)value, diagnostics, context);
 			case OSCALPackage.INFORMATION_TYPE_ID_TYPE:
 				return validateInformationTypeIdType((String)value, diagnostics, context);
+			case OSCALPackage.MARKUP_LINE_DATATYPE:
+				return validateMarkupLineDatatype((String)value, diagnostics, context);
+			case OSCALPackage.MARKUP_MULTILINE_DATATYPE:
+				return validateMarkupMultilineDatatype((String)value, diagnostics, context);
 			case OSCALPackage.MEMBER_OF_ORGANIZATION_TYPE:
 				return validateMemberOfOrganizationType((String)value, diagnostics, context);
 			case OSCALPackage.METHOD_TYPE:
@@ -638,15 +606,6 @@ public class OSCALValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMarkupAnchor(MarkupAnchor markupAnchor, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupAnchor, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateAssessmentLog(AssessmentLog assessmentLog, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(assessmentLog, diagnostics, context);
 	}
@@ -701,15 +660,6 @@ public class OSCALValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMarkupBlockQuote(MarkupBlockQuote markupBlockQuote, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupBlockQuote, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateCategorization(Categorization categorization, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(categorization, diagnostics, context);
 	}
@@ -721,15 +671,6 @@ public class OSCALValidator extends EObjectValidator {
 	 */
 	public boolean validateCitation(Citation citation, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(citation, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMarkupCode(MarkupCode markupCode, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupCode, diagnostics, context);
 	}
 
 	/**
@@ -854,15 +795,6 @@ public class OSCALValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMarkupImage(MarkupImage markupImage, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupImage, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateImplementedComponent(ImplementedComponent implementedComponent, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(implementedComponent, diagnostics, context);
 	}
@@ -890,44 +822,8 @@ public class OSCALValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateInlineMarkup(InlineMarkup inlineMarkup, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(inlineMarkup, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMarkupInsert(MarkupInsert markupInsert, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupInsert, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateLeveragedAuthorization(LeveragedAuthorization leveragedAuthorization, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(leveragedAuthorization, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMarkupListItem(MarkupListItem markupListItem, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupListItem, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMarkupList(MarkupList markupList, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupList, diagnostics, context);
 	}
 
 	/**
@@ -971,24 +867,6 @@ public class OSCALValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMarkupLineDatatype(MarkupLineDatatype markupLineDatatype, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupLineDatatype, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMarkupMultilineDatatype(MarkupMultilineDatatype markupMultilineDatatype, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupMultilineDatatype, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateMitigatingFactor(MitigatingFactor mitigatingFactor, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(mitigatingFactor, diagnostics, context);
 	}
@@ -1000,15 +878,6 @@ public class OSCALValidator extends EObjectValidator {
 	 */
 	public boolean validateOnDate(OnDate onDate, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(onDate, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMarkupOrderedList(MarkupOrderedList markupOrderedList, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupOrderedList, diagnostics, context);
 	}
 
 	/**
@@ -1979,15 +1848,6 @@ public class OSCALValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMarkupPreformatted(MarkupPreformatted markupPreformatted, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupPreformatted, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateProvided(Provided provided, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(provided, diagnostics, context);
 	}
@@ -2053,15 +1913,6 @@ public class OSCALValidator extends EObjectValidator {
 	 */
 	public boolean validateResponsibility(Responsibility responsibility, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(responsibility, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateRevisions(Revisions revisions, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(revisions, diagnostics, context);
 	}
 
 	/**
@@ -2159,33 +2010,6 @@ public class OSCALValidator extends EObjectValidator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean validateMarkupTableCell(MarkupTableCell markupTableCell, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupTableCell, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMarkupTableRow(MarkupTableRow markupTableRow, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupTableRow, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateMarkupTable(MarkupTable markupTable, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(markupTable, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean validateTermsAndConditions(TermsAndConditions termsAndConditions, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(termsAndConditions, diagnostics, context);
 	}
@@ -2224,24 +2048,6 @@ public class OSCALValidator extends EObjectValidator {
 	 */
 	public boolean validateWithinDateRange(WithinDateRange withinDateRange, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(withinDateRange, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAlignType(AlignType alignType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateAlignTypeObject(AlignType alignTypeObject, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return true;
 	}
 
 	/**
@@ -2629,6 +2435,24 @@ public class OSCALValidator extends EObjectValidator {
 	public boolean validateInformationTypeIdType(String informationTypeIdType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		boolean result = validateStringDatatype_Pattern(informationTypeIdType, diagnostics, context);
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMarkupLineDatatype(String markupLineDatatype, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateMarkupMultilineDatatype(String markupMultilineDatatype, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return true;
 	}
 
 	/**

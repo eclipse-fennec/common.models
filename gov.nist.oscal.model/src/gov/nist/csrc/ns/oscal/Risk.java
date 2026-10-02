@@ -59,7 +59,7 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface Risk extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -69,27 +69,27 @@ public interface Risk extends EObject {
 	 *   : The title for this risk.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Title</em>' containment reference.
-	 * @see #setTitle(MarkupLineDatatype)
+	 * @return the value of the '<em>Title</em>' attribute.
+	 * @see #setTitle(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getRisk_Title()
-	 * @model containment="true" required="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupLineDatatype" required="true"
 	 *        extendedMetaData="kind='element' name='title' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupLineDatatype getTitle();
+	String getTitle();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Risk#getTitle <em>Title</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Risk#getTitle <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' containment reference.
+	 * @param value the new value of the '<em>Title</em>' attribute.
 	 * @see #getTitle()
 	 * @generated
 	 */
-	void setTitle(MarkupLineDatatype value);
+	void setTitle(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -99,27 +99,27 @@ public interface Risk extends EObject {
 	 *   : A human-readable summary of the identified risk, to include a statement of how the risk impacts the system.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Description</em>' containment reference.
-	 * @see #setDescription(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getRisk_Description()
-	 * @model containment="true" required="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype" required="true"
 	 *        extendedMetaData="kind='element' name='description' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getDescription();
+	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Risk#getDescription <em>Description</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Risk#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' containment reference.
+	 * @param value the new value of the '<em>Description</em>' attribute.
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(MarkupMultilineDatatype value);
+	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Statement</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Statement</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -129,24 +129,24 @@ public interface Risk extends EObject {
 	 *   : An summary of impact for how the risk affects the system.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Statement</em>' containment reference.
-	 * @see #setStatement(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Statement</em>' attribute.
+	 * @see #setStatement(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getRisk_Statement()
-	 * @model containment="true" required="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype" required="true"
 	 *        extendedMetaData="kind='element' name='statement' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getStatement();
+	String getStatement();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Risk#getStatement <em>Statement</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Risk#getStatement <em>Statement</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Statement</em>' containment reference.
+	 * @param value the new value of the '<em>Statement</em>' attribute.
 	 * @see #getStatement()
 	 * @generated
 	 */
-	void setStatement(MarkupMultilineDatatype value);
+	void setStatement(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Prop</b></em>' containment reference list.

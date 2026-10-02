@@ -11,8 +11,6 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleRole;
@@ -57,24 +55,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -117,14 +135,24 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	protected EList<ResponsibleRole> responsibleRole;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -171,7 +199,7 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -180,14 +208,12 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
+	@Override
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
 		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.STEP__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.STEP__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -196,27 +222,7 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * @generated
 	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.STEP__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.STEP__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.STEP__TITLE, newTitle, newTitle));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -225,34 +231,12 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.STEP__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.STEP__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.STEP__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.STEP__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.STEP__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -345,7 +329,7 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -354,34 +338,12 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.STEP__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.STEP__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.STEP__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.STEP__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.STEP__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -415,10 +377,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.STEP__TITLE:
-				return basicSetTitle(null, msgs);
-			case OSCALPackage.STEP__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.STEP__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.STEP__LINK:
@@ -427,8 +385,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 				return basicSetReviewedControls(null, msgs);
 			case OSCALPackage.STEP__RESPONSIBLE_ROLE:
 				return ((InternalEList<?>)getResponsibleRole()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.STEP__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -471,10 +427,10 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.STEP__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.STEP__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.STEP__PROP:
 				getProp().clear();
@@ -492,7 +448,7 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 				getResponsibleRole().addAll((Collection<? extends ResponsibleRole>)newValue);
 				return;
 			case OSCALPackage.STEP__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.STEP__UUID:
 				setUuid((String)newValue);
@@ -510,10 +466,10 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.STEP__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.STEP__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.STEP__PROP:
 				getProp().clear();
@@ -528,7 +484,7 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 				getResponsibleRole().clear();
 				return;
 			case OSCALPackage.STEP__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.STEP__UUID:
 				setUuid(UUID_EDEFAULT);
@@ -546,9 +502,9 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.STEP__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.STEP__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.STEP__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.STEP__LINK:
@@ -558,7 +514,7 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			case OSCALPackage.STEP__RESPONSIBLE_ROLE:
 				return responsibleRole != null && !responsibleRole.isEmpty();
 			case OSCALPackage.STEP__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.STEP__UUID:
 				return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
 		}
@@ -575,7 +531,13 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (uuid: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", uuid: ");
 		result.append(uuid);
 		result.append(')');
 		return result.toString();

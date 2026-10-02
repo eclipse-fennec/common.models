@@ -13,7 +13,6 @@ package gov.nist.csrc.ns.oscal.impl;
 import gov.nist.csrc.ns.oscal.AssessmentSubject;
 import gov.nist.csrc.ns.oscal.AssociatedActivity;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleRole;
@@ -94,14 +93,24 @@ public class AssociatedActivityImpl extends MinimalEObjectImpl.Container impleme
 	protected EList<AssessmentSubject> subject;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getActivityUuid() <em>Activity Uuid</em>}' attribute.
@@ -200,7 +209,7 @@ public class AssociatedActivityImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -209,34 +218,12 @@ public class AssociatedActivityImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.ASSOCIATED_ACTIVITY__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.ASSOCIATED_ACTIVITY__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.ASSOCIATED_ACTIVITY__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.ASSOCIATED_ACTIVITY__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.ASSOCIATED_ACTIVITY__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -278,8 +265,6 @@ public class AssociatedActivityImpl extends MinimalEObjectImpl.Container impleme
 				return ((InternalEList<?>)getResponsibleRole()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.ASSOCIATED_ACTIVITY__SUBJECT:
 				return ((InternalEList<?>)getSubject()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.ASSOCIATED_ACTIVITY__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -334,7 +319,7 @@ public class AssociatedActivityImpl extends MinimalEObjectImpl.Container impleme
 				getSubject().addAll((Collection<? extends AssessmentSubject>)newValue);
 				return;
 			case OSCALPackage.ASSOCIATED_ACTIVITY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.ASSOCIATED_ACTIVITY__ACTIVITY_UUID:
 				setActivityUuid((String)newValue);
@@ -364,7 +349,7 @@ public class AssociatedActivityImpl extends MinimalEObjectImpl.Container impleme
 				getSubject().clear();
 				return;
 			case OSCALPackage.ASSOCIATED_ACTIVITY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.ASSOCIATED_ACTIVITY__ACTIVITY_UUID:
 				setActivityUuid(ACTIVITY_UUID_EDEFAULT);
@@ -390,7 +375,7 @@ public class AssociatedActivityImpl extends MinimalEObjectImpl.Container impleme
 			case OSCALPackage.ASSOCIATED_ACTIVITY__SUBJECT:
 				return subject != null && !subject.isEmpty();
 			case OSCALPackage.ASSOCIATED_ACTIVITY__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.ASSOCIATED_ACTIVITY__ACTIVITY_UUID:
 				return ACTIVITY_UUID_EDEFAULT == null ? activityUuid != null : !ACTIVITY_UUID_EDEFAULT.equals(activityUuid);
 		}
@@ -407,7 +392,9 @@ public class AssociatedActivityImpl extends MinimalEObjectImpl.Container impleme
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (activityUuid: ");
+		result.append(" (remarks: ");
+		result.append(remarks);
+		result.append(", activityUuid: ");
 		result.append(activityUuid);
 		result.append(')');
 		return result.toString();

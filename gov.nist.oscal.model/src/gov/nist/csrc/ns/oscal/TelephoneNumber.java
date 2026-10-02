@@ -50,6 +50,7 @@ public interface TelephoneNumber extends EObject {
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getTelephoneNumber_Value()
 	 * @model dataType="gov.nist.csrc.ns.oscal.StringDatatype"
 	 *        extendedMetaData="name=':0' kind='simple'"
+	 *        annotation="http://eclipse.org/fennec/codec key='number'"
 	 * @generated
 	 */
 	String getValue();

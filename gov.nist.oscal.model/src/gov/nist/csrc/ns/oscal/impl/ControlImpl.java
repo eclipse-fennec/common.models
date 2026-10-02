@@ -12,7 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Control;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Parameter;
 import gov.nist.csrc.ns.oscal.Part;
@@ -56,14 +55,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ControlImpl extends MinimalEObjectImpl.Container implements Control {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getParam() <em>Param</em>}' containment reference list.
@@ -180,7 +189,7 @@ public class ControlImpl extends MinimalEObjectImpl.Container implements Control
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -189,34 +198,12 @@ public class ControlImpl extends MinimalEObjectImpl.Container implements Control
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
-		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.CONTROL__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CONTROL__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CONTROL__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CONTROL__TITLE, newTitle, newTitle));
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
+		title = newTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CONTROL__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -338,8 +325,6 @@ public class ControlImpl extends MinimalEObjectImpl.Container implements Control
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.CONTROL__TITLE:
-				return basicSetTitle(null, msgs);
 			case OSCALPackage.CONTROL__PARAM:
 				return ((InternalEList<?>)getParam()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.CONTROL__PROP:
@@ -392,7 +377,7 @@ public class ControlImpl extends MinimalEObjectImpl.Container implements Control
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.CONTROL__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.CONTROL__PARAM:
 				getParam().clear();
@@ -433,7 +418,7 @@ public class ControlImpl extends MinimalEObjectImpl.Container implements Control
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.CONTROL__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.CONTROL__PARAM:
 				getParam().clear();
@@ -469,7 +454,7 @@ public class ControlImpl extends MinimalEObjectImpl.Container implements Control
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.CONTROL__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.CONTROL__PARAM:
 				return param != null && !param.isEmpty();
 			case OSCALPackage.CONTROL__PROP:
@@ -498,7 +483,9 @@ public class ControlImpl extends MinimalEObjectImpl.Container implements Control
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (class: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", class: ");
 		result.append(class_);
 		result.append(", id: ");
 		result.append(id);

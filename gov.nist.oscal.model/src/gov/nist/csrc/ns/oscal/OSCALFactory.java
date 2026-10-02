@@ -51,15 +51,6 @@ public interface OSCALFactory extends EFactory {
 	Alter createAlter();
 
 	/**
-	 * Returns a new object of class '<em>Markup Anchor</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Anchor</em>'.
-	 * @generated
-	 */
-	MarkupAnchor createMarkupAnchor();
-
-	/**
 	 * Returns a new object of class '<em>Assessment Log</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -114,15 +105,6 @@ public interface OSCALFactory extends EFactory {
 	Base64 createBase64();
 
 	/**
-	 * Returns a new object of class '<em>Markup Block Quote</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Block Quote</em>'.
-	 * @generated
-	 */
-	MarkupBlockQuote createMarkupBlockQuote();
-
-	/**
 	 * Returns a new object of class '<em>Categorization</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,15 +121,6 @@ public interface OSCALFactory extends EFactory {
 	 * @generated
 	 */
 	Citation createCitation();
-
-	/**
-	 * Returns a new object of class '<em>Markup Code</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Code</em>'.
-	 * @generated
-	 */
-	MarkupCode createMarkupCode();
 
 	/**
 	 * Returns a new object of class '<em>Combine</em>'.
@@ -267,15 +240,6 @@ public interface OSCALFactory extends EFactory {
 	IdentifiedSubject createIdentifiedSubject();
 
 	/**
-	 * Returns a new object of class '<em>Markup Image</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Image</em>'.
-	 * @generated
-	 */
-	MarkupImage createMarkupImage();
-
-	/**
 	 * Returns a new object of class '<em>Implemented Component</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -303,24 +267,6 @@ public interface OSCALFactory extends EFactory {
 	Inherited createInherited();
 
 	/**
-	 * Returns a new object of class '<em>Inline Markup</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Inline Markup</em>'.
-	 * @generated
-	 */
-	InlineMarkup createInlineMarkup();
-
-	/**
-	 * Returns a new object of class '<em>Markup Insert</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Insert</em>'.
-	 * @generated
-	 */
-	MarkupInsert createMarkupInsert();
-
-	/**
 	 * Returns a new object of class '<em>Leveraged Authorization</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -328,24 +274,6 @@ public interface OSCALFactory extends EFactory {
 	 * @generated
 	 */
 	LeveragedAuthorization createLeveragedAuthorization();
-
-	/**
-	 * Returns a new object of class '<em>Markup List Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup List Item</em>'.
-	 * @generated
-	 */
-	MarkupListItem createMarkupListItem();
-
-	/**
-	 * Returns a new object of class '<em>Markup List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup List</em>'.
-	 * @generated
-	 */
-	MarkupList createMarkupList();
 
 	/**
 	 * Returns a new object of class '<em>Result Local Definitions</em>'.
@@ -384,24 +312,6 @@ public interface OSCALFactory extends EFactory {
 	Location createLocation();
 
 	/**
-	 * Returns a new object of class '<em>Markup Line Datatype</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Line Datatype</em>'.
-	 * @generated
-	 */
-	MarkupLineDatatype createMarkupLineDatatype();
-
-	/**
-	 * Returns a new object of class '<em>Markup Multiline Datatype</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Multiline Datatype</em>'.
-	 * @generated
-	 */
-	MarkupMultilineDatatype createMarkupMultilineDatatype();
-
-	/**
 	 * Returns a new object of class '<em>Mitigating Factor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -418,15 +328,6 @@ public interface OSCALFactory extends EFactory {
 	 * @generated
 	 */
 	OnDate createOnDate();
-
-	/**
-	 * Returns a new object of class '<em>Markup Ordered List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Ordered List</em>'.
-	 * @generated
-	 */
-	MarkupOrderedList createMarkupOrderedList();
 
 	/**
 	 * Returns a new object of class '<em>Poam Item Origin</em>'.
@@ -1392,15 +1293,6 @@ public interface OSCALFactory extends EFactory {
 	Party createParty();
 
 	/**
-	 * Returns a new object of class '<em>Markup Preformatted</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Preformatted</em>'.
-	 * @generated
-	 */
-	MarkupPreformatted createMarkupPreformatted();
-
-	/**
 	 * Returns a new object of class '<em>Provided</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1471,15 +1363,6 @@ public interface OSCALFactory extends EFactory {
 	 * @generated
 	 */
 	Responsibility createResponsibility();
-
-	/**
-	 * Returns a new object of class '<em>Revisions</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Revisions</em>'.
-	 * @generated
-	 */
-	Revisions createRevisions();
 
 	/**
 	 * Returns a new object of class '<em>Revision</em>'.
@@ -1570,33 +1453,6 @@ public interface OSCALFactory extends EFactory {
 	 * @generated
 	 */
 	Step createStep();
-
-	/**
-	 * Returns a new object of class '<em>Markup Table Cell</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Table Cell</em>'.
-	 * @generated
-	 */
-	MarkupTableCell createMarkupTableCell();
-
-	/**
-	 * Returns a new object of class '<em>Markup Table Row</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Table Row</em>'.
-	 * @generated
-	 */
-	MarkupTableRow createMarkupTableRow();
-
-	/**
-	 * Returns a new object of class '<em>Markup Table</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Markup Table</em>'.
-	 * @generated
-	 */
-	MarkupTable createMarkupTable();
 
 	/**
 	 * Returns a new object of class '<em>Terms And Conditions</em>'.

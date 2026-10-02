@@ -40,7 +40,7 @@ import org.osgi.annotation.versioning.ProviderType;
  *   <li>{@link gov.nist.csrc.ns.oscal.Metadata#getLastModified <em>Last Modified</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.Metadata#getVersion <em>Version</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.Metadata#getOscalVersion <em>Oscal Version</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.Metadata#getRevisions <em>Revisions</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.Metadata#getRevision <em>Revision</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.Metadata#getDocumentId <em>Document Id</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.Metadata#getProp <em>Prop</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.Metadata#getLink <em>Link</em>}</li>
@@ -59,7 +59,7 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface Metadata extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -69,24 +69,24 @@ public interface Metadata extends EObject {
 	 *   : A name given to the document, which may be used by a tool for display and navigation.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Title</em>' containment reference.
-	 * @see #setTitle(MarkupLineDatatype)
+	 * @return the value of the '<em>Title</em>' attribute.
+	 * @see #setTitle(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getMetadata_Title()
-	 * @model containment="true" required="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupLineDatatype" required="true"
 	 *        extendedMetaData="kind='element' name='title' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupLineDatatype getTitle();
+	String getTitle();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Metadata#getTitle <em>Title</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Metadata#getTitle <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' containment reference.
+	 * @param value the new value of the '<em>Title</em>' attribute.
 	 * @see #getTitle()
 	 * @generated
 	 */
-	void setTitle(MarkupLineDatatype value);
+	void setTitle(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Published</b></em>' attribute.
@@ -181,7 +181,8 @@ public interface Metadata extends EObject {
 	void setOscalVersion(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Revisions</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Revision</b></em>' containment reference list.
+	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.Revision}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -191,24 +192,14 @@ public interface Metadata extends EObject {
 	 *   : A group of 'revision' elements
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Revisions</em>' containment reference.
-	 * @see #setRevisions(Revisions)
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getMetadata_Revisions()
+	 * @return the value of the '<em>Revision</em>' containment reference list.
+	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getMetadata_Revision()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='revisions' namespace='##targetNamespace'"
+	 *        extendedMetaData="kind='element' name='revision' namespace='##targetNamespace'"
+	 *        annotation="http://eclipse.org/fennec/codec key='revisions'"
 	 * @generated
 	 */
-	Revisions getRevisions();
-
-	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Metadata#getRevisions <em>Revisions</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Revisions</em>' containment reference.
-	 * @see #getRevisions()
-	 * @generated
-	 */
-	void setRevisions(Revisions value);
+	EList<Revision> getRevision();
 
 	/**
 	 * Returns the value of the '<em><b>Document Id</b></em>' containment reference list.
@@ -323,7 +314,7 @@ public interface Metadata extends EObject {
 	EList<Action> getAction();
 
 	/**
-	 * Returns the value of the '<em><b>Remarks</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -333,23 +324,23 @@ public interface Metadata extends EObject {
 	 *   : Additional commentary about the containing object.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Remarks</em>' containment reference.
-	 * @see #setRemarks(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Remarks</em>' attribute.
+	 * @see #setRemarks(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getMetadata_Remarks()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype"
 	 *        extendedMetaData="kind='element' name='remarks' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getRemarks();
+	String getRemarks();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Metadata#getRemarks <em>Remarks</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.Metadata#getRemarks <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Remarks</em>' containment reference.
+	 * @param value the new value of the '<em>Remarks</em>' attribute.
 	 * @see #getRemarks()
 	 * @generated
 	 */
-	void setRemarks(MarkupMultilineDatatype value);
+	void setRemarks(String value);
 
 } // Metadata

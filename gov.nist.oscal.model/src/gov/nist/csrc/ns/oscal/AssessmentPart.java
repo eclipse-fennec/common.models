@@ -14,8 +14,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.eclipse.emf.ecore.util.FeatureMap;
-
 import org.osgi.annotation.versioning.ProviderType;
 
 /**
@@ -37,21 +35,7 @@ import org.osgi.annotation.versioning.ProviderType;
  * <ul>
  *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getTitle <em>Title</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getProp <em>Prop</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getBlockElementGroup <em>Block Element Group</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH1 <em>H1</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH2 <em>H2</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH3 <em>H3</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH4 <em>H4</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH5 <em>H5</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getH6 <em>H6</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getUl <em>Ul</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getOl <em>Ol</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getPre <em>Pre</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getHr <em>Hr</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getBlockquote <em>Blockquote</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getP <em>P</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getTable <em>Table</em>}</li>
- *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getImg <em>Img</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getProse <em>Prose</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getPart <em>Part</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getLink <em>Link</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.AssessmentPart#getClass_ <em>Class</em>}</li>
@@ -67,7 +51,7 @@ import org.osgi.annotation.versioning.ProviderType;
 @ProviderType
 public interface AssessmentPart extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Title</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -77,24 +61,24 @@ public interface AssessmentPart extends EObject {
 	 *   : A name given to the part, which may be used by a tool for display and navigation.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Title</em>' containment reference.
-	 * @see #setTitle(MarkupLineDatatype)
+	 * @return the value of the '<em>Title</em>' attribute.
+	 * @see #setTitle(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_Title()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupLineDatatype"
 	 *        extendedMetaData="kind='element' name='title' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupLineDatatype getTitle();
+	String getTitle();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getTitle <em>Title</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getTitle <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Title</em>' containment reference.
+	 * @param value the new value of the '<em>Title</em>' attribute.
 	 * @see #getTitle()
 	 * @generated
 	 */
-	void setTitle(MarkupLineDatatype value);
+	void setTitle(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Prop</b></em>' containment reference list.
@@ -111,199 +95,30 @@ public interface AssessmentPart extends EObject {
 	EList<Property> getProp();
 
 	/**
-	 * Returns the value of the '<em><b>Block Element Group</b></em>' attribute list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
+	 * Returns the value of the '<em><b>Prose</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Block Element Group</em>' attribute list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_BlockElementGroup()
-	 * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
-	 *        extendedMetaData="kind='group' name='BlockElementGroup:2'"
+	 * <!-- begin-model-doc -->
+	 * The prose of this part as a Markdown string (OSCAL JSON key prose).
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Prose</em>' attribute.
+	 * @see #setProse(String)
+	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_Prose()
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype"
+	 *        extendedMetaData="kind='element' name='prose' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	FeatureMap getBlockElementGroup();
+	String getProse();
 
 	/**
-	 * Returns the value of the '<em><b>H1</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.InlineMarkup}.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.AssessmentPart#getProse <em>Prose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>H1</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_H1()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='h1' namespace='##targetNamespace' group='#BlockElementGroup:2'"
+	 * @param value the new value of the '<em>Prose</em>' attribute.
+	 * @see #getProse()
 	 * @generated
 	 */
-	EList<InlineMarkup> getH1();
-
-	/**
-	 * Returns the value of the '<em><b>H2</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.InlineMarkup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>H2</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_H2()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='h2' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<InlineMarkup> getH2();
-
-	/**
-	 * Returns the value of the '<em><b>H3</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.InlineMarkup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>H3</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_H3()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='h3' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<InlineMarkup> getH3();
-
-	/**
-	 * Returns the value of the '<em><b>H4</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.InlineMarkup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>H4</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_H4()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='h4' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<InlineMarkup> getH4();
-
-	/**
-	 * Returns the value of the '<em><b>H5</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.InlineMarkup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>H5</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_H5()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='h5' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<InlineMarkup> getH5();
-
-	/**
-	 * Returns the value of the '<em><b>H6</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.InlineMarkup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>H6</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_H6()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='h6' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<InlineMarkup> getH6();
-
-	/**
-	 * Returns the value of the '<em><b>Ul</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.MarkupList}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ul</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_Ul()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='ul' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<MarkupList> getUl();
-
-	/**
-	 * Returns the value of the '<em><b>Ol</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.MarkupOrderedList}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ol</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_Ol()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='ol' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<MarkupOrderedList> getOl();
-
-	/**
-	 * Returns the value of the '<em><b>Pre</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.MarkupPreformatted}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pre</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_Pre()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='pre' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<MarkupPreformatted> getPre();
-
-	/**
-	 * Returns the value of the '<em><b>Hr</b></em>' containment reference list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hr</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_Hr()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='hr' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<EObject> getHr();
-
-	/**
-	 * Returns the value of the '<em><b>Blockquote</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.MarkupBlockQuote}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Blockquote</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_Blockquote()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='blockquote' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<MarkupBlockQuote> getBlockquote();
-
-	/**
-	 * Returns the value of the '<em><b>P</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.InlineMarkup}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>P</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_P()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='p' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<InlineMarkup> getP();
-
-	/**
-	 * Returns the value of the '<em><b>Table</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.MarkupTable}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Table</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_Table()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='table' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<MarkupTable> getTable();
-
-	/**
-	 * Returns the value of the '<em><b>Img</b></em>' containment reference list.
-	 * The list contents are of type {@link gov.nist.csrc.ns.oscal.MarkupImage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Img</em>' containment reference list.
-	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getAssessmentPart_Img()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='img' namespace='##targetNamespace' group='#BlockElementGroup:2'"
-	 * @generated
-	 */
-	EList<MarkupImage> getImg();
+	void setProse(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Part</b></em>' containment reference list.

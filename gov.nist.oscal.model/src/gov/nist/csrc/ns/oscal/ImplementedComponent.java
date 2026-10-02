@@ -89,7 +89,7 @@ public interface ImplementedComponent extends EObject {
 	EList<ResponsibleParty> getResponsibleParty();
 
 	/**
-	 * Returns the value of the '<em><b>Remarks</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Remarks</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -99,24 +99,24 @@ public interface ImplementedComponent extends EObject {
 	 *   : Additional commentary about the containing object.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Remarks</em>' containment reference.
-	 * @see #setRemarks(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Remarks</em>' attribute.
+	 * @see #setRemarks(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getImplementedComponent_Remarks()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype"
 	 *        extendedMetaData="kind='element' name='remarks' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getRemarks();
+	String getRemarks();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.ImplementedComponent#getRemarks <em>Remarks</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.ImplementedComponent#getRemarks <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Remarks</em>' containment reference.
+	 * @param value the new value of the '<em>Remarks</em>' attribute.
 	 * @see #getRemarks()
 	 * @generated
 	 */
-	void setRemarks(MarkupMultilineDatatype value);
+	void setRemarks(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Component Uuid</b></em>' attribute.

@@ -86,12 +86,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case OSCALPackage.MARKUP_ANCHOR: {
-				MarkupAnchor markupAnchor = (MarkupAnchor)theEObject;
-				T result = caseMarkupAnchor(markupAnchor);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case OSCALPackage.ASSESSMENT_LOG: {
 				AssessmentLog assessmentLog = (AssessmentLog)theEObject;
 				T result = caseAssessmentLog(assessmentLog);
@@ -128,12 +122,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case OSCALPackage.MARKUP_BLOCK_QUOTE: {
-				MarkupBlockQuote markupBlockQuote = (MarkupBlockQuote)theEObject;
-				T result = caseMarkupBlockQuote(markupBlockQuote);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case OSCALPackage.CATEGORIZATION: {
 				Categorization categorization = (Categorization)theEObject;
 				T result = caseCategorization(categorization);
@@ -143,13 +131,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 			case OSCALPackage.CITATION: {
 				Citation citation = (Citation)theEObject;
 				T result = caseCitation(citation);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.MARKUP_CODE: {
-				MarkupCode markupCode = (MarkupCode)theEObject;
-				T result = caseMarkupCode(markupCode);
-				if (result == null) result = caseInlineMarkup(markupCode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -231,12 +212,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case OSCALPackage.MARKUP_IMAGE: {
-				MarkupImage markupImage = (MarkupImage)theEObject;
-				T result = caseMarkupImage(markupImage);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case OSCALPackage.IMPLEMENTED_COMPONENT: {
 				ImplementedComponent implementedComponent = (ImplementedComponent)theEObject;
 				T result = caseImplementedComponent(implementedComponent);
@@ -255,33 +230,9 @@ public class OSCALSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case OSCALPackage.INLINE_MARKUP: {
-				InlineMarkup inlineMarkup = (InlineMarkup)theEObject;
-				T result = caseInlineMarkup(inlineMarkup);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.MARKUP_INSERT: {
-				MarkupInsert markupInsert = (MarkupInsert)theEObject;
-				T result = caseMarkupInsert(markupInsert);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case OSCALPackage.LEVERAGED_AUTHORIZATION: {
 				LeveragedAuthorization leveragedAuthorization = (LeveragedAuthorization)theEObject;
 				T result = caseLeveragedAuthorization(leveragedAuthorization);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.MARKUP_LIST_ITEM: {
-				MarkupListItem markupListItem = (MarkupListItem)theEObject;
-				T result = caseMarkupListItem(markupListItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.MARKUP_LIST: {
-				MarkupList markupList = (MarkupList)theEObject;
-				T result = caseMarkupList(markupList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -309,19 +260,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case OSCALPackage.MARKUP_LINE_DATATYPE: {
-				MarkupLineDatatype markupLineDatatype = (MarkupLineDatatype)theEObject;
-				T result = caseMarkupLineDatatype(markupLineDatatype);
-				if (result == null) result = caseInlineMarkup(markupLineDatatype);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.MARKUP_MULTILINE_DATATYPE: {
-				MarkupMultilineDatatype markupMultilineDatatype = (MarkupMultilineDatatype)theEObject;
-				T result = caseMarkupMultilineDatatype(markupMultilineDatatype);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case OSCALPackage.MITIGATING_FACTOR: {
 				MitigatingFactor mitigatingFactor = (MitigatingFactor)theEObject;
 				T result = caseMitigatingFactor(mitigatingFactor);
@@ -331,13 +269,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 			case OSCALPackage.ON_DATE: {
 				OnDate onDate = (OnDate)theEObject;
 				T result = caseOnDate(onDate);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.MARKUP_ORDERED_LIST: {
-				MarkupOrderedList markupOrderedList = (MarkupOrderedList)theEObject;
-				T result = caseMarkupOrderedList(markupOrderedList);
-				if (result == null) result = caseMarkupList(markupOrderedList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -983,13 +914,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case OSCALPackage.MARKUP_PREFORMATTED: {
-				MarkupPreformatted markupPreformatted = (MarkupPreformatted)theEObject;
-				T result = caseMarkupPreformatted(markupPreformatted);
-				if (result == null) result = caseInlineMarkup(markupPreformatted);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case OSCALPackage.PROVIDED: {
 				Provided provided = (Provided)theEObject;
 				T result = caseProvided(provided);
@@ -1035,12 +959,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 			case OSCALPackage.RESPONSIBILITY: {
 				Responsibility responsibility = (Responsibility)theEObject;
 				T result = caseResponsibility(responsibility);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.REVISIONS: {
-				Revisions revisions = (Revisions)theEObject;
-				T result = caseRevisions(revisions);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1101,25 +1019,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 			case OSCALPackage.STEP: {
 				Step step = (Step)theEObject;
 				T result = caseStep(step);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.MARKUP_TABLE_CELL: {
-				MarkupTableCell markupTableCell = (MarkupTableCell)theEObject;
-				T result = caseMarkupTableCell(markupTableCell);
-				if (result == null) result = caseInlineMarkup(markupTableCell);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.MARKUP_TABLE_ROW: {
-				MarkupTableRow markupTableRow = (MarkupTableRow)theEObject;
-				T result = caseMarkupTableRow(markupTableRow);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case OSCALPackage.MARKUP_TABLE: {
-				MarkupTable markupTable = (MarkupTable)theEObject;
-				T result = caseMarkupTable(markupTable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1184,21 +1083,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAlter(Alter object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Anchor</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Anchor</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupAnchor(MarkupAnchor object) {
 		return null;
 	}
 
@@ -1293,21 +1177,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Block Quote</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Block Quote</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupBlockQuote(MarkupBlockQuote object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Categorization</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1334,21 +1203,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCitation(Citation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Code</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Code</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupCode(MarkupCode object) {
 		return null;
 	}
 
@@ -1548,21 +1402,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Image</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Image</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupImage(MarkupImage object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Implemented Component</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1608,36 +1447,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Inline Markup</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Inline Markup</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInlineMarkup(InlineMarkup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Insert</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Insert</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupInsert(MarkupInsert object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Leveraged Authorization</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1649,36 +1458,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLeveragedAuthorization(LeveragedAuthorization object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup List Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup List Item</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupListItem(MarkupListItem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupList(MarkupList object) {
 		return null;
 	}
 
@@ -1743,36 +1522,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Line Datatype</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Line Datatype</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupLineDatatype(MarkupLineDatatype object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Multiline Datatype</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Multiline Datatype</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupMultilineDatatype(MarkupMultilineDatatype object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Mitigating Factor</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1799,21 +1548,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOnDate(OnDate object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Ordered List</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Ordered List</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupOrderedList(MarkupOrderedList object) {
 		return null;
 	}
 
@@ -3423,21 +3157,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Preformatted</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Preformatted</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupPreformatted(MarkupPreformatted object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Provided</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -3554,21 +3273,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseResponsibility(Responsibility object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Revisions</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Revisions</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRevisions(Revisions object) {
 		return null;
 	}
 
@@ -3719,51 +3423,6 @@ public class OSCALSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStep(Step object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Table Cell</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Table Cell</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupTableCell(MarkupTableCell object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Table Row</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Table Row</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupTableRow(MarkupTableRow object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Markup Table</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Markup Table</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMarkupTable(MarkupTable object) {
 		return null;
 	}
 

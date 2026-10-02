@@ -11,7 +11,6 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.Provided;
@@ -53,14 +52,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provided {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -93,14 +102,24 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 	protected EList<ResponsibleRole> responsibleRole;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -147,7 +166,7 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -156,34 +175,12 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.PROVIDED__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PROVIDED__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PROVIDED__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PROVIDED__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PROVIDED__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -231,7 +228,7 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -240,34 +237,12 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.PROVIDED__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PROVIDED__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PROVIDED__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PROVIDED__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PROVIDED__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -301,16 +276,12 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.PROVIDED__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.PROVIDED__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.PROVIDED__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.PROVIDED__RESPONSIBLE_ROLE:
 				return ((InternalEList<?>)getResponsibleRole()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.PROVIDED__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -349,7 +320,7 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.PROVIDED__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.PROVIDED__PROP:
 				getProp().clear();
@@ -364,7 +335,7 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 				getResponsibleRole().addAll((Collection<? extends ResponsibleRole>)newValue);
 				return;
 			case OSCALPackage.PROVIDED__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.PROVIDED__UUID:
 				setUuid((String)newValue);
@@ -382,7 +353,7 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.PROVIDED__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.PROVIDED__PROP:
 				getProp().clear();
@@ -394,7 +365,7 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 				getResponsibleRole().clear();
 				return;
 			case OSCALPackage.PROVIDED__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.PROVIDED__UUID:
 				setUuid(UUID_EDEFAULT);
@@ -412,7 +383,7 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.PROVIDED__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.PROVIDED__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.PROVIDED__LINK:
@@ -420,7 +391,7 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 			case OSCALPackage.PROVIDED__RESPONSIBLE_ROLE:
 				return responsibleRole != null && !responsibleRole.isEmpty();
 			case OSCALPackage.PROVIDED__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.PROVIDED__UUID:
 				return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
 		}
@@ -437,7 +408,11 @@ public class ProvidedImpl extends MinimalEObjectImpl.Container implements Provid
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (uuid: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", remarks: ");
+		result.append(remarks);
+		result.append(", uuid: ");
 		result.append(uuid);
 		result.append(')');
 		return result.toString();

@@ -10,25 +10,21 @@
  */
 package gov.nist.csrc.ns.oscal.impl;
 
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.ParameterSelection;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,14 +42,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ParameterSelectionImpl extends MinimalEObjectImpl.Container implements ParameterSelection {
 	/**
-	 * The cached value of the '{@link #getChoice() <em>Choice</em>}' containment reference list.
+	 * The cached value of the '{@link #getChoice() <em>Choice</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getChoice()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MarkupLineDatatype> choice;
+	protected EList<String> choice;
 
 	/**
 	 * The default value of the '{@link #getHowMany() <em>How Many</em>}' attribute.
@@ -100,9 +96,9 @@ public class ParameterSelectionImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public EList<MarkupLineDatatype> getChoice() {
+	public EList<String> getChoice() {
 		if (choice == null) {
-			choice = new EObjectContainmentEList<MarkupLineDatatype>(MarkupLineDatatype.class, this, OSCALPackage.PARAMETER_SELECTION__CHOICE);
+			choice = new EDataTypeUniqueEList<String>(String.class, this, OSCALPackage.PARAMETER_SELECTION__CHOICE);
 		}
 		return choice;
 	}
@@ -136,20 +132,6 @@ public class ParameterSelectionImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OSCALPackage.PARAMETER_SELECTION__CHOICE:
-				return ((InternalEList<?>)getChoice()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case OSCALPackage.PARAMETER_SELECTION__CHOICE:
@@ -171,7 +153,7 @@ public class ParameterSelectionImpl extends MinimalEObjectImpl.Container impleme
 		switch (featureID) {
 			case OSCALPackage.PARAMETER_SELECTION__CHOICE:
 				getChoice().clear();
-				getChoice().addAll((Collection<? extends MarkupLineDatatype>)newValue);
+				getChoice().addAll((Collection<? extends String>)newValue);
 				return;
 			case OSCALPackage.PARAMETER_SELECTION__HOW_MANY:
 				setHowMany((String)newValue);
@@ -224,7 +206,9 @@ public class ParameterSelectionImpl extends MinimalEObjectImpl.Container impleme
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (howMany: ");
+		result.append(" (choice: ");
+		result.append(choice);
+		result.append(", howMany: ");
 		result.append(howMany);
 		result.append(')');
 		return result.toString();

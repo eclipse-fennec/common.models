@@ -81,7 +81,7 @@ public interface ProfileSetParameter extends EObject {
 	EList<Link> getLink();
 
 	/**
-	 * Returns the value of the '<em><b>Label</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Label</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -91,27 +91,27 @@ public interface ProfileSetParameter extends EObject {
 	 *   : A short, placeholder name for the parameter, which can be used as a substitute for a value if no value is assigned.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Label</em>' containment reference.
-	 * @see #setLabel(MarkupLineDatatype)
+	 * @return the value of the '<em>Label</em>' attribute.
+	 * @see #setLabel(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getProfileSetParameter_Label()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupLineDatatype"
 	 *        extendedMetaData="kind='element' name='label' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupLineDatatype getLabel();
+	String getLabel();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.ProfileSetParameter#getLabel <em>Label</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.ProfileSetParameter#getLabel <em>Label</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Label</em>' containment reference.
+	 * @param value the new value of the '<em>Label</em>' attribute.
 	 * @see #getLabel()
 	 * @generated
 	 */
-	void setLabel(MarkupLineDatatype value);
+	void setLabel(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Usage</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Usage</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
@@ -121,24 +121,24 @@ public interface ProfileSetParameter extends EObject {
 	 *   : Describes the purpose and use of a parameter.
 	 * 
 	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Usage</em>' containment reference.
-	 * @see #setUsage(MarkupMultilineDatatype)
+	 * @return the value of the '<em>Usage</em>' attribute.
+	 * @see #setUsage(String)
 	 * @see gov.nist.csrc.ns.oscal.OSCALPackage#getProfileSetParameter_Usage()
-	 * @model containment="true"
+	 * @model dataType="gov.nist.csrc.ns.oscal.MarkupMultilineDatatype"
 	 *        extendedMetaData="kind='element' name='usage' namespace='##targetNamespace'"
 	 * @generated
 	 */
-	MarkupMultilineDatatype getUsage();
+	String getUsage();
 
 	/**
-	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.ProfileSetParameter#getUsage <em>Usage</em>}' containment reference.
+	 * Sets the value of the '{@link gov.nist.csrc.ns.oscal.ProfileSetParameter#getUsage <em>Usage</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Usage</em>' containment reference.
+	 * @param value the new value of the '<em>Usage</em>' attribute.
 	 * @see #getUsage()
 	 * @generated
 	 */
-	void setUsage(MarkupMultilineDatatype value);
+	void setUsage(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Constraint</b></em>' containment reference list.

@@ -11,7 +11,6 @@
 package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.ResponsibleParty;
@@ -82,14 +81,24 @@ public class ResponsiblePartyImpl extends MinimalEObjectImpl.Container implement
 	protected EList<Link> link;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRoleId() <em>Role Id</em>}' attribute.
@@ -175,7 +184,7 @@ public class ResponsiblePartyImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -184,34 +193,12 @@ public class ResponsiblePartyImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.RESPONSIBLE_PARTY__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RESPONSIBLE_PARTY__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.RESPONSIBLE_PARTY__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RESPONSIBLE_PARTY__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.RESPONSIBLE_PARTY__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -249,8 +236,6 @@ public class ResponsiblePartyImpl extends MinimalEObjectImpl.Container implement
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.RESPONSIBLE_PARTY__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.RESPONSIBLE_PARTY__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -299,7 +284,7 @@ public class ResponsiblePartyImpl extends MinimalEObjectImpl.Container implement
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
 			case OSCALPackage.RESPONSIBLE_PARTY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.RESPONSIBLE_PARTY__ROLE_ID:
 				setRoleId((String)newValue);
@@ -326,7 +311,7 @@ public class ResponsiblePartyImpl extends MinimalEObjectImpl.Container implement
 				getLink().clear();
 				return;
 			case OSCALPackage.RESPONSIBLE_PARTY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.RESPONSIBLE_PARTY__ROLE_ID:
 				setRoleId(ROLE_ID_EDEFAULT);
@@ -350,7 +335,7 @@ public class ResponsiblePartyImpl extends MinimalEObjectImpl.Container implement
 			case OSCALPackage.RESPONSIBLE_PARTY__LINK:
 				return link != null && !link.isEmpty();
 			case OSCALPackage.RESPONSIBLE_PARTY__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.RESPONSIBLE_PARTY__ROLE_ID:
 				return ROLE_ID_EDEFAULT == null ? roleId != null : !ROLE_ID_EDEFAULT.equals(roleId);
 		}
@@ -369,6 +354,8 @@ public class ResponsiblePartyImpl extends MinimalEObjectImpl.Container implement
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (partyUuid: ");
 		result.append(partyUuid);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(", roleId: ");
 		result.append(roleId);
 		result.append(')');

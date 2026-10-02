@@ -13,7 +13,6 @@ package gov.nist.csrc.ns.oscal.impl;
 import gov.nist.csrc.ns.oscal.ComponentControlImplementation;
 import gov.nist.csrc.ns.oscal.ComponentImplementedRequirement;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.SetParameter;
@@ -55,14 +54,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ComponentControlImplementationImpl extends MinimalEObjectImpl.Container implements ComponentControlImplementation {
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -169,7 +178,7 @@ public class ComponentControlImplementationImpl extends MinimalEObjectImpl.Conta
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -178,34 +187,12 @@ public class ComponentControlImplementationImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -314,8 +301,6 @@ public class ComponentControlImplementationImpl extends MinimalEObjectImpl.Conta
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__LINK:
@@ -364,7 +349,7 @@ public class ComponentControlImplementationImpl extends MinimalEObjectImpl.Conta
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__PROP:
 				getProp().clear();
@@ -401,7 +386,7 @@ public class ComponentControlImplementationImpl extends MinimalEObjectImpl.Conta
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__PROP:
 				getProp().clear();
@@ -434,7 +419,7 @@ public class ComponentControlImplementationImpl extends MinimalEObjectImpl.Conta
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.COMPONENT_CONTROL_IMPLEMENTATION__LINK:
@@ -461,7 +446,9 @@ public class ComponentControlImplementationImpl extends MinimalEObjectImpl.Conta
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (source: ");
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", source: ");
 		result.append(source);
 		result.append(", uuid: ");
 		result.append(uuid);

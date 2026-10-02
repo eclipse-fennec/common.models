@@ -21,6 +21,7 @@ import gov.nist.csrc.ns.oscal.PlanOfActionAndMilestones;
 import gov.nist.csrc.ns.oscal.Profile;
 import gov.nist.csrc.ns.oscal.SystemSecurityPlan;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EMap;
@@ -30,6 +31,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EStringToStringMapEntryImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -57,6 +59,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link gov.nist.csrc.ns.oscal.impl.DocumentRootImpl#getPlanOfActionAndMilestones <em>Plan Of Action And Milestones</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.impl.DocumentRootImpl#getProfile <em>Profile</em>}</li>
  *   <li>{@link gov.nist.csrc.ns.oscal.impl.DocumentRootImpl#getSystemSecurityPlan <em>System Security Plan</em>}</li>
+ *   <li>{@link gov.nist.csrc.ns.oscal.impl.DocumentRootImpl#getSchema <em>Schema</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,6 +94,26 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @ordered
 	 */
 	protected EMap<String, String> xSISchemaLocation;
+
+	/**
+	 * The default value of the '{@link #getSchema() <em>Schema</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSchema()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SCHEMA_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSchema() <em>Schema</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSchema()
+	 * @generated
+	 * @ordered
+	 */
+	protected String schema = SCHEMA_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -388,6 +411,29 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	@Override
+	public String getSchema() {
+		return schema;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSchema(String newSchema) {
+		String oldSchema = schema;
+		schema = newSchema;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.DOCUMENT_ROOT__SCHEMA, oldSchema, schema));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case OSCALPackage.DOCUMENT_ROOT__MIXED:
@@ -449,6 +495,8 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 				return getProfile();
 			case OSCALPackage.DOCUMENT_ROOT__SYSTEM_SECURITY_PLAN:
 				return getSystemSecurityPlan();
+			case OSCALPackage.DOCUMENT_ROOT__SCHEMA:
+				return getSchema();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -493,6 +541,9 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 				return;
 			case OSCALPackage.DOCUMENT_ROOT__SYSTEM_SECURITY_PLAN:
 				setSystemSecurityPlan((SystemSecurityPlan)newValue);
+				return;
+			case OSCALPackage.DOCUMENT_ROOT__SCHEMA:
+				setSchema((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -539,6 +590,9 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 			case OSCALPackage.DOCUMENT_ROOT__SYSTEM_SECURITY_PLAN:
 				setSystemSecurityPlan((SystemSecurityPlan)null);
 				return;
+			case OSCALPackage.DOCUMENT_ROOT__SCHEMA:
+				setSchema(SCHEMA_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -573,6 +627,8 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 				return getProfile() != null;
 			case OSCALPackage.DOCUMENT_ROOT__SYSTEM_SECURITY_PLAN:
 				return getSystemSecurityPlan() != null;
+			case OSCALPackage.DOCUMENT_ROOT__SCHEMA:
+				return SCHEMA_EDEFAULT == null ? schema != null : !SCHEMA_EDEFAULT.equals(schema);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -589,6 +645,8 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (mixed: ");
 		result.append(mixed);
+		result.append(", schema: ");
+		result.append(schema);
 		result.append(')');
 		return result.toString();
 	}

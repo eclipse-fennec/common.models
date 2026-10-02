@@ -15,7 +15,6 @@ import gov.nist.csrc.ns.oscal.Coverage;
 import gov.nist.csrc.ns.oscal.Link;
 import gov.nist.csrc.ns.oscal.MapEntry;
 import gov.nist.csrc.ns.oscal.MappingItem;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.QualifierItem;
@@ -152,14 +151,24 @@ public class MapEntryImpl extends MinimalEObjectImpl.Container implements MapEnt
 	protected EList<Link> link;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getMatchingRationale() <em>Matching Rationale</em>}' attribute.
@@ -424,7 +433,7 @@ public class MapEntryImpl extends MinimalEObjectImpl.Container implements MapEnt
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -433,34 +442,12 @@ public class MapEntryImpl extends MinimalEObjectImpl.Container implements MapEnt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.MAP_ENTRY__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.MAP_ENTRY__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.MAP_ENTRY__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.MAP_ENTRY__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.MAP_ENTRY__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -554,8 +541,6 @@ public class MapEntryImpl extends MinimalEObjectImpl.Container implements MapEnt
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.MAP_ENTRY__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.MAP_ENTRY__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -635,7 +620,7 @@ public class MapEntryImpl extends MinimalEObjectImpl.Container implements MapEnt
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
 			case OSCALPackage.MAP_ENTRY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.MAP_ENTRY__MATCHING_RATIONALE:
 				setMatchingRationale((String)newValue);
@@ -683,7 +668,7 @@ public class MapEntryImpl extends MinimalEObjectImpl.Container implements MapEnt
 				getLink().clear();
 				return;
 			case OSCALPackage.MAP_ENTRY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.MAP_ENTRY__MATCHING_RATIONALE:
 				setMatchingRationale(MATCHING_RATIONALE_EDEFAULT);
@@ -723,7 +708,7 @@ public class MapEntryImpl extends MinimalEObjectImpl.Container implements MapEnt
 			case OSCALPackage.MAP_ENTRY__LINK:
 				return link != null && !link.isEmpty();
 			case OSCALPackage.MAP_ENTRY__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.MAP_ENTRY__MATCHING_RATIONALE:
 				return MATCHING_RATIONALE_EDEFAULT == null ? matchingRationale != null : !MATCHING_RATIONALE_EDEFAULT.equals(matchingRationale);
 			case OSCALPackage.MAP_ENTRY__NS:
@@ -746,6 +731,8 @@ public class MapEntryImpl extends MinimalEObjectImpl.Container implements MapEnt
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (relationship: ");
 		result.append(relationship);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(", matchingRationale: ");
 		result.append(matchingRationale);
 		result.append(", ns: ");

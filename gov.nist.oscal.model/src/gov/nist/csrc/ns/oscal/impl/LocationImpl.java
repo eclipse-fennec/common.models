@@ -13,8 +13,6 @@ package gov.nist.csrc.ns.oscal.impl;
 import gov.nist.csrc.ns.oscal.Address;
 import gov.nist.csrc.ns.oscal.Link;
 import gov.nist.csrc.ns.oscal.Location;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 import gov.nist.csrc.ns.oscal.TelephoneNumber;
@@ -59,14 +57,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class LocationImpl extends MinimalEObjectImpl.Container implements Location {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getAddress() <em>Address</em>}' containment reference.
@@ -129,14 +137,24 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	protected EList<Link> link;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -183,7 +201,7 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -192,34 +210,12 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
-		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.LOCATION__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.LOCATION__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.LOCATION__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.LOCATION__TITLE, newTitle, newTitle));
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
+		title = newTitle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.LOCATION__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -338,7 +334,7 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -347,34 +343,12 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.LOCATION__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.LOCATION__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.LOCATION__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.LOCATION__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.LOCATION__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -408,8 +382,6 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.LOCATION__TITLE:
-				return basicSetTitle(null, msgs);
 			case OSCALPackage.LOCATION__ADDRESS:
 				return basicSetAddress(null, msgs);
 			case OSCALPackage.LOCATION__TELEPHONE_NUMBER:
@@ -418,8 +390,6 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.LOCATION__LINK:
 				return ((InternalEList<?>)getLink()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.LOCATION__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -464,7 +434,7 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.LOCATION__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.LOCATION__ADDRESS:
 				setAddress((Address)newValue);
@@ -490,7 +460,7 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
 			case OSCALPackage.LOCATION__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.LOCATION__UUID:
 				setUuid((String)newValue);
@@ -508,7 +478,7 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.LOCATION__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.LOCATION__ADDRESS:
 				setAddress((Address)null);
@@ -529,7 +499,7 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 				getLink().clear();
 				return;
 			case OSCALPackage.LOCATION__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.LOCATION__UUID:
 				setUuid(UUID_EDEFAULT);
@@ -547,7 +517,7 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.LOCATION__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.LOCATION__ADDRESS:
 				return address != null;
 			case OSCALPackage.LOCATION__EMAIL_ADDRESS:
@@ -561,7 +531,7 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 			case OSCALPackage.LOCATION__LINK:
 				return link != null && !link.isEmpty();
 			case OSCALPackage.LOCATION__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.LOCATION__UUID:
 				return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
 		}
@@ -578,10 +548,14 @@ public class LocationImpl extends MinimalEObjectImpl.Container implements Locati
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (emailAddress: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", emailAddress: ");
 		result.append(emailAddress);
 		result.append(", url: ");
 		result.append(url);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(", uuid: ");
 		result.append(uuid);
 		result.append(')');

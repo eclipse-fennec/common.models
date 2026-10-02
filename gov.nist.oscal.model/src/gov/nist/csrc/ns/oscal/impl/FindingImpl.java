@@ -14,8 +14,6 @@ import gov.nist.csrc.ns.oscal.AssociatedRisk;
 import gov.nist.csrc.ns.oscal.Finding;
 import gov.nist.csrc.ns.oscal.FindingTarget;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Origin;
 import gov.nist.csrc.ns.oscal.Property;
@@ -62,24 +60,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class FindingImpl extends MinimalEObjectImpl.Container implements Finding {
 	/**
-	 * The cached value of the '{@link #getTitle() <em>Title</em>}' containment reference.
+	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTitle()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype title;
+	protected static final String TITLE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
+	 * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTitle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String title = TITLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype description;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -162,14 +180,24 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	protected EList<AssociatedRisk> associatedRisk;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUuid() <em>Uuid</em>}' attribute.
@@ -216,7 +244,7 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getTitle() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -225,14 +253,12 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTitle(MarkupLineDatatype newTitle, NotificationChain msgs) {
-		MarkupLineDatatype oldTitle = title;
+	@Override
+	public void setTitle(String newTitle) {
+		String oldTitle = title;
 		title = newTitle;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING__TITLE, oldTitle, newTitle);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -241,27 +267,7 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	 * @generated
 	 */
 	@Override
-	public void setTitle(MarkupLineDatatype newTitle) {
-		if (newTitle != title) {
-			NotificationChain msgs = null;
-			if (title != null)
-				msgs = ((InternalEObject)title).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.FINDING__TITLE, null, msgs);
-			if (newTitle != null)
-				msgs = ((InternalEObject)newTitle).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.FINDING__TITLE, null, msgs);
-			msgs = basicSetTitle(newTitle, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING__TITLE, newTitle, newTitle));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MarkupMultilineDatatype getDescription() {
+	public String getDescription() {
 		return description;
 	}
 
@@ -270,34 +276,12 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(MarkupMultilineDatatype newDescription, NotificationChain msgs) {
-		MarkupMultilineDatatype oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING__DESCRIPTION, oldDescription, newDescription);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setDescription(MarkupMultilineDatatype newDescription) {
-		if (newDescription != description) {
-			NotificationChain msgs = null;
-			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.FINDING__DESCRIPTION, null, msgs);
-			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.FINDING__DESCRIPTION, null, msgs);
-			msgs = basicSetDescription(newDescription, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING__DESCRIPTION, newDescription, newDescription));
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -439,7 +423,7 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -448,34 +432,12 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.FINDING__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.FINDING__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.FINDING__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -509,10 +471,6 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.FINDING__TITLE:
-				return basicSetTitle(null, msgs);
-			case OSCALPackage.FINDING__DESCRIPTION:
-				return basicSetDescription(null, msgs);
 			case OSCALPackage.FINDING__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.FINDING__LINK:
@@ -525,8 +483,6 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 				return ((InternalEList<?>)getRelatedObservation()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.FINDING__ASSOCIATED_RISK:
 				return ((InternalEList<?>)getAssociatedRisk()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.FINDING__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -575,10 +531,10 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.FINDING__TITLE:
-				setTitle((MarkupLineDatatype)newValue);
+				setTitle((String)newValue);
 				return;
 			case OSCALPackage.FINDING__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)newValue);
+				setDescription((String)newValue);
 				return;
 			case OSCALPackage.FINDING__PROP:
 				getProp().clear();
@@ -607,7 +563,7 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 				getAssociatedRisk().addAll((Collection<? extends AssociatedRisk>)newValue);
 				return;
 			case OSCALPackage.FINDING__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.FINDING__UUID:
 				setUuid((String)newValue);
@@ -625,10 +581,10 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.FINDING__TITLE:
-				setTitle((MarkupLineDatatype)null);
+				setTitle(TITLE_EDEFAULT);
 				return;
 			case OSCALPackage.FINDING__DESCRIPTION:
-				setDescription((MarkupMultilineDatatype)null);
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case OSCALPackage.FINDING__PROP:
 				getProp().clear();
@@ -652,7 +608,7 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 				getAssociatedRisk().clear();
 				return;
 			case OSCALPackage.FINDING__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.FINDING__UUID:
 				setUuid(UUID_EDEFAULT);
@@ -670,9 +626,9 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.FINDING__TITLE:
-				return title != null;
+				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case OSCALPackage.FINDING__DESCRIPTION:
-				return description != null;
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case OSCALPackage.FINDING__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.FINDING__LINK:
@@ -688,7 +644,7 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 			case OSCALPackage.FINDING__ASSOCIATED_RISK:
 				return associatedRisk != null && !associatedRisk.isEmpty();
 			case OSCALPackage.FINDING__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.FINDING__UUID:
 				return UUID_EDEFAULT == null ? uuid != null : !UUID_EDEFAULT.equals(uuid);
 		}
@@ -705,8 +661,14 @@ public class FindingImpl extends MinimalEObjectImpl.Container implements Finding
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (implementationStatementUuid: ");
+		result.append(" (title: ");
+		result.append(title);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", implementationStatementUuid: ");
 		result.append(implementationStatementUuid);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(", uuid: ");
 		result.append(uuid);
 		result.append(')');

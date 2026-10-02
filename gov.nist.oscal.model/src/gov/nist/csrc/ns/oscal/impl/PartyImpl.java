@@ -13,7 +13,6 @@ package gov.nist.csrc.ns.oscal.impl;
 import gov.nist.csrc.ns.oscal.Address;
 import gov.nist.csrc.ns.oscal.ExternalId;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Party;
 import gov.nist.csrc.ns.oscal.Property;
@@ -183,14 +182,24 @@ public class PartyImpl extends MinimalEObjectImpl.Container implements Party {
 	protected EList<String> memberOfOrganization;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -407,7 +416,7 @@ public class PartyImpl extends MinimalEObjectImpl.Container implements Party {
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -416,34 +425,12 @@ public class PartyImpl extends MinimalEObjectImpl.Container implements Party {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.PARTY__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PARTY__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.PARTY__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PARTY__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.PARTY__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -510,8 +497,6 @@ public class PartyImpl extends MinimalEObjectImpl.Container implements Party {
 				return ((InternalEList<?>)getTelephoneNumber()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.PARTY__ADDRESS:
 				return ((InternalEList<?>)getAddress()).basicRemove(otherEnd, msgs);
-			case OSCALPackage.PARTY__REMARKS:
-				return basicSetRemarks(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -602,7 +587,7 @@ public class PartyImpl extends MinimalEObjectImpl.Container implements Party {
 				getMemberOfOrganization().addAll((Collection<? extends String>)newValue);
 				return;
 			case OSCALPackage.PARTY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.PARTY__TYPE:
 				setType((String)newValue);
@@ -653,7 +638,7 @@ public class PartyImpl extends MinimalEObjectImpl.Container implements Party {
 				getMemberOfOrganization().clear();
 				return;
 			case OSCALPackage.PARTY__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.PARTY__TYPE:
 				setType(TYPE_EDEFAULT);
@@ -694,7 +679,7 @@ public class PartyImpl extends MinimalEObjectImpl.Container implements Party {
 			case OSCALPackage.PARTY__MEMBER_OF_ORGANIZATION:
 				return memberOfOrganization != null && !memberOfOrganization.isEmpty();
 			case OSCALPackage.PARTY__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.PARTY__TYPE:
 				return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 			case OSCALPackage.PARTY__UUID:
@@ -723,6 +708,8 @@ public class PartyImpl extends MinimalEObjectImpl.Container implements Party {
 		result.append(locationUuid);
 		result.append(", memberOfOrganization: ");
 		result.append(memberOfOrganization);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(", type: ");
 		result.append(type);
 		result.append(", uuid: ");

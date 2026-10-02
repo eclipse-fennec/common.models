@@ -12,7 +12,6 @@ package gov.nist.csrc.ns.oscal.impl;
 
 import gov.nist.csrc.ns.oscal.Citation;
 import gov.nist.csrc.ns.oscal.Link;
-import gov.nist.csrc.ns.oscal.MarkupLineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.Property;
 
@@ -49,14 +48,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class CitationImpl extends MinimalEObjectImpl.Container implements Citation {
 	/**
-	 * The cached value of the '{@link #getText() <em>Text</em>}' containment reference.
+	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupLineDatatype text;
+	protected static final String TEXT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getText()
+	 * @generated
+	 * @ordered
+	 */
+	protected String text = TEXT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getProp() <em>Prop</em>}' containment reference list.
@@ -103,7 +112,7 @@ public class CitationImpl extends MinimalEObjectImpl.Container implements Citati
 	 * @generated
 	 */
 	@Override
-	public MarkupLineDatatype getText() {
+	public String getText() {
 		return text;
 	}
 
@@ -112,34 +121,12 @@ public class CitationImpl extends MinimalEObjectImpl.Container implements Citati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetText(MarkupLineDatatype newText, NotificationChain msgs) {
-		MarkupLineDatatype oldText = text;
-		text = newText;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.CITATION__TEXT, oldText, newText);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setText(MarkupLineDatatype newText) {
-		if (newText != text) {
-			NotificationChain msgs = null;
-			if (text != null)
-				msgs = ((InternalEObject)text).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CITATION__TEXT, null, msgs);
-			if (newText != null)
-				msgs = ((InternalEObject)newText).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.CITATION__TEXT, null, msgs);
-			msgs = basicSetText(newText, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CITATION__TEXT, newText, newText));
+	public void setText(String newText) {
+		String oldText = text;
+		text = newText;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.CITATION__TEXT, oldText, text));
 	}
 
 	/**
@@ -176,8 +163,6 @@ public class CitationImpl extends MinimalEObjectImpl.Container implements Citati
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case OSCALPackage.CITATION__TEXT:
-				return basicSetText(null, msgs);
 			case OSCALPackage.CITATION__PROP:
 				return ((InternalEList<?>)getProp()).basicRemove(otherEnd, msgs);
 			case OSCALPackage.CITATION__LINK:
@@ -214,7 +199,7 @@ public class CitationImpl extends MinimalEObjectImpl.Container implements Citati
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case OSCALPackage.CITATION__TEXT:
-				setText((MarkupLineDatatype)newValue);
+				setText((String)newValue);
 				return;
 			case OSCALPackage.CITATION__PROP:
 				getProp().clear();
@@ -237,7 +222,7 @@ public class CitationImpl extends MinimalEObjectImpl.Container implements Citati
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.CITATION__TEXT:
-				setText((MarkupLineDatatype)null);
+				setText(TEXT_EDEFAULT);
 				return;
 			case OSCALPackage.CITATION__PROP:
 				getProp().clear();
@@ -258,13 +243,29 @@ public class CitationImpl extends MinimalEObjectImpl.Container implements Citati
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case OSCALPackage.CITATION__TEXT:
-				return text != null;
+				return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 			case OSCALPackage.CITATION__PROP:
 				return prop != null && !prop.isEmpty();
 			case OSCALPackage.CITATION__LINK:
 				return link != null && !link.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (text: ");
+		result.append(text);
+		result.append(')');
+		return result.toString();
 	}
 
 } //CitationImpl

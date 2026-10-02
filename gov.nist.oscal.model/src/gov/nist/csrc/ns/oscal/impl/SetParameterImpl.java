@@ -10,19 +10,16 @@
  */
 package gov.nist.csrc.ns.oscal.impl;
 
-import gov.nist.csrc.ns.oscal.MarkupMultilineDatatype;
 import gov.nist.csrc.ns.oscal.OSCALPackage;
 import gov.nist.csrc.ns.oscal.SetParameter;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -56,14 +53,24 @@ public class SetParameterImpl extends MinimalEObjectImpl.Container implements Se
 	protected EList<String> value;
 
 	/**
-	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' containment reference.
+	 * The default value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRemarks()
 	 * @generated
 	 * @ordered
 	 */
-	protected MarkupMultilineDatatype remarks;
+	protected static final String REMARKS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRemarks() <em>Remarks</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRemarks()
+	 * @generated
+	 * @ordered
+	 */
+	protected String remarks = REMARKS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getParamId() <em>Param Id</em>}' attribute.
@@ -123,7 +130,7 @@ public class SetParameterImpl extends MinimalEObjectImpl.Container implements Se
 	 * @generated
 	 */
 	@Override
-	public MarkupMultilineDatatype getRemarks() {
+	public String getRemarks() {
 		return remarks;
 	}
 
@@ -132,34 +139,12 @@ public class SetParameterImpl extends MinimalEObjectImpl.Container implements Se
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRemarks(MarkupMultilineDatatype newRemarks, NotificationChain msgs) {
-		MarkupMultilineDatatype oldRemarks = remarks;
-		remarks = newRemarks;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, OSCALPackage.SET_PARAMETER__REMARKS, oldRemarks, newRemarks);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public void setRemarks(MarkupMultilineDatatype newRemarks) {
-		if (newRemarks != remarks) {
-			NotificationChain msgs = null;
-			if (remarks != null)
-				msgs = ((InternalEObject)remarks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.SET_PARAMETER__REMARKS, null, msgs);
-			if (newRemarks != null)
-				msgs = ((InternalEObject)newRemarks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - OSCALPackage.SET_PARAMETER__REMARKS, null, msgs);
-			msgs = basicSetRemarks(newRemarks, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.SET_PARAMETER__REMARKS, newRemarks, newRemarks));
+	public void setRemarks(String newRemarks) {
+		String oldRemarks = remarks;
+		remarks = newRemarks;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.SET_PARAMETER__REMARKS, oldRemarks, remarks));
 	}
 
 	/**
@@ -183,20 +168,6 @@ public class SetParameterImpl extends MinimalEObjectImpl.Container implements Se
 		paramId = newParamId;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, OSCALPackage.SET_PARAMETER__PARAM_ID, oldParamId, paramId));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case OSCALPackage.SET_PARAMETER__REMARKS:
-				return basicSetRemarks(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -231,7 +202,7 @@ public class SetParameterImpl extends MinimalEObjectImpl.Container implements Se
 				getValue().addAll((Collection<? extends String>)newValue);
 				return;
 			case OSCALPackage.SET_PARAMETER__REMARKS:
-				setRemarks((MarkupMultilineDatatype)newValue);
+				setRemarks((String)newValue);
 				return;
 			case OSCALPackage.SET_PARAMETER__PARAM_ID:
 				setParamId((String)newValue);
@@ -252,7 +223,7 @@ public class SetParameterImpl extends MinimalEObjectImpl.Container implements Se
 				getValue().clear();
 				return;
 			case OSCALPackage.SET_PARAMETER__REMARKS:
-				setRemarks((MarkupMultilineDatatype)null);
+				setRemarks(REMARKS_EDEFAULT);
 				return;
 			case OSCALPackage.SET_PARAMETER__PARAM_ID:
 				setParamId(PARAM_ID_EDEFAULT);
@@ -272,7 +243,7 @@ public class SetParameterImpl extends MinimalEObjectImpl.Container implements Se
 			case OSCALPackage.SET_PARAMETER__VALUE:
 				return value != null && !value.isEmpty();
 			case OSCALPackage.SET_PARAMETER__REMARKS:
-				return remarks != null;
+				return REMARKS_EDEFAULT == null ? remarks != null : !REMARKS_EDEFAULT.equals(remarks);
 			case OSCALPackage.SET_PARAMETER__PARAM_ID:
 				return PARAM_ID_EDEFAULT == null ? paramId != null : !PARAM_ID_EDEFAULT.equals(paramId);
 		}
@@ -291,6 +262,8 @@ public class SetParameterImpl extends MinimalEObjectImpl.Container implements Se
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
+		result.append(", remarks: ");
+		result.append(remarks);
 		result.append(", paramId: ");
 		result.append(paramId);
 		result.append(')');
