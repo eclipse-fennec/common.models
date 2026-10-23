@@ -126,19 +126,11 @@ makes the exact revision traceable.
 
 ## Fennec-internal models
 
-These are not external standards — they are Fennec's own models, kept here so
-they ship through the same library and BOM.
+The Fennec-own models (`org.eclipse.fennec.model`, `gdpr.*`, `compliance.*`) moved to
+[eclipse-fennec/fennec.models](https://github.com/eclipse-fennec/fennec.models) in `0.1.0`;
+`org.eclipse.fennec.query.model` lives on in
+[eclipse-fennec/emf.persistence-jpa](https://github.com/eclipse-fennec/emf.persistence-jpa).
 
-| Module | Namespace URI | Purpose |
-|---|---|---|
-| `org.eclipse.fennec.model` | `https://org.eclipse/fennec/collection/1.0`<br>`https://org.eclipse/fennec/pushstream/1.0`<br>`https://org.eclipse/fennec/utils/1.0` | Three small utility models — collection wrappers, OSGi PushStream types and general utilities. Generated into `src-gen-coll/`, `src-gen-ps/` and `src-gen-util/`. |
-| `org.eclipse.fennec.query.model` | `https://org.eclipse/fennec/query/1.0.0` | The Fennec query model — comparators, operations and sort orders used to express queries over EMF instances. |
-
-::: warning Work in progress
-`org.eclipse.fennec.service.model` (`http://eclipse.org/fennec/service/1.0`)
-exists in the workspace but is not part of the build yet — it has a
-`model/service.ecore` but no genmodel, so nothing is generated from it.
-:::
 
 ## Shared models and cross-module dependencies
 

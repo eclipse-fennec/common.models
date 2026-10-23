@@ -13,7 +13,7 @@ the OSGi Bundle-Symbolic-Name.
 ## In a Bndtools workspace
 
 A workspace library brings in every model with matching versions, so you do not
-maintain 40 coordinates by hand.
+maintain 38 coordinates by hand.
 
 Add the library artifact to your Maven index (e.g. `cnf/central.mvn`):
 
@@ -21,11 +21,25 @@ Add the library artifact to your Maven index (e.g. `cnf/central.mvn`):
 org.eclipse.fennec.models:org.eclipse.fennec.common.models.library:<version>
 ```
 
-Then enable it in `cnf/build.bnd`:
+Then enable it in `cnf/build.bnd` (or a `cnf/ext/*.bnd` file):
 
 ```bnd
--library: fennecEMFModels
+-library: fennecEMFCommonModels
 ```
+
+::: warning Library renamed in 0.1.0
+Up to `0.0.1` this library was called `fennecEMFModels` and also contained the
+Fennec-own models (`org.eclipse.fennec.model`, `gdpr.*`, `compliance.*`,
+`query.model`). Since `0.1.0` it is `fennecEMFCommonModels` and carries the
+external standard models only. The Fennec-own models moved to
+[eclipse-fennec/fennec.models](https://github.com/eclipse-fennec/fennec.models),
+whose library `org.eclipse.fennec.models:org.eclipse.fennec.models.library` is the
+one now named `fennecEMFModels`. `org.eclipse.fennec.query.model` lives on in
+[eclipse-fennec/emf.persistence-jpa](https://github.com/eclipse-fennec/emf.persistence-jpa).
+
+To migrate, change the library version and the library name together — never
+combine the `0.0.1` library with the new `fennecEMFModels`, both use that name.
+:::
 
 The models are now resolvable; put the ones you need on the buildpath of the
 module that uses them:

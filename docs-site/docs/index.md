@@ -42,7 +42,7 @@ features:
     linkText: See origins
   - icon: 📦
     title: One dependency, all models
-    details: "A Bndtools workspace library (-library: fennecEMFModels) and a Maven BOM pull in every model with correct versions. Cross-model dependencies are already wired."
+    details: "A Bndtools workspace library (-library: fennecEMFCommonModels) and a Maven BOM pull in every model with correct versions. Cross-model dependencies are already wired."
     link: /guides/consuming
     linkText: How to consume
   - icon: 🔌
@@ -56,7 +56,7 @@ features:
 
 Writing an EMF model for a standard that already has an XML Schema is
 mechanical, repetitive work — and everybody does it again. This repository does
-it once: it holds **40 model bundles**, each generated with
+it once: it holds **38 model bundles**, each generated with
 [Fennec EMF](https://github.com/eclipse-fennec/emf.osgi) from the official schema
 of a published standard, with the generated Java checked in so consuming them
 needs no code generation at all.

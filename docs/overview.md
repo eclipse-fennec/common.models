@@ -5,7 +5,7 @@ packaged as OSGi bundles. There is no runtime, no framework and no API here — 
 entire deliverable is Ecore models plus the Java code generated from them.
 
 If a standard you need already has an XML Schema, chances are this repository
-already contains the corresponding Ecore model: 40 modules covering OGC
+already contains the corresponding Ecore model: 38 modules covering OGC
 geospatial standards, W3C formats, OMG process notations, HL7 FHIR, OASIS OData,
 the German XOeV family and more. See
 [Model catalog & origins](/guides/model-catalog) for the full list and where each
@@ -30,7 +30,7 @@ Three kinds of module live side by side:
 | Kind | Example | Contents |
 |---|---|---|
 | **Model bundle** | `net.opengis.gml3.model`, `org.hl7.fhir.model` | `model/` with Ecore + genmodel + the original schemas, and the generated Java in `src/` or `src-gen*/` |
-| **Workspace library** | `org.eclipse.fennec.common.models.library` | Resource-only bundle providing `-library: fennecEMFModels` for Bndtools |
+| **Workspace library** | `org.eclipse.fennec.common.models.library` | Resource-only bundle providing `-library: fennecEMFCommonModels` for Bndtools |
 | **Maven BOM** | `org.eclipse.fennec.common.models.bom` | Dependency management for all model bundles |
 
 A model bundle looks like this:
@@ -104,7 +104,7 @@ each module's `bnd.bnd`:
 ```
 
 **In the committed state this block is commented out in every module**, and the
-generated code is checked in. Generation is slow — regenerating 40 models takes
+generated code is checked in. Generation is slow — regenerating 38 models takes
 minutes — and consumers never need it.
 
 That has one consequence worth knowing: a plain `./gradlew build` does **not**
