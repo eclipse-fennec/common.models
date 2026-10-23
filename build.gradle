@@ -1,5 +1,5 @@
 plugins {
-  id "org.sonarqube" version "6.2.0.5505"
+  id "org.sonarqube" version "6.3.1.5724"
   id 'jacoco'
   id 'java'
 }
@@ -48,19 +48,18 @@ subprojects {
     
 }
 
-// Sonar setup
+// Sonar setup — values come from gradle.properties (github_org, github_repository)
 sonarqube {
   properties {
-    property "sonar.projectName", "common.models"
-    property "sonar.projectKey", "eclipse-fennec-common.models"
-    property "sonar.organization", "eclipse-fennec"
+    property "sonar.projectName", github_repository
+    property "sonar.projectKey", github_org + "-" + github_repository
+    property "sonar.organization", github_org
     property "sonar.host.url", "https://sonarcloud.io"
     property "sonar.coverage.jacoco.xmlReportPaths", "${rootDir}/build/reports/jacoco/codeCoverageReport/codeCoverageReport.xml"
-    //property "sonar.exclusions", "org.eclipse.fennec.project/**/*.java, org.eclipse.fennec.other.project/**/*.java"
   }
 }
 
-task codeCoverageReport(type: JacocoReport) {
+tasks.register('codeCoverageReport', JacocoReport) {
     dependsOn(test)
     // Gather execution data from all subprojects for JUnit generated/jacoco/test.exec for OSGi Tests generated/tmp/testOSGi/generated/jacoco.exec
     // Latter are generated via agent in the test.bndrun
