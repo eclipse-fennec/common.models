@@ -1,0 +1,12 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.6.0" ), 
+    UMLPackagePath ( "CIM::Device::Controller" ), 
+    Description ( 
+       "Capabilities and management of an SSAController (Serial "
+       "Storage Architecture)." )]
+class CIM_SSAController : CIM_Controller {
+
+
+};

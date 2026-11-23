@@ -1,0 +1,14 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Abstract, Version ( "2.25.0" ), 
+    UMLPackagePath ( "CIM::Device::UserDevices" ), 
+    Description ( 
+       "Display is a superclass for grouping the miscellaneous display "
+       "devices that exist. Most of the properties are derived from "
+       "analogous command codes in the Monitor Command and Control Set "
+       "(MCCS) specifications Version 2.2 from VESA." )]
+class CIM_Display : CIM_UserDevice {
+
+
+};

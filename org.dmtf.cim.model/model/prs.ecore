@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="prs" nsURI="https://eclipse.org/fennec/model/dmtf/prs/2" nsPrefix="prs">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="modelName" value="Cim"/>
+    <details key="basePackage" value="org.dmtf"/>
+    <details key="complianceLevel" value="21.0"/>
+    <details key="oSGiCompatible" value="true"/>
+    <details key="adapterFactory" value="false"/>
+    <details key="copyrightText" value="Copyright (c) 2026 Contributors to the Eclipse Foundation.&#xA;&#xA;This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/&#xA;&#xA;SPDX-License-Identifier: EPL-2.0&#xA;&#xA;Contributors:&#xA;  Data In Motion Consulting - initial implementation"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ExchangeElement" abstract="true" eSuperTypes="cim.ecore#//CIM_ManagedElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Abstract" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_ExchangeElement is an abstract base class for all classes in the Solution and Service Incident object model. As an abstract class it is never instantiated. &#xA;&#xA;PRS_ExchangeElement exists to provide a single anchor point for associations that may be made to any Solution or Service Incident object. For example, Administrative or Attachment instances may be associated with any object derived from PRS_ExchangeElement. To support this generic association capability, the PRS_AdminAssociation and PRS_Attached associations both derive from the CIM_Dependency association and override the Antecedent property of that class to be a PRS_ExchangeElement REF."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PRSUniqueName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+        <details key="Key" value="true"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The PRSUniqueName property is a Globally Unique IDentifier (GUID) also known as a Universally Unique IDentifier (UUID). This property allows Solution and Service Incident objects to be used by multiple Solutions or Service Incidents without duplication. In addition, all Solution or Service Incidents containing a unique object are updated when the object is updated."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DirtyFlag" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]"/>
+        <details key="Values" value="[&quot;Clean&quot;,&quot;New&quot;,&quot;Modified&quot;,&quot;Deleted&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The DirtyFlag is used by the SISService Start Transaction method to determine whether an ExchangeElement has been created, modified or deleted since the last Transaction. Any object not marked 'Clean' is included in the next Transaction. &#xA;&#xA;It is the responsibility of the entity creating, modifying or deleting the object derived from ExchangeElement to set this property appropriately. &#xA;&#xA;This property value is set to 'Clean' by an invocation of the Transaction Complete method with a Status parameter of zero (0)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ExpressionElement" abstract="true" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Abstract" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_ExpressionElement is an abstract base class for PRS_Products and PRS_Statements. It provides a common association point for objects associated with PRS_Expressions."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Feature" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Feature is used for structured diagnostic data, including specific data values like steps or conditions. For example, consider a PRS_Statement with a Text property value of: &#xA;Print jobs per day are less than 50 &#xA;&#xA;This could be described using a PRS_Feature as follows: &#xA;Description: 'Print jobs per day' &#xA;Prompt: 'How many print jobs per day?' &#xA;ValidValues: '10' '50' '100' &#xA;DataType: 'Integer' &#xA;&#xA;The associated PRS_Statement would contain: &#xA;Operator: '&lt;' &#xA;FeatureValue: '50'"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Prompt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Prompt presented through user interface."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ValidValues" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Valid values for this PRS_Feature."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DataType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;String&quot;,&quot;Integer&quot;,&quot;Float&quot;,&quot;Date/Time&quot;,&quot;Boolean&quot;,&quot;Binary&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Data type used for PRS_Statement FeatureValue property."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Location" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Location describes the location of a PRS_Address."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LocationType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Primary_Voice&quot;,&quot;Alternate_Voice&quot;,&quot;Fax&quot;,&quot;Email&quot;,&quot;URL&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The type of location."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LocationID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The specific location."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Product" eSuperTypes="#//PRS_ExpressionElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Product is used to describe a single product to associate with a PRS_Expression."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Vendor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The vendor of the product."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProductName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The make and or model of the product."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The version of the product."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The order of relevance of this product to an associated PRS_SolutionElement (which includes PRS_Reference, PRS_Problem or PRS_Resolution)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Resource" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Each PRS_Resolution may have an associated cost of implementation. This cost may have several components such as time, material costs, labor cost, etc. To capture these costs, a PRS_Resouce is associated with a PRS_Resolution. For Service Incidents, one or more PRS_Resource objects may be associated with an Activity."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ResourceType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A string describing the type of resource."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint16"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Number of units of resource used."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Units" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Unit of measure for this resource."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Revision" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Description" value="string"/>
+      <details key="override.Description.Description" value="Text description of what was done in this revision."/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Revision records changes to the content."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RevisionDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="datetime"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The date of this revision."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ActivityName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Create&quot;,&quot;Update&quot;,&quot;Delete&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name of the specific revision being made."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ActivityType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Technical&quot;,&quot;Editorial&quot;,&quot;Administrative&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Type of revision activity. 'Technical' refers to a change in content. 'Editorial' refers to a change in language or style. 'Administrative' refers to information about the object."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TechnicalStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Open&quot;,&quot;Not Reviewed&quot;,&quot;Reviewed&quot;,&quot;Approved&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The current state of technical review. 'Open' means created but not necessarily completed or resolved. 'Not Reviewed' means contents have to be reviewed for accuracy and consistency with other content. 'Reviewed' means review has been completed. 'Approved' means formally approval to certify the solution given the specific status of the contents."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="EditorialStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;In_Progress&quot;,&quot;Draft&quot;,&quot;Reviewed&quot;,&quot;Published&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The current state of editorial review. 'In Progress' means the content is in the process of being developed. 'Draft' means the content is complete but unedited. 'Reviewed' means the review has been completed. 'Published' means the contents have been released."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ServiceIncident" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_ServiceIncident contains the fundamental information related to a specific incident: its identity, status, priority, etc. The actual incident data, including specific transactions and resolution information, is contained in the objects associated with PRS_ServiceIncident. These include specific Problem, Resolution and Activity related objects accrued through the Transaction workflow."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RequesterID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The unique identifier for this incident assigned by the Requester."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProviderID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The unique identifier for this incident assigned by the Provider."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CurrentState" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Beginning_State&quot;,&quot;Not_Entitled&quot;,&quot;Entitled&quot;,&quot;Problem_Submitted&quot;,&quot;Open_Requester&quot;,&quot;Open_Provider&quot;,&quot;Closed_Pending_Confirmation&quot;,&quot;Closed&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The state of the incident within the Service Incident Exchange Standard transaction model."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="RequesterSeverity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The severity of the incident as defined by the Requester. One is the most severe and five is the least severe."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ProviderPriority" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The priority of the incident as defined by the Requester. One is the highest priority and five is the lowest priority."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ResponseTime" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="datetime"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The explicit time the Requester expects a response."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="WorkflowStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Status of the incident according to the workflow."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Comment" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Additional general information about the incident."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Entitled" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Yes&quot;,&quot;No&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Is the Requester entitled to service or not?"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Acknowledge" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Yes&quot;,&quot;No&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Was the last transaction was accepted or rejected?"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TransactionName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+        <details key="Deprecated" value="[&quot;PRS_ServiceIncident.LastTransaction&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The use of the TransactionName property is deprecated. New Service Incidents should use the LastTransaction property and set this property to NULL."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LastTransaction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Service_Request&quot;,&quot;Entitlement&quot;,&quot;Problem_Submittal&quot;,&quot;Accept_Problem&quot;,&quot;Problem_Resolution&quot;,&quot;Request_Problem_Information&quot;,&quot;Provide_Problem_Information&quot;,&quot;Provide_Admin_Information&quot;,&quot;Query_Incident&quot;,&quot;Confirm_Close&quot;,&quot;Reject_Resolution&quot;,&quot;Request_Closure&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name of the last transaction which was acknowledged."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Solution" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Solution is the root class of a set of associated classes used to describe a single Solution. If a Solution is associated with multiple Problems or Resolutions, all of the Problems described are related to all of the Resolutions described. The reverse is also true. All of the Resolutions described are related to all of the Problems described in the Solution. &#xA;&#xA;PRS_Solution is directly associated to one or more of the following classes: &#xA;PRS_Reference &#xA;PRS_Problem &#xA;PRS_Resolution. "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The Solution title."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SolutionAbstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A brief description of the Solution."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="SolutionType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Reference&quot;,&quot;Diagnostic&quot;,&quot;How To&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The SolutionType suggests the type of knowledge contained in the Solution. Depending on the type, the Solution may or may not include particular objects. For example, a 'Reference' Solution describes non-diagnostic technical or general information using PRS_Statement objects. A 'Diagnostic' Solution includes one or more PRS_Problem and PRS_Resolution objects. A 'How To' Solution describes how to solve a particular Problem described by a PRS_Problem in a series of sequential steps within a PRS_Resolution."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_SolutionElement" abstract="true" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Abstract" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_SolutionElement is an abstract base class for non-Category objects that are associated with a Solution. This includes: &#xA;PRS_Reference &#xA;PRS_Problem &#xA;PRS_Resolution &#xA;&#xA;PRS_SolutionElement provides a common reference for these objects to be associated with PRS_Expression objects through the SolutionExpression association. &#xA;&#xA;In addition, all of the derived objects may be retrieved with a single query for the common super-class."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Statement" eSuperTypes="#//PRS_ExpressionElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Statement contains the text describing a problem, any relevant background information, and its resolution. Statements are units of text ranging from brief sentences or phrases to paragraphs or pages. There is no limit to the number of PRS_Statements within a Solution, as long as they support the intent and focus of their root class. Root classes include: PRS_Reference, PRS_Problem or PRS_Resolution. &#xA;&#xA;PRS_Statements may be grouped together to build compound 'sentences'. For example, &#xA;StatementA = Printer output is blotchy. &#xA;StatementB = Print jobs per day are less than 50. &#xA;ExpressionA = StatementA AND StatementB."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StatementRole" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Description&quot;,&quot;Symptom&quot;,&quot;Error_Message&quot;,&quot;Objective&quot;,&quot;Evidence&quot;,&quot;Cause&quot;,&quot;Work_Around&quot;,&quot;Fix&quot;,&quot;Answer&quot;,&quot;Keyword&quot;,&quot;Changes&quot;,&quot;Title&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="StatementRole describes how the PRS_Statement relates to the larger context. For example, is the PRS_Statement describing a Fix or a Symptom? 'Description' is generic text without a specific diagnostic application. 'Symptom' describes initial observable incident or behavior that the user reports. 'Error_Message' is a specific type of symptom that the user reports, describing the specific error condition. 'Objective' is what the user wants to accomplish, often expressed as a positive condition. FOr example, how to print on a network. 'Evidence' is information that is collected to diagnose the problem after the symptom is reported. 'Cause' is a description of the underlying facts or factors that engender or relate this behavior. 'Work_around' is information that lets the user work, but does not correct the problem completely. 'Fix' is information that fixes the problem completely. 'Answer' is the information given to the user such as steps to perform, wording to support their environment and understanding. 'Keyword' is a specific classification using defined words or phrases. 'Changes' describe recent changes in the environment which could affect the problem or resolution. 'Title' is the title applying to associated PRS_Statements (usually associated via an 'and' expression."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The descriptive text used for the PRS_Statement."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="StatementOperator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="When the PRS_Adminstrative object indicates Level 2 compliance, StatementOperator describes the relationship between an associated PRS_Feature and the FeatureValue property. This property is ignored if there is no PRS_Feature associated with this PRS_Statement."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="FeatureValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="When the PRS_Adminstrative object indicates Level 2 compliance, FeatureValue is the specific value selected from the associated PRS_Feature. This property is ignored if there is no PRS_Feature associated with this PRS_Statement."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Order" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Order is used to sequence PRS_Statements associated with a single PRS_Expression to allow a Consumer to process the information in the order desired by the Producer."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Relevance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint16"/>
+        <details key="MinValue" value="0"/>
+        <details key="MaxValue" value="100"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Importance of this Statement. The value of this property shall be an integer value in the range of 0 to 100, inclusive."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Transaction" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Transaction represents a single transaction of the Service Incident workflow. A PRS_Transaction instance is created by the PRS_SISService StartSISTransaction method."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TransactionType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Service_Request&quot;,&quot;Entitlement&quot;,&quot;Problem_Submittal&quot;,&quot;Accept_Problem&quot;,&quot;Problem_Resolution&quot;,&quot;Request_Problem_Information&quot;,&quot;Provide_Problem_Information&quot;,&quot;Provide_Admin_Information&quot;,&quot;Query_Incident&quot;,&quot;Confirm_Close&quot;,&quot;Reject_Resolution&quot;,&quot;Request_Closure&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The specific SIS transaction represented by this PRS_Transaction instance."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TransactionState" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]"/>
+        <details key="Values" value="[&quot;Open&quot;,&quot;Working&quot;,&quot;Closed&quot;,&quot;Notification_Pending&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The current state of this transaction. This value is manipulated by the PRS_SISService:StartSISTransaction and SetSISCompletionStatus method implementations. This property is not intended to be written by management applications."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CompletionStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint32"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The status of the transaction after it has reached the 'Closed' state. A CompletionStatus of zero (0) means the tranasaction completed successfully. A non-zero CompletionStatus indicates the transaction did not complete successfully. Non-zero values are implementation-specific. While the transaction is 'Open' or 'Working' the CompletionStatus property shall be zero (0). See the description for PRS_SISService for the definition of the contents of this property."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Activity" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Describes the date of each transaction and the objects involved."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ParameterList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+        <details key="Deprecated" value="[&quot;PRS_Activity.NewKeys&quot;,&quot;PRS_Activity.Deleted&quot;,&quot;PRS_Activity.Modified&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The key fields for the objects in the associated Transaction. The use of this property is deprecated. The PRS_SISService StartSISTransaction method uses the New, Modified and Deleted properties instead of this field. This field is set to NULL by the StartSISTransaction method if the other properties are used."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NewKeys" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The key fields for the objects added in the associated Transaction. This property is set by the PRS_SISService StartSISTransaction method."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Deleted" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The key fields for objects deleted in the associated Transaction. This property is set by the PRS_SISService StartSISTransaction method."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Modified" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The key fields for objects modified in the associated Transaction. This property is set by the PRS_SISService StartSISTransaction method."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LocalDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="datetime"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The date of the Activity. This property is set by the PRS_SISService StartSISTranasaction method."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ActionLog" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Description of the activity performed."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ActivityResource" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Activity REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Max" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Activity."/>
+      <details key="override.Dependent" value="PRS_Resource REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Resource."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Activity with PRS_Resource."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ActivityTransaction" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Activity REF"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Max" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Activity."/>
+      <details key="override.Dependent" value="PRS_Transaction REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Max" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Transaction."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Activity with PRS_Transaction."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Address" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Provides address information for PRS_ContactItem."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AddressType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Primary&quot;,&quot;Shipping&quot;,&quot;Billing&quot;,&quot;Service&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The type of address."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Address1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="First line of address information."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Address2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Second line of address information."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Address3" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Third line of address information."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Address4" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Fourth line of address information."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="City" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The city."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Region" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The specific region, such as state or province."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="PostalCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The country's postal code for the address."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="TimeZone" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The time zone of the address."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Country" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The country code, based on ISO/IEC 3166."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_AddressLocation" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Address REF"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Address."/>
+      <details key="override.Dependent" value="PRS_Location REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Location."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Address and PRS_Location."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Administrative" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Administrative defines administrative information about associated objects. There must be at least one PRS_Administrative instance associated with a PRS_Solution. Administrative information is inherited from a parent object. &#xA;&#xA;If the administrative information among objects within a Solution is not the same, additional PRS_Administrative instances may be associated with other objects within the Solution. All instances under a specific parent inherit their administrative information unless there is an PRS_Administrative instance associated with that instance. &#xA;&#xA;For example, if there is a PRS_Administrative instance associated with a PRS_Problem instance, all of the PRS_Statement and PRS_ Product instances within the Problem use the same Administrative information as the PRS_Problem instance."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ComplianceLevel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint16"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Level 0 means all information within a Reference, Problem or Resolution is conveyed by a single PRS_Statement. &#xA;&#xA;Level 1 means there may be multiple PRS_Statement instances within a Reference, Problem or Resolution. &#xA;&#xA;Level 2 means that a PRS_Statement may be associated with a PRS_Feature instance within a Reference, Problem or Resolution."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DocumentStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Draft&quot;,&quot;Reviewed&quot;,&quot;Published&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Editorial status of the document. If 'Draft', information is complete, but unedited. If 'Reviewed', an editorial review has been completed. If 'Published', information has been reviewed and approved for distribution."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Distribution" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Proprietary&quot;,&quot;Internal&quot;,&quot;Partner&quot;,&quot;Public&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Intended distribution audience for the associated information. If 'Proprietary', information contains proprietary information and is not to be released externally. If 'Internal', information is for internal use only. If 'Partner', information is only available to contracted partners. If 'Public', information is available to anyone."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Language" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Language used in the associated information."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Copyright" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Copyright for the associated information."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Disclaimer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Disclaimers about the associated information."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Rights" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Usage rights for the associated information."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_AdministrativeRevision" eSuperTypes="cim.ecore#//CIM_HostedDependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.8.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Administrative REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Max" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Administrative."/>
+      <details key="override.Dependent" value="PRS_Revision REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Revision."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Administrative with PRS_Revision."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Agreement" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The agreement or contract referenced for entitlement to service."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ContractID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The identifier for the contract between the Request and the Provider. This property is set by the Requester prior to submitting a Service Request."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AgreementType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="A brief description of the contract."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Attachment" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Attachment describes file attachments. A PRS_Attachment may be associated to any object derived from PRS_ExchangeElement. PRS_Attachment is used to attach objects of any type including binary files, ASCII documents, or URLs. Only one object may be attached per PRS_Attachment. &#xA;&#xA;The actual attachment carried by the Attachment object is included by one of two methods: by reference or by value as embedded data. A 'by reference' approach links indirectly to the attachment through the use of a string identifier, e.g. a file name. An 'embedded data' approach means the actual binary data is included in PRS_Attachment."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AttachmentReference" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="If the attachment is not embedded, where the attachment is located."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Protocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Protocol required to read the attachment (e.g., http)."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Format" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The file format of the attachment."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AttachmentSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The size of the attachment in bytes."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AttachmentObject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The attachment itself, if embedded."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AttachmentType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Instructions&quot;,&quot;Background&quot;,&quot;Log&quot;,&quot;Unknown&quot;,&quot;Undefined&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The purpose of the attachment, as related to the diagnosis. 'Instructions' are compilable code. 'Background' is descriptive information. 'Log' is information captured in a log file."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="AttachmentName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The displayable attachment identifier. Used to define what will appear as the name of the attachment, as opposed to the specific attachment file name or URL."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Category" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Category is used to classify the components of a Solution. Hierarchical classifications are created by associating PRS_CategoryParentChild with multiple PRS_Category instances."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CategoryContents" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The specific value for the category. For example, 'HP Laserjet' would be a value for a category containing printer names."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CategoryType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The type of category. Used to give additional semantics to the category. For example, a Category of Type 'Printers' would qualify the list of category values for a list of printers. &#xA;&#xA;Note: the relationship of Category Type to Category Value expresses no intrinsic hierarchy. If a tree of relationships exists to define categories and sub-categories, this should be defined using CategoryParentChild associations."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_CategoryParentChild" eSuperTypes="cim.ecore#//CIM_HostedDependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.8.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Category REF"/>
+      <details key="override.Antecedent.Description" value="The parent PRS_Category used for classification."/>
+      <details key="override.Dependent" value="PRS_Category REF"/>
+      <details key="override.Dependent.Description" value="The child PRS_Category used for classification."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_CategoryParentChild is used to define classification hierarchies."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Contact" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Contact is used to anchor associations to PRS_Person and PRS_Orgnaization. PRS_Contact is also used to anchor associations to PRS_Revision and PRS_Resolution, as well as PRS_ServiceIncident."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ContactItem" abstract="true" eSuperTypes="#//PRS_ExchangeElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Abstract" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_ContactItem is the abstract root class for PRS_Person and PRS_Organization. It provides a common anchor point for the PRS_ContactContactItem association."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ContactItemAddress" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_ContactItem REF"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_ContactItem."/>
+      <details key="override.Dependent" value="PRS_Address REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Address."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_ContactItem with PRS_Address."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Expression" eSuperTypes="#//PRS_ExpressionElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Expression defines a specific relationship between PRS_ExpressionElements associated with PRS_SolutionElements."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Relation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The operator to be used with the associated PRS_Expression Elements. The 'AND', 'OR' and 'NOT' operators are the only operators currently defined by the standard. (They must be used as uppercase strings.) Note that this is a vendor-extensible property - so that additional operators can be defined and used in implementations."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ExpressionLink" eSuperTypes="cim.ecore#//CIM_HostedDependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.8.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Expression REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The parent PRS_Expression."/>
+      <details key="override.Dependent" value="PRS_ExpressionElement REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Description" value="The child PRS_ExpressionElement, either a PRS_Expression, PRS_Product or PRS_Statement."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates a PRS_Expression with PRS_ExpressionElements such as PRS_Expression, PRS_Product, and PRS_Statement."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_FeatureResource" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Feature REF"/>
+      <details key="override.Antecedent.Description" value="The PRS_Feature."/>
+      <details key="override.Dependent" value="PRS_Resource REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Resource."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Feature with PRS_Resource. This is used to track labor and costs associated with specific tasks defined in a Feature object."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Organization" eSuperTypes="#//PRS_ContactItem">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Organization describes a PRS_Contact's organization name and business."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The name of the organization."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Business" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Description of organization's primary business."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Person" eSuperTypes="#//PRS_ContactItem">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Information about a personal contact."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="FirstName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contact's first name."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contact's last name."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Salutation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="How the contact is addressed, i.e. Dr., Mr., Ms., Mrs., etc."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contact's business title."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ContactType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="string"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Description of the contact. For example, they may have responsibilities not apparent from their title."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CommunicationMode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint8"/>
+        <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+        <details key="Values" value="[&quot;Primary_Voice&quot;,&quot;Alternate_Voice&quot;,&quot;Fax&quot;,&quot;Email&quot;,&quot;URL&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Contact's preferred communication method. See the PRS_Location.LocationType property."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Problem" eSuperTypes="#//PRS_SolutionElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Problem is the root object of a set of associated objects that describe a Problem. One or more Problems may be associated with a Solution. &#xA;&#xA;The Problem is described by PRS_Statement and PRS_Product instances indirectly associated to the PRS_Problem through a PRS_Expression."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Likelihood" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint16"/>
+        <details key="MinValue" value="0"/>
+        <details key="MaxValue" value="100"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The Likelihood describes the potential for the Problem to occur. The value of this property shall be an integer value in the range of 0 to 100, inclusive."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Impact" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint16"/>
+        <details key="MinValue" value="0"/>
+        <details key="MaxValue" value="100"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The Impact describes the severity of the problem. The value of this property shall be an integer value in the range of 0 to 100, inclusive."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ProductAsset" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Product REF"/>
+      <details key="override.Antecedent.Description" value="The product."/>
+      <details key="override.Dependent" value="PRS_Expression REF"/>
+      <details key="override.Dependent.Description" value="The expression."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_ProductAsset is used to provide specific information about a PRS_Product. PRS_ProductAsset associates this information to a PRS_Product using one or more Statements associated to a PRS_Expression."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ProductComponent" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Product REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Description" value="The PRS_Product which contains the component."/>
+      <details key="override.Dependent" value="PRS_Product REF"/>
+      <details key="override.Dependent.Description" value="The component PRS_Product."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_ProductComponent is used to describe 'has a' relationships between Products and their components parts. See PRS_ProductParentChild for 'is a' relationships."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ProductParentChild" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Product REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Description" value="The parent PRS_Product."/>
+      <details key="override.Dependent" value="PRS_Product REF"/>
+      <details key="override.Dependent.Description" value="The child PRS_Product."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Products may exist in a hierarchy of relationships with related Products. If a Producer deems these hierarchy relationships are relevant to the current Problem or Resolution, then the position of the Product in a hierarchy can be implied using one of two types of relationships: 'is a' and 'has a'. An 'is a' relationship implies a classification, such as versioning or typing. A 'has a' relationship implies that one product contains another. The PRS_ProductParentChild association is used to imply an 'is a' hierarchy. Use the ProductComponent association to imply 'has a' relationships."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Reference" eSuperTypes="#//PRS_SolutionElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Reference is a placeholder to support links between PRS_Expression objects and a PRS_Solution. It does not have any properties. A 'Reference' Solution uses PRS_Statement objects to describe general, non-diagnostic knowledge and may not include any PRS_Problem and PRS_Resolution instances."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Resolution" eSuperTypes="#//PRS_SolutionElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="PRSUniqueName"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Resolution is the root object of a set of associated objects that describe a the resolution to a Problem. One or more Resolutions may be associated with a Solution. &#xA;&#xA;The Resolution is described by PRS_Statement and PRS_Product instances indirectly associated to the PRS_Resolution through a PRS_Expression."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Confidence" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint16"/>
+        <details key="MinValue" value="0"/>
+        <details key="MaxValue" value="100"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The Confidence describes the potential for the Resolution to correct the Problem or Problems associated with the PRS_Solution. The value of this property shall be an integer value in the range of 0 to 100, inclusive."/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ResolutionResource" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Resource REF"/>
+      <details key="override.Antecedent.Description" value="The PRS_Resource."/>
+      <details key="override.Dependent" value="PRS_Resolution REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Resolution."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Resolution with PRS_Resource."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_RevisionContact" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Revision REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Description" value="The PRS_Revision."/>
+      <details key="override.Dependent" value="PRS_Contact REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Contact."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Revision and PRS_Contact."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ServiceActivity" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_ServiceIncident REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Max" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_ServiceIncident."/>
+      <details key="override.Dependent" value="PRS_Activity REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Activity."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_ServiceIncident to PRS_Activity."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ServiceAgreement" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_ServiceIncident REF"/>
+      <details key="override.Antecedent.Description" value="The PRS_ServiceIncident."/>
+      <details key="override.Dependent" value="PRS_Agreement REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Max" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Agreement."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_ServiceIncident to PRS_Agreement."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ServiceProblem" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_ServiceIncident REF"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_ServiceIncident."/>
+      <details key="override.Dependent" value="PRS_Problem REF"/>
+      <details key="override.Dependent.Max" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Problem."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_ServiceIncident to PRS_Problem to describe the Problem being submitted to the Service Provider."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ServiceProvider" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_ServiceIncident REF"/>
+      <details key="override.Antecedent.Description" value="The PRS_ServiceIncident."/>
+      <details key="override.Dependent" value="PRS_Contact REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Max" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Contact."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_ServiceIncident to PRS_Contact to describe the Service Provider."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ServiceRequester" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_ServiceIncident REF"/>
+      <details key="override.Antecedent.Description" value="The PRS_ServiceIncident."/>
+      <details key="override.Dependent" value="PRS_Contact REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Max" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Contact."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_ServiceRequester associates a PRS_ServiceIncident with a PRS_Contact representing the entity requesting service. Note that the Contact class is used for both Requesters and Providers, the context is determined by which association exists."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ServiceResolutionSolution" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_ServiceIncident REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Description" value="The PRS_ServiceIncident."/>
+      <details key="override.Dependent" value="PRS_Solution REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Solution. PRS_Solution must be associated with at least one Resolution."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_ServiceIncident to PRS_Solution to describe the Resolutions proposed by the Service Provider."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_SolutionCategory" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Solution REF"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Solution being classified."/>
+      <details key="override.Dependent" value="PRS_Category REF"/>
+      <details key="override.Dependent.Description" value="The specific PRS_Category being used to classify the Solution."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_SolutionCategory associates PRS_Solution with a PRS_Category for classification purposes."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_SolutionExpression" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_SolutionElement REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_SolutionElement."/>
+      <details key="override.Dependent" value="PRS_Expression REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Expression."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_SolutionElements (PRS_Reference, PRS_Problem or PRS_Resolution) with PRS_Expressions."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_SolutionHasElement" abstract="true" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Abstract" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Solution REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Solution root object of the Solution."/>
+      <details key="override.Dependent" value="PRS_SolutionElement REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Reference, PRS_Problem or PRS_Resolution aggregated into the Solution by this association."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_SolutionHasElement is an abstract base class for associating PRS_Solution with objects derived from PRS_SolutionElement. This association class allows all PRS_Reference, PRS_Problem and PRS_Resolution objects to be retrieved with a single query."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_SolutionProblem" eSuperTypes="#//PRS_SolutionHasElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Solution REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Solution root object of the Solution."/>
+      <details key="override.Dependent" value="PRS_Problem REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Problem aggregated into the Solution."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_SolutionProblem aggregates a Problem into a Solution."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_SolutionReference" eSuperTypes="#//PRS_SolutionHasElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Solution REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Solution root object of the Solution."/>
+      <details key="override.Dependent" value="PRS_Reference REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Reference aggregated into the Solution."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_SolutionReference aggregates a Reference into a Solution."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_SolutionResolution" eSuperTypes="#//PRS_SolutionHasElement">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Solution REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Solution root object of the Solution."/>
+      <details key="override.Dependent" value="PRS_Resolution REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Solution aggregated into the Solution."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_SolutionResolution aggregates a Resolution into a Solution."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_StatementFeature" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Statement REF"/>
+      <details key="override.Antecedent.Description" value="The PRS_Statement."/>
+      <details key="override.Dependent" value="PRS_Feature REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Feature."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Statement with PRS_Feature."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ActivityContact" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Activity REF"/>
+      <details key="override.Antecedent.Description" value="The PRS_Activity."/>
+      <details key="override.Dependent" value="PRS_Contact REF"/>
+      <details key="override.Dependent.Max" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Contact."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Activity with PRS_Contact."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_AdminAssociation" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_ExchangeElement REF"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_ExchangeElement."/>
+      <details key="override.Dependent" value="PRS_Administrative REF"/>
+      <details key="override.Dependent.Description" value="The PRS_Administrative object."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Administrative data with any object derived from PRS_ExchangeElement."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_AdministrativeContact" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Aggregation" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Administrative REF"/>
+      <details key="override.Antecedent.Aggregate" value="true"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Administrative instance."/>
+      <details key="override.Dependent" value="PRS_Contact REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Contact."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Administrative and PRS_Contact."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Attached" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Attachment REF"/>
+      <details key="override.Antecedent.Description" value="The PRS_Attachment."/>
+      <details key="override.Dependent" value="PRS_ExchangeElement REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_ExchangeElement."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Attachment with PRS_ExchangeElement."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_Categorization" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Category REF"/>
+      <details key="override.Antecedent.Description" value="The PRS_Category used for classification."/>
+      <details key="override.Dependent" value="PRS_SolutionElement REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Description" value="The specific PRS_Reference, PRS_Problem or PRS_Resolution classified by this association."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="PRS_Categorization associates PRS_Reference, PRS_Problem or PRS_Resolution with a PRS_Category for classification purposes. For example, a Category named 'Printing Issues' can be defined for a Problem using the Categorization association between a PRS_Problem and a PRS_Category."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ContactContactItem" abstract="true" eSuperTypes="cim.ecore#//CIM_Dependency">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Abstract" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Contact REF"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Contact."/>
+      <details key="override.Dependent" value="PRS_ContactItem REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_ContactItem, either PRS_Person or PRS_Organization. There is always at least one PRS_ContactItem, however it may be either a PRS_Person or PRS_Organization. For that reason, there is a minimum cardinality of one for this property, but a minimum cardinality of zero in the classes derived from this class."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Abstract root class to associate PRS_Person or PRS_Organization and PRS_Contact."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ContactOrganization" eSuperTypes="#//PRS_ContactContactItem">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Contact REF"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Contact."/>
+      <details key="override.Dependent" value="PRS_Organization REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Organization."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Contact and PRS_Organization."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_ContactPerson" eSuperTypes="#//PRS_ContactContactItem">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Association" value="true"/>
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="override.Antecedent" value="PRS_Contact REF"/>
+      <details key="override.Antecedent.Min" value="1"/>
+      <details key="override.Antecedent.Description" value="The PRS_Contact."/>
+      <details key="override.Dependent" value="PRS_Person REF"/>
+      <details key="override.Dependent.Min" value="1"/>
+      <details key="override.Dependent.Description" value="The PRS_Person."/>
+      <details key="keys" value="Antecedent,Dependent"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Associates PRS_Contact and PRS_Person."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PRS_SISService" eSuperTypes="cim.ecore#//CIM_Service">
+    <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+      <details key="Version" value="2.6.0"/>
+      <details key="UMLPackagePath" value="PRS::Support"/>
+      <details key="keys" value="SystemCreationClassName,SystemName,CreationClassName,Name"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="The PRS_SISService is used as a class factory for PRS_Transactions."/>
+    </eAnnotations>
+    <eOperations name="StartSISTransaction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint32"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="When invoked on a local system, this method validates the objects in the local repository, to determine if they are sufficient for the indicated (input parameter) TransactionType. If not, an error is returned and no additional processing is performed. If the repository is successfully validated, this method creates a PRS_Transaction instance for return to the caller. &#xA;&#xA;The method also reviews the repository looking for new, modified or deleted objects. As these objects are located, their keys are appended to the related strings in the PRS_Activity instance referenced by another parameter of this method. &#xA;&#xA;After all the appropriate new, modified or deleted objects have been located, this method invokes the PRS_SISService's StartSISTransaction method on the remote system specified by the objects related to the Service Incident, associated with the PRS_Activity instance specified as a method parameter. The TransactionType and PRS_Activity REF is forwarded to the remote system as method parameters as well as the PRS_Transaction REF for the instance created by this method. &#xA;&#xA;The remote system creates a child namespace using the PRS_Transaction REF for the name. The local system then transfers all of the new, modified and deleted objects to the namespace on the remote system. Once all objects have been successfully transferred, the PRS_SISService's EndSISTransaction method is invoked on the remote system with a Status value of zero to indicate that the remote system should attempt to commit the transaction to the remote repository. &#xA;&#xA;The remote system passes the results of the remote commit back to the originating system by invoking the PRS_SISService's SetSISCompletionStatus method on the system that originated the SIS transaction. The CompletionStatus method parameter indicates whether the remote commit was successful. If the CompletionStatis is zero, the remote commit was successful. If it was unsuccessful, the objects were not applied to the remote repository and the CompletionStatus is non-zero, indicating the error. The local invocation of the SetSIS CompletionStatus method updates the specified PRS_Transaction's TransactionState to Closed and CompletionStatus to the value provided by the remote system in the CompletionStatus method parameter. &#xA;&#xA;In order to promote extensibility, the uint32 return values for PRS_SISService's methods and Status-related parameters are mapped into three sections. The first describes the type of value being reported. It indicates Error versus Notification, and Standard versus Vendor-Specific. &#xA;&#xA;The second section describes the source of the value. It indicates Method, Operating System, Repository, or Transport. In addition, this section indicates whether the value was created locally or remotely. &#xA;&#xA;The third section is the specific return value. &#xA;&#xA;If all 32 bits of the return value are reset, the method completed successfully. Any other value indicates an error condition or notification. If D31 is set, the method did not complete successfully. If D31 is reset, but the rest of the return value is non-zero, this is a Notification that the operation did complete successfully, but that there is a conditon of which the caller should be aware. &#xA;&#xA;If D30 is set, the return value is vendor specific. If D30 is reset, the return value is defined by the standard. &#xA;&#xA;If D29 is set, the return value was generated by a remote system. If D29 is reset, the return value was generated locally. The bit is always set or reset by the local system. The local system sets the bit if it receives a non-zero return value from a remote method invocation. &#xA;&#xA;Bit D28 is reserved for future use and shall be reset on all return values. &#xA;&#xA;When there is an error or notification, D24 through D27 indicate its source. The following sources are currently defined (D24 is the least significant bit below): &#xA;0000 Method &#xA;0001 Operating System &#xA;0010 Repository &#xA;0011 Transport &#xA;All remaining values are reserved. &#xA;&#xA;Bits D16 through D23 are reserved for future use and shall be reset to zero. &#xA;&#xA;Bits D0 through D15 indicate the specific return value. If zero, all other bits in the return value must be zero, indicating successful completion of the method (or Transaction)."/>
+      </eAnnotations>
+      <eParameters name="TransactionType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject">
+        <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+          <details key="cimType" value="uint8"/>
+          <details key="In" value="true"/>
+          <details key="ValueMap" value="[&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;11&quot;,&quot;254&quot;,&quot;255&quot;]"/>
+          <details key="Values" value="[&quot;Service_Request&quot;,&quot;Entitlement&quot;,&quot;Problem_Submittal&quot;,&quot;Accept_Problem&quot;,&quot;Problem_Resolution&quot;,&quot;Request_Problem_Information&quot;,&quot;Provide_Problem_Information&quot;,&quot;Provide_Admin_Information&quot;,&quot;Query_Incident&quot;,&quot;Confirm_Close&quot;,&quot;Reject_Resolution&quot;,&quot;Request_Closure&quot;,&quot;Other&quot;,&quot;Unknown&quot;]"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="The specific SIS transaction represented by this instance."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="ActivityRef" eType="#//PRS_Activity">
+        <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+          <details key="cimType" value="PRS_Activity REF"/>
+          <details key="In" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="TransactionRef identifies the PRS_Transaction to commit or abort. If this property is NULL or does not identify an 'Open' transaction, this method returns an error."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="TransactionRef" eType="#//PRS_Transaction">
+        <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+          <details key="cimType" value="PRS_Transaction REF"/>
+          <details key="In" value="true"/>
+          <details key="Out" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="ActivityRef associates a time and description of the activity involved in the service incident transaction."/>
+        </eAnnotations>
+      </eParameters>
+    </eOperations>
+    <eOperations name="EndSISTransaction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint32"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="The EndSISTransaction method is used to handle committing or aborting a transaction. For commit, the method is invoked by a remote system when all of the objects associated with the transaction have been placed in the child namespace created by StartSISTransaction. &#xA;&#xA;For abort, the method cleans up the child namespace and closes the specified PRS_Transaction, setting the Transaction's CompletionStatus to the method parameter of the same name."/>
+      </eAnnotations>
+      <eParameters name="Status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+        <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+          <details key="cimType" value="uint32"/>
+          <details key="In" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="Status indicates whether the transaction is to be committed or aborted. If Status is zero, the transaction is to be committed. If Status is non-zero, it indicates the transaction is to be aborted. If the transaction is being aborted, the Status field is passed back to the originating system as the CompletionStatus parameter for the PRS_SISService SetSISCompletionStatus method. See the description for PRS_SISService.StartSISTransaction for the definition of the contents of this property."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="TransactionRef" eType="#//PRS_Transaction">
+        <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+          <details key="cimType" value="PRS_Transaction REF"/>
+          <details key="In" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="TransactionRef identifies the PRS_Transaction to commit or abort. If this property is NULL or does not identify an 'Open' transaction, this method returns an error."/>
+        </eAnnotations>
+      </eParameters>
+    </eOperations>
+    <eOperations name="SetSISCompletionStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+      <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+        <details key="cimType" value="uint32"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="SetSISCompletionStatus is used to signal the system that originated a PRS_Transaction that the remote system has completed processing of the transaction. If the processing was successful, as indicated by the CompletionStatus parameter, the local system resets the DirtyFlag for all of the objects identified in the PRS_Activity instance associated with the PRS_Transaction."/>
+      </eAnnotations>
+      <eParameters name="CompletionStatus" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELongObject">
+        <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+          <details key="cimType" value="uint32"/>
+          <details key="In" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="This parameter is used to set the CompletionStatus field of the specified PRS_Transaction. If zero, the Transaction was completed successfully. If non-zero, an error occurred and the objects provided in StartSISTransaction were not submitted to the remote repository. See the description for PRS_SISService.StartSISTransaction for the definition of the contents of this property."/>
+        </eAnnotations>
+      </eParameters>
+      <eParameters name="TransactionRef" eType="#//PRS_Transaction">
+        <eAnnotations source="http://schemas.dmtf.org/wbem/cim">
+          <details key="cimType" value="PRS_Transaction REF"/>
+          <details key="In" value="true"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+          <details key="documentation" value="TransactionRef identifies the PRS_Transaction that has completed. If this property is NULL or does not identify an 'Open' transaction, this method returns an error."/>
+        </eAnnotations>
+      </eParameters>
+    </eOperations>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,101 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.52.0" ), 
+    UMLPackagePath ( "CIM::Network" ), 
+    Description ( 
+       "Generic translation look up record for IP Encapsulation. For "
+       "example NVGRE \n"
+       "and VXLAN. This property contains all of the information "
+       "required to make the headers for an IP overlay network." )]
+class CIM_EncapsulationMappingSettingData : CIM_SettingData {
+
+      [Description ( 
+          "An optional IP address of the Virtual machine or the "
+          "customer system, the overlay network formatted according "
+          "to the appropriate convention as defined in the "
+          "AddressType property of this class e.g., 171.79.6.4). "
+          "This property should be populated for an IP over IP "
+          "overlay e.g., NVGRE." )]
+   string CustomerIPAddress;
+
+      [Description ( 
+          "The IP address that will be used on the underlay or "
+          "provider network for traffic encapsulated using this "
+          "encapsulation mapping. The address is formatted "
+          "according to the appropriate convention as defined in "
+          "the AddressType property of this class (e.g., "
+          "171.79.6.40)." )]
+   string ProviderIPAddress;
+
+      [Description ( 
+          "The MAC address associated with the CustomerAddress. The "
+          "MAC address is formatted as twelve hexadecimal digits "
+          "(e.g., \"010203040506\"), with each pair representing "
+          "one of the six octets of the MAC address in \"canonical\" "
+          "bit order according to RFC \" \"2469.\" )," )]
+   string CustomerMACAddress;
+
+      [Description ( 
+          "An optional property that may be populated with a "
+          "customer or tenant identifier." )]
+   string CustomerIdentifier;
+
+      [Description ( 
+          "This property is populated with the identifier of the "
+          "virtual or overlay network for the traffic mapped "
+          "through an instance of this class. For example this "
+          "would contain a VNI for VXLAN and a VSID for NVGRE." )]
+   string VirtualNetworkIdentifier;
+
+      [Description ( 
+          "An optional property that can set to identify the VM "
+          "corresponding to the CustomerAddress." )]
+   string VirtualMachineName;
+
+      [Description ( 
+          "An enumeration that describes the format of the Address "
+          "property. It is deprecated since it is not needed, as "
+          "the class contains both IPv4 and v6 addresses" ), 
+       ValueMap { "0", "1", "2" }, 
+       Values { "Unknown", "IPv4", "IPv6" }, 
+       ModelCorrespondence { "CIM_IPProtocolEndpoint.AddressType" }]
+   uint16 CustomerIPAddressType[];
+
+      [Description ( 
+          "An enumeration that describes the format of the Address "
+          "property. It is deprecated since it is not needed, as "
+          "the class contains both IPv4 and v6 addresses" ), 
+       ValueMap { "0", "1", "2" }, 
+       Values { "Unknown", "IPv4", "IPv6" }, 
+       ModelCorrespondence { "CIM_IPProtocolEndpoint.AddressType" }]
+   uint16 ProviderIPAddressType[];
+
+      [Description ( 
+          "1- sets the Encapsulation mode typeOther - should only "
+          "be used if there is not an enumerated value 2- GRE 3- "
+          "IP-in-IP \n"
+          "4-NVGRE 5-VXLAN" ), 
+       ValueMap { "1", "2", "3", "4", "5", "..", "0x8000..0xFFFF" }, 
+       Values { "Other", "GRE", "IP-in-IP", "NVGRE", "VXLAN", 
+          "DMTF Reserved", "Vendor Reserved" }]
+   uint16 EncapsulationMode[];
+
+      [Description ( 
+          "if the EncapsulationMode has a value 1 - "
+          "OtherOtherEncapsulationMode should have a string "
+          "describing the tunne mode" )]
+   string OtherEncapsulationMode;
+
+      [Description ( 
+          "Optional encapsulation type specific metadata that may "
+          "be included in the encapsulation." )]
+   string EncapsulationMetadata;
+
+      [Description ( 
+          "Read only property that contains the encapsulation MAC "
+          "address on the provider network" )]
+   string ProviderMACAddress;
+
+
+};

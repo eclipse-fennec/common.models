@@ -122,6 +122,7 @@ makes the exact revision traceable.
 | `org.apache.maven.model` | 4.0.0 | `http://maven.apache.org/POM/4.0.0` | **Attributed** — `maven-4.0.0.xsd`, canonical [`maven.apache.org/xsd/maven-4.0.0.xsd`](https://maven.apache.org/xsd/maven-4.0.0.xsd). Models the POM. |
 | `org.docbook.model` | 5.0.0 | `http://docbook.org/ns/docbook`<br>`http://www.w3.org/1999/xlink` | **Attributed** — `docbook.xsd` with the imported `xlink.xsd`, `xinclude.xsd` and `xml.xsd`. Spec: [DocBook 5.0](https://docbook.org/xml/5.0/) — note the normative DocBook 5 grammar is RELAX NG; the W3C XML Schema is the derived variant. |
 | `io.cloudevents.model` | 1.0.2 | `https://cloudevents.io/1.0.2` | **Hand-authored** — CloudEvents defines no XML Schema. Ecore written against the [CloudEvents v1.0.2 core specification](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md). The namespace URI is a Fennec-local identifier. |
+| `org.dmtf.cim.model` | 2.56.0 | `https://eclipse.org/fennec/model/dmtf/cim/2`<br>`https://eclipse.org/fennec/model/dmtf/prs/2` | **Traceable** — `model/cim_schema_2.56.0/` is the unpacked `cim_schema_2.56.0Final-MOFs.zip` as published at [dmtf.org/standards/cim](https://www.dmtf.org/standards/cim) (MOF, not XML Schema); the derivation is recorded in `model/README.md`. Spec: DMTF CIM Schema 2.56.0, language [DSP0004](https://www.dmtf.org/dsp/DSP0004). CIM has no XML namespace of its own, so the namespace URIs are Fennec-local identifiers (major schema version only). |
 | `org.openmicroscopy` | 1.0.0 | `http://www.openmicroscopy.org/Schemas/OME/2016-06` | **Attributed** — `ome.xsd`, canonical [`openmicroscopy.org/Schemas/OME/2016-06/ome.xsd`](https://www.openmicroscopy.org/Schemas/OME/2016-06/ome.xsd). Spec: [OME Data Model](https://www.openmicroscopy.org/Schemas/) (2016-06 release). |
 
 ## Fennec-internal models
@@ -157,7 +158,7 @@ bundles a specific revision that differs from the standalone bundle.
 
 The Java code in this repository is EPL-2.0. The **schemas** in each `model/`
 directory remain under the terms of their respective publisher — OGC, W3C, OMG,
-OASIS, HL7, KoSIT, AdV, DWD and others. They are redistributed here as the
+OASIS, HL7, DMTF, KoSIT, AdV, DWD and others. They are redistributed here as the
 generator input and as a runtime resource. Consult the publisher's terms before
 redistributing a schema outside this context; the links in the tables above are
 the authoritative source for each one.

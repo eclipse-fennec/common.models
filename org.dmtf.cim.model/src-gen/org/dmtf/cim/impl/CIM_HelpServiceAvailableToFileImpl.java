@@ -1,0 +1,228 @@
+/*
+ * Copyright (c) 2026 Contributors to the Eclipse Foundation.
+ * 
+ * This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ * 
+ * Contributors:
+ *   Data In Motion Consulting - initial implementation
+ */
+package org.dmtf.cim.impl;
+
+import org.dmtf.cim.CIM_HelpServiceAvailableToFile;
+import org.dmtf.cim.CimPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>CIM Help Service Available To File</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.dmtf.cim.impl.CIM_HelpServiceAvailableToFileImpl#getDocumentFormat <em>Document Format</em>}</li>
+ *   <li>{@link org.dmtf.cim.impl.CIM_HelpServiceAvailableToFileImpl#getOtherDocumentFormatDescription <em>Other Document Format Description</em>}</li>
+ * </ul>
+ *
+ * @generated
+ */
+public class CIM_HelpServiceAvailableToFileImpl extends CIM_ServiceAvailableToElementImpl implements CIM_HelpServiceAvailableToFile {
+	/**
+	 * The default value of the '{@link #getDocumentFormat() <em>Document Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDocumentFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Integer DOCUMENT_FORMAT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDocumentFormat() <em>Document Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDocumentFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected Integer documentFormat = DOCUMENT_FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOtherDocumentFormatDescription() <em>Other Document Format Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOtherDocumentFormatDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String OTHER_DOCUMENT_FORMAT_DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getOtherDocumentFormatDescription() <em>Other Document Format Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOtherDocumentFormatDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String otherDocumentFormatDescription = OTHER_DOCUMENT_FORMAT_DESCRIPTION_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CIM_HelpServiceAvailableToFileImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return CimPackage.eINSTANCE.getCIM_HelpServiceAvailableToFile();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Integer getDocumentFormat() {
+		return documentFormat;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDocumentFormat(Integer newDocumentFormat) {
+		Integer oldDocumentFormat = documentFormat;
+		documentFormat = newDocumentFormat;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__DOCUMENT_FORMAT, oldDocumentFormat, documentFormat));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getOtherDocumentFormatDescription() {
+		return otherDocumentFormatDescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOtherDocumentFormatDescription(String newOtherDocumentFormatDescription) {
+		String oldOtherDocumentFormatDescription = otherDocumentFormatDescription;
+		otherDocumentFormatDescription = newOtherDocumentFormatDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__OTHER_DOCUMENT_FORMAT_DESCRIPTION, oldOtherDocumentFormatDescription, otherDocumentFormatDescription));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__DOCUMENT_FORMAT:
+				return getDocumentFormat();
+			case CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__OTHER_DOCUMENT_FORMAT_DESCRIPTION:
+				return getOtherDocumentFormatDescription();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__DOCUMENT_FORMAT:
+				setDocumentFormat((Integer)newValue);
+				return;
+			case CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__OTHER_DOCUMENT_FORMAT_DESCRIPTION:
+				setOtherDocumentFormatDescription((String)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__DOCUMENT_FORMAT:
+				setDocumentFormat(DOCUMENT_FORMAT_EDEFAULT);
+				return;
+			case CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__OTHER_DOCUMENT_FORMAT_DESCRIPTION:
+				setOtherDocumentFormatDescription(OTHER_DOCUMENT_FORMAT_DESCRIPTION_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__DOCUMENT_FORMAT:
+				return DOCUMENT_FORMAT_EDEFAULT == null ? documentFormat != null : !DOCUMENT_FORMAT_EDEFAULT.equals(documentFormat);
+			case CimPackage.CIM_HELP_SERVICE_AVAILABLE_TO_FILE__OTHER_DOCUMENT_FORMAT_DESCRIPTION:
+				return OTHER_DOCUMENT_FORMAT_DESCRIPTION_EDEFAULT == null ? otherDocumentFormatDescription != null : !OTHER_DOCUMENT_FORMAT_DESCRIPTION_EDEFAULT.equals(otherDocumentFormatDescription);
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (DocumentFormat: ");
+		result.append(documentFormat);
+		result.append(", OtherDocumentFormatDescription: ");
+		result.append(otherDocumentFormatDescription);
+		result.append(')');
+		return result.toString();
+	}
+
+} //CIM_HelpServiceAvailableToFileImpl

@@ -33,7 +33,8 @@
 	bnd.identity;id='org.apache.maven.model',\
 	bnd.identity;id='io.cloudevents.model',\
 	bnd.identity;id='org.odata.csdl.model',\
-	bnd.identity;id='gov.nist.oscal.model'
+	bnd.identity;id='gov.nist.oscal.model',\
+	bnd.identity;id='org.dmtf.cim.model'
 -runbundles: \
 	net.opengis.gml3.model;version=snapshot,\
 	net.opengis.kml.model;version=snapshot,\
@@ -73,6 +74,7 @@
 	de.xoev.familie;version=snapshot,\
 	io.cloudevents.model;version=snapshot,\
 	org.apache.maven.model;version=snapshot,\
+	org.dmtf.cim.model;version=snapshot,\
 	org.cyclonedx.schema;version=snapshot,\
 	org.docbook.model;version=snapshot,\
 	org.w3.xinclude.model;version=snapshot,\

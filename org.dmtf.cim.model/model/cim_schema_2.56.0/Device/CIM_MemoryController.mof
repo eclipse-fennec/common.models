@@ -1,0 +1,25 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.54.1" ), 
+    UMLPackagePath ( "CIM::Device" ), 
+    Description ( 
+       "MemoryController instances provide access to and management "
+       "for their associated memory devices." )]
+class CIM_MemoryController : CIM_Controller {
+
+      [Description ( 
+          "If the controller has topology related constraints which "
+          "limit its suitability for a given purpose they can be "
+          "exposed using this property. If for example, the "
+          "controller physical connectivity is such that it can be "
+          "accessed from one processor in a multi-processor system "
+          "its configurability is constrained to usages from that "
+          "processor. In that case, ProcessorAffinity is set to the "
+          "DeviceID of the processor.\"" ), 
+       MaxLen ( 256 ), 
+       ModelCorrespondence { "CIM_Processor.DeviceID" }]
+   string ProcessorAffinity;
+
+
+};

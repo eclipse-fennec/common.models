@@ -1,0 +1,11 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.8.0" ), 
+    UMLPackagePath ( "CIM::Application::J2eeAppServer" ), 
+    Description ( 
+       "Identifies a deployed entity bean within an EJB module." )]
+class CIM_J2eeEntityBean : CIM_J2eeEJB {
+
+
+};
