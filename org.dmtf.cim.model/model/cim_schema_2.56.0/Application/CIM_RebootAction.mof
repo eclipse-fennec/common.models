@@ -1,0 +1,12 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.6.0" ), 
+    UMLPackagePath ( "CIM::Application::CheckAction" ), 
+    Description ( 
+       "RebootAction causes a reboot of the computer system that "
+       "defines the Action\'s environment." )]
+class CIM_RebootAction : CIM_Action {
+
+
+};

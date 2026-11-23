@@ -1,0 +1,25 @@
+src=src-gen
+# sets the usually required buildpath using the bnd library, you can extend it with the normal -buildpath to your liking
+-library: enableEMF
+
+# The code generation takes a bit of time and makes the build a bit slower.
+# It might be a good idea to put comments around it, when you don't need it
+#-generate:\
+#	model/cim.genmodel;\
+#		generate=fennecEMF;\
+#		genmodel=model/cim.genmodel;\
+#		output=src-gen
+
+# If this is not done with a instruction namespace, bnd would think you like
+# to take full control over whats exported and imported and will ignore @Export
+# Bundle Annotations
+-includeresource.model: model=model
+
+Bundle-Version: 2.56.0.SNAPSHOT
+Bundle-Name: DMTF CIM Schema Model
+Bundle-Description: Ecore and generated code for the DMTF Common Information Model (CIM) Schema \
+ 2.56.0, derived from the published MOF with org.eclipse.fennec.mof.ecore
+Bundle-DocURL: https://www.dmtf.org/standards/cim
+
+-buildpath: \
+	org.osgi.service.condition;version=latest

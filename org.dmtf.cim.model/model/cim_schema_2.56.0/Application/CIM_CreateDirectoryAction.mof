@@ -1,0 +1,12 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.6.0" ), 
+    UMLPackagePath ( "CIM::Application::CheckAction" ), 
+    Description ( 
+       "CreateDirectoryAction creates empty directories for "
+       "SoftwareElements to be installed locally." )]
+class CIM_CreateDirectoryAction : CIM_DirectoryAction {
+
+
+};

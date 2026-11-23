@@ -1,0 +1,14 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.51.0" ), 
+    UMLPackagePath ( "CIM::System::Settings" ), 
+    Description ( 
+       "The FSIPInterfaceSettingData is a derived class of "
+       "IPInterfaceSettingData that specifies the IP interface "
+       "settings for a Fileserver. It contains the properties needed "
+       "to establish an IPProtocolEndpoint and a NetworkVLAN." )]
+class CIM_FSIPInterfaceSettingData : CIM_IPInterfaceSettingData {
+
+
+};

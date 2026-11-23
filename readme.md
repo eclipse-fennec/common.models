@@ -138,6 +138,7 @@ original schema it was generated from**, see
 |---|---|
 | `io.cloudevents.model` | CloudEvents specification model |
 | `jakarta.persistence` | Jakarta Persistence 3.2 (JPA) mapping metadata |
+| `org.dmtf.cim.model` | DMTF CIM Schema 2.56.0 — Common Information Model (systems, network and device management; basis of WMI, SMI-S, SMASH/DASH) |
 | `org.apache.maven.model` | Apache Maven POM 4.0 model |
 | `org.cyclonedx.schema` | CycloneDX 1.6 Software Bill of Materials (SBOM) |
 | `org.docbook.model` | DocBook 5.0 documentation format |

@@ -1,0 +1,11 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.53.0" ), 
+    UMLPackagePath ( "CIM::Network" ), 
+    Description ( 
+       "This class is a parent class for network policy rules." )]
+class CIM_NetworkPolicyRule : CIM_PolicyRule {
+
+
+};

@@ -1,0 +1,137 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.52.0" ), 
+    UMLPackagePath ( "CIM::Network" ), 
+    Description ( 
+       "The service has a set of extrinsic methods to control the "
+       "creation and removal of the instances required to create an IP "
+       "encapsulation gateway also known as an IP Tunnel gateway.." )]
+class CIM_IPEncapsulationManagementService : CIM_Service {
+
+
+      [Description ( 
+          "Creates an instance of CIM_IPEncapsulationInterface that "
+          "is used in IP Tunnel gateways. The method also creates a "
+          "set of CIM_IPProtocolEndpoints and optionally a set of "
+          "CIM_EncapsulationMappingSettingData instances." )]
+   uint32 AddIPEncapsulationInterface(
+         [Description ( 
+             "reference to a system or network. The supported "
+             "target interfaces for a "
+             "CIM_IPEncapsulationInterface class or subclass" )]
+      CIM_System REF TargetSystem, 
+         [Description ( 
+             "A required string containing an embedded instance "
+             "of the class or subclass of "
+             "CIM_IPEncapsulationInterface describes the initial "
+             "configuration of the resulting "
+             "CIM_IPEncapsulationInterface instance. The "
+             "populated properties of the embedded instance "
+             "should not contain key properties, and any key "
+             "property values may be ignored" ), 
+          EmbeddedInstance ( "CIM_IPEncapsulationInterface" )]
+      string EncapsulationGateway, 
+         [Description ( 
+             "string containing an embedded instance of the "
+             "class or subclass of CIM_IPProtocolEndpoint that "
+             "describes the initial configuration of a "
+             "CIM_IPProtocolEndpoint that is on the provider "
+             "network. The populated properties of the embedded "
+             "instance should not contain key properties, and "
+             "any key property values may be ignored." ), 
+          EmbeddedInstance ( "CIM_IPProtocolEndpoint" )]
+      string PAIPEndpoint, 
+         [Description ( 
+             "string containing an embedded instances of the "
+             "class or subclass of CIM_IPProtocolEndpoint that "
+             "describes the initial configuration of an "
+             "CIM_IPProtocolEndpoint that is on the customer "
+             "network. The populated properties of the embedded "
+             "instance should not contain key properties, and "
+             "any key property values may be ignored." ), 
+          EmbeddedInstance ( "CIM_IPProtocolEndpoint" )]
+      string CAIPEndpoint, 
+         [Description ( 
+             "array of strings containing embedded instances of "
+             "the class or subclass of "
+             "CIM_EncapsulationMappingSettingData that describes "
+             "entries in a mapping table used by the "
+             "encapsulation gateway to provide the encapsulation "
+             "header information used by the gateway. The "
+             "populated properties of the embedded "
+             "CIM_EncapsulationMappingSettingData instances "
+             "should not contain key properties, and any key "
+             "property values may be ignored." ), 
+          EmbeddedInstance ( 
+             "CIM_EncapsulationMappingSettingData" )]
+      string EncapsulationMapping[], 
+         [Out, Description ( 
+             "If the creation of the "
+             "CIM_IPEncapsulationInterface is successful, the "
+             "instance of the class CIM_IPEncapsulationInterface "
+             "that represents the instantiated instance of "
+             "CIM_IPEncapsulationInteface is returned." )]
+      CIM_IPEncapsulationInterface REF ResultingInterface, 
+         [Out, Description ( 
+             "a ConcreteJob instance is returned if the "
+             "execution of the method is asynchronous" )]
+      CIM_ConcreteJob REF Job);
+
+      [Description ( 
+          "Adds a set of IPEncapuslationMappings used to configure "
+          "an IP Tunnel." )]
+   uint32 AddIPEncapsulationMappings(
+         [Description ( 
+             "Reference to the IPEncapsulationInterface instance "
+             "to associate the mapping." )]
+      CIM_IPEncapsulationInterface REF TargetInterface, 
+         [Description ( 
+             "array of strings containing embedded instances of "
+             "the class or subclass of "
+             "CIM_EncapsulationMappingSettingData that describes "
+             "entries in a mapping table used by the "
+             "encapsulation interface to provide the "
+             "encapsulation header for the resultant "
+             "IIPEncapsulationInterface. The populated "
+             "properties of the embedded "
+             "CIM_EncapsulationMappingSettingData instances "
+             "should not contain key properties, and any key "
+             "property values may be ignored." ), 
+          EmbeddedInstance ( 
+             "CIM_EncapsulationMappingSettingData" )]
+      string EncapsulationMappings[], 
+         [Out, Description ( 
+             "If the method is executed asyncronously an "
+             "reference to CIM_ConcreteJob is returned" )]
+      CIM_ConcreteJob REF Job);
+
+      [Description ( 
+          "Method to remove an IPEncapsulationInterface and any "
+          "associated CIM_ProtocolEndpoints or CIM_SettingData." )]
+   uint32 RemoveIPEncapsulationInterface(
+         [Description ( 
+             "A reference to the gateway that is to be removed." )]
+      CIM_IPEncapsulationInterface REF Gateway, 
+         [Out, Description ( 
+             "If the method is excuted asynchronously a "
+             "reference to a ConcreteJob instance is returned." )]
+      CIM_ConcreteJob REF Job);
+
+      [Description ( 
+          "Successful execution of the "
+          "RemoveIPEncapsulationMappings removes the instances "
+          "referenced in the methods EncapsulationMapping parameter" )]
+   uint32 RemoveIPEncapsulationMappings(
+         [Description ( 
+             "An array of references to the set of "
+             "CIM_EncapsulationMappingSettingData instances that "
+             "shall be removed." )]
+      CIM_EncapsulationMappingSettingData REF EncapsulationMappings[], 
+         [Out, Description ( 
+             "If the method is executed asynchronously then a "
+             "reference to a CIM_ConcreteJob instance is "
+             "returned" )]
+      CIM_ConcreteJob REF Job);
+
+};

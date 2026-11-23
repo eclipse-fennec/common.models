@@ -1,0 +1,10 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.8.0" ), 
+    UMLPackagePath ( "CIM::Application::J2eeAppServer" ), 
+    Description ( "CIM_J2eeURLResource identifies a URL resource." )]
+class CIM_J2eeURLResource : CIM_J2eeResource {
+
+
+};

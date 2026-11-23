@@ -49,6 +49,10 @@ Notable schema sources:
   Vermessungsverwaltungen open terms
 * **OMG** BPMN / CMMN / DMN — OMG specification licence
 * **HL7** FHIR R5 — HL7 IP policy (Creative Commons CC0)
+* **DMTF** CIM Schema 2.56.0 (MOF) — Copyright (c) 2023 DMTF; "DMTF
+  specifications and documents may be reproduced by members and
+  non-members, provided that correct attribution is given" (header of every
+  file in `org.dmtf.cim.model/model/cim_schema_2.56.0/`)
 * **CloudEvents** — Apache License 2.0
 * **Jakarta Persistence** — Eclipse Public License 2.0 / Eclipse
   Distribution License 1.0

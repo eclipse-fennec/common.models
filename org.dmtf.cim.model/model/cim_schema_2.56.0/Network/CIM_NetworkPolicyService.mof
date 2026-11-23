@@ -1,0 +1,181 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.54.0" ), 
+    UMLPackagePath ( "CIM::Network" ), 
+    Description ( 
+       "This class describes a network policy service. The network "
+       "policy service can used to manage network policies like "
+       "firewall, load balancing, QoS, DHCP, and DNS. Typically, this "
+       "network policy service corresponds to an abstraction of the "
+       "service within a domain (for example, an orchestration layer)." )]
+class CIM_NetworkPolicyService : CIM_Service {
+
+      [Description ( 
+          "This property describes the type of network policy "
+          "service supported. This property does not identify an "
+          "instance of a specific type of network policy service.\n"
+          "Load Balancer: describes a load balancing service for "
+          "the management and application of load balancer policies "
+          "and rules.\n"
+          "QoS: describes a Quality of Service (QoS) service for "
+          "the management and application of QoS policies and rules.\n"
+          "Firewall: describes a firewalling service for the "
+          "management and application of firewall policies and rules.\n"
+          "VPN: describes a Virtual Private Network (VPN) service "
+          "for the configuration and management of VPNs.\n"
+          "DHCPv4: describes a DHCP service for automatic network "
+          "configuration of client systems on IPv4 networks.\n"
+          "DHCPv6: describes a DHCP service for automatic network "
+          "configuration of client systems on IPv6 networks. \n"
+          "DNS: describes a Dynamic Name System (DNS) resolution service.\n"
+          "NAT: describes a Network Address Translation (NAT) "
+          "service for the configuration of NAT rules. \n"
+          "Gateway: describes a gateway service for the "
+          "configuration and management of gateway\'s functionalities.\n"
+          "Layer4 Port Forwarding: describes a Port Forwarding "
+          "service based on Layer 4 protocols for the configuration "
+          "of port forwarding rules.\n"
+          "IP Routing: describes a IP routing service for the "
+          "configuration and management of routing rules." ), 
+       ValueMap { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", 
+          "11", "12", "..", "32768..65535" }, 
+       Values { "Other", "Load Balancer", "QoS", "Firewall", "VPN", 
+          "DHCPv4", "DHCPv6", "DNS", "NAT", "Gateway", 
+          "Layer4 Port Forwarding", "IP Routing", "DMTF Reserved", 
+          "Vendor Reserved" }]
+   uint16 ServiceType;
+
+      [Description ( 
+          "A string that describes the network policy service type "
+          "when the ServiceType is set to 1 (\"Other\")." )]
+   string OtherServiceTypeDescription;
+
+      [Description ( 
+          "This property identifies an instance of a network policy service."
+           ), 
+       ModelCorrespondence { "CIM_NetworkPolicyService.ServiceIDType" }]
+   string ServiceID;
+
+      [Description ( 
+          "This property describes the type of identifier used to "
+          "identify an instance of a network policy service." ), 
+       ValueMap { "2", "3", "..", "32768..65535" }, 
+       Values { "URI", "UUID", "DMTF Reserved", "Vendor Reserved" }, 
+       ModelCorrespondence { "CIM_NetworkPolicyService.ServiceID" }]
+   uint16 ServiceIDType;
+
+
+      [Description ( 
+          "This method creates an instance of CIM_NetworkPolicyRule "
+          "class and instances of CIM_NetworkPolicyCondition, "
+          "CIM_NetworkPolicyAction, "
+          "CIM_NetworkPolicyRuleSettingData, and "
+          "CIM_NetworkPolicyActionSettingData classes and all "
+          "mandatory associations between these instances" )]
+   uint32 CreatePolicyRule(
+         [Description ( 
+             "an array of embedded instances of the class "
+             "CIM_NetworkPolicyAction associated with the "
+             "created rule. This array is indexed with the "
+             "ActionOrder parameter." ), 
+          EmbeddedInstance ( "CIM_NetworkPolicyAction" ), 
+          ArrayType ( "Indexed" )]
+      string NetworkPolicyAction[], 
+         [Description ( 
+             "An optional array corresponding to the "
+             "NetworkPolicyAction, ActionOrder is an unsigned "
+             "integer that indicates the relative position of a "
+             "PolicyAction in the sequence of actions associated "
+             "with a NetworkPolicyRule. This parameter populates "
+             "the ActionOrder parameter in the corresponding "
+             "CIM_PolicyActionInPolicyRule association instance." ), 
+          ArrayType ( "Indexed" )]
+      uint16 ActionsOrder[], 
+         [Description ( 
+             "An array of enbedded instance of the class "
+             "CIM_NetworkPolicyCondition to be associated with "
+             "the created rule rule." ), 
+          EmbeddedInstance ( "CIM_NetworkPolicyCondition" )]
+      string NetworkPolicyCondition[], 
+         [Description ( 
+             "An array unsigned integer corresponding to the "
+             "NetworkPolicyCondition input indicating the group "
+             "to which the contained NetworkPolicyCondition "
+             "belongs. This integer segments the Conditions into "
+             "the ANDed sets (when the ConditionListType is "
+             "\"DNF\") or similarly, into the ORed sets (when "
+             "the ConditionListType is \"CNF\"). This value is "
+             "used to populate the ConditionGroupNumber property "
+             "in the association in the corresponding "
+             "association CIM_PolicyConditionInPolicyRule" )]
+      uint16 ConditionGroupNumber[], 
+         [Description ( 
+             "An embedded instance of "
+             "CIM_NetworkPolicyRuleSettingData. This array "
+             "corresponds to the NetworkPolicyRule input array, "
+             "the created instance of the embedded class is "
+             "associated with the corresponding "
+             "CIM_NetworkPolicyRule." ), 
+          EmbeddedInstance ( "CIM_NetworkPolicyRuleSettingData" )]
+      string NetworkPolicyRuleSettingData[], 
+         [Description ( 
+             "An embedded instance of "
+             "CIM_NetworkPolicyActionSettingData. This array "
+             "corresponds to the NetworkPolicyAction input "
+             "array, the created instance of the embedded class "
+             "is associated with the corresponding "
+             "CIM_NetworkPolicyAction." ), 
+          EmbeddedInstance ( "CIM_NetworkPolicyActionSettingData" )]
+      string NetworkPolicyActionSettingData[], 
+         [Out, Description ( 
+             "Reference to the created instance of CIM_NetworkPolicyRule"
+              )]
+      CIM_NetworkPolicyRule REF NetworkPolicyRule);
+
+      [Description ( 
+          "This method removes the referenced instances "
+          "CIM_NetworkPolicyRule and all associated instances of "
+          "CIM_NetworkPolicyAction, CIM_NetworkPolicyCondition, "
+          "CIM_NetworkPolicyRuleSettingData, and "
+          "CIM_NetworkPolicyActionSettingData that are only "
+          "associated with the rule specified in this method input "
+          "parameter." )]
+   uint32 DeletePolicyRules(
+         [Description ( 
+             "An array of referenced instances of "
+             "CIM_NetworkPolicyRule to be deleted." )]
+      CIM_NetworkPolicyRule REF NetworkPolicyRule[]);
+
+      [Description ( 
+          "Applies the Network Policy Rule to the specified "
+          "instances of the CIM_ManagedElement. This method creates "
+          "the instances of the CIM_PolicySetAppliesToElement "
+          "association between the specified instance of the "
+          "CIM_NetworkPolicyRule and the instances of "
+          "CIM_ManagedElement subclasses, which references are "
+          "supplied." )]
+   uint32 ApplyPolicyRule(
+         [Description ( "The rule to apply" )]
+      CIM_NetworkPolicyRule REF NetworkPolicyRule, 
+         [Description ( 
+             "The managed elements to which to apply the rule" )]
+      CIM_ManagedElement REF ManagedElememt[]);
+
+      [Description ( 
+          "Removes the Network Policy Rule from the ManagedElement "
+          "instances it was applied before. This method deletes the "
+          "instances of the CIM_PolicySetAppliesToElement "
+          "association between the specified instance of the "
+          "CIM_NetworkPolicyRule and the instances of "
+          "CIM_ManagedElement subclasses, which references are "
+          "supplied." )]
+   uint32 ReleasePolicyRule(
+         [Description ( "Reference to the rule to be removed" )]
+      CIM_NetworkPolicyRule REF NetworkPolicyRule, 
+         [Description ( 
+             "The Manged Elements from which the rule is to be released."
+              )]
+      CIM_ManagedElement REF ManagedElement[]);
+
+};

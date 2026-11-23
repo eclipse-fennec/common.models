@@ -1,0 +1,20 @@
+// Copyright (c) 2023 DMTF.  All rights reserved.
+
+
+   [Version ( "2.51.0" ), 
+    UMLPackagePath ( "CIM::Network" ), 
+    Description ( 
+       "Configuration class for a switch virtual interface which is a "
+       "VLAN of switch ports represented by one interface to a routing "
+       "or bridging system." )]
+class CIM_SwitchVirtualInterface : CIM_IPProtocolEndpoint {
+
+      [Description ( 
+          "A 12-bit VLAN ID that this interface is dependent on." ), 
+       MinValue ( 1 ), 
+       MaxValue ( 4094 ), 
+       MappingStrings { "MIB.IETF|Q-BRIDGE-MIB.VlanId" }]
+   uint16 VLANId;
+
+
+};
